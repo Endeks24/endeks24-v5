@@ -1001,3 +1001,15 @@ html.e24v5 #e24v5 .v5-rk-cubuk:not(.up):not(.dn) i{background:var(--v5-vurgu)}
 @media (max-width:991.98px){html.e24v5 #e24v5 a.e24v5-rakam b{font-size:44px}}
 @media (max-width:991.98px){html.e24v5 #e24v5 a.e24v5-rakam p{font-size:15px}}
 @supports (-webkit-touch-callout:none){@media (max-width:991.98px){html.e24v5 #e24v5 .v5-ust{padding-top:max(16px,env(safe-area-inset-top))}}}
+html.e24v5 #e24v5 a.v5-hisse{color:inherit;text-decoration:none}
+html.e24v5 #e24v5 a.v5-hisse:hover{text-decoration:underline;text-underline-offset:3px}
+html.e24v5 #e24v5 .v5-genislik{margin:0 0 16px;font:600 14px/1.4 var(--v5-sans);font-variant-numeric:tabular-nums;color:var(--v5-yazi2)}
+html.e24v5 #e24v5 .v5-hareket-listeler{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px 32px}
+html.e24v5 #e24v5 .v5-hareket-liste h4{margin:0 0 4px;font:600 12px/1 var(--v5-sans);letter-spacing:.06em;text-transform:uppercase}
+html.e24v5 #e24v5 .v5-hareket-liste .v5-tablo td,html.e24v5 #e24v5 .v5-hareket-liste .v5-tablo th{white-space:nowrap}
+html.e24v5 #e24v5 .v5-hareket-liste .v5-tablo td:first-child{font-weight:700}
+html.e24v5 #e24v5 .v5-sektor-daha{margin-top:12px}
+html.e24v5 #e24v5 .v5-genel-kurul{margin-top:32px}
+html.e24v5 #e24v5 .v5-genel-kurul .v5-yz-daha{margin-top:12px}
+html.e24v5 #e24v5 .v5-kap-bag{white-space:nowrap;font:600 13px/1.4 var(--v5-sans);color:var(--v5-vurgu);text-decoration:none}
+@media (max-width:991.98px){html.e24v5 #e24v5 .v5-hareket-listeler{grid-template-columns:minmax(0,1fr)}}

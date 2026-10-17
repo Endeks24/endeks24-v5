@@ -666,3 +666,11 @@ html.e24v5 #e24v5 .v5-rk-cubuk:not(.up):not(.dn) i{background:var(--v5-vurgu)}
 @media (max-width:991.98px){html.e24v5 #e24v5.v5-sayfa-kose .v5-govde .eh-ozet li{font-size:17px!important;line-height:1.5!important;font-weight:400!important}}
 @media (max-width:991.98px){
 html.e24v5 #e24v5.v5-sayfa-kose .v5-govde h2,html.e24v5 #e24v5.v5-sayfa-kose .v5-govde h3,html.e24v5 #e24v5.v5-sayfa-kose .v5-govde .eh-h{font-family:var(--v5-serif)!important;font-size:21px!important;font-weight:700!important;line-height:1.3!important}}
+html.e24v5 #e24v5 a.v5-yz-kbas{color:inherit;text-decoration:none}
+html.e24v5 #e24v5 a.v5-yz-kbas:hover{text-decoration:underline;text-underline-offset:3px}
+html.e24v5 #e24v5 button.v5-yz-ketk{background:none;border:0;padding:18px 0 0;text-align:left;cursor:pointer}
+html.e24v5 #e24v5 a.v5-yz-ketk{text-decoration:none}
+html.e24v5 #e24v5 .v5-yz-suzgec{display:inline-flex;align-items:center;gap:10px;height:38px;padding:0 6px 0 16px;margin-bottom:8px;background:var(--v5-yazi);color:var(--v5-zemin);font:600 14px/1 var(--v5-sans)}
+html.e24v5 #e24v5 .v5-yz-suzgec b{font-weight:600}
+html.e24v5 #e24v5 .v5-yz-kaldir{background:none;border:0;color:inherit;font:400 20px/1 var(--v5-sans);width:28px;height:28px;cursor:pointer;padding:0}
+@media (max-width:991.98px){html.e24v5 #e24v5 .v5-yz-kart .v5-yz-goster{display:block;padding-top:10px;font-size:13px}}
