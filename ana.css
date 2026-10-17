@@ -291,6 +291,26 @@ html.e24v5 .v5-manset-foto figcaption:empty{display:none}
 html.e24v5 .v5-etiket-ozel{color:var(--v5-etiket)}
 html.e24v5 .v5-ozel-imza{font:400 13px/1 var(--v5-sans);color:#9AA8B6}
 html.e24v5 #e24v5 .v5-ozel-metin .v5-etiket{color:#8FB8E0}
+html.e24v5 .e24-grafik{margin:28px 0;padding:20px 22px 16px;background:var(--v5-kutu);font-family:var(--v5-sans);color:var(--v5-yazi)}
+html.e24v5 .e24-grafik p{margin:0}
+html.e24v5 .e24-grafik .e24-g-baslik{font:600 15px/1.35 var(--v5-sans)!important;color:var(--v5-yazi)!important;margin:0 0 14px!important}
+html.e24v5 .e24-g-ust{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+html.e24v5 .e24-g-buyuk{font:400 30px/1 var(--v5-serif);color:var(--v5-vurgu)}
+html.e24v5 .e24-g-pay{display:grid;grid-template-columns:repeat(20,1fr);gap:5px;margin:4px 0 12px}
+html.e24v5 .e24-g-pay i{aspect-ratio:1;border-radius:50%;background:var(--v5-cizgi)}
+html.e24v5 .e24-g-pay i.on{background:var(--v5-vurgu)}
+html.e24v5 .e24-g-lejant{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:10px;font:400 13px/1.3 var(--v5-sans);color:var(--v5-yazi2)}
+html.e24v5 .e24-g-lejant span{display:inline-flex;align-items:center;gap:6px}
+html.e24v5 .e24-g-lejant i{width:9px;height:9px;border-radius:50%;background:var(--v5-cizgi)}
+html.e24v5 .e24-g-lejant .on i{background:var(--v5-vurgu)}
+html.e24v5 .e24-grafik .e24-g-satir.ciz{display:grid;grid-template-columns:minmax(80px,30%) 1fr 56px;align-items:center;gap:12px;margin:0 0 10px!important;font:400 14px/1.3 var(--v5-sans)!important}
+html.e24v5 .e24-g-satir.vurgu .e24-g-ad,html.e24v5 .e24-g-satir.vurgu b{font-weight:700}
+html.e24v5 .e24-g-cubuk{height:28px;background:transparent;display:block}
+html.e24v5 .e24-g-cubuk i{display:block;height:100%;background:#B5A08F}
+html.e24v5 .e24-g-satir.vurgu .e24-g-cubuk i{background:var(--v5-vurgu)}
+html.e24v5 .e24-g-satir b{font:600 15px/1 var(--v5-sans);font-variant-numeric:tabular-nums}
+html.e24v5 .e24-grafik .e24-g-sayi{font:400 64px/1 var(--v5-serif)!important;color:var(--v5-dusus)!important;margin:0 0 8px!important}
+html.e24v5 .e24-grafik .e24-g-kaynak{margin-top:10px!important;padding-top:10px;border-top:1px solid var(--v5-cizgi);font:400 12px/1.4 var(--v5-sans)!important;color:var(--v5-silik)!important}
 html.e24v5 .v5-manset-grafik .e24-grafik{margin:0;padding:0;background:none}
 html.e24v5 #e24v5 .e24v5-rakamlar .e24v5-bb{display:flex;align-items:baseline;flex-wrap:wrap;gap:14px}
 html.e24v5 #e24v5 .e24v5-rakamlar .e24v5-bb span{font:400 13px/1.3 var(--v5-sans);font-style:normal;color:var(--v5-yazi2)}
