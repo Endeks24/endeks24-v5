@@ -372,9 +372,12 @@ html.e24v5 #e24v5 .v5-yol{font:400 13px/1.4 var(--v5-sans);color:var(--v5-yazi2)
 html.e24v5 #e24v5 .v5-yol a{color:var(--v5-yazi2)}
 html.e24v5 #e24v5 .v5-yol .v5-ust-etiket{margin-left:16px}
 html.e24v5 #e24v5 h4{font:600 14px/1.2 var(--v5-sans);margin:0 0 14px}
+html.e24v5 #e24v5 .v5-kat-sektor:empty{display:none}
+html.e24v5 #e24v5 .v5-kat-sektor{margin-bottom:36px;max-width:640px}
 html.e24v5 #e24v5 figcaption{margin-top:8px;font:400 12px/1.45 var(--v5-sans);color:var(--v5-silik)}
 html.e24v5 #e24v5 figcaption:empty{display:none}
 html.e24v5 #e24v5 .v5-son-liste.v5-cizgi time{font-weight:500}
+html.e24v5 #e24v5 .v5-kat-bolumler>*{margin-bottom:56px}
 html.e24v5 #e24v5 .v5-imza span:not(.v5-imza-rozet){display:block}
 html.e24v5 #e24v5 .v5-paylas{display:flex;gap:8px}
 html.e24v5 #e24v5 .v5-paylas a,html.e24v5 #e24v5 .v5-paylas button{width:46px;height:46px;border:1px solid var(--v5-cizgi-k);display:flex;align-items:center;justify-content:center;background:transparent;color:var(--v5-yazi);cursor:pointer}
@@ -438,8 +441,11 @@ html.e24v5 #e24v5 .v5-yorumlar .bg-white,html.e24v5 #e24v5 .v5-yorumlar .card{ba
 @media (max-width:991.98px){html.e24v5 #e24v5 .v5-alinti{font-size:17px}}
 html.e24v5 #e24v5 .v5-yorumlar .section-title,html.e24v5 #e24v5 .v5-yorumlar>div{border-top:0!important}
 html.e24v5 #e24v5 .v5-daha{display:inline-block;margin-top:18px}
+html.e24v5 #e24v5 .v5-yan-veri:empty{display:none}
+html.e24v5 #e24v5 .v5-yan-veri>*+*{margin-top:16px}
 html.e24v5 #e24v5 .v5-reklam300{display:flex;flex-direction:column;align-items:center;gap:8px}
 html.e24v5 #e24v5 .v5-reklam300 img{width:300px;height:250px;max-width:100%;object-fit:cover;display:block}
+html.e24v5 #e24v5 .v5-kat-bolumler .v5-izgara>:only-child{grid-column:1/-1}
 html.e24v5 #e24v5 .v5-izgara>*{min-width:0}
 html.e24v5 #e24v5 .v5-akis-sag .v5-reklam300{margin-top:36px}
 html.e24v5 #e24v5 .v5-reklam300-mobil{display:none}
