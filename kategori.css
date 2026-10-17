@@ -965,3 +965,19 @@ html.e24v5 #e24v5 .v5-alt{content-visibility:auto;contain-intrinsic-size:auto 60
 html.e24v5 #e24v5 .v5-yorumlar,html.e24v5 #e24v5 .v5-kat-akis,html.e24v5 #e24v5 .v5-kat-alt{content-visibility:auto;contain-intrinsic-size:auto 500px}
 html.e24v5 #e24v5 header.v5-bas.sticky-header{position:static!important;top:auto!important;transform:none!important;animation:none!important;box-shadow:none!important}
 html.e24v5.e24v5-hazir body{padding-top:0!important}
+html.e24v5,html.e24v5.e24v5-hazir body{overflow-x:clip!important;max-width:100%}
+@media (min-width:992px){html.e24v5 #e24v5 .v5-izgara.v5-iki-bir:has(>.v5-ha-spk),html.e24v5 #e24v5 .v5-kat-msol .v5-izgara.v5-iki-bir:has(>.v5-ha-spk){grid-template-columns:minmax(0,1fr) 300px!important}}
+@media (min-width:992px){html.e24v5 #e24v5 .v5-ha-spk{grid-column:2}}
+html.e24v5 #e24v5 .v5-ha-spk li[hidden]{display:none}
+html.e24v5 #e24v5 .v5-spk-tum{display:block;margin:10px 0 0;padding:0;border:0;background:none;font:600 13px/1.4 var(--v5-sans);color:var(--v5-etiket);cursor:pointer;text-align:left}
+html.e24v5 #e24v5 .v5-kat-veri-izgara b{white-space:nowrap}
+html.e24v5 #e24v5 .v5-kat-veri-izgara b small{font-size:.5em;margin-left:3px}
+@media (min-width:768px) and (max-width:1279.98px){html.e24v5 #e24v5 .c{padding-left:24px;padding-right:24px}}
+@media (max-width:991.98px){html.e24v5 #e24v5 .v5-oz-kart .v5-oz-ust-rakam span{display:none}}
+@media (max-width:991.98px){html.e24v5 #e24v5 .v5-oz-kart .v5-oz-ust-rakam b{white-space:nowrap;font-size:clamp(15px,4.6vw,20px)}}
+@media (max-width:991.98px){html.e24v5 #e24v5 .v5-oz-kart .v5-oz-ust-rakam{display:inline-flex;width:auto;max-width:100%}}
+@media (max-width:991.98px){html.e24v5 #e24v5 .v5-oz-drakam{white-space:nowrap;font-size:clamp(22px,7vw,32px)}}
+@media (max-width:991.98px){html.e24v5 #e24v5 .v5-oz-duvar>a{flex:0 0 78%}}
+@media (max-width:991.98px){html.e24v5 #e24v5 .v5-oz-dkutu{position:relative}}
+@media (max-width:991.98px){html.e24v5 #e24v5 .v5-oz-duvar{-webkit-mask-image:linear-gradient(90deg,#000 82%,transparent);mask-image:linear-gradient(90deg,#000 82%,transparent);scroll-snap-type:x mandatory}}
+@media (max-width:991.98px){html.e24v5 #e24v5 .v5-oz-duvar>a{scroll-snap-align:start}}

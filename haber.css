@@ -561,3 +561,11 @@ html.e24v5 #e24v5 .v5-sira-metin .v5-silik{font:400 14px/1.45 var(--v5-sans)}
 @media (max-width:575.98px){html.e24v5 #e24v5 .v5-sira-metin .v5-silik{display:none}}
 html.e24v5 #e24v5 header.v5-bas.sticky-header{position:static!important;top:auto!important;transform:none!important;animation:none!important;box-shadow:none!important}
 html.e24v5.e24v5-hazir body{padding-top:0!important}
+html.e24v5,html.e24v5.e24v5-hazir body{overflow-x:clip!important;max-width:100%}
+html.e24v5 #e24v5 .v5-govde .eh-tblwrap,html.e24v5 #e24v5 .v5-govde .e24-haber .eh-tblwrap{max-width:100%!important;overflow-x:auto!important;-webkit-overflow-scrolling:touch}
+html.e24v5 #e24v5 .v5-govde img,html.e24v5 #e24v5 .v5-govde iframe,html.e24v5 #e24v5 .v5-govde video{max-width:100%!important;height:auto}
+html.e24v5 #e24v5 .v5-makale,html.e24v5 #e24v5 .v5-govde{min-width:0;overflow-wrap:break-word}
+@media (min-width:768px) and (max-width:1279.98px){html.e24v5 #e24v5 .c{padding-left:24px;padding-right:24px}}
+html.e24v5 #e24v5 .v5-haber-izgara>*{min-width:0}
+html.e24v5 #e24v5 .v5-haber-foto img,html.e24v5 #e24v5 .v5-makale img{max-width:100%;height:auto}
+@media (max-width:991.98px){html.e24v5 #e24v5 .v5-haber-izgara{grid-template-columns:minmax(0,1fr)!important}}
