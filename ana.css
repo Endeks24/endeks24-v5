@@ -703,3 +703,6 @@ html.e24v5 #e24v5 .v5-rk-cubuk:not(.up):not(.dn) i{background:var(--v5-vurgu)}
 @media (max-width:991.98px){html.e24v5 #e24v5 a.e24v5-rakam b{font-size:44px}}
 @media (max-width:991.98px){html.e24v5 #e24v5 a.e24v5-rakam p{font-size:15px}}
 @supports (-webkit-touch-callout:none){@media (max-width:991.98px){html.e24v5 #e24v5 .v5-ust{padding-top:max(16px,env(safe-area-inset-top))}}}
+html.e24v5 #e24v5 .e24v5-3sey.v5-uc-bekle ol{visibility:hidden;min-height:96px}
+html.e24v5 #e24v5 .e24v5-3sey.v5-uc-bekle .e24v5-tarih{visibility:hidden}
+@media (max-width:991.98px){html.e24v5 #e24v5 .e24v5-3sey.v5-uc-bekle ol{min-height:250px}}
