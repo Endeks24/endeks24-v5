@@ -584,15 +584,16 @@ html.e24v5 #e24v5 .v5-ac-grup{display:flex;flex-direction:column;gap:6px}
 html.e24v5 #e24v5 .v5-ac-alt{display:flex;flex-direction:column;gap:4px;padding-left:10px;border-left:2px solid var(--v5-cizgi-k)}
 html.e24v5 #e24v5 .v5-ac-alt a{font:400 14px/1.35 var(--v5-sans)!important;color:var(--v5-yazi2)}
 @media (max-width:991.98px){html.e24v5 .v5-menu.acik .v5-acilir{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px 20px;padding:18px 16px;justify-content:stretch}}
-html.e24v5 #e24v5[data-kat=piyasalar]{--v5-kat-renk:#14548C}
-html.e24v5 #e24v5[data-kat=enerji]{--v5-kat-renk:#1E6B35}
-html.e24v5 #e24v5[data-kat=gundem]{--v5-kat-renk:#B3261E}
-html.e24v5 #e24v5[data-kat=halka-arz]{--v5-kat-renk:#0B6A8A}
-html.e24v5 #e24v5[data-kat=kripto]{--v5-kat-renk:#8A5A00}
-html.e24v5 #e24v5[data-kat=emlak]{--v5-kat-renk:#6B2346}
-html.e24v5 #e24v5[data-kat=otomotiv]{--v5-kat-renk:#B0430C}
-html.e24v5 #e24v5[data-kat=savunma]{--v5-kat-renk:#3F5128}
-html.e24v5 #e24v5[data-kat=yatirimci-rehberi]{--v5-kat-renk:#1F4E79}
+html.e24v5 #e24v5[data-kat=piyasalar],html.e24v5 #e24v5 .v5-etiket[data-kat=piyasalar]{--v5-kat-renk:#14548C}
+html.e24v5 #e24v5[data-kat=enerji],html.e24v5 #e24v5 .v5-etiket[data-kat=enerji]{--v5-kat-renk:#1E6B35}
+html.e24v5 #e24v5[data-kat=gundem],html.e24v5 #e24v5 .v5-etiket[data-kat=gundem]{--v5-kat-renk:#B3261E}
+html.e24v5 #e24v5[data-kat=halka-arz],html.e24v5 #e24v5 .v5-etiket[data-kat=halka-arz]{--v5-kat-renk:#0B6A8A}
+html.e24v5 #e24v5[data-kat=kripto],html.e24v5 #e24v5 .v5-etiket[data-kat=kripto]{--v5-kat-renk:#8A5A00}
+html.e24v5 #e24v5[data-kat=emlak],html.e24v5 #e24v5 .v5-etiket[data-kat=emlak]{--v5-kat-renk:#6B2346}
+html.e24v5 #e24v5[data-kat=otomotiv],html.e24v5 #e24v5 .v5-etiket[data-kat=otomotiv]{--v5-kat-renk:#B0430C}
+html.e24v5 #e24v5[data-kat=savunma],html.e24v5 #e24v5 .v5-etiket[data-kat=savunma]{--v5-kat-renk:#3F5128}
+html.e24v5 #e24v5[data-kat=yatirimci-rehberi],html.e24v5 #e24v5 .v5-etiket[data-kat=yatirimci-rehberi]{--v5-kat-renk:#1F4E79}
+html.e24v5 #e24v5 .v5-etiket[data-kat]{color:var(--v5-kat-renk,var(--v5-etiket))!important}
 html.e24v5 #e24v5 .v5-alt-kol-iki{display:grid;grid-template-columns:repeat(2,max-content);grid-template-rows:auto repeat(5,auto);grid-auto-flow:column;column-gap:36px;row-gap:12px;align-content:start}
 html.e24v5 #e24v5 .v5-alt-kol-iki h4{grid-column:1/-1}
 html.e24v5 #e24v5 .v5-rozet-kap{position:relative;overflow:hidden;padding:0;background:var(--v5-band);box-shadow:inset 0 0 0 1.5px #122D4A;flex:none}
