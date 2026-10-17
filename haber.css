@@ -272,7 +272,7 @@ html.e24v5 .v5-son-liste.v5-cizgi li::after{content:"";position:absolute;left:0;
 html.e24v5 .v5-son-liste.v5-cizgi li:first-child::after{background:var(--v5-dusus)}
 html.e24v5 #e24v5 .v5-son-liste.v5-cizgi a{font-size:15px;line-height:1.4}
 html.e24v5 #e24v5 a.e24v5-rakam b small{font-size:.58em;color:var(--v5-silik);margin-left:2px}
-html.e24v5 #e24v5 a.e24v5-rakam.up b small,html.e24v5 #e24v5 a.e24v5-rakam.dn b small{color:inherit}
+html.e24v5 #e24v5 a.e24v5-rakam b small{color:var(--v5-silik)}
 html.e24v5 #e24v5 a.e24v5-rakam p{white-space:normal;overflow:visible;text-overflow:clip;min-height:2.9em}
 html.e24v5 .v5-reklam-etiket{font:500 11px/1 var(--v5-sans);letter-spacing:.12em;text-transform:uppercase;color:var(--v5-silik)}
 html.e24v5 #e24v5 .v5-etiket em{font-style:normal;color:var(--v5-yazi);margin-right:8px}
@@ -569,3 +569,7 @@ html.e24v5 #e24v5 .v5-makale,html.e24v5 #e24v5 .v5-govde{min-width:0;overflow-wr
 html.e24v5 #e24v5 .v5-haber-izgara>*{min-width:0}
 html.e24v5 #e24v5 .v5-haber-foto img,html.e24v5 #e24v5 .v5-makale img{max-width:100%;height:auto}
 @media (max-width:991.98px){html.e24v5 #e24v5 .v5-haber-izgara{grid-template-columns:minmax(0,1fr)!important}}
+html.e24v5 #e24v5 .v5-rk-cubuk{display:block;height:6px;background:#E2D2C6;margin-top:10px}
+html.e24v5 #e24v5 .v5-rk-cubuk i{display:block;height:100%;background:var(--v5-lacivert)}
+html.e24v5 #e24v5 .v5-rk-cubuk.up i{background:#0B7A4B}
+html.e24v5 #e24v5 .v5-rk-cubuk.dn i{background:#B3261E}
