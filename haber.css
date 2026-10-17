@@ -573,3 +573,11 @@ html.e24v5 #e24v5 .v5-rk-cubuk{display:block;height:6px;background:#E2D2C6;margi
 html.e24v5 #e24v5 .v5-rk-cubuk i{display:block;height:100%;background:var(--v5-lacivert)}
 html.e24v5 #e24v5 .v5-rk-cubuk.up i{background:#0B7A4B}
 html.e24v5 #e24v5 .v5-rk-cubuk.dn i{background:#B3261E}
+html.e24v5 #e24v5 a.e24v5-rakam{display:flex;flex-direction:column;gap:12px}
+html.e24v5 #e24v5 a.e24v5-rakam b{font:600 60px/1 var(--v5-serif);letter-spacing:-.02em}
+html.e24v5 #e24v5 a.e24v5-rakam b small{font-size:.6em;color:#6E625A;margin-left:0}
+html.e24v5 #e24v5 a.e24v5-rakam p{margin:0;font:400 16px/1.5 var(--v5-sans)}
+html.e24v5 #e24v5 a.e24v5-rakam .v5-rk-cubuk{margin-top:0;background:#DEC9BB}
+html.e24v5 #e24v5 .v5-rk-cubuk:not(.up):not(.dn) i{background:var(--v5-vurgu)}
+@media (max-width:991.98px){html.e24v5 #e24v5 a.e24v5-rakam b{font-size:44px}}
+@media (max-width:991.98px){html.e24v5 #e24v5 a.e24v5-rakam p{font-size:15px}}
