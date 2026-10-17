@@ -943,3 +943,4 @@ html.e24v5 #e24v5 .v5-hucre b{min-width:3ch;display:inline-block}
 html.e24v5 #e24v5 .v5-gozcu{display:block;height:0;margin:0;padding:0}
 html.e24v5 #e24v5 .v5-alt{content-visibility:auto;contain-intrinsic-size:auto 600px}
 html.e24v5 #e24v5 .v5-yorumlar,html.e24v5 #e24v5 .v5-kat-akis,html.e24v5 #e24v5 .v5-kat-alt{content-visibility:auto;contain-intrinsic-size:auto 500px}
+html.e24v5 #e24v5 header.v5-bas.sticky-header{position:static!important;top:auto!important;transform:none!important;animation:none!important;box-shadow:none!important}
