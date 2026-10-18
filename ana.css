@@ -793,3 +793,38 @@ html.e24v5 #e24v5 .v5-govde table th,html.e24v5 #e24v5 .e24-haber table th{paddi
 html.e24v5 #e24v5 .v5-manset-grafik .post-flash{display:none!important}
 @media (max-width:991.98px){html.e24v5 #e24v5 .v5-bas .v5-logo img,html.e24v5 #e24v5 .v5-logo img{height:36px}}
 @media (max-width:991.98px){html.e24v5 #e24v5 .v5-ince .v5-logo img{height:28px}}
+html.e24v5 #e24v5 .v5-mp[hidden]{display:none!important}
+html.e24v5 #e24v5 .v5-mp{animation:v5-mp-gir .35s ease-out}
+@keyframes v5-mp-gir{from{opacity:.3;transform:translateY(6px)}to{opacity:1;transform:none}}
+html.e24v5 #e24v5 .v5-msayac{display:grid;grid-template-columns:auto repeat(8,minmax(0,1fr));align-items:end;gap:0 6px;margin-top:26px;padding-top:4px}
+html.e24v5 #e24v5 .v5-msayac-ad{font:700 11px/1 var(--v5-sans);letter-spacing:.12em;text-transform:uppercase;color:var(--v5-yazi);padding:0 12px 9px 0}
+html.e24v5 #e24v5 .v5-ms{all:unset;box-sizing:border-box;cursor:pointer;position:relative;display:block;padding:10px 0 6px;min-width:0;min-height:44px}
+html.e24v5 #e24v5 .v5-ms:focus-visible{outline:2px solid var(--v5-vurgu);outline-offset:3px}
+html.e24v5 #e24v5 .v5-ms-iz{display:block;height:3px;background:#E0CDBE;position:relative;overflow:hidden}
+html.e24v5 #e24v5 .v5-ms-iz i{position:absolute;inset:0;width:0;background:var(--v5-yazi)}
+html.e24v5 #e24v5 .v5-ms-gecti .v5-ms-iz i{width:100%;background:var(--v5-silik)}
+html.e24v5 #e24v5 .v5-ms-aktif .v5-ms-iz i{background:var(--v5-vurgu);animation:v5-ms-dol 8s linear forwards}
+html.e24v5 #e24v5 .v5-ms-dur .v5-ms-aktif .v5-ms-iz i{animation-play-state:paused}
+@keyframes v5-ms-dol{from{width:0}to{width:100%}}
+html.e24v5 #e24v5 .v5-ms-no{display:block;margin-top:8px;font:400 24px/1 var(--v5-serif);color:var(--v5-silik);font-variant-numeric:lining-nums}
+html.e24v5 #e24v5 .v5-ms:hover .v5-ms-no,html.e24v5 #e24v5 .v5-ms-aktif .v5-ms-no{color:var(--v5-yazi)}
+html.e24v5 #e24v5 .v5-ms-aktif .v5-ms-no{font-weight:700}
+html.e24v5 #e24v5 .v5-ms-no small{position:absolute;left:0;top:-4px;font:700 9px/1 var(--v5-sans);letter-spacing:.12em;text-transform:uppercase;color:#5A4A3F}
+html.e24v5 #e24v5 .v5-ms-rek .v5-ms-iz{background:repeating-linear-gradient(135deg,#E0CDBE 0 3px,transparent 3px 6px)}
+html.e24v5 #e24v5 .v5-ms-on{position:absolute;left:0;bottom:100%;margin-bottom:6px;z-index:5;width:240px;background:var(--v5-yazi);color:#FBF8F5;font:500 13px/1.35 var(--v5-sans);padding:9px 11px;border-radius:3px;pointer-events:none;opacity:0;transform:translateY(4px);transition:opacity .15s,transform .15s}
+html.e24v5 #e24v5 .v5-ms:hover .v5-ms-on,html.e24v5 #e24v5 .v5-ms:focus-visible .v5-ms-on{opacity:1;transform:none}
+html.e24v5 #e24v5 .v5-ms:nth-child(n+7) .v5-ms-on{left:auto;right:0}
+html.e24v5 #e24v5 .v5-mp-rek .v5-damga{background:#5A4A3F!important;color:#fff!important}
+html.e24v5 #e24v5 .v5-mp-rek .v5-mh a,html.e24v5 #e24v5.v5-sayfa-ana .v5-mp-rek .v5-mh a{color:var(--v5-yazi)!important;font-style:italic}
+html.e24v5 #e24v5 .v5-mp-rek .v5-manset-govde{background:#F1E8E0;padding:16px;outline:1px solid #E0CDBE}
+html.e24v5 #e24v5 .v5-mp-rek-not{margin:12px 0 0;font:400 13px/1.45 var(--v5-sans);color:#5A4A3F}
+html.e24v5 #e24v5 .v5-mp-rek .v5-imza-rozet{border-radius:3px}
+@media (max-width:991.98px){html.e24v5 #e24v5 .v5-msayac{grid-template-columns:repeat(8,minmax(0,1fr));gap:0 4px;margin-top:20px}}
+@media (max-width:991.98px){html.e24v5 #e24v5 .v5-msayac-ad{grid-column:1/-1;padding:0 0 4px}}
+@media (max-width:991.98px){html.e24v5 #e24v5 .v5-ms-no{font-size:19px;text-align:center}}
+@media (max-width:991.98px){html.e24v5 #e24v5 .v5-ms-no small{display:none}}
+@media (max-width:991.98px){html.e24v5 #e24v5 .v5-ms-rek .v5-ms-no::after{content:"R";font:700 9px/1 var(--v5-sans);color:#5A4A3F;margin-left:1px}}
+@media (max-width:991.98px){html.e24v5 #e24v5 .v5-ms-on{display:none}}
+@media (max-width:991.98px){html.e24v5 #e24v5 .v5-mp-rek .v5-manset-govde{padding:12px}}
+@media (prefers-reduced-motion:reduce){html.e24v5 #e24v5 .v5-ms-aktif .v5-ms-iz i{animation:none;width:100%}}
+@media (prefers-reduced-motion:reduce){html.e24v5 #e24v5 .v5-mp{animation:none}}
