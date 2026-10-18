@@ -743,3 +743,4 @@ html.e24v5 #e24v5 .v5-govde table td:not(.e24-sayi),html.e24v5 #e24v5 .v5-govde 
 html.e24v5 #e24v5 .v5-govde table td:first-child{min-width:8em}
 html.e24v5 #e24v5 .v5-govde table.e24-tablo-hiza td,html.e24v5 #e24v5 .v5-govde table.e24-tablo-hiza th{text-align:left!important}
 html.e24v5 #e24v5 .v5-govde table.e24-tablo-hiza td.e24-sayi,html.e24v5 #e24v5 .v5-govde table.e24-tablo-hiza th.e24-sayi{text-align:right!important;font-variant-numeric:tabular-nums;white-space:nowrap}
+html.e24v5 #e24v5 .v5-govde table th,html.e24v5 #e24v5 .e24-haber table th{padding-left:12px!important;padding-right:12px!important}
