@@ -867,3 +867,6 @@ html.e24v5 #e24v5 .v5-mp .e24-grafik.cizildi>.e24-g-satir,html.e24v5 #e24v5 .v5-
 @media (max-width:991.98px){html.e24v5 #e24v5 .v5-msayac-foto .v5-ms-no{margin-top:5px;font-size:15px;color:rgba(255,255,255,.78)!important;text-shadow:0 1px 2px rgba(0,0,0,.45)}}
 @media (max-width:991.98px){html.e24v5 #e24v5 .v5-msayac-foto .v5-ms-aktif .v5-ms-no{color:#fff!important}}
 @media (max-width:991.98px){html.e24v5 #e24v5 .v5-msayac-foto .v5-ms-rek .v5-ms-no::after{color:#fff}}
+@media (max-width:991.98px){html.e24v5 #e24v5 .v5-msayac.v5-msayac-foto{background:linear-gradient(to top,rgba(10,18,28,.72) 0,rgba(10,18,28,.34) 28%,rgba(10,18,28,0) 48%)}}
+@media (max-width:991.98px){html.e24v5 #e24v5 .v5-msayac-foto .v5-ms-iz{background:rgba(255,255,255,.5);height:4px}}
+@media (max-width:991.98px){html.e24v5 #e24v5 .v5-msayac-foto .v5-ms-no{font-size:16px;color:rgba(255,255,255,.9)!important}}
