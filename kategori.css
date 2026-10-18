@@ -890,6 +890,17 @@ html.e24v5.e24v5-hazir body>div.impression,html.e24v5.e24v5-hazir body>div.conta
 html.e24v5 #e24v5 .v5-me p{margin:0 0 8px;font:400 14px/1.5 var(--v5-sans);color:var(--v5-yazi2)}
 html.e24v5 #e24v5 .v5-me .v5-kaynak{margin:8px 0 0;padding-top:8px;border-top:1px solid var(--v5-cizgi);font:400 12px/1.4 var(--v5-sans);color:var(--v5-silik)}
 html.e24v5 #e24v5 .v5-mk{border-top:1px solid var(--v5-yazi);padding-top:12px}
+html.e24v5 #e24v5 .v5-mk-bas{margin:0;font:700 15px/1.3 var(--v5-sans);color:var(--v5-yazi)}
+html.e24v5 #e24v5 .v5-mk-alt{margin:3px 0 10px;font:400 12px/1.4 var(--v5-sans);color:var(--v5-silik)}
+html.e24v5 #e24v5 .v5-mk-satir{display:grid;grid-template-columns:150px minmax(0,1fr) auto;gap:10px;align-items:center;padding:5px 0;font:400 14px/1.3 var(--v5-sans);color:var(--v5-yazi2)}
+html.e24v5 #e24v5 .v5-mk-ad{min-width:0;overflow-wrap:anywhere}
+html.e24v5 #e24v5 .v5-mk-cubuk{display:block;height:10px;background:#F4EDE9}
+html.e24v5 #e24v5 .v5-mk-cubuk i{display:block;height:100%;background:#9AA7B4}
+html.e24v5 #e24v5 .v5-mk-satir b{min-width:48px;text-align:right;font:600 14px/1.3 var(--v5-sans);font-variant-numeric:tabular-nums;color:var(--v5-yazi)}
+html.e24v5 #e24v5 .v5-mk-satir.vurgu .v5-mk-ad{font-weight:700;color:var(--v5-yazi)}
+html.e24v5 #e24v5 .v5-mk-satir.vurgu .v5-mk-cubuk i{background:#B3261E}
+html.e24v5 #e24v5 .v5-mk-satir.vurgu b{color:#B3261E}
+@media (max-width:991.98px){html.e24v5 #e24v5 .v5-mk-satir{grid-template-columns:120px minmax(0,1fr) auto}}
 @media (max-width:575.98px){html.e24v5 #e24v5 .v5-rakam-satir .e24v5-rakam-izgara{grid-template-columns:minmax(0,1fr);gap:22px}}
 @media (max-width:575.98px){html.e24v5 #e24v5 .v5-rakam-satir .e24v5-rakam-izgara>a:nth-child(2n){border-left:0;padding-left:0}}
 @media (max-width:575.98px){html.e24v5 #e24v5 a.e24v5-rakam p{font-size:14px}}
@@ -1051,3 +1062,5 @@ html.e24v5 #e24v5 .e24v5-hgrafik .e24-g-damga,html.e24v5 .v5-manset-grafik .e24-
 html.e24v5 #e24v5 .e24-grafik .e24-g-sayi.dn{color:var(--v5-dusus)!important}
 html.e24v5 #e24v5 .e24-grafik .e24-g-sayi.up{color:var(--v5-yukselis)!important}
 html.e24v5 #e24v5 .v5-reklam300+.v5-eco{margin-top:28px}
+html.e24v5 #e24v5 .v5-mk:has(>.e24-grafik){border-top:0;padding-top:0}
+html.e24v5 #e24v5 .v5-mk>.e24-grafik{margin:0}
