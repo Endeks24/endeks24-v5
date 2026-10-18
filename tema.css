@@ -678,4 +678,4 @@ html.e24v5 #e24v5 .v5-mp .v5-imza{margin-bottom:12px}
 html.e24v5 #e24v5 .v5-mp .v5-manset-grafik.dolu{padding:14px 16px}
 @media (max-width:991.98px){html.e24v5 #e24v5 .v5-mp .v5-spot{font-size:16px;-webkit-line-clamp:4}}
 @media (max-width:991.98px){html.e24v5 #e24v5 .v5-mp .v5-manset-grafik.dolu{padding:12px}}
-html.e24v5 #e24v5 .v5-mp{min-height:var(--v5-mp-h,0px)}
+html.e24v5 #e24v5 .v5-mp .e24-grafik.cizildi>.e24-g-satir,html.e24v5 #e24v5 .v5-mp .e24-grafik>.mb-3,html.e24v5 #e24v5 .v5-mp .e24-grafik>.e24-g-damga{display:none!important}
