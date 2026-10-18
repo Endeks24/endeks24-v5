@@ -857,3 +857,13 @@ html.e24v5 #e24v5 .v5-mp .e24-grafik.cizildi>.e24-g-satir,html.e24v5 #e24v5 .v5-
 @media (min-width:992px){html.e24v5 #e24v5.v5-sayfa-ana .v5-mp .e24-grafik .e24-g-kaynak{margin-top:6px}}
 @media (min-width:992px){html.e24v5 #e24v5.v5-sayfa-ana .v5-mp .v5-manset-yan.v5-mg-sik .v5-spot{-webkit-line-clamp:2;margin-bottom:8px}}
 @media (min-width:992px){html.e24v5 #e24v5.v5-sayfa-ana .v5-mp .v5-manset-yan.v5-mg-sik .v5-imza{margin-bottom:8px}}
+@media (max-width:991.98px){html.e24v5 #e24v5 .v5-mp .v5-manset-foto{position:relative}}
+@media (max-width:991.98px){html.e24v5 #e24v5 .v5-msayac.v5-msayac-foto{position:absolute;left:0;right:0;top:0;aspect-ratio:860/504;margin:0;padding:0 10px 9px;display:grid;grid-template-columns:repeat(8,minmax(0,1fr));align-content:end;gap:0 4px;background:linear-gradient(to top,rgba(10,18,28,.62) 0,rgba(10,18,28,.28) 26%,rgba(10,18,28,0) 46%);pointer-events:none;z-index:2}}
+@media (max-width:991.98px){html.e24v5 #e24v5 .v5-msayac-foto .v5-msayac-ad{display:none}}
+@media (max-width:991.98px){html.e24v5 #e24v5 .v5-msayac-foto .v5-ms{pointer-events:auto;min-height:40px;padding:8px 0 4px}}
+@media (max-width:991.98px){html.e24v5 #e24v5 .v5-msayac-foto .v5-ms-iz{background:rgba(255,255,255,.38);height:3px}}
+@media (max-width:991.98px){html.e24v5 #e24v5 .v5-msayac-foto .v5-ms-iz i{background:#fff!important}}
+@media (max-width:991.98px){html.e24v5 #e24v5 .v5-msayac-foto .v5-ms-gecti .v5-ms-iz i{background:rgba(255,255,255,.8)!important}}
+@media (max-width:991.98px){html.e24v5 #e24v5 .v5-msayac-foto .v5-ms-no{margin-top:5px;font-size:15px;color:rgba(255,255,255,.78)!important;text-shadow:0 1px 2px rgba(0,0,0,.45)}}
+@media (max-width:991.98px){html.e24v5 #e24v5 .v5-msayac-foto .v5-ms-aktif .v5-ms-no{color:#fff!important}}
+@media (max-width:991.98px){html.e24v5 #e24v5 .v5-msayac-foto .v5-ms-rek .v5-ms-no::after{color:#fff}}
