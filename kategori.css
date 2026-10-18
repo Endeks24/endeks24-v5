@@ -1125,6 +1125,15 @@ html.e24v5 #e24v5 .v5-genislik{margin-bottom:10px}
 html.e24v5 #e24v5 .v5-genislik-bar{margin-bottom:22px}
 @media (min-width:992px){html.e24v5 #e24v5 .v5-uclu .v5-mobil-kart{display:none!important}}
 @media (max-width:991.98px){html.e24v5 #e24v5 .v5-kat-msol>.v5-ikinci+.v5-reklam300-mobil{margin-top:28px}}
+html.e24v5 #e24v5 .v5-mp[hidden]{display:none!important}
+html.e24v5 #e24v5 .v5-mp{animation:v5-mp-gir .35s ease-out}
 @keyframes v5-mp-gir{from{opacity:.3;transform:translateY(6px)}to{opacity:1;transform:none}}
 @keyframes v5-ms-dol{from{width:0}to{width:100%}}
+@media (prefers-reduced-motion:reduce){html.e24v5 #e24v5 .v5-mp{animation:none}}
 html.e24v5 #e24v5 .v5-hareket-alt{border-top:2px solid var(--v5-yazi);padding-top:18px;margin-top:8px}
+html.e24v5 #e24v5 .v5-mp .v5-spot{font-size:18px;line-height:1.5;margin-bottom:12px;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+html.e24v5 #e24v5 .v5-mp .v5-imza{margin-bottom:12px}
+html.e24v5 #e24v5 .v5-mp .v5-manset-grafik.dolu{padding:14px 16px}
+@media (max-width:991.98px){html.e24v5 #e24v5 .v5-mp .v5-spot{font-size:16px;-webkit-line-clamp:4}}
+@media (max-width:991.98px){html.e24v5 #e24v5 .v5-mp .v5-manset-grafik.dolu{padding:12px}}
+html.e24v5 #e24v5 .v5-mp{min-height:var(--v5-mp-h,0px)}
