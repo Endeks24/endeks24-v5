@@ -616,7 +616,7 @@ html.e24v5.e24v5-hazir body{padding-top:0!important}
 html.e24v5,html.e24v5.e24v5-hazir body{overflow-x:clip!important;max-width:100%}
 html.e24v5 #e24v5 .v5-govde .eh-tblwrap,html.e24v5 #e24v5 .v5-govde .e24-haber .eh-tblwrap{max-width:100%!important;overflow-x:auto!important;-webkit-overflow-scrolling:touch}
 html.e24v5 #e24v5 .v5-govde img,html.e24v5 #e24v5 .v5-govde iframe,html.e24v5 #e24v5 .v5-govde video{max-width:100%!important;height:auto}
-html.e24v5 #e24v5 .v5-makale,html.e24v5 #e24v5 .v5-govde{min-width:0;overflow-wrap:break-word}
+html.e24v5 #e24v5 .v5-govde,html.e24v5 #e24v5 .v5-makale{min-width:0;overflow-wrap:break-word}
 @media (min-width:768px) and (max-width:1279.98px){html.e24v5 #e24v5 .c{padding-left:24px;padding-right:24px}}
 html.e24v5 #e24v5 .v5-haber-izgara>*{min-width:0}
 html.e24v5 #e24v5 .v5-haber-foto img,html.e24v5 #e24v5 .v5-makale img{max-width:100%;height:auto}
@@ -651,3 +651,9 @@ html.e24v5 #e24v5 .e24-grafik .e24-g-sayi.up{color:var(--v5-yukselis)!important}
 html.e24v5 #e24v5 .v5-reklam300+.v5-eco{margin-top:28px}
 html.e24v5 #e24v5 .v5-mk:has(>.e24-grafik){border-top:0;padding-top:0}
 html.e24v5 #e24v5 .v5-mk>.e24-grafik{margin:0}
+html.e24v5 #e24v5 .v5-govde table td,html.e24v5 #e24v5 .v5-govde table th{overflow-wrap:break-word!important;word-break:normal!important;hyphens:manual!important;vertical-align:top}
+html.e24v5 #e24v5 .v5-govde .eh-tblwrap table,html.e24v5 #e24v5 .v5-govde table{min-width:0!important;max-width:100%;width:100%!important}
+html.e24v5 #e24v5 .v5-govde table td:not(.e24-sayi),html.e24v5 #e24v5 .v5-govde table th:not(.e24-sayi){white-space:normal!important}
+html.e24v5 #e24v5 .v5-govde table td:first-child{min-width:8em}
+html.e24v5 #e24v5 .v5-govde table.e24-tablo-hiza td,html.e24v5 #e24v5 .v5-govde table.e24-tablo-hiza th{text-align:left!important}
+html.e24v5 #e24v5 .v5-govde table.e24-tablo-hiza td.e24-sayi,html.e24v5 #e24v5 .v5-govde table.e24-tablo-hiza th.e24-sayi{text-align:right!important;font-variant-numeric:tabular-nums;white-space:nowrap}
