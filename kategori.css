@@ -1119,3 +1119,5 @@ html.e24v5 #e24v5 .v5-hareket-tablo th:nth-child(4),html.e24v5 #e24v5 .v5-hareke
 @media (max-width:991.98px){html.e24v5 #e24v5 .v5-hareket-tablo th{padding:8px 6px 8px 0;font-size:11px}}
 @media (max-width:991.98px){html.e24v5 #e24v5 .v5-hareket-tablo td::before{content:none!important}}
 @media (max-width:991.98px){html.e24v5 #e24v5 .v5-hareket-tablo td:last-child,html.e24v5 #e24v5 .v5-hareket-tablo th:last-child{padding-right:0}}
+html.e24v5 #e24v5 .v5-genislik{margin-bottom:10px}
+html.e24v5 #e24v5 .v5-genislik-bar{margin-bottom:22px}
