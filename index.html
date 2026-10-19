@@ -36,7 +36,7 @@ async function basla(){
   try{
     yaz('Hazırlanıyor…');
     var m=await (await fetch(AS+'/.well-known/oauth-authorization-server')).json();
-    var r=await fetch(m.registration_endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({client_name:'Endeks24 veri programi',redirect_uris:[DON],grant_types:['authorization_code'],response_types:['code'],token_endpoint_auth_method:'none'})});
+    var r=await fetch(m.registration_endpoint,{method:'POST',headers:{'Content-Type':'text/plain'},body:JSON.stringify({client_name:'Endeks24 veri programi',redirect_uris:[DON],grant_types:['authorization_code'],response_types:['code'],token_endpoint_auth_method:'none'})});
     if(!r.ok)throw new Error('Kayıt reddedildi ('+r.status+'): '+(await r.text()).slice(0,200));
     var c=await r.json(),v=rast(48),s=rast(16);
     var ch=b64(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(v)));
