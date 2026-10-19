@@ -60,7 +60,10 @@ async function don(q){
       '<p>Bu süreyi Claude\'a yazın. Ardından anahtarı GitHub\'a kaydedin:</p><ol><li>Aşağıdaki <b>Anahtarı kopyala</b> düğmesine basın.</li><li><b>GitHub\'da kaydet</b> düğmesiyle açılan sayfada Name alanına <b>FINTABLES</b> yazın, Secret alanına yapıştırın, <b>Add secret</b> deyin.</li></ol>'+
       '<textarea id="p" readonly></textarea><button id="kop">Anahtarı kopyala</button><a class="dugme ikinci" target="_blank" rel="noopener" href="https://github.com/Endeks24/endeks24-v5/settings/secrets/actions/new">GitHub\'da kaydet</a><p class="soluk">Anahtarı başka bir yere yapıştırmayın, Claude\'a da göndermeyin. Sayfayı kapatınca anahtar burada da kalmaz.</p>';
     var p=document.getElementById('p');p.value=paket;
-    document.getElementById('kop').onclick=function(){p.select();(navigator.clipboard?navigator.clipboard.writeText(paket):Promise.reject()).then(function(){document.getElementById('kop').textContent='Kopyalandı';},function(){document.execCommand('copy');document.getElementById('kop').textContent='Kopyalandı';});};
+    document.getElementById('kop').onclick=function(){var dg=this;
+      function elle(){p.removeAttribute('readonly');p.focus();p.setSelectionRange(0,paket.length);var ok=false;try{ok=document.execCommand('copy');}catch(e){}p.setAttribute('readonly','');
+        dg.textContent=ok?'Kopyalandı':'Kutuyu basılı tutup Tümünü Seç ve Kopyala deyin';}
+      if(navigator.clipboard&&window.isSecureContext)navigator.clipboard.writeText(paket).then(function(){dg.textContent='Kopyalandı';},elle);else elle();};
   }catch(e){yaz('Anahtar alınamadı: '+e.message,'kotu');}
 }
 document.getElementById('basla').onclick=basla;
