@@ -1,0 +1,9 @@
+anahtar uzunlugu: 10
+== https://evds3.tcmb.gov.tr/igmevdsms-dis/series=TP.DK.USD.A&startDate=13-10-2026&endDate=19-10-2026&type=json
+{"totalCount":7,"items":[{"Tarih":"13-10-2026","TP_DK_USD_A":"49.24710000","UNIXTIME":{"$numberLong":"1791838800"}},{"Tarih":"14-10-2026","TP_DK_USD_A":"49.27940000","UNIXTIME":{"$numberLong":"1791925200"}},{"Tarih":"15-10-2026","TP_DK_USD_A":"49.30410000","UNIXTIME":{"$numberLong":"1792011600"}},{"Tarih":"16-10-2026","TP_DK_USD_A":"49.33150000","UNIXTIME":{"$numberLong":"1792098000"}},{"Tarih":"17-10-2026","TP_DK_USD_A":null,"UNIXTIME":{"$numberLong":"1792184400"}},{"Tarih":"18-10-2026","TP_DK_USD_A":null,"UNIXTIME":{"$numberLong":"1792270800"}},{"Tarih":"19-10-2026","TP_DK_USD_A":"49.35730000","UNIXTIME":{"$numberLong":"1792357200"}}]}
+HTTP 200
+
+== https://evds2.tcmb.gov.tr/service/evds/series=TP.DK.USD.A&startDate=13-10-2026&endDate=19-10-2026&type=json
+
+HTTP 302
+
