@@ -842,7 +842,7 @@ html.e24v5 #e24v5 .v5-msayac{margin-top:14px}
 @media (max-width:991.98px){html.e24v5 #e24v5 .v5-mp .v5-manset-grafik.dolu,html.e24v5 #e24v5 .v5-mp .v5-manset-grafik.v5-me-dolu{padding:12px}}
 @media (max-width:991.98px){html.e24v5 #e24v5 .v5-msayac{margin-top:12px}}
 @media (min-width:992px){html.e24v5 #e24v5.v5-sayfa-ana .v5-mp .v5-manset-govde{align-items:stretch}}
-@media (min-width:992px){html.e24v5 #e24v5.v5-sayfa-ana .v5-mp .v5-manset-yan{contain:size;align-self:stretch;display:flex;flex-direction:column;overflow:hidden;min-height:0}}
+@media (min-width:992px){html.e24v5 #e24v5.v5-sayfa-ana .v5-mp .v5-manset-yan{align-self:start;display:flex;flex-direction:column;overflow:hidden;min-height:0}}
 @media (min-width:992px){html.e24v5 #e24v5.v5-sayfa-ana .v5-mp .v5-manset-yan .v5-spot{-webkit-line-clamp:3;flex:none}}
 @media (min-width:992px){html.e24v5 #e24v5.v5-sayfa-ana .v5-mp .v5-manset-yan .v5-imza{flex:none}}
 @media (min-width:992px){html.e24v5 #e24v5.v5-sayfa-ana .v5-mp .v5-manset-grafik{flex:1 1 auto;min-height:0;overflow:hidden;position:relative}}
