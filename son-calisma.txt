@@ -1,0 +1,2 @@
+TAMAM: cikti/veri.json 83844 bayt; seans 2026-10-19T18:10:00+03:00 ; kripto 2026-10-19T20:37:00+03:00
+2026-10-19T17:37:58Z --kripto-yalniz
