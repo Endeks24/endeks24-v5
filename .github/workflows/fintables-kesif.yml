@@ -16,7 +16,7 @@ jobs:
         run: |
           mkdir -p kesif; o=kesif/sonuc.txt; : > $o
           echo "anahtar uzunlugu: ${#K}" >> $o
-          for u in "https://evds3.tcmb.gov.tr/igmevdsms-dis/series=TP.DK.USD.A&startDate=13-10-2026&endDate=19-10-2026&type=json" "https://evds2.tcmb.gov.tr/service/evds/series=TP.DK.USD.A&startDate=13-10-2026&endDate=19-10-2026&type=json"; do
+          for u in "https://evds3.tcmb.gov.tr/igmevdsms-dis/datagroup=bie_abres2&startDate=01-10-2026&endDate=19-10-2026&type=json" "https://evds3.tcmb.gov.tr/igmevdsms-dis/serieList/type=json&code=bie_kkhartut"; do
             echo "== $u" >> $o; curl -sS -m 30 -w "\nHTTP %{http_code}\n" -H "key: $K" "$u" | head -c 1200 >> $o; echo >> $o; done
       - name: Yaz
         run: |
