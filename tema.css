@@ -691,3 +691,5 @@ html.e24v5 #e24v5 .v5-mp .e24-grafik .e24-g-alt{display:-webkit-box;-webkit-line
 @media (min-width:992px){html.e24v5 #e24v5 .v5-mp .e24-grafik.e24-g-tur-sayi .e24-g-sayi{font-size:min(60px,11.5cqi)!important}}
 @media (min-width:992px){html.e24v5 #e24v5 .v5-mp .e24-g-tur-sayi .e24-g-baslik{font-size:18px!important}}
 @media (min-width:992px){html.e24v5 #e24v5 .v5-mp .v5-manset-grafik:has(.e24-g-tur-sayi){display:flex;flex-direction:column}}
+html.e24v5.e24v5-tema main.single .card.rounded-0.p-5 a[href]:not(.btn){color:var(--v5-etiket);font-weight:600;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;text-decoration-color:color-mix(in srgb,var(--v5-etiket) 45%,transparent)}
+html.e24v5.e24v5-tema main.single .card.rounded-0.p-5 a[href]:not(.btn):hover{color:var(--v5-vurgu);text-decoration-color:currentColor}
