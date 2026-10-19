@@ -679,3 +679,10 @@ html.e24v5 #e24v5 .v5-mp .e24-grafik .e24-g-sayi{font-size:clamp(30px,10vw,46px)
 html.e24v5 #e24v5 .v5-mp .e24-grafik .e24-g-baslik{font-size:16px!important;line-height:1.3!important}
 html.e24v5 #e24v5 .v5-mp .e24-grafik .e24-g-alt{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 @media (min-width:992px){html.e24v5 #e24v5 .v5-mp .e24-grafik .e24-g-sayi{font-size:clamp(30px,3.2vw,46px)!important}}
+@media (min-width:992px){html.e24v5 #e24v5 .v5-mp .e24-grafik.e24-g-tur-sayi{display:flex;flex-direction:column;justify-content:center;height:100%}}
+@media (min-width:992px){html.e24v5 #e24v5 .v5-mp .e24-g-tur-sayi .e24-g-sayi-blok{flex:1;align-content:center;gap:12px}}
+@media (min-width:992px){html.e24v5 #e24v5 .v5-mp .e24-g-tur-sayi .e24-g-alt{-webkit-line-clamp:4}}
+@media (min-width:992px){html.e24v5 #e24v5 .v5-mp .e24-grafik.e24-g-tur-sayi{container-type:inline-size}}
+@media (min-width:992px){html.e24v5 #e24v5 .v5-mp .e24-grafik.e24-g-tur-sayi .e24-g-sayi{font-size:min(60px,11.5cqi)!important}}
+@media (min-width:992px){html.e24v5 #e24v5 .v5-mp .e24-g-tur-sayi .e24-g-baslik{font-size:18px!important}}
+@media (min-width:992px){html.e24v5 #e24v5 .v5-mp .v5-manset-grafik:has(.e24-g-tur-sayi){display:flex;flex-direction:column}}
