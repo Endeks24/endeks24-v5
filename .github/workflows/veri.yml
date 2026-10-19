@@ -30,6 +30,7 @@ jobs:
           H=$(TZ=Europe/Istanbul date +%u%H%M)
           EK=""; g=${H:0:1}; s=$((10#${H:1:4}))
           if [ "$g" -gt 5 ] || [ $s -lt 1000 ] || [ $s -gt 1830 ]; then EK="--kripto-yalniz"; fi
+          if [ "${{ github.event_name }}" != schedule ]; then EK=""; fi  # elle ya da kod değişince tam deneme
           python3 veri-programi/fintables_veri.py cikti/veri.json $EK 2>&1 | tee cikti/son-calisma.txt || echo "BASARISIZ" >> cikti/son-calisma.txt
           echo "$(date -u +%FT%TZ) $EK" >> cikti/son-calisma.txt
       - name: Yaz
