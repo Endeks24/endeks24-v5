@@ -1,3 +1,2 @@
-BIST 100 günü yüzde 2,49 düşüşle 11.430,14 puandan kapattı. Endeksteki 100 hisseden 85 hisse geriledi, 12 hisse yükseldi.
-TAMAM: cikti/veri.json 83844 bayt; seans 2026-10-19T18:10:00+03:00 ; kripto 2026-10-19T20:42:00+03:00
-2026-10-19T17:42:30Z 
+TAMAM: cikti/veri.json 83844 bayt; seans 2026-10-19T18:10:00+03:00 ; kripto 2026-10-19T21:06:00+03:00
+2026-10-19T18:06:33Z --kripto-yalniz
