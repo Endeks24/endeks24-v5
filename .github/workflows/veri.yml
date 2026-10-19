@@ -1,0 +1,41 @@
+name: endeks24-veri
+# Seans boyunca 15 dakikada bir BIST + kripto; geri kalan saatlerde saat başı yalnız kripto. Sonuç "veri" dalına yazılır.
+on:
+  schedule:
+    - cron: '*/15 7-15 * * 1-5'
+    - cron: '41 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [veri-programi/**, .github/workflows/veri.yml]
+permissions:
+  contents: write
+concurrency:
+  group: endeks24-veri
+  cancel-in-progress: false
+jobs:
+  veri:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Veri dalı
+        run: |
+          git fetch origin veri:veri 2>/dev/null && git worktree add -q cikti veri || { git worktree add -q --orphan -b veri cikti 2>/dev/null || { mkdir cikti; cd cikti; git init -q -b veri; }; }
+      - name: Program
+        env:
+          FINTABLES: ${{ secrets.FINTABLES }}
+        run: |
+          set -o pipefail
+          H=$(TZ=Europe/Istanbul date +%u%H%M)
+          EK=""; g=${H:0:1}; s=$((10#${H:1:4}))
+          if [ "$g" -gt 5 ] || [ $s -lt 1000 ] || [ $s -gt 1830 ]; then EK="--kripto-yalniz"; fi
+          python3 veri-programi/fintables_veri.py cikti/veri.json $EK 2>&1 | tee cikti/son-calisma.txt || echo "BASARISIZ" >> cikti/son-calisma.txt
+          echo "$(date -u +%FT%TZ) $EK" >> cikti/son-calisma.txt
+      - name: Yaz
+        run: |
+          cd cikti
+          git config user.name e24-veri; git config user.email e24-veri@users.noreply.github.com
+          git add -A; git commit -qm "veri $(TZ=Europe/Istanbul date '+%d.%m %H.%M')" || exit 0
+          git push -q origin HEAD:veri
+          grep -q BASARISIZ son-calisma.txt && exit 1 || true
