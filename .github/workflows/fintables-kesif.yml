@@ -1,33 +1,24 @@
-name: fintables-kesif
+name: evds-deneme
 on:
   push:
     branches: [veri-kesif]
-    paths: [.github/workflows/fintables-kesif.yml, kesif/tetik]
+    paths: [.github/workflows/fintables-kesif.yml]
 permissions:
   contents: write
 jobs:
-  kesif:
+  deneme:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Keşif
+      - name: EVDS
+        env:
+          K: ${{ secrets.EVDS }}
         run: |
           mkdir -p kesif; o=kesif/sonuc.txt; : > $o
-          b=https://evo.fintables.com
-          for u in /.well-known/oauth-protected-resource /.well-known/oauth-protected-resource/mcp /.well-known/oauth-authorization-server /.well-known/openid-configuration; do
-            echo "== GET $u" >> $o; curl -sS -m 20 -i "$b$u" | head -c 3000 >> $o; echo >> $o; done
-          echo "== POST /mcp (yetkisiz)" >> $o
-          curl -sS -m 20 -i -X POST $b/mcp -H 'Content-Type: application/json' -H 'Accept: application/json, text/event-stream' \
-            -d '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-06-18","capabilities":{},"clientInfo":{"name":"e24","version":"0"}}}' | head -c 2000 >> $o; echo >> $o
-          O=https://endeks24.github.io
-          for u in /register /token /.well-known/oauth-authorization-server; do
-            echo "== OPTIONS $u" >> $o; curl -sS -m 20 -i -X OPTIONS "$b$u" -H "Origin: $O" -H 'Access-Control-Request-Method: POST' -H 'Access-Control-Request-Headers: content-type' | grep -iv 'nel:\|report-to\|set-cookie\|cf-ray\|alt-svc\|strict' | head -c 1500 >> $o; echo >> $o; done
-          echo "== POST /register text/plain" >> $o
-          curl -sS -m 20 -i -X POST $b/register -H "Origin: $O" -H 'Content-Type: text/plain' -d '{"client_name":"e24","redirect_uris":["https://endeks24.github.io/endeks24-v5/"],"token_endpoint_auth_method":"none"}' | grep -iv 'nel:\|report-to\|set-cookie\|cf-ray\|alt-svc\|strict' | head -c 1500 >> $o; echo >> $o
-          echo "== POST /token form (geçersiz kod)" >> $o
-          curl -sS -m 20 -i -X POST $b/token -H "Origin: $O" -d 'grant_type=authorization_code&code=x&client_id=x&code_verifier=x&redirect_uri=x' | grep -iv 'nel:\|report-to\|set-cookie\|cf-ray\|alt-svc\|strict' | head -c 1500 >> $o; echo >> $o
-          date -u >> $o
-      - name: Sonucu yaz
+          echo "anahtar uzunlugu: ${#K}" >> $o
+          for u in "https://evds3.tcmb.gov.tr/igmevdsms-dis/series=TP.DK.USD.A&startDate=13-10-2026&endDate=19-10-2026&type=json" "https://evds2.tcmb.gov.tr/service/evds/series=TP.DK.USD.A&startDate=13-10-2026&endDate=19-10-2026&type=json"; do
+            echo "== $u" >> $o; curl -sS -m 30 -w "\nHTTP %{http_code}\n" -H "key: $K" "$u" | head -c 1200 >> $o; echo >> $o; done
+      - name: Yaz
         run: |
           git config user.name e24-bot; git config user.email e24-bot@users.noreply.github.com
-          git add kesif/sonuc.txt; git commit -m "kesif sonucu" || true; git push
+          git add kesif/sonuc.txt; git commit -qm "evds deneme sonucu"; git push
