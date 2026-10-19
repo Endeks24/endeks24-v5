@@ -19,6 +19,8 @@ jobs:
           echo "== POST /mcp (yetkisiz)" >> $o
           curl -sS -m 20 -i -X POST $b/mcp -H 'Content-Type: application/json' -H 'Accept: application/json, text/event-stream' \
             -d '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-06-18","capabilities":{},"clientInfo":{"name":"e24","version":"0"}}}' | head -c 2000 >> $o; echo >> $o
+          echo "== POST /register" >> $o
+          curl -sS -m 20 -X POST $b/register -H 'Content-Type: application/json' -d '{"client_name":"Endeks24 deneme","redirect_uris":["https://endeks24.github.io/endeks24-v5/"],"grant_types":["authorization_code"],"response_types":["code"],"token_endpoint_auth_method":"none"}' | head -c 1500 >> $o; echo >> $o
           date -u >> $o
       - name: Sonucu yaz
         run: |
