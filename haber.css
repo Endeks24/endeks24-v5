@@ -686,3 +686,9 @@ html.e24v5 #e24v5 .v5-mp .e24-grafik .e24-g-alt{display:-webkit-box;-webkit-line
 @media (min-width:992px){html.e24v5 #e24v5 .v5-mp .e24-grafik.e24-g-tur-sayi .e24-g-sayi{font-size:min(60px,11.5cqi)!important}}
 @media (min-width:992px){html.e24v5 #e24v5 .v5-mp .e24-g-tur-sayi .e24-g-baslik{font-size:18px!important}}
 @media (min-width:992px){html.e24v5 #e24v5 .v5-mp .v5-manset-grafik:has(.e24-g-tur-sayi){display:flex;flex-direction:column}}
+html.e24v5 #e24v5 .v5-konu-bag{border-top:2px solid var(--v5-yazi);margin:28px 0 8px;padding-top:12px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px}
+html.e24v5 #e24v5 .v5-konu-bag-l{display:flex;flex-wrap:wrap;gap:8px;flex:1;min-width:0}
+html.e24v5 #e24v5 .v5-konu-cip{display:inline-block;padding:6px 12px;border:1px solid var(--v5-cizgi,#d9cfc4);border-radius:999px;font:600 14px/1.2 var(--v5-sans);color:var(--v5-yazi);text-decoration:none;background:var(--v5-kutu)}
+html.e24v5 #e24v5 .v5-konu-cip:hover{border-color:var(--v5-vurgu,#1f5fa8);color:var(--v5-vurgu,#1f5fa8)}
+html.e24v5 #e24v5 .v5-konu-rehber::before{content:"Rehber · ";font-weight:400;opacity:.75}
+html.e24v5 #e24v5 .v5-konu-tum{font:600 13px/1.2 var(--v5-sans);color:var(--v5-vurgu,#1f5fa8);text-decoration:none;white-space:nowrap}
