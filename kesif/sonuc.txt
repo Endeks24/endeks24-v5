@@ -1,0 +1,94 @@
+== GET /.well-known/oauth-protected-resource
+HTTP/2 401 
+date: Mon, 19 Oct 2026 17:19:18 GMT
+content-type: application/octet-stream
+content-length: 12
+access-control-allow-origin: *
+vary: Origin
+www-authenticate: Bearer realm="http://evo.fintables.com/.well-known/oauth-protected-resource",error="invalid_request",error_description="no authorization included in request"
+cf-cache-status: DYNAMIC
+set-cookie: __cflb=02DiuEFrHUFmRVqA29DH2JqTMBS6jX1NDqhvy2ayp2zrG; HttpOnly; SameSite=Lax; Path=/; Expires=Tue, 20 Oct 2026 16:19:18 GMT
+strict-transport-security: max-age=15552000; includeSubDomains; preload
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=fVDFRr8XiwrbrWag005Nmh5rov2PpTc3t5hG1WZNAahaHoR%2FJbRwcrwy70qAnNqj9GejkYClSMxf5iKLiYQFh5b95uQVWks8M%2BThOOzLP7UcblxkIq60BnOW51A3N1JKQ0mK"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-ray: a4d1726dca1d56de-DUB
+alt-svc: h3=":443"; ma=86400
+
+Unauthorized
+== GET /.well-known/oauth-protected-resource/mcp
+HTTP/2 200 
+date: Mon, 19 Oct 2026 17:19:19 GMT
+content-type: application/json
+content-length: 98
+access-control-allow-origin: *
+vary: Origin
+cf-cache-status: DYNAMIC
+set-cookie: __cflb=02DiuEFrHUFmRVqA29DH2S2wzewtEVGdJ3xDB9rZop6Sp; HttpOnly; SameSite=Lax; Path=/; Expires=Tue, 20 Oct 2026 16:19:19 GMT
+strict-transport-security: max-age=15552000; includeSubDomains; preload
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=2p0hQ0wJeIMjQLpGs%2B40JaonMVYzlcncgLKIhHPzl%2B7HjA5mgBVYSeUiGNMTZL2zQBKdFu8r0NUwAf4TzSPi7uqDHPTJqqcW4UaifUY4vYowLqF1blPG7Avrj1vPC7DShKej"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-ray: a4d17270d98f79df-DUB
+alt-svc: h3=":443"; ma=86400
+
+{"resource":"https://evo.fintables.com/mcp","authorization_servers":["https://evo.fintables.com"]}
+== GET /.well-known/oauth-authorization-server
+HTTP/2 200 
+date: Mon, 19 Oct 2026 17:19:19 GMT
+content-type: application/json
+content-length: 389
+access-control-allow-origin: *
+vary: Origin
+cf-cache-status: DYNAMIC
+set-cookie: __cflb=02DiuEFrHUFmRVqA29DH2JqTMBS6jX1NDrSkVE9dSJfLg; HttpOnly; SameSite=Lax; Path=/; Expires=Tue, 20 Oct 2026 16:19:19 GMT
+strict-transport-security: max-age=15552000; includeSubDomains; preload
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=3vrj771CuUB9bzv1KQaJfNOBz0kN%2BbJvItDApwnIp3lGTn0sUBRfZTEIl2FtsRdobLjUPvQ0n4ELJMNYOXDwNeVP0gGDoX5axZ78pLBhpkY6ZqhWoocrg4W4CEVmBqQZzeTj"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-ray: a4d17273e917d944-DUB
+alt-svc: h3=":443"; ma=86400
+
+{"issuer":"https://evo.fintables.com","authorization_endpoint":"https://evo.fintables.com/authorize","token_endpoint":"https://evo.fintables.com/token","registration_endpoint":"https://evo.fintables.com/register","response_types_supported":["code"],"grant_types_supported":["authorization_code"],"code_challenge_methods_supported":["S256"],"token_endpoint_auth_methods_supported":["none"]}
+== GET /.well-known/openid-configuration
+HTTP/2 401 
+date: Mon, 19 Oct 2026 17:19:20 GMT
+content-type: application/octet-stream
+content-length: 12
+access-control-allow-origin: *
+vary: Origin
+www-authenticate: Bearer realm="http://evo.fintables.com/.well-known/openid-configuration",error="invalid_request",error_description="no authorization included in request"
+cf-cache-status: DYNAMIC
+set-cookie: __cflb=0H28v3T2Feu4EYrEYw22MJGcnK7ZLPNNkvuoAwJmPEC; HttpOnly; SameSite=Lax; Path=/; Expires=Tue, 20 Oct 2026 16:19:20 GMT
+strict-transport-security: max-age=15552000; includeSubDomains; preload
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=%2B2JkorLP9m0ZYYHBXwIxoWss1yDuAzAwjkrY8maDBB7PAU7zI59WpLiuD0%2BJMASLrUB21YUmq1iPeanASTbJdOV5m%2BccV2OLFHoHZJ9hDf%2FQ0xrNHeMf7b7d5Yy3lSFy7NCG"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-ray: a4d172770fd57dcf-DUB
+alt-svc: h3=":443"; ma=86400
+
+Unauthorized
+== POST /mcp (yetkisiz)
+HTTP/2 401 
+date: Mon, 19 Oct 2026 17:19:20 GMT
+content-type: application/json
+content-length: 54
+access-control-allow-origin: *
+vary: Origin
+www-authenticate: Bearer resource_metadata="https://evo.fintables.com/.well-known/oauth-protected-resource/mcp"
+cf-cache-status: DYNAMIC
+set-cookie: __cflb=0H28v3T2Feu4EYrEYw22MJGcnK7ZLPNNkvuoAwJmPEC; HttpOnly; SameSite=Lax; Path=/; Expires=Tue, 20 Oct 2026 16:19:20 GMT
+strict-transport-security: max-age=15552000; includeSubDomains; preload
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=GKY1ANPIqkS2sEKfCjq9%2BmDNXxz6LbIYMNFpF9%2FBScbQWd2gopRrUXW0%2FoyH1UkXV9x7ubt4rU1bx1Rcpm6Med2RuyxD2u7vo9AaQXVHPIJIxnPkXfk9joYRnJqJ8oXXwZty"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-ray: a4d17279fb85b350-DUB
+alt-svc: h3=":443"; ma=86400
+
+{"error":"Missing or malformed Authorization header."}
+Mon Oct 19 17:19:20 UTC 2026
