@@ -258,7 +258,7 @@ def kripto(y, simdi):
     v['satirlar'] = yeni; v['tarih'] = simdi.replace(second=0, microsecond=0).isoformat(); v['kaynak'] = 'Coinbase'
 
 
-RAKAM_SURUM = 3
+RAKAM_SURUM = 4
 
 
 def ozne(bas):
@@ -309,7 +309,15 @@ def rakamlar(y, simdi, onbellek):
                 h1b = re.search(r'<h1[^>]*>(.*?)</h1>', h, re.S)
                 oz = ozne(html.unescape(re.sub(r'<[^>]+>', '', h1b.group(1))).strip() if h1b else '')
                 if oz and oz.lower() not in ac.lower():
-                    ac = oz + ': ' + ac
+                    # Halit Bey 20.10.2026: özneden sonra iki nokta değil virgül. Cümlenin ilk kelimesi metinde küçük harfle de
+                    # geçiyorsa (özel ad değilse) küçük harfe iner: "TMSF, kararın ..."
+                    w = ac.split(' ')[0]
+                    wk = {'I': 'ı', 'İ': 'i'}.get(w[:1], w[:1].lower()) + w[1:]
+                    duz = re.sub(r'<[^>]+>', ' ', h)
+                    kok = wk[:max(4, len(wk) - 3)]  # "kararın" -> "kara": ek almış hali de sayılır
+                    if wk != w and not re.search(r"['’]", w) and not w.isupper() and re.search(r'[^.!?:\s]\s+' + re.escape(kok), duz):
+                        ac = wk + ac[len(w):]
+                    ac = oz + ', ' + ac
                 # Masanın yazdığı açıklama (data-aciklama) her zaman önceliklidir
                 da = re.search(r'data-aciklama="([^"]+)"', m.group(1))
                 if da:
