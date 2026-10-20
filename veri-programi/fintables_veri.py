@@ -121,7 +121,9 @@ AY = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağusto
 
 
 def kisa(ad):
-    k = KISA.get(ad) or ad.split(',')[0].strip()
+    if ad in KISA:
+        return KISA[ad]
+    k = ad.split(',')[0].strip()
     k = k[:1] + k[1:].lower() if k.isupper() else k
     k = ' '.join([k.split(' ')[0]] + [w if w.isupper() else w.replace('I', 'ı').replace('İ', 'i').lower() for w in k.split(' ')[1:]])
     return k if len(k) <= 22 else k[:21].rstrip() + '…'
