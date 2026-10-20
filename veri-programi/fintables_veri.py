@@ -116,13 +116,14 @@ KISA = {'Servis Taşımacılığı ve Araç Kiralama': 'Araç kiralama', 'Cam, S
         'Dayanıklı Tüketim Ürünleri': 'Dayanıklı tüketim', 'Teknolojik Ürün Ticareti': 'Teknoloji ticareti',
         'Toptan ve Perakende Ticaret': 'Perakende ticaret', 'Kağıt ve Kağıt Ürünleri': 'Kağıt',
         'Tarım, Hayvancılık, Balıkçılık': 'Tarım', 'Tekstil, Giyim ve Deri': 'Tekstil', 'Gıda Perakendeciliği': 'Gıda perakende',
-        'Otomotiv Yan Sanayi': 'Otomotiv yan sanayi', 'Metal Eşya ve Makine': 'Metal eşya ve makine'}
+        'Otomotiv Yan Sanayi': 'Otomotiv yan sanayi', 'Gayrimenkul Yatırım Ortaklıkları': 'GYO', 'Metal Eşya ve Makine': 'Metal eşya ve makine'}
 AY = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık']
 
 
 def kisa(ad):
     k = KISA.get(ad) or ad.split(',')[0].strip()
     k = k[:1] + k[1:].lower() if k.isupper() else k
+    k = ' '.join([k.split(' ')[0]] + [w if w.isupper() else w.replace('I', 'ı').replace('İ', 'i').lower() for w in k.split(' ')[1:]])
     return k if len(k) <= 22 else k[:21].rstrip() + '…'
 
 
