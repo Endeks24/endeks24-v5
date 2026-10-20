@@ -267,9 +267,10 @@ html.e24v5 #e24v5 .v5-alt-kol a:hover{color:#fff}
 html.e24v5 .v5-alt-son{display:flex;justify-content:space-between;gap:16px;border-top:1px solid #33475B;padding-top:18px!important;padding-bottom:22px!important;font:400 12px/1.4 var(--v5-sans);color:#9AA8B6}
 @media (max-width:991.98px){html.e24v5 .v5-ust-ic{height:36px;font-size:12px}}
 @media (max-width:991.98px){html.e24v5 .v5-ust-sol>span:first-child{display:none}}
-@media (max-width:991.98px){html.e24v5 .v5-bas-ic{height:72px}}
+@media (max-width:991.98px){html.e24v5 .v5-bas-ic{height:68px}}
 @media (max-width:991.98px){html.e24v5 #e24v5 .v5-logo img{height:30px}}
-@media (max-width:991.98px){html.e24v5 .v5-slogan{display:none}}
+@media (max-width:991.98px){html.e24v5 #e24v5 .v5-bas-ic{position:relative;padding-bottom:22px}}
+@media (max-width:991.98px){html.e24v5 .v5-slogan{position:absolute;left:0;right:0;bottom:9px;margin:0!important;text-align:center;font-size:clamp(10.5px,3.2vw,12.5px);white-space:nowrap}}
 @media (max-width:991.98px){html.e24v5 .v5-menu-dugme,html.e24v5 .v5-ara-dugme{font-size:0;gap:0}}
 @media (max-width:991.98px){html.e24v5 .v5-menu-ic{justify-content:flex-start;gap:22px}}
 @media (max-width:991.98px){html.e24v5 .v5-serit-ic{display:flex;overflow-x:auto;scrollbar-width:none}}
