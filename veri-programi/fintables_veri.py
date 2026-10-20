@@ -136,10 +136,11 @@ def grafik(y, gr, dg, z, kapali, T):
     sat = [{'ad': kisa(a), 'deger': d} for a, d in ust] + [{'ad': 'BIST 100', 'deger': dg, 'vurgu': True}] + [{'ad': kisa(a), 'deger': d} for a, d in alt]
     sat.sort(key=lambda r: -r['deger'])
     gun = f'{z.day} {AY[z.month - 1]}'
+    ek = "'" + ('ta', 'ta', 'ta', 'da', 'ta', 'da', 'da', 'ta', 'de', 'de', 'da', 'ta')[z.month - 1]
     a1, a2 = kisa(ust[0][0]).lower(), kisa(alt[-1][0]).lower()
     y1, y2 = ('yükseldi', 'düştü') if kapali else ('yükseliyor', 'düşüyor')
-    adaylar = [f"{gun}{'de' if kapali else ' seansında'} en çok {a1} {y1}, en çok {a2} {y2}",
-               f"{gun}{'de' if kapali else ' seansında'} en çok {a1} {y1}, {a2} {y2}",
+    adaylar = [f"{gun}{ek if kapali else ' seansında'} en çok {a1} {y1}, en çok {a2} {y2}",
+               f"{gun}{ek if kapali else ' seansında'} en çok {a1} {y1}, {a2} {y2}",
                f"{gun}: en çok {a1} {y1}, {a2} {y2}", f"En çok {a1} {y1}, {a2} {y2}", f"{gun}: en çok {a1} {y1}"]
     bas = next((x for x in adaylar if len(x) <= 70), adaylar[-1][:70])
     y['rakamlar']['grafik'] = {'tarih': T, 'kaynak': 'Borsa İstanbul, Endeks24 hesaplaması', 'tur': 'cubuk', 'baslik': bas,
