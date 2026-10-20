@@ -373,6 +373,23 @@ def main():
     onceki = json.load(open(cikti)) if os.path.exists(cikti) else None
     taban = canli_taban(onceki and onceki.get('veri'))
     y = copy.deepcopy(taban)
+    # Kripto turunda BIST çekilmez: önceki çıktıdaki tablo sitedekinden yeniyse o kalır (20.10.2026: kripto turu
+    # bugünün seansını panelin dünkü verisiyle eziyordu)
+    if onceki and onceki.get('veri') is not y:
+        ov = onceki['veri']
+        def bul(v, yol):
+            for a in yol.split('.'):
+                v = v.get(a) if isinstance(v, dict) else None
+            return v
+        yollar = YOLLAR + ['sektorler.' + a for a in (ov.get('sektorler') or {})]
+        for yol in yollar:
+            eski, simd = bul(ov, yol), bul(y, yol)
+            if isinstance(eski, dict) and eski.get('tarih') and (not isinstance(simd, dict) or str(eski['tarih']) > str(simd.get('tarih') or '')):
+                *ust, son = yol.split('.')
+                hedef = y
+                for a in ust:
+                    hedef = hedef.setdefault(a, {})
+                hedef[son] = copy.deepcopy(eski)
     if '--kripto-yalniz' not in sys.argv:
         paket = os.environ.get('FINTABLES', '').strip()
         if not paket:
