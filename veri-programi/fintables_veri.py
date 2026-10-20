@@ -4,7 +4,7 @@ yalnız aşağıdaki tabloları günceller ve veri.json olarak yazar. Site bu do
 Anahtar FINTABLES ortam değişkeninde (GitHub secret); dosyaya ya da çıktıya yazılmaz.
 Kullanım: python3 fintables_veri.py <cikti.json> [--kripto-yalniz]
 """
-import base64, collections, copy, datetime, html, json, os, re, sys, urllib.request
+import base64, collections, copy, datetime, html, json, os, re, sys, time, urllib.request
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from veri_sema import dogrula
 
@@ -258,6 +258,18 @@ def kripto(y, simdi):
     v['satirlar'] = yeni; v['tarih'] = simdi.replace(second=0, microsecond=0).isoformat(); v['kaynak'] = 'Coinbase'
 
 
+RAKAM_SURUM = 2
+
+
+def ozne(bas):
+    """Başlığın öznesi: iki noktadan önceki kısa ad ("BIS:", "Şimşek:"), baştaki büyük harfli ad öbeği ("Garanti BBVA")
+    ya da baştaki kısaltma ("TCMB"). Bulunamazsa boş."""
+    m = re.match(r"([^\s:]+(?:\s[^\s:]+){0,2}):", bas)
+    if not m:
+        m = re.match(r"([A-ZÇĞİÖŞÜ][\w.&-]*(?:\s(?:[A-ZÇĞİÖŞÜ][\w.&-]*|ve))*\s[A-ZÇĞİÖŞÜ][\w.&-]*)", bas) or re.match(r"([A-ZÇĞİÖŞÜ]{2,}[\w.&-]*)", bas)
+    return re.sub(r"['’].*$", '', m.group(1)).strip() if m else ''
+
+
 def rakamlar(y, simdi, onbellek):
     """Haberlerdeki rakam işaretlerinden (span.e24-rakam, Kısaca kutusunda) "Rakamlarla piyasa" ve "Rakamlarla gündem"
     kartları. Halit Bey onayı 20.10.2026. Son 72 saatin haberleri; her bölümde en yeni 8. Haber başına bir işaret."""
@@ -265,10 +277,14 @@ def rakamlar(y, simdi, onbellek):
     adres = re.findall(r'<loc>([^<]+)</loc>', t)[:60]
     bulunan = []
     for u in adres:
-        if u not in onbellek:
+        # Haber sonradan düzeltilebilir (işaret, data-aciklama): kayıt saatte bir yeniden okunur
+        ok = onbellek.get(u)
+        if not isinstance(ok, dict) or 'k' not in ok or time.time() - ok.get('t', 0) > 3600:
             try:
                 h, _ = istek(u, zaman=25)
             except Exception:
+                if isinstance(ok, dict) and ok.get('k'):
+                    bulunan.append(ok['k'])  # okunamadıysa önceki kayıt kalır
                 continue
             m = re.search(r'<span class="e24-rakam"([^>]*)>([^<]+)</span>', h)
             kayit = None
@@ -279,10 +295,25 @@ def rakamlar(y, simdi, onbellek):
                 cumle = html.unescape(re.sub(r'\s+', ' ', cumle)).strip().rstrip('.')
                 parca = [p.strip() for p in cumle.split(';')]
                 sayi = html.unescape(m.group(2)).strip()
+                # Yalın sayının ardından gelen birim karta eklenir ("30" + "baz puan")
+                if re.fullmatch(r'[\d.,]+', sayi):
+                    bi = re.match(r"\s*((?:baz puan|puan|milyar|milyon|bin)(?:\s(?:lira|dolar|euro|TL))?|lira|dolar|euro|kuruş)\b",
+                                  html.unescape(re.sub(r'<[^>]+>', '', h[m.end():m.end() + 80])))
+                    if bi:
+                        sayi += ' ' + bi.group(1)
                 # Kart başlıksız gösterilir: açıklama tek başına anlaşılmalı. Cümle kısaysa tamamı, uzunsa sayının geçtiği bölüm.
                 ac = cumle if len(cumle) <= 150 else next((p for p in parca if sayi in p), cumle)
                 if len(ac) > 150:
                     ac = ac[:147].rsplit(' ', 1)[0] + '…'
+                # Cümlede haberin öznesi geçmiyorsa başa eklenir (Halit Bey 20.10.2026: "Garanti Bankası ve konu geçmesi gerekirdi")
+                h1b = re.search(r'<h1[^>]*>(.*?)</h1>', h, re.S)
+                oz = ozne(html.unescape(re.sub(r'<[^>]+>', '', h1b.group(1))).strip() if h1b else '')
+                if oz and oz.lower() not in ac.lower():
+                    ac = oz + ': ' + ac
+                # Masanın yazdığı açıklama (data-aciklama) her zaman önceliklidir
+                da = re.search(r'data-aciklama="([^"]+)"', m.group(1))
+                if da:
+                    ac = html.unescape(da.group(1)).strip()
                 ac = ac[:1].upper() + ac[1:]
                 ys = re.fullmatch(r'yüzde\s+([\d.,]+)', sayi)
                 if ys:
@@ -308,9 +339,9 @@ def rakamlar(y, simdi, onbellek):
                             kayit['oran'] = o
                     except ValueError:
                         pass
-            onbellek[u] = kayit
-        if onbellek.get(u):
-            bulunan.append(onbellek[u])
+            onbellek[u] = {'t': time.time(), 'k': kayit}
+        if onbellek.get(u, {}).get('k'):
+            bulunan.append(onbellek[u]['k'])
     sinir = simdi - datetime.timedelta(hours=72)
     def yeni_mi(k):
         try:
@@ -323,7 +354,7 @@ def rakamlar(y, simdi, onbellek):
         sat = [{x: v for x, v in k.items() if x != 'bolum'} for k in bulunan if kosul(k)][:8]
         if len(sat) >= 3:
             y['rakamlar'][ad] = {'tarih': T, 'kaynak': 'Endeks24', 'satirlar': sat}
-    for u in [u for u in onbellek if u not in adres]:
+    for u in [u for u in onbellek if u not in adres and not u.startswith('_')]:
         del onbellek[u]
     print('rakamlar:', {a: len(y['rakamlar'][a]['satirlar']) for a in ('piyasa', 'gundem')})
 
@@ -349,7 +380,10 @@ def main():
         kripto(y, simdi)
     except Exception as e:
         print('Uyarı: kripto alınamadı:', e)
+    # RAKAM_SURUM: açıklama kuralı değişince eski önbellek atılır, kartlar yeniden okunur
     onbellek = (onceki or {}).get('rakam_onbellek', {})
+    if onbellek.get('_surum') != RAKAM_SURUM:
+        onbellek = {'_surum': RAKAM_SURUM}
     try:
         rakamlar(y, simdi, onbellek)
     except Exception as e:
