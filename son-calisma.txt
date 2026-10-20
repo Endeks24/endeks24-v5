@@ -1,3 +1,3 @@
-BIST 100 saat 10.15 itibarıyla değişimsiz 11.429,96 puanda. Endeksteki 100 hisseden 40 hisse geriliyor, 50 hisse yükseliyor.
-TAMAM: cikti/veri.json 83332 bayt; seans 2026-10-20T10:15:00+03:00 ; kripto 2026-10-20T10:21:00+03:00
-2026-10-20T07:21:20Z 
+BIST 100 saat 10.25 itibarıyla yüzde 0,09 yükselişle 11.440,58 puanda. Endeksteki 100 hisseden 34 hisse geriliyor, 56 hisse yükseliyor.
+TAMAM: cikti/veri.json 83427 bayt; seans 2026-10-20T10:25:00+03:00 ; kripto 2026-10-20T10:30:00+03:00
+2026-10-20T07:30:59Z 
