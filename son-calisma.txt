@@ -1,2 +1,3 @@
-TAMAM: cikti/veri.json 83845 bayt; seans 2026-10-19T18:10:00+03:00 ; kripto 2026-10-20T09:07:00+03:00
-2026-10-20T06:07:44Z --kripto-yalniz
+BIST 100 saat 10.15 itibarıyla değişimsiz 11.429,96 puanda. Endeksteki 100 hisseden 40 hisse geriliyor, 50 hisse yükseliyor.
+TAMAM: cikti/veri.json 83332 bayt; seans 2026-10-20T10:15:00+03:00 ; kripto 2026-10-20T10:21:00+03:00
+2026-10-20T07:21:20Z 
