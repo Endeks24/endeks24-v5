@@ -12,7 +12,7 @@ MCP = 'https://evo.fintables.com/mcp'
 SITE = 'https://www.endeks24.com/'
 TR = datetime.timezone(datetime.timedelta(hours=3))
 PIYASA_BOLUM = ('PİYASALAR', 'KAP HABERLERİ', 'HALKA ARZ', 'KRİPTO', 'BIST 100', 'ALTIN', 'DOLAR VE DÖVİZ', 'FON KRİZİ', 'TCMB VE FAİZ')
-YOLLAR = ['rakamlar.piyasa', 'rakamlar.gundem', 'piyasa.seans', 'piyasa.hareket', 'piyasa.sektor_performans', 'fiyat.tum', 'hisseler', 'kap.temettu',
+YOLLAR = ['rakamlar.piyasa', 'rakamlar.gundem', 'rakamlar.grafik', 'piyasa.seans', 'piyasa.hareket', 'piyasa.sektor_performans', 'fiyat.tum', 'hisseler', 'kap.temettu',
           'doviz.kurlar', 'enerji.brent', 'kripto.varliklar']  # sektorler.* ayrıca
 
 
@@ -110,6 +110,43 @@ def tr(x, n=2):
     return f'{x:,.{n}f}'.replace(',', 'X').replace('.', ',').replace('X', '.')
 
 
+KISA = {'Servis Taşımacılığı ve Araç Kiralama': 'Araç kiralama', 'Cam, Seramik, Porselen': 'Cam ve seramik',
+        'Menkul Kıymet Yat. Ort.': 'Menkul kıymet YO', 'Girişim Sermayesi Yat. Ort.': 'Girişim sermayesi YO',
+        'Madencilik ve Taş Ocakçılığı': 'Madencilik', 'Enerji Üretim ve Dağıtım': 'Enerji üretim',
+        'Dayanıklı Tüketim Ürünleri': 'Dayanıklı tüketim', 'Teknolojik Ürün Ticareti': 'Teknoloji ticareti',
+        'Toptan ve Perakende Ticaret': 'Perakende ticaret', 'Kağıt ve Kağıt Ürünleri': 'Kağıt',
+        'Tarım, Hayvancılık, Balıkçılık': 'Tarım', 'Tekstil, Giyim ve Deri': 'Tekstil', 'Gıda Perakendeciliği': 'Gıda perakende',
+        'Otomotiv Yan Sanayi': 'Otomotiv yan sanayi', 'Metal Eşya ve Makine': 'Metal eşya ve makine'}
+AY = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık']
+
+
+def kisa(ad):
+    k = KISA.get(ad) or ad.split(',')[0].strip()
+    k = k[:1] + k[1:].lower() if k.isupper() else k
+    return k if len(k) <= 22 else k[:21].rstrip() + '…'
+
+
+def grafik(y, gr, dg, z, kapali, T):
+    """Ana sayfa "Haftanın grafiği": günün en çok yükselen ve düşen 3 sektörü (en az 5 hisseli sektörlerde hisselerin
+    ortalama değişimi) ve BIST 100. Halit Bey onayı 20.10.2026."""
+    ort = sorted([(a, r2(sum(l) / len(l))) for a, l in gr.items() if len(l) >= 5], key=lambda x: -x[1])
+    if len(ort) < 6:
+        return
+    ust, alt = ort[:3], ort[-3:]
+    sat = [{'ad': kisa(a), 'deger': d} for a, d in ust] + [{'ad': 'BIST 100', 'deger': dg, 'vurgu': True}] + [{'ad': kisa(a), 'deger': d} for a, d in alt]
+    sat.sort(key=lambda r: -r['deger'])
+    gun = f'{z.day} {AY[z.month - 1]}'
+    a1, a2 = kisa(ust[0][0]).lower(), kisa(alt[-1][0]).lower()
+    if kapali:
+        bas = f"{gun}'de en çok {a1} yükseldi, en çok {a2} düştü"
+    else:
+        bas = f"{gun} seansında en çok {a1} yükseliyor, {a2} düşüyor"
+    if len(bas) > 70:
+        bas = f"{gun}: en güçlü sektör {a1}"[:70]
+    y['rakamlar']['grafik'] = {'tarih': T, 'kaynak': 'Borsa İstanbul, Endeks24 hesaplaması', 'tur': 'cubuk', 'baslik': bas,
+                               'birim': '%', 'link': SITE + 'bist-100', 'satirlar': sat}
+
+
 def bist(y, ft, simdi):
     bugun = simdi.date().isoformat()
     ix = {r['endeks_kodu']: r for r in ft.sorgu("SELECT endeks_kodu, son_fiyat, son_fiyat_zaman_utc, gunici_getiri FROM endeksler_k WHERE endeks_kodu IN ('XU100','XU030','XU050','XUMAL','XUSIN','XHARZ') LIMIT 10")}
@@ -169,6 +206,7 @@ def bist(y, ft, simdi):
             gr[v['s']].append(v['g'])
     sp = y['piyasa']['sektor_performans']; sp['tarih'] = T
     sp['satirlar'] = sorted([{'ad': a, 'degisim': r2(sum(l) / len(l))} for a, l in gr.items() if len(l) >= 4], key=lambda z: -z['degisim'])
+    grafik(y, gr, dg, z, kapali, T)
     for ad, v in y['sektorler'].items():
         ks = [h['kod'] for h in v['hisseler'] if h['kod'] in B]
         if not ks:
