@@ -4,14 +4,15 @@ yalnız aşağıdaki tabloları günceller ve veri.json olarak yazar. Site bu do
 Anahtar FINTABLES ortam değişkeninde (GitHub secret); dosyaya ya da çıktıya yazılmaz.
 Kullanım: python3 fintables_veri.py <cikti.json> [--kripto-yalniz]
 """
-import base64, collections, copy, datetime, json, os, re, sys, urllib.request
+import base64, collections, copy, datetime, html, json, os, re, sys, urllib.request
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from veri_sema import dogrula
 
 MCP = 'https://evo.fintables.com/mcp'
 SITE = 'https://www.endeks24.com/'
 TR = datetime.timezone(datetime.timedelta(hours=3))
-YOLLAR = ['piyasa.seans', 'piyasa.hareket', 'piyasa.sektor_performans', 'fiyat.tum', 'hisseler', 'kap.temettu',
+PIYASA_BOLUM = ('PİYASALAR', 'KAP HABERLERİ', 'HALKA ARZ', 'KRİPTO', 'BIST 100', 'ALTIN', 'DOLAR VE DÖVİZ', 'FON KRİZİ', 'TCMB VE FAİZ')
+YOLLAR = ['rakamlar.piyasa', 'rakamlar.gundem', 'piyasa.seans', 'piyasa.hareket', 'piyasa.sektor_performans', 'fiyat.tum', 'hisseler', 'kap.temettu',
           'doviz.kurlar', 'enerji.brent', 'kripto.varliklar']  # sektorler.* ayrıca
 
 
@@ -216,6 +217,76 @@ def kripto(y, simdi):
     v['satirlar'] = yeni; v['tarih'] = simdi.replace(second=0, microsecond=0).isoformat(); v['kaynak'] = 'Coinbase'
 
 
+def rakamlar(y, simdi, onbellek):
+    """Haberlerdeki rakam işaretlerinden (span.e24-rakam, Kısaca kutusunda) "Rakamlarla piyasa" ve "Rakamlarla gündem"
+    kartları. Halit Bey onayı 20.10.2026. Son 72 saatin haberleri; her bölümde en yeni 8. Haber başına bir işaret."""
+    t, _ = istek(SITE + 'sitemap-news.xml')
+    adres = re.findall(r'<loc>([^<]+)</loc>', t)[:60]
+    bulunan = []
+    for u in adres:
+        if u not in onbellek:
+            try:
+                h, _ = istek(u, zaman=25)
+            except Exception:
+                continue
+            m = re.search(r'<span class="e24-rakam"([^>]*)>([^<]+)</span>', h)
+            kayit = None
+            if m:
+                yon = re.search(r'data-yon="(up|dn)"', m.group(1))
+                li = h.rfind('<li', 0, m.start()); son = h.find('</li>', m.end())
+                cumle = re.sub(r'<[^>]+>', '', h[li:son] if li > 0 and son > 0 else m.group(2))
+                cumle = html.unescape(re.sub(r'\s+', ' ', cumle)).strip().rstrip('.')
+                parca = [p.strip() for p in cumle.split(';')]
+                sayi = html.unescape(m.group(2)).strip()
+                # Kart başlıksız gösterilir: açıklama tek başına anlaşılmalı. Cümle kısaysa tamamı, uzunsa sayının geçtiği bölüm.
+                ac = cumle if len(cumle) <= 150 else next((p for p in parca if sayi in p), cumle)
+                if len(ac) > 150:
+                    ac = ac[:147].rsplit(' ', 1)[0] + '…'
+                ac = ac[:1].upper() + ac[1:]
+                ys = re.fullmatch(r'yüzde\s+([\d.,]+)', sayi)
+                if ys:
+                    sayi = '%' + ys.group(1)
+                elif re.fullmatch(r'[\d.,]+', sayi) and re.search(r'yüzde\s+' + re.escape(sayi) + r'\b', cumle):
+                    sayi = '%' + sayi  # metinde "yüzde 34,7" olarak geçen yalın sayı
+                AYLAR = 'Ocak|Şubat|Mart|Nisan|Mayıs|Haziran|Temmuz|Ağustos|Eylül|Ekim|Kasım|Aralık'
+                if re.search(r'\b(' + AYLAR + r')\b', sayi) or re.fullmatch(r'(19|20)\d\d', sayi):
+                    m = None  # tarih işaretlenmez (Y.20261017.04 madde 2)
+            if m:
+                bas = re.search(r'<meta property="og:title" content="([^"]*)"', h)
+                h1 = re.search(r'<h1[^>]*>(.*?)</h1>', h, re.S)
+                zm = re.search(r'"datePublished":"([^"]+)"', h)
+                bol = re.search(r'"articleSection":"([^"]+)"', h)
+                kayit = {'sayi': sayi, 'yon': yon.group(1) if yon else '', 'aciklama': ac, 'link': u,
+                         'baslik': html.unescape(re.sub(r'<[^>]+>', '', h1.group(1)).strip() if h1 else (bas.group(1) if bas else '')),
+                         'haber_tarihi': zm.group(1) if zm else None,
+                         'bolum': json.loads('"' + bol.group(1) + '"') if bol else ''}
+                if sayi.startswith('%'):
+                    try:
+                        o = float(sayi[1:].replace('.', '').replace(',', '.'))
+                        if 0 <= o <= 100:
+                            kayit['oran'] = o
+                    except ValueError:
+                        pass
+            onbellek[u] = kayit
+        if onbellek.get(u):
+            bulunan.append(onbellek[u])
+    sinir = simdi - datetime.timedelta(hours=72)
+    def yeni_mi(k):
+        try:
+            return datetime.datetime.fromisoformat(k['haber_tarihi']) >= sinir
+        except Exception:
+            return False
+    bulunan = sorted([k for k in bulunan if k.get('haber_tarihi') and yeni_mi(k)], key=lambda k: k['haber_tarihi'], reverse=True)
+    T = simdi.replace(second=0, microsecond=0).isoformat()
+    for ad, kosul in (('piyasa', lambda k: k['bolum'] in PIYASA_BOLUM), ('gundem', lambda k: k['bolum'] not in PIYASA_BOLUM)):
+        sat = [{x: v for x, v in k.items() if x != 'bolum'} for k in bulunan if kosul(k)][:8]
+        if len(sat) >= 3:
+            y['rakamlar'][ad] = {'tarih': T, 'kaynak': 'Endeks24', 'satirlar': sat}
+    for u in [u for u in onbellek if u not in adres]:
+        del onbellek[u]
+    print('rakamlar:', {a: len(y['rakamlar'][a]['satirlar']) for a in ('piyasa', 'gundem')})
+
+
 def main():
     cikti = sys.argv[1]
     simdi = datetime.datetime.now(TR)
@@ -237,12 +308,17 @@ def main():
         kripto(y, simdi)
     except Exception as e:
         print('Uyarı: kripto alınamadı:', e)
+    onbellek = (onceki or {}).get('rakam_onbellek', {})
+    try:
+        rakamlar(y, simdi, onbellek)
+    except Exception as e:
+        print('Uyarı: rakamlar alınamadı:', e)
     hatalar = dogrula(y)
     if hatalar:
         hata('Şema hatası, yazılmadı: ' + '; '.join(hatalar[:5]))
     # Site yalnız YOLLAR'daki tabloları ve sektorler altındaki tabloları, kendi verisinden yeniyse kullanır
     cik = {'olusturma': simdi.isoformat(timespec='seconds'), 'yollar': YOLLAR + ['sektorler.*'],
-           'veri': y}
+           'veri': y, 'rakam_onbellek': onbellek}
     json.dump(cik, open(cikti, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
     print('TAMAM:', cikti, os.path.getsize(cikti), 'bayt;', 'seans', y['piyasa']['seans']['tarih'], '; kripto', y['kripto']['varliklar']['tarih'])
 
