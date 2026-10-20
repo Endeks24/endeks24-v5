@@ -258,7 +258,7 @@ def kripto(y, simdi):
     v['satirlar'] = yeni; v['tarih'] = simdi.replace(second=0, microsecond=0).isoformat(); v['kaynak'] = 'Coinbase'
 
 
-RAKAM_SURUM = 2
+RAKAM_SURUM = 3
 
 
 def ozne(bas):
