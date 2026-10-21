@@ -1,5 +1,3 @@
-BIST 100 günü yüzde 1,87 düşüşle 11.577,12 puandan kapattı. Endeksteki 100 hisseden 95 hisse geriledi, 3 hisse yükseldi.
 rakamlar: {'piyasa': 8, 'gundem': 6}
-HATA: Şema hatası, yazılmadı: piyasa.hareket.yukselenler[3].degisim: sıfırdan büyük olmalı; piyasa.hareket.yukselenler[4].degisim: sıfırdan büyük olmalı
-BASARISIZ
-2026-10-21T15:27:41Z 
+TAMAM: cikti/veri.json 99264 bayt; seans 2026-10-21T16:50:00+03:00 ; kripto 2026-10-21T19:03:00+03:00
+2026-10-21T16:03:16Z --kripto-yalniz
