@@ -1,5 +1,5 @@
-BIST 100 saat 17.55 itibarıyla yüzde 1,84 düşüşle 11.580,38 puanda. Endeksteki 100 hisseden 98 hisse geriliyor, 1 hisse yükseliyor.
+BIST 100 günü yüzde 1,87 düşüşle 11.577,12 puandan kapattı. Endeksteki 100 hisseden 95 hisse geriledi, 3 hisse yükseldi.
 rakamlar: {'piyasa': 8, 'gundem': 6}
-HATA: Şema hatası, yazılmadı: piyasa.hareket.yukselenler[1].degisim: sıfırdan büyük olmalı; piyasa.hareket.yukselenler[2].degisim: sıfırdan büyük olmalı; piyasa.hareket.yukselenler[3].degisim: sıfırdan büyük olmalı; piyasa.hareket.yukselenler[4].degisim: sıfırdan büyük olmalı
+HATA: Şema hatası, yazılmadı: piyasa.hareket.yukselenler[3].degisim: sıfırdan büyük olmalı; piyasa.hareket.yukselenler[4].degisim: sıfırdan büyük olmalı
 BASARISIZ
-2026-10-21T14:59:02Z 
+2026-10-21T15:11:03Z 
