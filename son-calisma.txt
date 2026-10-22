@@ -1,4 +1,4 @@
-BIST 100 22 Ekim seansını yüzde 3,00 düşüşle 11.230,31 puandan kapattı. Endeksteki 100 hisseden 93 hisse geriledi, 5 hisse yükseldi.
+BIST 100 22 Ekim seansını yüzde 3,08 düşüşle 11.220,37 puandan kapattı. Endeksteki 100 hisseden 95 hisse geriledi, 5 hisse yükseldi.
 rakamlar: {'piyasa': 8, 'gundem': 8}
-TAMAM: cikti/veri.json 100169 bayt; seans 2026-10-22T18:10:00+03:00 ; kripto 2026-10-22T18:12:00+03:00
-2026-10-22T15:13:01Z 
+TAMAM: cikti/veri.json 99694 bayt; seans 2026-10-22T18:10:00+03:00 ; kripto 2026-10-22T18:15:00+03:00
+2026-10-22T15:15:45Z 
