@@ -186,7 +186,9 @@ def bist(y, ft, simdi):
     yon = 'yükselişle' if dg > 0 else 'düşüşle' if dg < 0 else 'değişimsiz'
     yuzde = f'yüzde {tr(abs(dg))} ' if dg else ''
     if kapali:
-        se['yorum'] = f'BIST 100 günü {yuzde}{yon} {tr(son)} puandan kapattı. Endeksteki {len(x100)} hisseden {du} hisse geriledi, {yu} hisse yükseldi.'
+        # 22.10.2026: tarihli; ertesi sabah açılışa kadar da doğru okunur
+        AY = ('Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık')
+        se['yorum'] = f'BIST 100 {simdi.day} {AY[simdi.month - 1]} seansını {yuzde}{yon} {tr(son)} puandan kapattı. Endeksteki {len(x100)} hisseden {du} hisse geriledi, {yu} hisse yükseldi.'
     else:
         se['yorum'] = f'BIST 100 saat {z.strftime("%H.%M")} itibarıyla {yuzde}{yon} {tr(son)} puanda. Endeksteki {len(x100)} hisseden {du} hisse geriliyor, {yu} hisse yükseliyor.'
     AD = {'BIST 30': 'XU030', 'BIST 50': 'XU050', 'BIST Mali': 'XUMAL', 'BIST Sınai': 'XUSIN', 'BIST Halka Arz': 'XHARZ'}
