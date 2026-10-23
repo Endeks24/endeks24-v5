@@ -202,7 +202,7 @@ def bist(y, ft, simdi):
     sira = sorted(x100, key=lambda k: -g(k))
     sat = lambda k: {'kod': k, 'fiyat': f(k), 'degisim': g(k), 'hacim_mn': hac.get(k, 0.0)}
     hr = y['piyasa']['hareket']; hr['tarih'] = T
-    hr['yukselenler'] = [sat(k) for k in sira[:5]]; hr['dusenler'] = [sat(k) for k in sira[::-1][:5]]
+    hr['yukselenler'] = [sat(k) for k in [k for k in sira if g(k) > 0][:5]]; hr['dusenler'] = [sat(k) for k in [k for k in sira[::-1] if g(k) < 0][:5]]
     hr['hacim'] = [sat(k) for k in sorted((k for k in hac if k in B), key=lambda k: -hac[k])[:5]]
     hr['genislik'] = {'yukselen': yu, 'dusen': du, 'degismeyen': de}
     gr = collections.defaultdict(list)
