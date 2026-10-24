@@ -199,8 +199,6 @@ def main():
     ay = 36
     if '--pencere-ay' in sys.argv:
         ay = int(sys.argv[sys.argv.index('--pencere-ay') + 1])
-    if dene:
-        ay = 2
     simdi = datetime.datetime.now(datetime.timezone.utc)
     bas = (simdi - datetime.timedelta(days=30.4 * ay)).replace(hour=0, minute=0, second=0, microsecond=0)
     ft = baglan()
@@ -218,6 +216,19 @@ def main():
         if tur and g == 'Hayır' and d == 'Hayır':
             pub = datetime.datetime.fromisoformat(x['yayinlanma_tarihi_utc']).astimezone(TR)
             olaylar.append({'hisse': x['iliskili_semboller'][0], 'tur': tur, 'pub': pub, 'kap': k})
+    if '--imza' in sys.argv:
+        isaret = ['Yönetim Kurulu Karar Tarihi', '| Karar Tarihi', 'Toplam Bedelsiz Pay Alma Oranı', 'Bedelli Sermaye Artırımı', 'Rüçhan', 'Tahsisli',
+                  'Nakit Kar Payı Ödeme Tutar ve Oranları', 'Pay Olarak Kar Payı', 'Genel Kurul', 'SPK', 'Tescil', 'Görüşüldü', 'Dağıtılmayacak', 'Dağıtım Yapılmayacak']
+        imza = collections.defaultdict(list)
+        for k, x in adaylar.items():
+            m = metin.get(str(x['id']), '')
+            g = re.search(r'Güncelleme mi \?\s*\|\s*(Evet|Hayır)', m)
+            if not g or g.group(1) != 'Hayır':
+                continue
+            imza[(x['kap_bildirim_konu'][:4], tuple(i[:14] for i in isaret if i in m))].append(k)
+        log('--- imzalar (Güncelleme=Hayır) ---')
+        for a, v in sorted(imza.items(), key=lambda t: -len(t[1]))[:30]:
+            log(len(v), a, v[:3])
     log('--- sınıflandırma dağılımı (en sık 40) ---')
     for k, n in sayac.most_common(40):
         log(n, k)

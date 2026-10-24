@@ -9,6 +9,14 @@ on:
         description: 'Kısa deneme (2 ay, dosya yazılmaz)'
         required: false
         default: 'hayır'
+      ay:
+        description: 'Pencere (ay)'
+        required: false
+        default: '36'
+      imza:
+        description: 'İmza dökümü (evet)'
+        required: false
+        default: 'hayır'
 permissions:
   contents: write
 concurrency:
@@ -27,7 +35,9 @@ jobs:
           set -o pipefail
           EK=""
           if [ "${{ github.event.inputs.dene }}" = "evet" ]; then EK="--dene"; fi
-          python3 veri-programi/hafiza_hesapla.py cikti $EK 2>&1 | tee hafiza-log.txt
+          if [ "${{ github.event.inputs.imza }}" = "evet" ]; then EK="$EK --imza"; fi
+          AY="${{ github.event.inputs.ay }}"; AY=${AY:-36}
+          python3 veri-programi/hafiza_hesapla.py cikti $EK --pencere-ay $AY 2>&1 | tee hafiza-log.txt
       - name: Yaz
         if: ${{ github.event.inputs.dene != 'evet' }}
         run: |
