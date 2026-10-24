@@ -41,9 +41,9 @@ jobs:
       - name: Yaz
         if: ${{ github.event.inputs.dene != 'evet' }}
         run: |
-          cp cikti/hafiza.json hafiza.json; cp cikti/hafiza-olaylar.json hafiza-olaylar.json
+          cp cikti/hafiza.json hafiza.json; cp cikti/hafiza-olaylar.json hafiza-olaylar.json; cp cikti/hafiza-olay-onbellek.json hafiza-olay-onbellek.json
           git config user.name e24-hafiza; git config user.email e24-hafiza@users.noreply.github.com
-          git add hafiza.json hafiza-olaylar.json
+          git add hafiza.json hafiza-olaylar.json hafiza-olay-onbellek.json
           git commit -qm "hafiza $(TZ=Europe/Istanbul date '+%d.%m.%Y')" || exit 0
           for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && exit 0; sleep 5; done
           exit 1

@@ -23,6 +23,8 @@ def log(*a):
 class FT(fv.Fintables):
     """Fintables istemcisi; 429 ve geçici hatalarda bekleyip yeniden dener, araç çağrısını ayrıştırır."""
 
+    bekleme = 0
+
     def _gonder(self, govde):
         for deneme in range(7):
             try:
@@ -34,9 +36,13 @@ class FT(fv.Fintables):
             except urllib.error.HTTPError as e:
                 if e.code == 401:
                     fv.hata('Fintables anahtarı geçersiz ya da süresi dolmuş (401).')
+                govde_e = e.read()[:300]
+                if e.code == 429 and b'Saatlik' in govde_e and self.bekleme < 30:
+                    self.bekleme += 1
+                    log(f'  saatlik sınır; 10 dk bekleniyor ({self.bekleme}/30)'); time.sleep(600); continue
                 if e.code in (429, 500, 502, 503, 504) and deneme < 6:
                     time.sleep(min(60, 3 * 2 ** deneme)); continue
-                fv.hata(f'Fintables HTTP {e.code}: {e.read()[:300]!r}')
+                fv.hata(f'Fintables HTTP {e.code}: {govde_e!r}')
             except (urllib.error.URLError, TimeoutError, ConnectionError):
                 if deneme < 6:
                     time.sleep(min(60, 3 * 2 ** deneme)); continue
@@ -228,7 +234,14 @@ def main():
     simdi = datetime.datetime.now(datetime.timezone.utc)
     bas = (simdi - datetime.timedelta(days=30.4 * ay)).replace(hour=0, minute=0, second=0, microsecond=0)
     ft = baglan()
-    log('KAP adayları', bas.date(), '->', simdi.date())
+    onbellek_yol = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'hafiza-olay-onbellek.json')
+    onbellek = {'tarama_bitis': None, 'olaylar': []}
+    if os.path.exists(onbellek_yol) and '--onbellek-yok' not in sys.argv:
+        onbellek = json.load(open(onbellek_yol, encoding='utf-8'))
+        if onbellek.get('tarama_bitis'):
+            bas_yeni = datetime.datetime.fromisoformat(onbellek['tarama_bitis']) - datetime.timedelta(days=10)
+            bas = max(bas, bas_yeni)
+    log('KAP adayları', bas.date(), '->', simdi.date(), '| önbellekte olay:', len(onbellek['olaylar']))
     ad = kap_adaylari(ft, bas, simdi)
     # yalnız ilk parçası ve tek şirketli bildirimler
     adaylar = {k: x for k, x in ad.items() if x.get('sayfa_no') == 1 and len(x.get('iliskili_semboller') or []) == 1}
@@ -258,6 +271,15 @@ def main():
     log('--- sınıflandırma dağılımı (en sık 40) ---')
     for k, n in sayac.most_common(40):
         log(n, k)
+    # önbellekteki eski olaylarla birleştir (kap numarasına göre), pencere dışına çıkanları at
+    eski = {o['kap']: dict(o, pub=datetime.datetime.fromisoformat(o['pub'])) for o in onbellek['olaylar']}
+    for o in olaylar:
+        eski[o['kap']] = o
+    pencere_bas = (simdi - datetime.timedelta(days=30.4 * ay)).astimezone(TR)
+    olaylar = [o for o in eski.values() if o['pub'] >= pencere_bas]
+    os.makedirs(cikti, exist_ok=True)
+    json.dump({'tarama_bitis': simdi.isoformat(), 'olaylar': [dict(o, pub=o['pub'].isoformat()) for o in sorted(olaylar, key=lambda o: o['pub'])]},
+              open(os.path.join(cikti, 'hafiza-olay-onbellek.json'), 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
     # aynı hisse ve türde 60 gün içindeki tekrarlar: yalnız ilk
     olaylar.sort(key=lambda o: o['pub'])
     son = {}; temiz = []
@@ -268,23 +290,39 @@ def main():
         son[a] = o['pub']; temiz.append(o)
     log('olay', len(temiz), dict(collections.Counter(o['tur'] for o in temiz)))
     bist100 = {r['hisse_senedi_kodu'] for r in ft.sql("SELECT hisse_senedi_kodu FROM hisse_senetleri WHERE 'XU100' = ANY(endeksler) LIMIT 300")}
-    bas_t = (bas - datetime.timedelta(days=15)).strftime('%Y-%m-%d')
+    bas_t = (pencere_bas - datetime.timedelta(days=15)).strftime('%Y-%m-%d')
     endeks = gunluk(ft, 'endeks_mumlar_gunluk_gh', ENDEKS, bas_t)
     log('endeks gün', len(endeks))
-    seriler = {}
     sonuc = []
-    for h in sorted({o['hisse'] for o in temiz}):
-        seriler[h] = gunluk(ft, 'mumlar_gunluk_gh', h, bas_t)
-    for o in temiz:
-        t = tepki(o['pub'], seriler.get(o['hisse']) or {}, endeks)
-        if t:
-            sonuc.append({'hisse': o['hisse'], 'tur': o['tur'], 'tarih': t[2].isoformat(), 'kap': o['kap'],
-                          'getiri': t[0], 'fazla': t[1], 'bist100': o['hisse'] in bist100})
+    parti = 12
+    for i in range(0, len(temiz), parti):
+        grup = temiz[i:i + parti]
+        kosul = ' OR '.join(
+            f"(kod = '{o['hisse']}' AND zaman_utc >= TIMESTAMP '{(o['pub'] - datetime.timedelta(days=9)).strftime('%Y-%m-%d')} 00:00:00' "
+            f"AND zaman_utc < TIMESTAMP '{(o['pub'] + datetime.timedelta(days=17)).strftime('%Y-%m-%d')} 00:00:00')" for o in grup)
+        seriler = collections.defaultdict(dict); off = 0
+        while True:
+            sat = ft.sql(f"SELECT zaman_utc, kod, kapanis FROM mumlar_gunluk_gh WHERE {kosul} ORDER BY kod, zaman_utc LIMIT 300 OFFSET {off}")
+            if not sat:
+                break
+            for r in sat:
+                t = datetime.datetime.fromisoformat(r['zaman_utc'].replace('Z', '+00:00')).astimezone(TR).date()
+                seriler[r['kod']][t] = float(r['kapanis'])
+            off += len(sat)
+            if len(sat) < 50:
+                break
+        for o in grup:
+            t = tepki(o['pub'], seriler.get(o['hisse']) or {}, endeks)
+            if t:
+                sonuc.append({'hisse': o['hisse'], 'tur': o['tur'], 'tarih': t[2].isoformat(), 'kap': o['kap'],
+                              'getiri': t[0], 'fazla': t[1], 'bist100': o['hisse'] in bist100})
+        if (i // parti) % 10 == 0:
+            log('  fiyat', i, '/', len(temiz))
     log('hesaplanan olay', len(sonuc), '/', len(temiz))
     tur_ad = {'bedelsiz': 'bedelsiz sermaye artırımı kararı', 'temettu': 'temettü (kar payı dağıtım) kararı',
               'bedelli': 'bedelli sermaye artırımı kararı'}
     cik = {'olusturma': simdi.astimezone(TR).isoformat(timespec='seconds'), 'gun': GUN, 'endeks': ENDEKS,
-           'pencere': [bas.astimezone(TR).date().isoformat(), simdi.astimezone(TR).date().isoformat()], 'en_az': EN_AZ_TUM, 'tur': {}}
+           'pencere': [bas.astimezone(TR).date().isoformat(), simdi.astimezone(TR).date().isoformat()], 'en_az': EN_AZ_TUM, 'bist100': sorted(bist100), 'tur': {}}
     for tur in tur_ad:
         ol = [s for s in sonuc if s['tur'] == tur]
         hisse = {}
