@@ -423,6 +423,12 @@ html.e24v5 #e24v5 h1,html.e24v5 #e24v5 h2,html.e24v5 #e24v5 h3,html.e24v5 #e24v5
 html.e24v5 #e24v5 :where(p,a,span,li,b,td,th,h1,h2,h3,h4,time,label,input,small,em,strong){letter-spacing:normal}
 html.e24v5 #e24v5 p{color:var(--v5-yazi)}
 html.e24v5 #e24v5 img.v5-imza-rozet{object-fit:cover;border-radius:50%;padding:0;background:var(--v5-band)}
+html.e24v5 #e24v5 .v5-govde .e24-hafiza{margin:28px 0;clear:both;background:var(--v5-kutu);border-top:4px solid var(--v5-yazi);padding:16px 18px 14px}
+html.e24v5 #e24v5 .v5-govde .e24-hafiza .e24-h-baslik{font:700 12px/1.2 var(--v5-sans)!important;letter-spacing:.06em;text-transform:uppercase;color:var(--v5-etiket);margin:0 0 10px!important}
+html.e24v5 #e24v5 .v5-govde .e24-hafiza p{margin:0 0 8px!important}
+html.e24v5 #e24v5 .v5-govde .e24-hafiza .e24-h-ozet,html.e24v5 #e24v5 .v5-govde .e24-hafiza .e24-h-hisse{font:400 16px/1.5 var(--v5-sans)!important;color:var(--v5-yazi)}
+html.e24v5 #e24v5 .v5-govde .e24-hafiza .e24-h-not{font:400 13.5px/1.45 var(--v5-sans)!important;color:var(--v5-yazi2)}
+html.e24v5 #e24v5 .v5-govde .e24-hafiza .e24-h-kaynak{font:400 12.5px/1.45 var(--v5-sans)!important;color:var(--v5-silik);margin:0!important}
 html.e24v5.e24v5-hazir body>[id^="ad_"]{display:none!important}
 html.e24v5 .v5-menu-ic{overflow-x:auto;-webkit-overflow-scrolling:touch}
 html.e24v5 #e24v5 .v5-menu-ic a{flex:0 0 auto}
