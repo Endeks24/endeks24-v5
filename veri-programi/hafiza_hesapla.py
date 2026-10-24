@@ -268,6 +268,24 @@ def main():
         log('--- imzalar (Güncelleme=Hayır) ---')
         for a, v in sorted(imza.items(), key=lambda t: -len(t[1]))[:30]:
             log(len(v), a, v[:3])
+    if '--tani' in sys.argv:
+        tani = collections.defaultdict(list)
+        for k, x in adaylar.items():
+            m = metin.get(str(x['id']), '')
+            tur, alt, g, d = sinifla(m)
+            if tur or g != 'Hayır' or d != 'Hayır':
+                continue
+            sat = [z.strip() for z in m.split('\n') if z.strip()]
+            yapi = [z for z in sat if z.startswith('|') or len(z) < 70]
+            v = lambda q: any(q in z for z in yapi)
+            sa = x['kap_bildirim_konu'].startswith('Sermaye')
+            anah = ('SA' if sa else 'KP', 'bedelsiz' if v('Toplam Bedelsiz Pay Alma Oranı') else '-', 'bedelli' if (v('Rüçhan') or v('Bedelli Sermaye Artırımı')) else '-',
+                    'tahsisli' if v('Tahsisli') else '-', 'YKtar' if v('Yönetim Kurulu Karar Tarihi') else '-', 'Ktar' if v('| Karar Tarihi') else '-',
+                    'nakit>0' if nakit_tutar(sat) > 0 else '-', 'GKtar' if v('Genel Kurul') else '-')
+            tani[anah].append(k)
+        log('--- TANI: sınıflanmayan Güncelleme=Hayır bildirimler ---')
+        for a, v in sorted(tani.items(), key=lambda t: -len(t[1]))[:25]:
+            log(len(v), a, v[:3])
     log('--- sınıflandırma dağılımı (en sık 40) ---')
     for k, n in sayac.most_common(40):
         log(n, k)

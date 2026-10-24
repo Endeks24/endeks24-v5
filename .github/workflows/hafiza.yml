@@ -13,6 +13,10 @@ on:
         description: 'Pencere (ay)'
         required: false
         default: '36'
+      tani:
+        description: 'Tanı dökümü ve önbelleksiz tarama (evet)'
+        required: false
+        default: 'hayır'
       imza:
         description: 'İmza dökümü (evet)'
         required: false
@@ -36,6 +40,7 @@ jobs:
           EK=""
           if [ "${{ github.event.inputs.dene }}" = "evet" ]; then EK="--dene"; fi
           if [ "${{ github.event.inputs.imza }}" = "evet" ]; then EK="$EK --imza"; fi
+          if [ "${{ github.event.inputs.tani }}" = "evet" ]; then EK="$EK --tani --onbellek-yok"; fi
           AY="${{ github.event.inputs.ay }}"; AY=${AY:-36}
           python3 veri-programi/hafiza_hesapla.py cikti $EK --pencere-ay $AY 2>&1 | tee hafiza-log.txt
       - name: Yaz
