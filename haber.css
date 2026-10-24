@@ -382,7 +382,7 @@ html.e24v5 #e24v5 .v5-duy .v5-duy-not a.v5-kaynak-bag:hover{color:var(--v5-vurgu
 html.e24v5 #e24v5 .v5-govde .e24-duyarli .v5-kaynak{font:400 13px/1.45 var(--v5-sans)!important;color:var(--v5-silik);margin:10px 0 0!important}
 html.e24v5 #e24v5 .v5-govde .e24-duyarli h3{font:700 12px/1 var(--v5-sans)!important;letter-spacing:.06em;text-transform:uppercase;margin:0 0 8px!important}
 html.e24v5 #e24v5 .v5-govde .e24-duyarli a.v5-sirket-bag{display:contents;border-bottom:0!important;text-decoration:none!important;box-shadow:none!important}
-html.e24v5 #e24v5 .v5-duy a.v5-sirket-bag{display:contents}
+html.e24v5 #e24v5 a.v5-sirket-bag{display:contents;border-bottom:0!important;text-decoration:none!important;box-shadow:none!important}
 html.e24v5 #e24v5 .v5-govde .e24-duyarli .v5-silik{color:var(--v5-silik)}
 @media (max-width:640px){html.e24v5 #e24v5 .v5-duy .v5-duy-not{padding-left:0}}
 html.e24v5 #e24v5 .v5-kaynaklar a{display:flex;flex-direction:column;gap:4px;padding:12px 0}
