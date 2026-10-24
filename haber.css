@@ -377,6 +377,8 @@ html.e24v5 #e24v5 .v5-govde .e24-duyarli .v5-duy-alt{font:400 15px/1.45 var(--v5
 html.e24v5 #e24v5 .v5-duy .v5-duy-not{padding:0 0 12px 88px}
 html.e24v5 #e24v5 .v5-govde .e24-duyarli .v5-duy-not p{font:400 14px/1.5 var(--v5-sans)!important;color:var(--v5-yazi2);margin:0 0 4px!important}
 html.e24v5 #e24v5 .v5-duy .v5-duy-not b{font-weight:600;color:var(--v5-yazi)}
+html.e24v5 #e24v5 .v5-duy .v5-duy-not a.v5-kaynak-bag{text-decoration:underline;text-decoration-color:var(--v5-cizgi,#D2BAAA);text-underline-offset:2px}
+html.e24v5 #e24v5 .v5-duy .v5-duy-not a.v5-kaynak-bag:hover{color:var(--v5-vurgu)}
 html.e24v5 #e24v5 .v5-govde .e24-duyarli .v5-kaynak{font:400 13px/1.45 var(--v5-sans)!important;color:var(--v5-silik);margin:10px 0 0!important}
 html.e24v5 #e24v5 .v5-govde .e24-duyarli h3{font:700 12px/1 var(--v5-sans)!important;letter-spacing:.06em;text-transform:uppercase;margin:0 0 8px!important}
 html.e24v5 #e24v5 .v5-govde .e24-duyarli a.v5-sirket{border-bottom:0!important;text-decoration:none!important;box-shadow:none!important}
