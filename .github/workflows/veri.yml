@@ -4,6 +4,10 @@ on:
   schedule:
     - cron: '*/15 7-15 * * 1-5'
     - cron: '41 * * * *'
+    # 24.10.2026: açılış için yedekli erken zamanlama (UTC 06.33 ve 06.49 = TR 09.33 ve 09.49). GitHub zamanlanmış çalışmaları geciktirebilir ya da atlayabilir;
+    # bunlardan biri 10.02'den önce başlarsa aşağıdaki bekleme açılış verisini tam 10.02'de yazar. Aynı anda tek çalışma kalır (concurrency).
+    - cron: '33 6 * * 1-5'
+    - cron: '49 6 * * 1-5'
   workflow_dispatch:
   push:
     branches: [main]
