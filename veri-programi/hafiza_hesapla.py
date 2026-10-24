@@ -122,24 +122,50 @@ def icerikler(ft, idler):
     return out
 
 
+def sayilar(hucreler):
+    out = []
+    for c in hucreler:
+        c = c.strip()
+        if re.fullmatch(r'\d{1,3}(\.\d{3})*(,\d+)?|\d+(,\d+)?', c):
+            out.append(float(c.replace('.', '').replace(',', '.')))
+    return out
+
+
+def nakit_tutar(satirlar):
+    """'Nakit Kar Payı Ödeme Tutar ve Oranları' tablosundaki en büyük sayı; tablo yoksa 0."""
+    for i, s in enumerate(satirlar):
+        if s.startswith('Nakit Kar Payı Ödeme Tutar ve Oran'):
+            en = 0.0
+            for t in satirlar[i + 1:i + 12]:
+                if not t.startswith('|'):
+                    if en or t.startswith('Kar Payı Ödeme Tarihleri'):
+                        break
+                    continue
+                en = max([en] + sayilar(t.strip('|').split('|')))
+            return en
+    return 0.0
+
+
 def sinifla(metin):
-    """(tur, altbaslik, guncelleme, duzeltme) döner; tur None ise olay sayılmaz."""
+    """(tur, altbaslik, guncelleme, duzeltme). Tür, alt başlığa değil bildirimin yapısına göre belirlenir (şirketler başlığı serbest yazıyor).
+    Yalnız saf türler sayılır: bedelsiz (bedelli ya da tahsisli bölümü yok), bedelli (bedelsiz ya da tahsisli bölümü yok), temettü (nakit tutarı > 0)."""
     satirlar = [s.strip() for s in metin.split('\n') if s.strip()]
     ust = satirlar[0].lstrip('# ').strip() if satirlar else ''
     alt = satirlar[1] if len(satirlar) > 1 else ''
     g = re.search(r'Güncelleme mi \?\s*\|\s*(Evet|Hayır)', metin)
     d = re.search(r'Düzeltme mi \?\s*\|\s*(Evet|Hayır)', metin)
     guncel = (g.group(1) if g else '?'); duz = (d.group(1) if d else '?')
-    a = alt.lower().replace('i̇', 'i')
+    yapi = [s for s in satirlar if s.startswith('|') or len(s) < 70]
+    var = lambda k: any(k in s for s in yapi)
     tur = None
-    if ust.startswith('Sermaye Artırımı'):
-        if 'bedelsiz sermaye artırımı yönetim kurulu kararı' in a and 'bedelli' not in a:
+    if ust.startswith('Sermaye Artırımı') and var('Yönetim Kurulu Karar Tarihi'):
+        bedelsiz, bedelli, tahsisli = var('Toplam Bedelsiz Pay Alma Oranı'), var('Rüçhan') or var('Bedelli Sermaye Artırımı'), var('Tahsisli')
+        if bedelsiz and not bedelli and not tahsisli:
             tur = 'bedelsiz'
-        elif 'bedelli sermaye artırımı yönetim kurulu kararı' in a:
+        elif bedelli and not bedelsiz and not tahsisli:
             tur = 'bedelli'
-    elif ust.startswith('Kar Payı Dağıtım'):
-        if a.strip() == 'kar payı dağıtım kararı':
-            tur = 'temettu'
+    elif ust.startswith('Kar Payı Dağıtım') and var('| Karar Tarihi') and nakit_tutar(satirlar) > 0:
+        tur = 'temettu'
     return tur, alt, guncel, duz
 
 
