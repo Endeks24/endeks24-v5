@@ -165,7 +165,7 @@ def sinifla(metin):
     var = lambda k: any(k in s for s in yapi)
     tur = None
     if ust.startswith('Sermaye Artırımı') and var('Yönetim Kurulu Karar Tarihi'):
-        bedelsiz, bedelli, tahsisli = var('Toplam Bedelsiz Pay Alma Oranı'), var('Rüçhan') or var('Bedelli Sermaye Artırımı'), var('Tahsisli')
+        bedelsiz, bedelli, tahsisli = var('Bedelsiz Pay Alma Oranı'), var('Rüçhan') or var('Bedelli Sermaye Artırımı'), var('Tahsisli')
         if bedelsiz and not bedelli and not tahsisli:
             tur = 'bedelsiz'
         elif bedelli and not bedelsiz and not tahsisli:
@@ -279,7 +279,7 @@ def main():
             yapi = [z for z in sat if z.startswith('|') or len(z) < 70]
             v = lambda q: any(q in z for z in yapi)
             sa = x['kap_bildirim_konu'].startswith('Sermaye')
-            anah = ('SA' if sa else 'KP', 'bedelsiz' if v('Toplam Bedelsiz Pay Alma Oranı') else '-', 'bedelli' if (v('Rüçhan') or v('Bedelli Sermaye Artırımı')) else '-',
+            anah = ('SA' if sa else 'KP', 'bedelsiz' if v('Bedelsiz Pay Alma Oranı') else '-', 'bedelli' if (v('Rüçhan') or v('Bedelli Sermaye Artırımı')) else '-',
                     'tahsisli' if v('Tahsisli') else '-', 'YKtar' if v('Yönetim Kurulu Karar Tarihi') else '-', 'Ktar' if v('| Karar Tarihi') else '-',
                     'nakit>0' if nakit_tutar(sat) > 0 else '-', 'GKtar' if v('Genel Kurul') else '-')
             tani[anah].append(k)
