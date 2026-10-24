@@ -119,7 +119,7 @@
    ]
   },
   "dolar-borc": {
-   "ad": "Döviz borcu ve küresel faiz",
+   "ad": "Döviz kuru ve döviz borcu",
    "anahtar": [
     "dolar endeksi",
     "dxy",
@@ -282,27 +282,27 @@
    "ad": "Türk Hava Yolları A.O.",
    "etiketler": [
     {
-     "id": "dolar-borc",
-     "not": "Şirketin ABD doları cinsi ekipman teminatlı kredi sertifikaları bulunmaktadır.",
-     "alinti": "2015 yılında ihraç etmiş olduğu USD cinsi Ekipman Teminatlı Geliştirilmiş Kredi Sertifikaları'na ait kredi notunu BB+ olarak teyit etmiştir.",
+     "id": "havacilik-yakit",
+     "not": "Akaryakıt giderleri ortaklığın en yüksek hacimli operasyonel maliyet kalemi olup, akaryakıt fiyatındaki değişimler nakit akışı ve kârlılıkta büyük dalgalanma potansiyeli taşıyor.",
+     "alinti": "Ortaklığımızın en yüksek hacimli operasyonel maliyet kalemi akaryakıt giderleridir. Bu sebeple, akaryakıt fiyatında oluşacak değişimler hem nakit akışı hem de kârlılık üzerinde büyük bir dalgalanma oluşturma potansiyeline sahiptir.",
      "kaynak": {
       "tur": "Faaliyet raporu",
-      "baslik": "THYAO 2026/06 Faaliyet Raporu",
-      "tarih": "5 Ağustos 2026",
-      "tarih_iso": "2026-08-05",
-      "dokuman": "5zpmGm0G"
+      "baslik": "THYAO 2024/12 Faaliyet Raporu",
+      "tarih": "28 Şubat 2025",
+      "tarih_iso": "2025-02-28",
+      "dokuman": "I0LaPLtw"
      }
     },
     {
-     "id": "turizm-talep",
-     "not": "Şirket, iştiraki SunExpress aracılığıyla Türkiye ile Orta Avrupa arasındaki turizm taşımacılığında faaliyet göstermektedir.",
-     "alinti": "Türkiye ile Orta Avrupa arasındaki uçuşlarda pazar lideri olarak turizm taşımacılığı faaliyetlerine devam eden Güneş Ekspress Havacılık A.Ş.",
+     "id": "dolar-borc",
+     "not": "Ortaklığın gelir ve giderlerini oluşturan para birimleri arasındaki dağılım farklılığı döviz kuru riski potansiyeli yaratıyor.",
+     "alinti": "Ortaklığımız gelirleri ve giderlerini teşkil eden para birimleri arasındaki dağılım farklılığı, döviz kuru riski potansiyeli oluşturmaktadır.",
      "kaynak": {
       "tur": "Faaliyet raporu",
-      "baslik": "THYAO 2026/06 Faaliyet Raporu",
-      "tarih": "5 Ağustos 2026",
-      "tarih_iso": "2026-08-05",
-      "dokuman": "5zpmGm0G"
+      "baslik": "THYAO 2024/12 Faaliyet Raporu",
+      "tarih": "28 Şubat 2025",
+      "tarih_iso": "2025-02-28",
+      "dokuman": "I0LaPLtw"
      }
     }
    ]
@@ -523,6 +523,647 @@
      }
     }
    ]
+  },
+  "AKSEN": {
+   "ad": "Aksa Enerji Üretim A.Ş.",
+   "etiketler": [
+    {
+     "id": "dogalgaz",
+     "not": "Rapor, elektrik üretiminde kullanılan doğal gazın fiyatının 4 Nisan 2026 itibarıyla BOTAŞ tarafından %20 oranında artırılarak 18 TL/sm3 olduğunu bildiriyor.",
+     "alinti": "4 Nisan 2026 tarihi itibarıyla, elektrik üretim amaçlı kullanılan doğal gazın fiyatı BOTAŞ tarafından %20 oranında artırılarak 18 TL/sm3'e yükselmiştir.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "AKSEN 2026/06 Faaliyet Raporu",
+      "tarih": "13 Ağustos 2026",
+      "tarih_iso": "2026-08-13",
+      "dokuman": "xEsBuljt"
+     }
+    }
+   ]
+  },
+  "AKFYE": {
+   "ad": "Akfen Yenilenebilir Enerji A.Ş",
+   "etiketler": [
+    {
+     "id": "dolar-borc",
+     "not": "Şirketin gelirleri ağırlıklı olarak USD bazlı, gider ve maliyet yapısı ise ağırlıklı olarak enflasyona endeksli TL bazlıdır.",
+     "alinti": "Şirketimizin ağırlıklı USD bazlı gelir yapısına (YEKDEM kapsamındaki satışlar) karşın gider ve maliyet yapısının ağırlıklı olarak enflasyona endeksli TL bazlı olması faaliyet kar marjındaki daralmaya neden olmaktadır.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "AKFYE 2026/06 Faaliyet Raporu",
+      "tarih": "13 Ağustos 2026",
+      "tarih_iso": "2026-08-13",
+      "dokuman": "1OfbDCAV"
+     }
+    }
+   ]
+  },
+  "ENERY": {
+   "ad": "Enerya Enerji A.Ş.",
+   "etiketler": [
+    {
+     "id": "dogalgaz",
+     "not": "Şirket, 6 aylık hasılatının doğal gaz alım fiyatının önceki yılın aynı dönemine göre değişmesi nedeniyle oluştuğunu belirtmektedir.",
+     "alinti": "2026 yılının 6 aylık döneminde ise doğal gaz alım fiyatının 2025 yılının aynı dönemine göre artış göstermesi nedeniyle 27.420.286.553 TL olarak gerçekleşmiştir.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "ENERY 2026/06 Faaliyet Raporu",
+      "tarih": "13 Ağustos 2026",
+      "tarih_iso": "2026-08-13",
+      "dokuman": "5XNJYFqO"
+     }
+    }
+   ]
+  },
+  "EGGUB": {
+   "ad": "Ege Gübre Sanayii A.Ş.",
+   "etiketler": [
+    {
+     "id": "gubre-hammadde",
+     "not": "Gübre ve gübre hammaddesi fiyatlarında aşırı yükseliş ve buna bağlı iç piyasada talep daralması yaşandığı belirtilmiş.",
+     "alinti": "Şirketimiz, dünya piyasalarındaki gübre ve gübre hammaddesi fiyatlarında meydana gelen aşırı yükseliş ve buna bağlı olarak iç piyasada bütçe tahminlerimizin de ötesinde meydana gelen talep daralması neticesinde,",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "EGGUB 2025/09 Faaliyet Raporu",
+      "tarih": "6 Kasım 2025",
+      "tarih_iso": "2025-11-06",
+      "dokuman": "AMalnLPO"
+     }
+    }
+   ]
+  },
+  "KORDS": {
+   "ad": "Kordsa Teknik Tekstil A.Ş.",
+   "etiketler": [
+    {
+     "id": "brent-petrol",
+     "not": "Petrol fiyatının yükselmesinin hammadde ve enerji maliyetlerini yükselttiği ve fiyatlarda artışlara yol açtığı belirtilmiş.",
+     "alinti": "Şubat ayının sonunda başlayan Amerika/İsrail İran savaşının etkisiyle birlikte petrol fiyatının yükselmesi, hammadde ve enerji maliyetlerini yükseltmiş, bunun karşılığında da fiyatlarda da artışlar yaşanmıştır.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "KORDS 2026/06 Faaliyet Raporu",
+      "tarih": "3 Ağustos 2026",
+      "tarih_iso": "2026-08-03",
+      "dokuman": "KCJxpCZW"
+     }
+    }
+   ]
+  },
+  "EUREN": {
+   "ad": "Europen Endüstri İnşaat Sanayi ve Ticaret A.Ş.",
+   "etiketler": [
+    {
+     "id": "avrupa-talep",
+     "not": "Avrupa bölgesindeki resesyon ve bölgede Çinli firmaların rekabetçi fiyatlaması nedeniyle yılın zor geçtiği belirtilmiş.",
+     "alinti": "Avrupa bölgesindeki resesyon ve ilgili coğrafyada artan Çinli firmaların oldukça rekabetçi fiyatlama davranışları nedenleri ile zor bir yıl olarak geçti",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "EUREN 2024/12 Faaliyet Raporu",
+      "tarih": "3 Mart 2025",
+      "tarih_iso": "2025-03-03",
+      "dokuman": "2YOgLN6f"
+     }
+    }
+   ]
+  },
+  "ISDMR": {
+   "ad": "İskenderun Demir ve Çelik A.Ş.",
+   "etiketler": [
+    {
+     "id": "celik-hammadde",
+     "not": "Şirket üretim girdileri olan demir cevheri ve koklaşabilir kömür fiyatlarındaki dalgalanmalar ile çelik ürün fiyatlarındaki dalgalanmalardan kaynaklanan fiyat riskine maruz kaldığını belirtiyor.",
+     "alinti": "Şirket , faaliyet gösterdiği sektör sebebiyle üretim girdileri olan demir cevheri ve koklaşabilir kömür fiyatlarındaki dalgalanmalar, üretim çıktısı olan çelik ürünlerinin fiyatında meydana gelen dalgalanmalar",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "ISDMR 2025/12 Faaliyet Raporu",
+      "tarih": "17 Şubat 2026",
+      "tarih_iso": "2026-02-17",
+      "dokuman": "PtBKCKTK"
+     }
+    }
+   ]
+  },
+  "AKCNS": {
+   "ad": "Akçansa Çimento Sanayi ve Ticaret A.Ş.",
+   "etiketler": [
+    {
+     "id": "dolar-borc",
+     "not": "Şirketin finansman ihtiyaçları ihracat taahhütlü Türk Lirası ve döviz kredileriyle karşılanmaktadır.",
+     "alinti": "İşletmenin finansman ihtiyaçları şirketin ihracat potansiyeline paralel olarak kısa ve orta -uzun vadeli ihracat taahhütlü, Türk Lirası ve döviz kredileriyle karşılanmaktadır.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "AKCNS 2026/06 Faaliyet Raporu",
+      "tarih": "5 Ağustos 2026",
+      "tarih_iso": "2026-08-05",
+      "dokuman": "BV8Sy3mj"
+     }
+    }
+   ]
+  },
+  "CIMSA": {
+   "ad": "Çimsa Çimento Sanayi ve Ticaret A.Ş.",
+   "etiketler": [
+    {
+     "id": "dolar-borc",
+     "not": "Şirketin döviz bazlı kredilerinden doğan kambiyo riskleri ihracat gelirleriyle doğal olarak karşılanmakta, uygun finansal enstrümanlar ayrıca değerlendirilmektedir.",
+     "alinti": "Şirketin döviz bazlı kredilerden doğacak kambiyo riskleri ihracat gelirleri ile doğal olarak bertaraf edilmekte olup, uygun finansal enstrümanlar ayrıca değerlendirilmektedir.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "CIMSA 2026/06 Faaliyet Raporu",
+      "tarih": "3 Ağustos 2026",
+      "tarih_iso": "2026-08-03",
+      "dokuman": "Poifei7q"
+     }
+    }
+   ]
+  },
+  "TTRAK": {
+   "ad": "Türk Traktör ve Ziraat Makineleri A.Ş.",
+   "etiketler": [
+    {
+     "id": "dolar-borc",
+     "not": "Şirket, yabancı paraya dayalı ticari faaliyetleri ve döviz cinsinden uzun vadeli yatırım kredisi nedeniyle kur riskine maruz olduğunu belirtmektedir.",
+     "alinti": "Şirket, yurt içi ve yurt dışındaki şirketler ile yabancı paraya dayalı ticari faaliyetlerde bulunması sebebi ve döviz cinsinden kullanmış olduğu uzun vadeli yatırım kredisiyle birlikte kur riskine maruz kalmaktadır.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "TTRAK 2025/12 Faaliyet Raporu",
+      "tarih": "13 Şubat 2026",
+      "tarih_iso": "2026-02-13",
+      "dokuman": "UDgLT524"
+     }
+    }
+   ]
+  },
+  "ASELS": {
+   "ad": "Aselsan Elektronik Sanayi ve Ticaret A.Ş.",
+   "etiketler": [
+    {
+     "id": "dolar-borc",
+     "not": "Aselsan kur riskini bilanço içi yöntemlerle yönettiğini ve ihracat hacmiyle uyumlu döviz kredisi kullandığını belirtmektedir.",
+     "alinti": "Kur riskinin yönetilmesinde bilanço içi yöntemler kullanılmakta olup, ihracat hacmi ile uyumlu döviz kredisi kullanımı, sözleşmelerin maliyetinde ağırlıklı olan para birimine göre sözleşme",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "ASELS 2025/12 Faaliyet Raporu",
+      "tarih": "24 Şubat 2026",
+      "tarih_iso": "2026-02-24",
+      "dokuman": "vYjQYrw6"
+     }
+    }
+   ]
+  },
+  "VESTL": {
+   "ad": "Vestel Elektronik Sanayi ve Ticaret A.Ş.",
+   "etiketler": [
+    {
+     "id": "konteyner-navlun",
+     "not": "Vestel, ticaret yollarındaki aksaklıkları, alternatif güzergâh kullanımını ve navlun ile gümrük maliyetlerini lojistik ve gümrük maliyetleri riski olarak sıralamaktadır.",
+     "alinti": "Lojistik ve Gümrük Maliyetleri: Ticaret yollarındaki aksaklıklar, alternatif güzergâh kullanımı ve artan navlun/ gümrük maliyetleri",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "VESTL 2025/12 Faaliyet Raporu",
+      "tarih": "11 Mart 2026",
+      "tarih_iso": "2026-03-11",
+      "dokuman": "npDaynGK"
+     }
+    }
+   ]
+  },
+  "TAVHL": {
+   "ad": "Tav Havalimanları Holding A.Ş.",
+   "etiketler": [
+    {
+     "id": "dolar-borc",
+     "not": "Grup'un kur riski genel olarak Avro'nun TL ve ABD Doları karşısındaki değer değişikliklerinden oluşuyor ve türev finansal sözleşmelerle dengeleniyor.",
+     "alinti": "Grup'un kur riski genel olarak Avro'nun TL ve ABD Doları karşısındaki değer değişikliklerinden oluşmaktadır. Grup, yabancı para karşısındaki kur riskini türev finansal sözleşmeler aracılığı ile dengelemektedir.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "TAVHL 2025/12 Faaliyet Raporu",
+      "tarih": "27 Şubat 2026",
+      "tarih_iso": "2026-02-27",
+      "dokuman": "iWdvEZ0H"
+     }
+    }
+   ]
+  },
+  "GRSEL": {
+   "ad": "GÜR-SEL Turizm Taşımacılık ve Servis Ticaret A.Ş.",
+   "etiketler": [
+    {
+     "id": "brent-petrol",
+     "not": "Akaryakıt fiyatlarındaki değişimlerin kârlılığa etkisi, sözleşmelerdeki fiyat uyarlama mekanizmaları ve operasyonel verimlilik uygulamalarıyla yönetiliyor.",
+     "alinti": "Akaryakıt fiyatlarındaki değişimlerin şirketin kârlılığı üzerindeki etkisi, sözleşmelerde yer alan fiyat uyarlama mekanizmaları ve operasyonel verimlilik uygulamalarıyla yönetilmektedir.",
+     "kaynak": {
+      "tur": "KAP",
+      "baslik": "Gürsel Turizm Bilgilendirme Notu_2Ç26.pdf",
+      "tarih": "17 Ağustos 2026",
+      "tarih_iso": "2026-08-17",
+      "dokuman": "CgFRGvhI"
+     }
+    }
+   ]
+  },
+  "TCELL": {
+   "ad": "Turkcell İletişim Hizmetleri A.Ş.",
+   "etiketler": [
+    {
+     "id": "dolar-borc",
+     "not": "Şirket, bilançosundaki yabancı para cinsinden borçluluk için ihtiyatlı finansal risk yönetimi yaklaşımını sürdürdüğünü belirtiyor.",
+     "alinti": "Bilançomuzdaki yabancı para cinsinden borçluluğa ilişkin olarak 2025 yılı boyunca ihtiyatlı finansal risk yönetimi yaklaşımımız sürdürülmüştür.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "TCELL 2025/12 Faaliyet Raporu",
+      "tarih": "11 Mart 2026",
+      "tarih_iso": "2026-03-11",
+      "dokuman": "B3AfzO6C"
+     }
+    }
+   ]
+  },
+  "TTKOM": {
+   "ad": "Türk Telekomünikasyon A.Ş.",
+   "etiketler": [
+    {
+     "id": "dolar-borc",
+     "not": "Yatırım harcamaları tedarikinin bir kısmının yabancı firmalardan karşılanması ve fonlama ihtiyacı nedeniyle şirket yabancı para cinsinden yükümlülük taşıyor.",
+     "alinti": "Yatırım harcamalarına ilişkin tedarikin bir kısmının yabancı menşeli firmalardan karşılanması gerekliliği ve uzun vadeli ve çeşitlendirilmiş fonlama kaynaklarıyla finanse edilmesi ihtiyacı, Türk Telekom'un yabancı para cinsinden yükümlülükler taşımasına sebep olmaktadır.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "TTKOM 2026/06 Faaliyet Raporu",
+      "tarih": "5 Ağustos 2026",
+      "tarih_iso": "2026-08-05",
+      "dokuman": "AWcExxhs"
+     }
+    }
+   ]
+  },
+  "OBAMS": {
+   "ad": "Oba Makarnacılık Sanayi ve Ticaret A.Ş",
+   "etiketler": [
+    {
+     "id": "tarim-emtia",
+     "not": "Makarna üretiminin temel girdisi olan buğday ve irmik fiyatlarındaki dalgalanmalar üretim maliyetleri ve kârlılıkla ilişkilendirilmiştir.",
+     "alinti": "makarna üretiminin temel girdisi olan buğday ve irmik fiyatlarında meydana gelebilecek dalgalanmalar üretim maliyetleri ve dolayısıyla kârlılık üzerinde etkili olabilmektedir.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "OBAMS 2026/06 Faaliyet Raporu",
+      "tarih": "18 Ağustos 2026",
+      "tarih_iso": "2026-08-18",
+      "dokuman": "bp4O2Uut"
+     }
+    },
+    {
+     "id": "dolar-borc",
+     "not": "Satışların önemli kısmı ihracat gelirlerinden oluştuğu için döviz kurlarındaki değişimler finansal sonuçlarla ilişkilendirilmiştir.",
+     "alinti": "Şirketin satışlarının önemli bir kısmının ihracat gelirlerinden oluşması nedeniyle döviz kurlarındaki değişimler finansal sonuçlar üzerinde etkili olabilmektedir.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "OBAMS 2026/06 Faaliyet Raporu",
+      "tarih": "18 Ağustos 2026",
+      "tarih_iso": "2026-08-18",
+      "dokuman": "bp4O2Uut"
+     }
+    }
+   ]
+  },
+  "ULKER": {
+   "ad": "Ülker Bisküvi Sanayi A.Ş.",
+   "etiketler": [
+    {
+     "id": "dolar-borc",
+     "not": "Şirket 550 milyon ABD Doları nominal değerli, yedi yıl vadeli tahvil ihracını 8 Temmuz 2024 tarihinde tamamlamıştır.",
+     "alinti": "Ülker Bisküvi 550.000.000 ABD Doları nominal değerli tahvil ihracını 8 Temmuz 2024 tarihinde tamamlamış; söz konusu tahviller 7 yıl vadeli",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "ULKER 2026/06 Faaliyet Raporu",
+      "tarih": "18 Ağustos 2026",
+      "tarih_iso": "2026-08-18",
+      "dokuman": "ZlS4A5ln"
+     }
+    }
+   ]
+  },
+  "ENJSA": {
+   "ad": "Enerjisa Enerji A.Ş.",
+   "etiketler": [
+    {
+     "id": "dolar-borc",
+     "not": "Şirket, finansal borçları nedeniyle faiz dalgalanmalarına, YEKDEM nedeniyle de kur dalgalanmalarına maruz kaldığını belirtiyor.",
+     "alinti": "Enerjisa Enerji, finansal borçları sebebiyle finansal piyasalardaki faiz oranı dalgalanmalarına, Yenilenebilir Enerji Kaynakları Destekleme Mekanizması (YEKDEM) nedeniyle de kur dalgalanmalarına maruz kalmaktadır.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "ENJSA 2026/06 Faaliyet Raporu",
+      "tarih": "10 Ağustos 2026",
+      "tarih_iso": "2026-08-10",
+      "dokuman": "uAL3y1KX"
+     }
+    }
+   ]
+  },
+  "ENTRA": {
+   "ad": "IC Enterra Yenilenebilir Enerji A.Ş.",
+   "etiketler": [
+    {
+     "id": "dolar-borc",
+     "not": "Üretim şirketlerinin ABD Doları cinsinden borçları olduğu, buna karşın operasyon ve raporlamanın Türk Lirası cinsinden yapıldığı belirtiliyor.",
+     "alinti": "Üretim Şirketleri'nin ABD Doları cinsinden borçları bulunmaktadır. Üretim Şirketleri'nin döviz borçluluğu olmasına rağmen, Şirket'in ve Üretim Şirketleri'nin operasyonları ve raporlamaları Türk Lirası cinsinden yapılmaktadır.",
+     "kaynak": {
+      "tur": "KAP",
+      "baslik": "IC Enterra Onaylı İzahname.pdf",
+      "tarih": "25 Mayıs 2026",
+      "tarih_iso": "2026-05-25",
+      "dokuman": "cElpOgjn"
+     }
+    }
+   ]
+  },
+  "GWIND": {
+   "ad": "Galata Wind Enerji A.Ş.",
+   "etiketler": [
+    {
+     "id": "dolar-borc",
+     "not": "Kısa vadeli yükümlülüklerin ağırlıklı olarak uzun vadeli yabancı para kredilerin kısa vadeye düşen kısmından oluştuğu belirtiliyor.",
+     "alinti": "Kısa vadeli yükümlülükler içerisinde ağırlıklı olarak uzun vadeli yabancı para kredilerin kısa vadeye düşen kısmından oluşmaktadır (30 Haziran 2026: 789,27 milyon TL).",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "GWIND 2026/06 Faaliyet Raporu",
+      "tarih": "10 Ağustos 2026",
+      "tarih_iso": "2026-08-10",
+      "dokuman": "vH0Leo5N"
+     }
+    }
+   ]
+  },
+  "TRENJ": {
+   "ad": "TR Doğal Enerji Kaynakları Araştırma ve Üretim A.Ş.",
+   "etiketler": [
+    {
+     "id": "brent-petrol",
+     "not": "Şirketin operasyonel karlılığının ve operasyonlarından sağladığı nakit akımlarının piyasalardaki petrol fiyatlarının değişiminden etkilendiği belirtiliyor.",
+     "alinti": "Şirket'in operasyonel karlılığı ve operasyonlarından sağladığı nakit akımları, piyasalardaki petrol fiyatlarının değişiminden etkilenmekte olup",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "TRENJ 2026/03 Faaliyet Raporu",
+      "tarih": "21 Mayıs 2026",
+      "tarih_iso": "2026-05-21",
+      "dokuman": "SqxL3lZA"
+     }
+    }
+   ]
+  },
+  "ANHYT": {
+   "ad": "Anadolu Hayat Emeklilik A.Ş.",
+   "etiketler": [
+    {
+     "id": "dolar-borc",
+     "not": "Şirket, dövizli poliçe ve varlıkları nedeniyle kur riskine maruz kaldığını belirtiyor.",
+     "alinti": "Şirket, finansal yatırımları sebebiyle genelde faiz ve fiyat riskine, sigorta alacakları sebebiyle kredi riskine ve dövizli poliçe ve varlıkları sebebiyle de kur riskine maruz kalmaktadır.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "ANHYT 2025/12 Faaliyet Raporu",
+      "tarih": "27 Şubat 2026",
+      "tarih_iso": "2026-02-27",
+      "dokuman": "ITuZIVQ9"
+     }
+    }
+   ]
+  },
+  "ANSGR": {
+   "ad": "Anadolu Anonim Türk Sigorta Şirketi",
+   "etiketler": [
+    {
+     "id": "dolar-borc",
+     "not": "Şirket, dövize dayalı sigortacılık ve reasürans faaliyetleri nedeniyle kur riskine maruz kaldığını belirtiyor.",
+     "alinti": "Şirket dövize dayalı yapılan sigortacılık ve reasürans faaliyetleri sebebiyle kur riskine maruz kalmaktadır.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "ANSGR 2025/12 Faaliyet Raporu",
+      "tarih": "26 Şubat 2026",
+      "tarih_iso": "2026-02-26",
+      "dokuman": "Vpu9bvF6"
+     }
+    }
+   ]
+  },
+  "AKBNK": {
+   "ad": "Akbank T.A.Ş.",
+   "etiketler": [
+    {
+     "id": "dolar-borc",
+     "not": "Banka'nın yabancı para fonları DTH, yabancı para cinsinden yurt dışı kaynaklı krediler, ihraç edilen menkul kıymetler ve repo işlemleriyle sağlanmaktadır.",
+     "alinti": "Yabancı para fonlar, DTH, yabancı para cinsinden yurtdışı kaynaklı krediler, ihraç edilen menkul kıymetler ve repo işlemleri aracılığı ile sağlanmaktadır.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "AKBNK 2025/12 Faaliyet Raporu",
+      "tarih": "2 Mart 2026",
+      "tarih_iso": "2026-03-02",
+      "dokuman": "MYHohxU0"
+     }
+    }
+   ]
+  },
+  "ISCTR": {
+   "ad": "Türkiye İş Bankası A.Ş.",
+   "etiketler": [
+    {
+     "id": "dolar-borc",
+     "not": "Banka, Haziran 2025'te sürdürülebilir sendikasyon kredisi ile 751 milyon ABD Doları ve 513,45 milyon Euro tutarında kaynak temin etti.",
+     "alinti": "Bu kapsamda Banka, Haziran 2025 tarihinde imzaladığı sürdürülebilir sendikasyon kredisi sözleşmesi ile 367 gün vadeli, 751 milyon ABD Doları ve 513,45 milyon Euro tutarında kaynak temin etmiştir.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "ISCTR 2025/12 Faaliyet Raporu",
+      "tarih": "9 Mart 2026",
+      "tarih_iso": "2026-03-09",
+      "dokuman": "ACTK4trr"
+     }
+    }
+   ]
+  },
+  "TSKB": {
+   "ad": "Türkiye Sınai Kalkınma Bankası A.Ş.",
+   "etiketler": [
+    {
+     "id": "dolar-borc",
+     "not": "TSKB, Haziran ayında 350 milyon ABD doları tutarında 5 yıl vadeli tahvil ihracını gerçekleştirdi.",
+     "alinti": "Uluslararası sermaye piyasalarının 10 yılı aşkın süredir aktif oyuncusu olan TSKB Haziran ayında gün içi işlemle 350 milyon ABD doları tutarında, 5 yıl vadeli tahvil ihracını başarıyla gerçekleştirdi.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "TSKB 2025/12 Faaliyet Raporu",
+      "tarih": "5 Mart 2026",
+      "tarih_iso": "2026-03-05",
+      "dokuman": "4R2t9QIV"
+     }
+    }
+   ]
+  },
+  "VAKBN": {
+   "ad": "Türkiye Vakıflar Bankası T.A.O.",
+   "etiketler": [
+    {
+     "id": "dolar-borc",
+     "not": "Yurt dışından temin edilen kaynak tutarı yıl içinde 7.1 milyar ABD Doları seviyesine ulaşmıştır.",
+     "alinti": "Yurt dışından temin ettiğimiz kaynak tutarı ise yıl içerisinde 7.1 milyar ABD Doları seviyesine ulaşmıştır.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "VAKBN 2026/06 Faaliyet Raporu",
+      "tarih": "7 Ağustos 2026",
+      "tarih_iso": "2026-08-07",
+      "dokuman": "bMjXO6jW"
+     }
+    }
+   ]
+  },
+  "YKBNK": {
+   "ad": "Yapı ve Kredi Bankası A.Ş.",
+   "etiketler": [
+    {
+     "id": "dolar-borc",
+     "not": "Yılın ilk yarısında 1,165 milyar ABD doları sürdürülebilirlik sendikasyon kredisi temin edildi.",
+     "alinti": "Yılın ilk yarısında Sürdürülebilir Finans Çerçevesi kapsamında kullanılmak üzere 28 ülkeden 55 bankanın katılımıyla 1,165 milyar ABD doları sürdürülebilirlik sendikasyon kredisi temin edildi.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "YKBNK 2025/12 Faaliyet Raporu",
+      "tarih": "18 Şubat 2026",
+      "tarih_iso": "2026-02-18",
+      "dokuman": "LNg38OxU"
+     }
+    }
+   ]
+  },
+  "DOHOL": {
+   "ad": "Doğan Şirketler Grubu Holding A.Ş.",
+   "etiketler": [
+    {
+     "id": "dolar-borc",
+     "not": "Grup, ABD Doları ve Avro cinsinden kur riskine maruz kaldığını ve diğer para birimlerinin etkisinin önemsiz olduğunu belirtiyor.",
+     "alinti": "Grup, ağırlıklı olarak ABD Doları ve Avro cinsinden kur riskine maruz kalmaktadır, diğer para birimlerinin etkisi önemsiz düzeydedir.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "DOHOL 2026/06 Faaliyet Raporu",
+      "tarih": "11 Ağustos 2026",
+      "tarih_iso": "2026-08-11",
+      "dokuman": "W53vSphZ"
+     }
+    }
+   ]
+  },
+  "EKGYO": {
+   "ad": "Emlak Konut Gayrimenkul Yatırım Ortaklığı A.Ş.",
+   "etiketler": [
+    {
+     "id": "dolar-borc",
+     "not": "Şirket, ABD doları cinsinden borçlanmalarında kur riskini iki katmanlı bir stratejiyle yönetiyor.",
+     "alinti": "ABD doları cinsinden gerçekleştirdiği borçlanmalarda kur riskini etkin bir şekilde yönetmek için iki katmanlı bir strateji uygulamaktadır.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "EKGYO 2026/06 Faaliyet Raporu",
+      "tarih": "14 Ağustos 2026",
+      "tarih_iso": "2026-08-14",
+      "dokuman": "y5LP7dm7"
+     }
+    }
+   ]
   }
+ },
+ "taranan": {
+  "AKSEN": "2026-10-24",
+  "AKFYE": "2026-10-24",
+  "ASTOR": "2026-10-24",
+  "AYGAZ": "2026-10-24",
+  "AHGAZ": "2026-10-24",
+  "CANTE": "2026-10-24",
+  "CWENE": "2026-10-24",
+  "ENERY": "2026-10-24",
+  "AKSA": "2026-10-24",
+  "SASA": "2026-10-24",
+  "EGGUB": "2026-10-24",
+  "HEKTS": "2026-10-24",
+  "KORDS": "2026-10-24",
+  "EUREN": "2026-10-24",
+  "KRDMD": "2026-10-24",
+  "ISDMR": "2026-10-24",
+  "KCAER": "2026-10-24",
+  "BRSAN": "2026-10-24",
+  "TCKRC": "2026-10-24",
+  "CVKMD": "2026-10-24",
+  "TRMET": "2026-10-24",
+  "TRALT": "2026-10-24",
+  "AKCNS": "2026-10-24",
+  "BTCIM": "2026-10-24",
+  "CIMSA": "2026-10-24",
+  "LMKDC": "2026-10-24",
+  "OYAKC": "2026-10-24",
+  "SISE": "2026-10-24",
+  "ENKAI": "2026-10-24",
+  "GLRMK": "2026-10-24",
+  "TKFEN": "2026-10-24",
+  "DOAS": "2026-10-24",
+  "KARSN": "2026-10-24",
+  "KATMR": "2026-10-24",
+  "OTKAR": "2026-10-24",
+  "TTRAK": "2026-10-24",
+  "ASELS": "2026-10-24",
+  "ALTNY": "2026-10-24",
+  "VESTL": "2026-10-24",
+  "EGEEN": "2026-10-24",
+  "PGSUS": "2026-10-24",
+  "THYAO": "2026-10-24",
+  "TAVHL": "2026-10-24",
+  "GRSEL": "2026-10-24",
+  "RYSAS": "2026-10-24",
+  "TCELL": "2026-10-24",
+  "TTKOM": "2026-10-24",
+  "AEFES": "2026-10-24",
+  "OBAMS": "2026-10-24",
+  "TABGD": "2026-10-24",
+  "TUKAS": "2026-10-24",
+  "ULKER": "2026-10-24",
+  "BIMAS": "2026-10-24",
+  "MGROS": "2026-10-24",
+  "SOKM": "2026-10-24",
+  "MAVI": "2026-10-24",
+  "ENJSA": "2026-10-24",
+  "ENTRA": "2026-10-24",
+  "GWIND": "2026-10-24",
+  "ODAS": "2026-10-24",
+  "ZOREN": "2026-10-24",
+  "TRENJ": "2026-10-24",
+  "ISMEN": "2026-10-24",
+  "ANHYT": "2026-10-24",
+  "ANSGR": "2026-10-24",
+  "TURSG": "2026-10-24",
+  "AGHOL": "2026-10-24",
+  "ALARK": "2026-10-24",
+  "BINHO": "2026-10-24",
+  "BRYAT": "2026-10-24",
+  "AKBNK": "2026-10-24",
+  "ALBRK": "2026-10-24",
+  "GARAN": "2026-10-24",
+  "HALKB": "2026-10-24",
+  "ISCTR": "2026-10-24",
+  "TSKB": "2026-10-24",
+  "VAKBN": "2026-10-24",
+  "YKBNK": "2026-10-24",
+  "SNGYO": "2026-10-24",
+  "TRGYO": "2026-10-24",
+  "BERA": "2026-10-24",
+  "FENER": "2026-10-24",
+  "MPARK": "2026-10-24",
+  "ECILC": "2026-10-24",
+  "DOHOL": "2026-10-24",
+  "ECZYT": "2026-10-24",
+  "GLYHO": "2026-10-24",
+  "KCHOL": "2026-10-24",
+  "PAHOL": "2026-10-24",
+  "SAHOL": "2026-10-24",
+  "EKGYO": "2026-10-24",
+  "RGYAS": "2026-10-24",
+  "EREGL": "2026-10-24",
+  "TUPRS": "2026-10-24",
+  "PETKM": "2026-10-24",
+  "FROTO": "2026-10-24",
+  "TOASO": "2026-10-24",
+  "ARCLK": "2026-10-24",
+  "GUBRF": "2026-10-24",
+  "CCOLA": "2026-10-24"
  }
 }
