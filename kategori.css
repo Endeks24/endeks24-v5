@@ -473,6 +473,10 @@ html.e24v5 #e24v5 .v5-govde .e24-grafik .e24-g-sayi{font:400 64px/.92 var(--v5-s
 @media (max-width:575.98px){html.e24v5 #e24v5 .v5-govde .e24-grafik .e24-g-baslik{font-size:19px!important}}
 html.e24v5 #e24v5 .v5-govde .e24-katki{display:grid;grid-template-columns:150px 1fr;gap:24px;border-top:1px solid var(--v5-yazi);border-bottom:1px solid var(--v5-yazi);padding:22px 0;margin:28px 0}
 html.e24v5 #e24v5 .v5-govde .e24-katki p{font:400 17px/1.6 var(--v5-sans)!important;margin:0!important;grid-column:2}
+html.e24v5 #e24v5 .v5-govde .e24-duyarli{margin:28px 0;clear:both}
+html.e24v5 #e24v5 .v5-govde .e24-duyarli .v5-kaynak{font:400 13px/1.45 var(--v5-sans)!important;color:var(--v5-silik);margin:10px 0 0!important}
+html.e24v5 #e24v5 .v5-govde .e24-duyarli h3{font:700 12px/1 var(--v5-sans)!important;letter-spacing:.06em;text-transform:uppercase;margin:0 0 8px!important}
+html.e24v5 #e24v5 .v5-govde .e24-duyarli .v5-silik{color:var(--v5-silik)}
 html.e24v5 #e24v5 .v5-govde>p:last-child,html.e24v5 #e24v5 .v5-govde>p strong{font-size:14px!important}
 @media (max-width:991.98px){html.e24v5 #e24v5 .v5-iki,html.e24v5 #e24v5 .v5-uc,html.e24v5 #e24v5 .v5-iki-bir{grid-template-columns:1fr}}
 @media (max-width:991.98px){html.e24v5 #e24v5 .v5-izgara{gap:28px}}

@@ -1,0 +1,528 @@
+{
+ "surum": 1,
+ "guncelleme": "2026-10-24",
+ "aciklama": "Kelebek Etkisi: BIST şirketlerinin kamuya açık belgelerdeki (faaliyet raporu, KAP) bağımlılıkları. Her eşleşme kaynağa ve alıntıya dayanır; kaynaksız eşleşme girmez. Yön ve tahmin içermez.",
+ "etiketler": {
+  "brent-petrol": {
+   "ad": "Petrol ve akaryakıt fiyatı",
+   "anahtar": [
+    "brent",
+    "ham petrol",
+    "petrol fiyat",
+    "varil",
+    "akaryakıt",
+    "opec"
+   ]
+  },
+  "dogalgaz": {
+   "ad": "Doğal gaz fiyatı ve tedariki",
+   "anahtar": [
+    "doğal gaz",
+    "doğalgaz",
+    "lng",
+    "botaş",
+    "ttf"
+   ]
+  },
+  "elektrik": {
+   "ad": "Elektrik maliyeti",
+   "anahtar": [
+    "elektrik fiyat",
+    "elektrik zam",
+    "elektrik tarife",
+    "epdk"
+   ]
+  },
+  "celik-hammadde": {
+   "ad": "Çelik hammaddesi",
+   "anahtar": [
+    "demir cevheri",
+    "kok kömürü",
+    "hurda",
+    "cevher"
+   ]
+  },
+  "celik-ticaret": {
+   "ad": "Çelik ticaret önlemleri",
+   "anahtar": [
+    "çelik ithalat",
+    "çelik ihracat",
+    "çelik kota",
+    "damping",
+    "korunma önlemi",
+    "çelik tarife",
+    "çelik gümrük"
+   ]
+  },
+  "cbam-karbon": {
+   "ad": "AB karbon düzenlemesi",
+   "anahtar": [
+    "cbam",
+    "karbon sınır",
+    "sınırda karbon",
+    "emisyon ticaret",
+    "karbon vergisi"
+   ]
+  },
+  "kizildeniz-rota": {
+   "ad": "Kızıldeniz ve Süveyş rotası",
+   "anahtar": [
+    "kızıldeniz",
+    "kızıl deniz",
+    "süveyş",
+    "husi",
+    "babülmendep",
+    "umut burnu"
+   ]
+  },
+  "konteyner-navlun": {
+   "ad": "Navlun ve deniz taşımacılığı maliyeti",
+   "anahtar": [
+    "navlun",
+    "konteyner",
+    "freight",
+    "drewry",
+    "deniz taşımacılığı",
+    "baltık"
+   ]
+  },
+  "avrupa-talep": {
+   "ad": "Avrupa talebi",
+   "anahtar": [
+    "euro bölgesi",
+    "avrupa talebi",
+    "avrupa ekonomisi",
+    "almanya",
+    "alman sanayi",
+    "avrupa birliği"
+   ]
+  },
+  "abd-gumruk": {
+   "ad": "ABD gümrük ve ticaret politikası",
+   "anahtar": [
+    "gümrük tarifesi",
+    "ek tarife",
+    "trump",
+    "abd tarife",
+    "ticaret savaşı",
+    "gümrük vergisi"
+   ]
+  },
+  "cin-talep": {
+   "ad": "Çin talebi ve arzı",
+   "anahtar": [
+    "çin ekonomisi",
+    "çin talebi",
+    "çin'in",
+    "pekin",
+    "çin imalat"
+   ]
+  },
+  "dolar-borc": {
+   "ad": "Döviz borcu ve küresel faiz",
+   "anahtar": [
+    "dolar endeksi",
+    "dxy",
+    "fed faiz",
+    "fed kararı",
+    "kur riski"
+   ]
+  },
+  "metal-fiyat": {
+   "ad": "Alüminyum, bakır ve diğer metaller",
+   "anahtar": [
+    "alüminyum",
+    "bakır",
+    "nikel",
+    "çinko",
+    "lme",
+    "metal fiyat"
+   ]
+  },
+  "tarim-emtia": {
+   "ad": "Tarım emtiası",
+   "anahtar": [
+    "buğday",
+    "mısır",
+    "şeker fiyat",
+    "ayçiçek",
+    "tarım emtia",
+    "fao",
+    "gıda fiyat endeksi"
+   ]
+  },
+  "gubre-hammadde": {
+   "ad": "Gübre hammaddesi",
+   "anahtar": [
+    "gübre",
+    "amonyak",
+    "üre fiyat",
+    "fosfat",
+    "potas"
+   ]
+  },
+  "havacilik-yakit": {
+   "ad": "Jet yakıtı",
+   "anahtar": [
+    "jet yakıt",
+    "havacılık yakıt",
+    "uçak yakıt",
+    "iata"
+   ]
+  },
+  "turizm-talep": {
+   "ad": "Turizm talebi",
+   "anahtar": [
+    "turizm",
+    "turist",
+    "rezervasyon",
+    "otel doluluk",
+    "tatil sezon"
+   ]
+  },
+  "yari-iletken-tedarik": {
+   "ad": "Çip ve elektronik bileşen tedariki",
+   "anahtar": [
+    "yarı iletken",
+    "çip krizi",
+    "çip tedarik",
+    "tsmc",
+    "nexperia",
+    "elektronik bileşen"
+   ]
+  },
+  "batarya-mineral": {
+   "ad": "Batarya mineralleri",
+   "anahtar": [
+    "lityum",
+    "kobalt",
+    "batarya",
+    "nadir toprak",
+    "elektrikli araç pil"
+   ]
+  }
+ },
+ "sirketler": {
+  "EREGL": {
+   "ad": "Ereğli Demir ve Çelik Fabrikaları T.A.Ş.",
+   "etiketler": [
+    {
+     "id": "celik-hammadde",
+     "not": "Şirket, demir cevheri ve koklaşabilir kömür fiyatlarındaki dalgalanmalara üretim girdisi olarak maruz kalmaktadır.",
+     "alinti": "üretim girdileri olan demir cevheri ve koklaşabilir kömür fiyatlarındaki dalgalanmalar",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "EREGL 2025/12 Faaliyet Raporu",
+      "tarih": "17 Şubat 2026",
+      "tarih_iso": "2026-02-17",
+      "dokuman": "gXxEsJur"
+     }
+    },
+    {
+     "id": "dolar-borc",
+     "not": "Şirket, kredi geri ödemeleri ve enerji ödemeleri dahil işlemlerini fonksiyonel para birimi dışındaki para birimleriyle yaptığı için kur riski taşımaktadır.",
+     "alinti": "fonksiyonel para birimi dışındaki para birimleri ile yapılması durumunda kur riskine maruz kalmaktadır",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "EREGL 2025/12 Faaliyet Raporu",
+      "tarih": "17 Şubat 2026",
+      "tarih_iso": "2026-02-17",
+      "dokuman": "gXxEsJur"
+     }
+    }
+   ]
+  },
+  "TUPRS": {
+   "ad": "TÜPRAŞ - Türkiye Petrol Rafinerileri A.Ş.",
+   "etiketler": [
+    {
+     "id": "brent-petrol",
+     "not": "Şirket, faaliyet raporunda piyasa koşullarını Dated Brent ham petrol fiyatı üzerinden izlemekte ve 2026 ilk yarıda bu fiyatın sert dalgalandığını bildirmektedir.",
+     "alinti": "Dated Brent ham petrol fiyatı, ilk çeyrekte artan jeopolitik riskler ve arz kesintilerine ilişkin endişelerle Mart ayı içerisinde 120 ABD doları/varil seviyesini aşmış",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "TUPRS 2026/06 Faaliyet Raporu",
+      "tarih": "4 Ağustos 2026",
+      "tarih_iso": "2026-08-04",
+      "dokuman": "dbpaDXmn"
+     }
+    },
+    {
+     "id": "konteyner-navlun",
+     "not": "Şirket raporunda artan navlun maliyetlerini ürün marjlarındaki dalgalanmanın nedenleri arasında saymaktadır.",
+     "alinti": "Artan navlun maliyetleri, savaş riski ve değişen ticaret akışları ürün marjlarında önemli dalgalanmalara neden olurken",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "TUPRS 2026/06 Faaliyet Raporu",
+      "tarih": "4 Ağustos 2026",
+      "tarih_iso": "2026-08-04",
+      "dokuman": "dbpaDXmn"
+     }
+    }
+   ]
+  },
+  "PETKM": {
+   "ad": "Petkim Petrokimya Holding A.Ş.",
+   "etiketler": [
+    {
+     "id": "brent-petrol",
+     "not": "Şirket raporunda petrol fiyatlarındaki dalgalanmanın petrokimyasal ürünlerin temel girdisi nafta fiyatlarına yansıdığını belirtmektedir.",
+     "alinti": "dalgalanma petrokimyasal ürünlerin temel girdisi nafta fiyatlarına da yansıdı",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "PETKM 2026/06 Faaliyet Raporu",
+      "tarih": "6 Ağustos 2026",
+      "tarih_iso": "2026-08-06",
+      "dokuman": "0wFx7yui"
+     }
+    }
+   ]
+  },
+  "THYAO": {
+   "ad": "Türk Hava Yolları A.O.",
+   "etiketler": [
+    {
+     "id": "dolar-borc",
+     "not": "Şirketin ABD doları cinsi ekipman teminatlı kredi sertifikaları bulunmaktadır.",
+     "alinti": "2015 yılında ihraç etmiş olduğu USD cinsi Ekipman Teminatlı Geliştirilmiş Kredi Sertifikaları'na ait kredi notunu BB+ olarak teyit etmiştir.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "THYAO 2026/06 Faaliyet Raporu",
+      "tarih": "5 Ağustos 2026",
+      "tarih_iso": "2026-08-05",
+      "dokuman": "5zpmGm0G"
+     }
+    },
+    {
+     "id": "turizm-talep",
+     "not": "Şirket, iştiraki SunExpress aracılığıyla Türkiye ile Orta Avrupa arasındaki turizm taşımacılığında faaliyet göstermektedir.",
+     "alinti": "Türkiye ile Orta Avrupa arasındaki uçuşlarda pazar lideri olarak turizm taşımacılığı faaliyetlerine devam eden Güneş Ekspress Havacılık A.Ş.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "THYAO 2026/06 Faaliyet Raporu",
+      "tarih": "5 Ağustos 2026",
+      "tarih_iso": "2026-08-05",
+      "dokuman": "5zpmGm0G"
+     }
+    }
+   ]
+  },
+  "FROTO": {
+   "ad": "Ford Otomotiv Sanayi A.Ş.",
+   "etiketler": [
+    {
+     "id": "avrupa-talep",
+     "not": "Avrupa ve Birleşik Krallık şirketin en büyük ihracat pazarıdır.",
+     "alinti": "En büyük ihracat pazarımız olan Avrupa ve Birleşik Krallık ticari araç pazarı",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "FROTO 2026/06 Faaliyet Raporu",
+      "tarih": "4 Ağustos 2026",
+      "tarih_iso": "2026-08-04",
+      "dokuman": "Q3xFTP33"
+     }
+    },
+    {
+     "id": "metal-fiyat",
+     "not": "Çelik ve alüminyum şirketin kritik hammaddeleri arasında sayılmaktadır.",
+     "alinti": "kritik hammaddeler (çelik, alüminyum, lityum batarya, kauçuk, plastik) için yeşil çelik denemeleri",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "FROTO 2025/12 Faaliyet Raporu",
+      "tarih": "18 Şubat 2026",
+      "tarih_iso": "2026-02-18",
+      "dokuman": "rce6f6bW"
+     }
+    }
+   ]
+  },
+  "TOASO": {
+   "ad": "Tofaş Türk Otomobil Fabrikası A.Ş.",
+   "etiketler": [
+    {
+     "id": "avrupa-talep",
+     "not": "Avrupa şirketin ülke açısından en büyük ihracat pazarı olarak yönetim kurulu mesajında belirleyici sayılmaktadır.",
+     "alinti": "Avrupa’daki ekonomik aktivitenin seyri, sanayimizin sürdürülebilir büyüme performansı açısından belirleyici öneme sahip",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "TOASO 2025/12 Faaliyet Raporu",
+      "tarih": "17 Şubat 2026",
+      "tarih_iso": "2026-02-17",
+      "dokuman": "xFgf8xQV"
+     }
+    },
+    {
+     "id": "cbam-karbon",
+     "not": "Avrupa pazarındaki daralma ve CBAM gibi karbon düzenlemelerinin ihracat maliyetlerine etkisi raporda yer almaktadır.",
+     "alinti": "Avrupa pazarındaki daralmalar ve CBAM gibi karbon düzenlemelerinin ihracat maliyetlerine etkisi",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "TOASO 2025/12 Faaliyet Raporu",
+      "tarih": "17 Şubat 2026",
+      "tarih_iso": "2026-02-17",
+      "dokuman": "xFgf8xQV"
+     }
+    }
+   ]
+  },
+  "ARCLK": {
+   "ad": "Arçelik A.Ş.",
+   "etiketler": [
+    {
+     "id": "avrupa-talep",
+     "not": "Şirket Avrupa'yı ana pazarı olarak tanımlıyor ve 2025 net satışlarının en büyük payı Avrupa müşterilerinden geliyor.",
+     "alinti": "Ana pazarımız olan Avrupa, %1,6 ile beklenenin üstünde büyümüş olsa da ekonomik aktivite hâlâ potansiyelinin altında seyrediyor.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "ARCLK 2025/12 Faaliyet Raporu",
+      "tarih": "19 Şubat 2026",
+      "tarih_iso": "2026-02-19",
+      "dokuman": "R1BZ3wMZ"
+     }
+    },
+    {
+     "id": "metal-fiyat",
+     "not": "Şirket raporunda metal hammadde piyasasını ayrı bir başlıkta değerlendirmektedir.",
+     "alinti": "Genel olarak; metal hammadde piyasası 2025'in son çeyreğinde dengeli bir görünüm sergilemiştir.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "ARCLK 2025/12 Faaliyet Raporu",
+      "tarih": "19 Şubat 2026",
+      "tarih_iso": "2026-02-19",
+      "dokuman": "R1BZ3wMZ"
+     }
+    },
+    {
+     "id": "cin-talep",
+     "not": "Şirket, Çinli üreticilerin ABD tarifeleri sonrası sevkiyatlarını başka pazarlara yönlendirmesinin kendi faaliyetlerini etkilediğini belirtiyor.",
+     "alinti": "Çin'in izlediği bu politika, şirketimizin faaliyetlerini de etkilerken, dikkatle takip etmemiz gereken bir gelişme olarak öne çıkıyor.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "ARCLK 2025/12 Faaliyet Raporu",
+      "tarih": "19 Şubat 2026",
+      "tarih_iso": "2026-02-19",
+      "dokuman": "R1BZ3wMZ"
+     }
+    },
+    {
+     "id": "dolar-borc",
+     "not": "Grup birden çok para biriminde faaliyet gösteriyor, Avro ve ABD doları cinsi kredi ve tahvil kullanıyor ve döviz kuru riskini en önemli finansal risklerden biri olarak tanımlıyor.",
+     "alinti": "Bu nedenle, döviz kuru riski maruz kalınan en önemli finansal risklerden biridir.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "ARCLK 2025/12 Faaliyet Raporu",
+      "tarih": "19 Şubat 2026",
+      "tarih_iso": "2026-02-19",
+      "dokuman": "R1BZ3wMZ"
+     }
+    }
+   ]
+  },
+  "GUBRF": {
+   "ad": "Gübre Fabrikaları T.A.Ş.",
+   "etiketler": [
+    {
+     "id": "dogalgaz",
+     "not": "Rapor, doğal gazı azotlu gübre üretiminin temel girdisi olarak tanımlıyor ve fiyat dalgalanmasının üretim maliyetine yansıdığını belirtiyor.",
+     "alinti": "azotlu gübre üretiminde temel girdi niteliği taşıyan doğal gaz fiyatlarında görülen dalgalanmalar, üretim maliyetlerini küresel ölçekte etkilemeye devam etmiştir.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "GUBRF 2026/03 Faaliyet Raporu",
+      "tarih": "11 Haziran 2026",
+      "tarih_iso": "2026-06-11",
+      "dokuman": "04Whmo9d"
+     }
+    },
+    {
+     "id": "gubre-hammadde",
+     "not": "Rapor, fosforik asidi ve amonyağı gübre fiyatlarını belirleyen önemli girdiler arasında anıyor.",
+     "alinti": "Diğer önemli girdi olan fosforik asit fiyatı ise 2025 yılında yaklaşık %22 oranında yükselmiştir.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "GUBRF 2025/12 Faaliyet Raporu",
+      "tarih": "9 Nisan 2026",
+      "tarih_iso": "2026-04-09",
+      "dokuman": "HPsM1zFJ"
+     }
+    },
+    {
+     "id": "konteyner-navlun",
+     "not": "Rapor, amonyak ve üre sevkiyatında deniz taşımacılığı ve sigorta giderlerinin gübre sektörü maliyetine etki ettiğini belirtiyor.",
+     "alinti": "deniz taşımacılığı maliyetleri ile sigorta giderlerinde belirgin artışlara neden olmuştur.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "GUBRF 2026/03 Faaliyet Raporu",
+      "tarih": "11 Haziran 2026",
+      "tarih_iso": "2026-06-11",
+      "dokuman": "04Whmo9d"
+     }
+    },
+    {
+     "id": "cin-talep",
+     "not": "Rapor, Çin'in gübre ihracatına yönelik politikalarını küresel arz dengesini etkileyen unsurlardan biri olarak sayıyor.",
+     "alinti": "Çin'in gübre ihracatına yönelik kontrollü politikalarının sürmesi",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "GUBRF 2026/03 Faaliyet Raporu",
+      "tarih": "11 Haziran 2026",
+      "tarih_iso": "2026-06-11",
+      "dokuman": "04Whmo9d"
+     }
+    },
+    {
+     "id": "tarim-emtia",
+     "not": "Rapor, tarımsal ürün fiyatlarını ve hububat fiyatlarını yurt içi gübre talebini etkileyen unsur olarak anıyor.",
+     "alinti": "Tarımsal ürün fiyatları ve üretici gelirlerinin kimyevi gübre talepleri üzerinde etkisi",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "GUBRF 2025/12 Faaliyet Raporu",
+      "tarih": "9 Nisan 2026",
+      "tarih_iso": "2026-04-09",
+      "dokuman": "HPsM1zFJ"
+     }
+    }
+   ]
+  },
+  "CCOLA": {
+   "ad": "Coca-Cola İçecek A.Ş.",
+   "etiketler": [
+    {
+     "id": "tarim-emtia",
+     "not": "Rapor, şeker fiyatlarını brüt kâr marjını etkileyen girdi kalemi olarak anıyor.",
+     "alinti": "düşük maliyetli hammadde stoklarının kullanımı, elverişli şeker fiyatları ve etkin maliyet yönetimiyle desteklendi.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "CCOLA 2026/06 Faaliyet Raporu",
+      "tarih": "10 Ağustos 2026",
+      "tarih_iso": "2026-08-10",
+      "dokuman": "rD1Wrm4n"
+     }
+    },
+    {
+     "id": "brent-petrol",
+     "not": "Rapor, petrol fiyatlarını dağıtım maliyetlerini etkileyen unsur olarak anıyor.",
+     "alinti": "süregelen enflasyonist baskılar ve artan petrol fiyatlarının dağıtım maliyetleri üzerindeki etkisine rağmen",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "CCOLA 2026/06 Faaliyet Raporu",
+      "tarih": "10 Ağustos 2026",
+      "tarih_iso": "2026-08-10",
+      "dokuman": "rD1Wrm4n"
+     }
+    },
+    {
+     "id": "dolar-borc",
+     "not": "Net finansman gideri tablosunda krediler üzerinden kur farkı gelir ve gideri ayrı kalem olarak raporlanıyor.",
+     "alinti": "Kur farkı gelir / (gideri ) - Krediler, 1Y26 = -656",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "CCOLA 2026/06 Faaliyet Raporu",
+      "tarih": "10 Ağustos 2026",
+      "tarih_iso": "2026-08-10",
+      "dokuman": "rD1Wrm4n"
+     }
+    }
+   ]
+  }
+ }
+}
