@@ -79,7 +79,7 @@ def ara_pencere(ft, konu, bas, bit, sonuc, derinlik=0):
     """[bas, bit) aralığındaki KAP bildirimlerini toplar; 1000 sınırına dayanırsa aralığı böler."""
     filtre = (f'dokuman_tipi = "kap_haberi" AND kap_bildirim_tipi = "CA" AND kap_bildirim_konu = "{konu}" '
               f'AND yayinlanma_tarihi_utc >= "{tarih_utc(bas)}" AND yayinlanma_tarihi_utc < "{tarih_utc(bit)}"')
-    r = ft.arac('dokumanlarda_ara', {'query': '', 'filter': filtre, 'sayfa': 1, 'sayfa_basi': 100,
+    r = ft.arac('dokumanlarda_ara', {'query': '', 'filter': filtre, 'sayfa': 1, 'sayfa_basi': 50,
                                      'sirala': 'yayinlanma_tarihi_utc:asc'})
     top = r.get('toplam', 0)
     if top >= 1000 and (bit - bas) > datetime.timedelta(hours=2):
@@ -90,7 +90,7 @@ def ara_pencere(ft, konu, bas, bit, sonuc, derinlik=0):
     sayfalar = r.get('toplam_sayfa', 1)
     for s in range(1, sayfalar + 1):
         if s > 1:
-            r = ft.arac('dokumanlarda_ara', {'query': '', 'filter': filtre, 'sayfa': s, 'sayfa_basi': 100,
+            r = ft.arac('dokumanlarda_ara', {'query': '', 'filter': filtre, 'sayfa': s, 'sayfa_basi': 50,
                                              'sirala': 'yayinlanma_tarihi_utc:asc'})
         for x in r.get('sonuclar', []):
             sonuc[x['kap_bildirim_id']] = x
