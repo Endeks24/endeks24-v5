@@ -200,6 +200,25 @@
     "nadir toprak",
     "elektrikli araç pil"
    ]
+  },
+  "komur-petrokok": {
+   "ad": "Kömür ve petrokok maliyeti",
+   "anahtar": [
+    "kömür fiyat",
+    "petrokok",
+    "petrol koku",
+    "taş kömürü",
+    "linyit"
+   ]
+  },
+  "hurmuz-korfez": {
+   "ad": "Hürmüz Boğazı ve Körfez rotası",
+   "anahtar": [
+    "hürmüz",
+    "basra körfezi",
+    "körfez bölgesi",
+    "körfez ülkeleri"
+   ]
   }
  },
  "sirketler": {
@@ -222,6 +241,18 @@
      "id": "dolar-borc",
      "not": "Şirket, kredi geri ödemeleri ve enerji ödemeleri dahil işlemlerini fonksiyonel para birimi dışındaki para birimleriyle yaptığı için kur riski taşımaktadır.",
      "alinti": "fonksiyonel para birimi dışındaki para birimleri ile yapılması durumunda kur riskine maruz kalmaktadır",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "EREGL 2025/12 Faaliyet Raporu",
+      "tarih": "17 Şubat 2026",
+      "tarih_iso": "2026-02-17",
+      "dokuman": "gXxEsJur"
+     }
+    },
+    {
+     "id": "komur-petrokok",
+     "not": "Şirket, üretim girdileri olan demir cevheri ve koklaşabilir kömür fiyatlarındaki dalgalanmaları ve çelik ürünlerinin fiyatındaki dalgalanmaları fiyat riskleri arasında sayıyor.",
+     "alinti": "Şirketin faaliyet gösterdiği sektör sebebiyle üretim girdileri olan demir cevheri ve koklaşabilir kömür fiyatlarındaki dalgalanmalar, üretim çıktısı olan çelik ürünlerinin fiyatında meydana gelen dalgalanmalar",
      "kaynak": {
       "tur": "Faaliyet raporu",
       "baslik": "EREGL 2025/12 Faaliyet Raporu",
@@ -275,6 +306,18 @@
       "tarih_iso": "2026-08-06",
       "dokuman": "0wFx7yui"
      }
+    },
+    {
+     "id": "kizildeniz-rota",
+     "not": "Şirket, Kızıldeniz bölgesindeki güvenlik kaynaklı aksaklıklara karşı stok yönetimi ve sevk planlarında revizyon yaptığını ve üretimi kesintisiz sürdürdüğünü belirtiyor.",
+     "alinti": "Kızıldeniz bölgesinde yaşanan güvenlik kaynaklı aksaklıklara karşı stok yönetimi ve sevk planlarında gerekli revizyonları yaparak üretim faaliyetlerimizin kesintisiz sürdürülmesini sağladık.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "PETKM 2025/12 Faaliyet Raporu",
+      "tarih": "5 Mart 2026",
+      "tarih_iso": "2026-03-05",
+      "dokuman": "cuxiukD7"
+     }
     }
    ]
   },
@@ -326,6 +369,30 @@
      "id": "metal-fiyat",
      "not": "Çelik ve alüminyum şirketin kritik hammaddeleri arasında sayılmaktadır.",
      "alinti": "kritik hammaddeler (çelik, alüminyum, lityum batarya, kauçuk, plastik) için yeşil çelik denemeleri",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "FROTO 2025/12 Faaliyet Raporu",
+      "tarih": "18 Şubat 2026",
+      "tarih_iso": "2026-02-18",
+      "dokuman": "rce6f6bW"
+     }
+    },
+    {
+     "id": "yari-iletken-tedarik",
+     "not": "Şirket, Nexperia gibi stratejik yarı iletken üreticilerine ilişkin gelişmelerin tedarik zinciri risk profilini öne çıkaran unsurlardan biri olduğunu belirtiyor.",
+     "alinti": "Hürmüz Boğazı başta olmak üzere kritik geçiş noktalarındaki riskler, Nadir Toprak Elementleri tedariğine yönelik kırılganlıklar ve Nexperia gibi stratejik yarı iletken üreticilerine ilişkin gelişmeler tedarik zinciri risk profilini öne çıkaran başlıca unsurlar olmuştur.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "FROTO 2025/12 Faaliyet Raporu",
+      "tarih": "18 Şubat 2026",
+      "tarih_iso": "2026-02-18",
+      "dokuman": "rce6f6bW"
+     }
+    },
+    {
+     "id": "hurmuz-korfez",
+     "not": "Şirket, Hürmüz Boğazı başta olmak üzere kritik geçiş noktalarındaki risklerin tedarik zinciri risk profilini öne çıkaran unsurlardan biri olduğunu belirtiyor.",
+     "alinti": "Hürmüz Boğazı başta olmak üzere kritik geçiş noktalarındaki riskler, Nadir Toprak Elementleri tedariğine yönelik kırılganlıklar ve Nexperia gibi stratejik yarı iletken üreticilerine ilişkin gelişmeler tedarik zinciri risk profilini öne çıkaran başlıca unsurlar olmuştur.",
      "kaynak": {
       "tur": "Faaliyet raporu",
       "baslik": "FROTO 2025/12 Faaliyet Raporu",
@@ -521,6 +588,30 @@
       "tarih_iso": "2026-08-10",
       "dokuman": "rD1Wrm4n"
      }
+    },
+    {
+     "id": "hurmuz-korfez",
+     "not": "Şirket, Irak ekonomisinin petrol gelirlerine bağımlı olduğunu ve Hürmüz Boğazı çevresindeki gerilimlerin ekonomik aktivite ve tüketici güveni üzerinde baskı yarattığını belirtiyor.",
+     "alinti": "Petrol gelirlerine yüksek bağımlılığı bulunan Irak ekonomisi, bölgesel jeopolitik gelişmelerden olumsuz etkilenmeye devam et ti; petrol sektöründeki faaliyetlerde yaşanan aksaklıklar ve Hürmüz Boğazı çevresindeki gerilimler ekonomik aktivite ve tüketici güveni üzerinde baskı yarattı.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "CCOLA 2026/06 Faaliyet Raporu",
+      "tarih": "10 Ağustos 2026",
+      "tarih_iso": "2026-08-10",
+      "dokuman": "rD1Wrm4n"
+     }
+    },
+    {
+     "id": "turizm-talep",
+     "not": "Şirket, satın alma gücündeki zayıflamanın ve İran kaynaklı çatışmaların ardından turizmde gözlenen yavaşlamanın tüketici talebini olumsuz etkilediğini belirtiyor.",
+     "alinti": "Satın alma gücündeki zayıf lama ve İran kaynaklı çatışmaların ardından turizmde gözlenen yavaşlama da tüketici talebini olumsuz etkiledi.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "CCOLA 2026/06 Faaliyet Raporu",
+      "tarih": "10 Ağustos 2026",
+      "tarih_iso": "2026-08-10",
+      "dokuman": "rD1Wrm4n"
+     }
     }
    ]
   },
@@ -640,6 +731,18 @@
       "tarih_iso": "2026-02-17",
       "dokuman": "PtBKCKTK"
      }
+    },
+    {
+     "id": "komur-petrokok",
+     "not": "Şirket, üretim girdileri olan demir cevheri ve koklaşabilir kömür fiyatlarındaki dalgalanmaları ve çelik ürünlerinin fiyatındaki dalgalanmaları fiyat riskleri arasında sayıyor.",
+     "alinti": "Şirket , faaliyet gösterdiği sektör sebebiyle üretim girdileri olan demir cevheri ve koklaşabilir kömür fiyatlarındaki dalgalanmalar, üretim çıktısı olan çelik ürünlerinin fiyatında meydana gelen dalgalanmalar",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "ISDMR 2025/12 Faaliyet Raporu",
+      "tarih": "17 Şubat 2026",
+      "tarih_iso": "2026-02-17",
+      "dokuman": "PtBKCKTK"
+     }
     }
    ]
   },
@@ -725,6 +828,18 @@
       "tarih_iso": "2026-03-11",
       "dokuman": "npDaynGK"
      }
+    },
+    {
+     "id": "yari-iletken-tedarik",
+     "not": "Şirketin tedarik zinciri riski tanımı, yarı iletken gibi önemli bir girdide yaşanan küresel arz eksikliğinin bu risklerin yönetimini daha kritik hale getirdiğini söylüyor.",
+     "alinti": "yarı iletken gibi önemli bir girdide yaşanan küresel arz eksikliği bu alandaki risklerin yönetiminin çok daha kritik hale geldiğini işaret etmiştir",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "VESTL 2025/12 Faaliyet Raporu",
+      "tarih": "11 Mart 2026",
+      "tarih_iso": "2026-03-11",
+      "dokuman": "npDaynGK"
+     }
     }
    ]
   },
@@ -735,6 +850,18 @@
      "id": "dolar-borc",
      "not": "Grup'un kur riski genel olarak Avro'nun TL ve ABD Doları karşısındaki değer değişikliklerinden oluşuyor ve türev finansal sözleşmelerle dengeleniyor.",
      "alinti": "Grup'un kur riski genel olarak Avro'nun TL ve ABD Doları karşısındaki değer değişikliklerinden oluşmaktadır. Grup, yabancı para karşısındaki kur riskini türev finansal sözleşmeler aracılığı ile dengelemektedir.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "TAVHL 2025/12 Faaliyet Raporu",
+      "tarih": "27 Şubat 2026",
+      "tarih_iso": "2026-02-27",
+      "dokuman": "iWdvEZ0H"
+     }
+    },
+    {
+     "id": "turizm-talep",
+     "not": "Şirket, Orta Doğu'daki artan gerilimin Türkiye'de işlettiği turistik havalimanlarının performansını olumsuz etkilediğini belirtiyor.",
+     "alinti": "Haziran ayı ortasında Orta Doğu'da artan gerilim, özellikle Türkiye'de işlettiğimiz turistik havalimanlarının performansını olumsuz etkiledi.",
      "kaynak": {
       "tur": "Faaliyet raporu",
       "baslik": "TAVHL 2025/12 Faaliyet Raporu",
@@ -1059,6 +1186,200 @@
       "tarih": "14 Ağustos 2026",
       "tarih_iso": "2026-08-14",
       "dokuman": "y5LP7dm7"
+     }
+    }
+   ]
+  },
+  "HEKTS": {
+   "ad": "Hektaş Ticaret T.A.Ş.",
+   "etiketler": [
+    {
+     "id": "kizildeniz-rota",
+     "not": "Şirket, Kızıldeniz bölgesindeki siyasi istikrarsızlığın nakliye süreçlerinde gecikmeye yol açıp hammadde tedarikini ve ihracat sevkiyatlarını aksattığını söylüyor.",
+     "alinti": "Kızıldeniz bölgesindeki siyasi istikrarsızlık, nakliye süreçle rinde gecikmelere yol açarak hem hammadde tedarikini hem de ihracat sevkiyatlarını aksattı.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "HEKTS 2025/06 Faaliyet Raporu",
+      "tarih": "18 Ağustos 2025",
+      "tarih_iso": "2025-08-18",
+      "dokuman": "MX0UlY1x"
+     }
+    }
+   ]
+  },
+  "TCKRC": {
+   "ad": "Kıraç Galvaniz Telekominikasyon Metal Makine İnşaat Elektrik Sanayi ve Ticaret A.Ş.",
+   "etiketler": [
+    {
+     "id": "cbam-karbon",
+     "not": "Şirket, AB ihracatı için zorunlu hale gelen SKDM/CBAM kapsamında gerekli aksiyonların alındığını ve ürünlerde karbon hesaplamalarına başlandığını belirtiyor.",
+     "alinti": "Sınırda Karbon Düzenleme Mekanizması (SKDM/CBAM) uygulaması kapsamında gerekli aksiyonların alınmasına ve ürünlerde karbon hesaplamalarına başla n mıştır.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "TCKRC 2026/06 Faaliyet Raporu",
+      "tarih": "10 Ağustos 2026",
+      "tarih_iso": "2026-08-10",
+      "dokuman": "ueXjujuI"
+     }
+    }
+   ]
+  },
+  "KCAER": {
+   "ad": "Kocaer Çelik Sanayi ve Ticaret A.Ş.",
+   "etiketler": [
+    {
+     "id": "cbam-karbon",
+     "not": "Şirket, Avrupa Birliği ihracatçıları için yürürlüğe giren SKDM uyumu kapsamında uzun süredir çalışma yürüttüğünü belirtiyor.",
+     "alinti": "Ocak 2026 itibarıyla Avrupa Birliği ülkelerine ihracat yapan firmalar için yürürlüğe giren Sınırda Karbon Düzenleme Mekanizması'na (SKDM Carbon Border Adjustment Mechanism) uyum kapsamında uzun süredir çalışmalarını sürdürmektedir.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "KCAER 2026/06 Faaliyet Raporu",
+      "tarih": "5 Ağustos 2026",
+      "tarih_iso": "2026-08-05",
+      "dokuman": "nqht90NS"
+     }
+    },
+    {
+     "id": "abd-gumruk",
+     "not": "Şirket, artan tarifelerin ardından kesintiye uğrayan ABD satışlarının yılın ikinci çeyreğinde yeniden başladığını belirtiyor.",
+     "alinti": "Geçtiğimiz yıl haziran ayından bu yana artan tarifelerin ardından kesintiye uğrayan ABD satışları yılın ikinci çeyreğinde yeniden başlarken",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "KCAER 2026/06 Faaliyet Raporu",
+      "tarih": "5 Ağustos 2026",
+      "tarih_iso": "2026-08-05",
+      "dokuman": "nqht90NS"
+     }
+    }
+   ]
+  },
+  "BRSAN": {
+   "ad": "Borusan Birleşik Boru Fabrikaları Sanayi ve Ticaret A.Ş.",
+   "etiketler": [
+    {
+     "id": "cbam-karbon",
+     "not": "Şirket, SKDM/CBAM gibi iklim politikalarındaki değişimlerin maliyet yapısı, rekabet gücü ve yatırım kararları üzerindeki etkilerini geçiş riskleri kapsamında ele aldığını belirtiyor.",
+     "alinti": "Geçiş riskleri kapsamında ise karbon düzenlemeleri ve Sınırda Karbon Düzenleme Mekanizması (SKDM/CBAM) başta olmak üzere iklim politikaları ve düzenleyici çerçevede meydana gelen değişimlerin şirketin maliyet yapısı, rekabet gücü ve yatırım kararları üzerindeki etkileri ele alınmaktadır.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "BRSAN 2025/12 Faaliyet Raporu",
+      "tarih": "11 Mart 2026",
+      "tarih_iso": "2026-03-11",
+      "dokuman": "wqJeL8HR"
+     }
+    },
+    {
+     "id": "abd-gumruk",
+     "not": "Şirket, ABD'deki tarife politikalarındaki gelişmeler, Avrupa'daki zayıf talep ve Türkiye'deki maliyet baskılarının tüm pazarlarında temkinli bir yönetim yaklaşımını zorunlu kıldığını belirtiyor.",
+     "alinti": "ABD'de tarife politikalarındaki gelişmeler, Avrupa'daki zayıf talep görünümü ve Türkiye'de artan maliyet baskıları, faaliyet gösterdiğimiz tüm pazarlarda daha disiplinli, temkinli ve çevik bir yönetim yaklaşımını zorunlu kılmıştır.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "BRSAN 2025/12 Faaliyet Raporu",
+      "tarih": "11 Mart 2026",
+      "tarih_iso": "2026-03-11",
+      "dokuman": "wqJeL8HR"
+     }
+    }
+   ]
+  },
+  "AKSA": {
+   "ad": "Aksa Akrilik Kimya Sanayii A.Ş.",
+   "etiketler": [
+    {
+     "id": "cbam-karbon",
+     "not": "Şirket, CBAM geçiş sürecinin 2026 itibarıyla mali yükümlülük aşamasına geçmesini orta vadeli iklim geçiş riskleri kapsamında değerlendirdiğini belirtiyor.",
+     "alinti": "Öte yandan sektörel konumlanmamız gereği orta vadeli iklim geçiş riskleri kapsamında değerlendirdiğimiz Sınırda Karbon Düzenleme Mekanizması’nın (CBAM) geçiş sürecinin 2026 itibarıyla mali yükümlülük aşamasına geçecek olması, karbon maliyetlerinin küresel ticaret üzerindeki etkisini artırmaktadır.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "AKSA 2025/12 Faaliyet Raporu",
+      "tarih": "5 Mart 2026",
+      "tarih_iso": "2026-03-05",
+      "dokuman": "pczRpOTi"
+     }
+    }
+   ]
+  },
+  "ASTOR": {
+   "ad": "Astor Enerji A.Ş.",
+   "etiketler": [
+    {
+     "id": "abd-gumruk",
+     "not": "Şirket, olası tarife artışları halinde sözleşmeler çerçevesinde doğabilecek gümrük vergisi yükümlülüklerinin proje bazında değerlendirildiğini belirtiyor.",
+     "alinti": "Olası tarife artışlarının yürürlüğe girmesi halinde, sözleşme hükümleri çerçevesinde doğabilecek gümrük vergisi yükümlülükleri proje bazında değerlendirilmektedir.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "ASTOR 2026/06 Faaliyet Raporu",
+      "tarih": "17 Ağustos 2026",
+      "tarih_iso": "2026-08-17",
+      "dokuman": "dpRbmCAL"
+     }
+    }
+   ]
+  },
+  "BIMAS": {
+   "ad": "Bim Birleşik Mağazalar A.Ş.",
+   "etiketler": [
+    {
+     "id": "elektrik",
+     "not": "Şirket, kendi GES paneli yatırımlarının kendisini şebeke elektriğine bağımlılıktan kısmen kurtardığını ve enerji fiyat volatilitesine karşı finansal koruma sağladığını belirtiyor.",
+     "alinti": "Depo ve arazi üzerine kurulan paneller, şirketi şebeke elektriğine bağımlı olmaktan kısmen kurtarmış ve enerji fiyatlarındaki volatiliteye karşı doğal bir finansal koruma sağlamıştır.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "BIMAS 2025/12 Faaliyet Raporu",
+      "tarih": "10 Mart 2026",
+      "tarih_iso": "2026-03-10",
+      "dokuman": "QJjiReWj"
+     }
+    }
+   ]
+  },
+  "AGHOL": {
+   "ad": "AG Anadolu Grubu Holding A.Ş.",
+   "etiketler": [
+    {
+     "id": "turizm-talep",
+     "not": "Holding raporu, Türkiye bira operasyonlarında satın alım gücündeki daralma ve turist sayısındaki azalma nedeniyle talepte yavaşlama görüldüğünü belirtiyor.",
+     "alinti": "Türkiye bira operasyonlarında, dört yıl üst üste güçlü büyümenin ardından satın alım gücündeki daralma ve turist sayısındaki azalma nedeniyle üçüncü çeyrekte talepte bir yavaşlama görülmüştür",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "AGHOL 2025/09 Faaliyet Raporu",
+      "tarih": "7 Kasım 2025",
+      "tarih_iso": "2025-11-07",
+      "dokuman": "FLoutodu"
+     }
+    }
+   ]
+  },
+  "AEFES": {
+   "ad": "Anadolu Efes Biracılık ve Malt Sanayii A.Ş.",
+   "etiketler": [
+    {
+     "id": "turizm-talep",
+     "not": "Şirket, geçen yıla göre turist sayısındaki azalmanın HORECA kanalının performansını olumsuz etkilediğini belirtiyor.",
+     "alinti": "Ayr ı ca, geçen y ı la göre turist say ı s ı ndaki azalma, HORECA kanal ı n ı n performans ı n ı olumsuz etkilemi ş tir.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "AEFES 2025/09 Faaliyet Raporu",
+      "tarih": "5 Kasım 2025",
+      "tarih_iso": "2025-11-05",
+      "dokuman": "cXyBlGBY"
+     }
+    }
+   ]
+  },
+  "SISE": {
+   "ad": "Türkiye Şişe ve Cam Fabrikaları A.Ş.",
+   "etiketler": [
+    {
+     "id": "turizm-talep",
+     "not": "Şirket, yabancı ziyaretçi sayısındaki gerilemenin turizmle ilişkili tüketim kanalları ve cam ev eşyası ile cam ambalaj iş kolları açısından izlenmesi gerektiğini belirtiyor.",
+     "alinti": "Yabancı ziyaretçi sayısındaki gerileme, turizmle ilişkili tüketim kanallarının cam ev eşyası ve yiyecek -içecek tüketimiyle bağlantılı cam ambalaj iş kolları açısından yakından izlenmesi gerektiğine işaret etmektedir.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "SISE 2026/06 Faaliyet Raporu",
+      "tarih": "14 Ağustos 2026",
+      "tarih_iso": "2026-08-14",
+      "dokuman": "9GNKYzp7"
      }
     }
    ]
