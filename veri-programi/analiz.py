@@ -205,14 +205,14 @@ def fon(ft, kok):
         bas = (bugun() - datetime.timedelta(days=gun)).isoformat()
         for s in fg.sayfala(ft, "SELECT k.baslik, SUM(g.gunluk_nakit_giris_cikisi) AS net, COUNT(DISTINCT g.fon_kodu) AS fon FROM gunluk_fon_degerleri g "
                                 "JOIN fon_kategori_iliskileri i ON i.fon_kodu = g.fon_kodu JOIN fon_kategorileri k ON k.fon_kategori_id = i.fon_kategori_id "
-                                f"WHERE g.tarih_europe_istanbul >= '{bas}' AND k.fon_tipi = 'mutual' AND ABS(g.gunluk_nakit_giris_cikisi) <= 0.25 * g.fon_buyuklugu GROUP BY k.baslik ORDER BY k.baslik"):
+                                f"WHERE g.tarih_europe_istanbul >= '{bas}' AND k.fon_tipi = 'mutual' AND ABS(g.gunluk_nakit_giris_cikisi) <= 0.6 * g.fon_buyuklugu GROUP BY k.baslik ORDER BY k.baslik"):
             if num(s['net']) is not None:
                 nakit.setdefault(s['baslik'], {'fon': int(s['fon'])})['g' + ad] = round(num(s['net']))
     kat = [{'ad': k, 'fon': v['fon'], 'g30': v.get('g30', 0), 'g7': v.get('g7', 0)} for k, v in nakit.items()]
     kat.sort(key=lambda x: -x['g30'])
     yaz(kok, 'fon-dedektifi.json', {'guncelleme': bugun().isoformat(), 'rapor_ay': [y1, a1], 'onceki_ay': [y0, a0], 'fon_sayisi': len(ikisi),
                                     'alinan': alinan, 'satilan': satilan, 'bedelsiz_suphesi': sorted(supheli), 'kategori_giren': kat[:8], 'kategori_cikan': kat[::-1][:8],
-                                    'not': 'Lot farkı ay sonu kapanışıyla TL\'ye çevrilmiştir; fiyat etkisi içermez. Raporlar ay sonundan sonra ilk 10 günde yayımlanır. Bir günde fon büyüklüğünün dörtte birinden fazla görünen nakit hareketleri (birleşme, tasfiye, veri hatası) kategori toplamına katılmaz.'})
+                                    'not': 'Lot farkı ay sonu kapanışıyla TL\'ye çevrilmiştir; fiyat etkisi içermez. Raporlar ay sonundan sonra ilk 10 günde yayımlanır. Bir günde fon büyüklüğünün yüzde 60'ından fazla görünen nakit hareketleri (tasfiye, birleşme, veri hatası) kategori toplamına katılmaz.'})
     log('fon: alınan', len(alinan), 'satılan', len(satilan), 'şüpheli', len(supheli), 'kategori', len(kat))
 
 
