@@ -432,9 +432,14 @@ def evds_tani(ft, kok):
         return json.loads(urllib.request.urlopen(req, timeout=60).read().decode('utf-8', 'replace'))
     for kat in al('categories/type=json'):
         ad = kat.get('TOPIC_TITLE_TR', '')
-        if 'FİYAT' in ad.upper() or 'ENFLASYON' in ad.upper():
+        if 'FİYAT' in ad.upper() or 'ENFLASYON' in ad.upper() or 'TÜKETİCİ' in ad.upper():
             log('kategori', kat.get('CATEGORY_ID'), ad)
-            for g in al(f"datagroups/mode=2&code={kat['CATEGORY_ID']}&type=json"):
+            try:
+                gruplar = al(f"datagroups/mode=2&code={int(float(kat['CATEGORY_ID']))}&type=json")
+            except Exception as e:
+                log('  grup listesi alınamadı', str(e)[:80])
+                continue
+            for g in gruplar:
                 gad = g.get('DATAGROUP_NAME', '')
                 if 'TÜFE' in gad.upper() or 'TÜKETİCİ' in gad.upper():
                     log('  grup', g.get('DATAGROUP_CODE'), gad, g.get('END_DATE'))
