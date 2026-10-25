@@ -422,7 +422,30 @@ def surpriz(ft, kok):
     log('surpriz: kayıt', len(ev['kayitlar']))
 
 
-MODULLER = {'tahmin': tahmin, 'tasiyici': tasiyici, 'fon': fon, 'arz': arz, 'surpriz': surpriz}
+def evds_tani(ft, kok):
+    """EVDS'te güncel TÜFE serisi kodunu bulmak için kategori, veri grubu ve seri listesini günlüğe yazar."""
+    anahtar = os.environ.get('EVDS_API_KEY', '').strip()
+    taban = 'https://evds3.tcmb.gov.tr/igmevdsms-dis/'
+
+    def al(yol):
+        req = urllib.request.Request(taban + yol, headers={'key': anahtar, 'User-Agent': 'Endeks24-analiz/1', 'Accept': 'application/json'})
+        return json.loads(urllib.request.urlopen(req, timeout=60).read().decode('utf-8', 'replace'))
+    for kat in al('categories/type=json'):
+        ad = kat.get('TOPIC_TITLE_TR', '')
+        if 'FİYAT' in ad.upper() or 'ENFLASYON' in ad.upper():
+            log('kategori', kat.get('CATEGORY_ID'), ad)
+            for g in al(f"datagroups/mode=2&code={kat['CATEGORY_ID']}&type=json"):
+                gad = g.get('DATAGROUP_NAME', '')
+                if 'TÜFE' in gad.upper() or 'TÜKETİCİ' in gad.upper():
+                    log('  grup', g.get('DATAGROUP_CODE'), gad, g.get('END_DATE'))
+                    try:
+                        for x in al(f"serieList/type=json&code={g['DATAGROUP_CODE']}")[:6]:
+                            log('     seri', x.get('SERIE_CODE'), x.get('SERIE_NAME'), x.get('START_DATE'), x.get('END_DATE'))
+                    except Exception as e:
+                        log('     seri listesi alınamadı', str(e)[:80])
+
+
+MODULLER = {'tahmin': tahmin, 'tasiyici': tasiyici, 'fon': fon, 'arz': arz, 'surpriz': surpriz, 'evds': evds_tani}
 
 if __name__ == '__main__':
     if len(sys.argv) < 3 or sys.argv[1] not in MODULLER:
