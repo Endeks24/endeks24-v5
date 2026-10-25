@@ -505,7 +505,7 @@ def hat(ft, kok):
             dagitim.append(k)
         else:
             talep.append(k)
-    yaz(kok, 'halka-arz-hat.json', {'guncelleme': bu.isoformat(), 'ozet': ozet, 'karne': liste[:12], 'vaka': vaka,
+    yaz(kok, 'halka-arz-hat.json', {'guncelleme': bu.isoformat(), 'ozet': ozet, 'karne': liste, 'vaka': vaka,
                                     'onayli': onay, 'talep': talep, 'dagitim': dagitim,
                                     'not': 'Getiri, arz fiyatı (varsa düzeltilmiş) ile son fiyat arasındaki farktır; tavan serisi ve tahsisat ayrıntısı hesaba katılmaz.'})
     log('hat: yıl', len(liste), 'onaylı', len(onay), 'talep', len(talep), 'dağıtım', len(dagitim))
