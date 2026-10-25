@@ -746,3 +746,8 @@ html.e24v5 #e24v5 .v5-govde .eh-tblnote,html.e24v5 #e24v5 .v5-govde p.eh-tblnote
 @media (max-width:767.98px){html.e24v5 #e24v5 .v5-govde table.e24-tablo-kart td:first-child{display:block!important;text-align:left!important;font:600 17px/1.35 var(--v5-sans)!important;padding:0 0 6px!important}}
 @media (max-width:767.98px){html.e24v5 #e24v5 .v5-govde table.e24-tablo-kart td:first-child::before{content:none}}
 @media (max-width:767.98px){html.e24v5 #e24v5 .v5-govde .eh-tblwrap:has(table.e24-tablo-kart){overflow-x:visible!important}}
+html.e24v5 #e24v5 .v5-hby{margin-top:24px}
+html.e24v5 #e24v5 .v5-hby .v5-duy-alt{font:400 14px/1.45 var(--v5-sans);color:var(--v5-yazi2);margin:0 0 6px}
+html.e24v5 #e24v5 .v5-hby .v5-sirket-fiyat b.up{color:var(--v5-yukselis,#0B7A4B)}
+html.e24v5 #e24v5 .v5-hby .v5-sirket-fiyat b.dn{color:var(--v5-dusus,#B3261E)}
+html.e24v5 #e24v5 .v5-hby .v5-kaynak{font:400 12px/1.45 var(--v5-sans);color:var(--v5-silik,#6E625A);margin:8px 0 0}
