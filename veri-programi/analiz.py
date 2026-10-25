@@ -247,10 +247,10 @@ def kurum_ligi(arzlar, en_az=5):
 
 
 def tufe_al(ft):
-    """{(yil, ay): endeks}. EVDS_API_KEY varsa TCMB EVDS (TP.FG.J0), yoksa Fintables TUFE serisi."""
+    """{(yil, ay): endeks}. EVDS_API_KEY varsa TCMB EVDS (TP.FE25.OKTG01, TÜFE 2025=100), yoksa Fintables TUFE serisi."""
     anahtar = os.environ.get('EVDS_API_KEY', '').strip()
     if anahtar:
-        yol = f"series=TP.FG.J0&startDate=01-01-2020&endDate={bugun().strftime('%d-%m-%Y')}&type=json"
+        yol = f"series=TP.FE25.OKTG01&startDate=01-01-2020&endDate={bugun().strftime('%d-%m-%Y')}&type=json"
         for taban in ('https://evds3.tcmb.gov.tr/igmevdsms-dis/', 'https://evds2.tcmb.gov.tr/service/evds/'):
             try:
                 req = urllib.request.Request(taban + yol, headers={'key': anahtar, 'User-Agent': 'Endeks24-analiz/1', 'Accept': 'application/json'})
@@ -262,8 +262,9 @@ def tufe_al(ft):
                 out = {}
                 for x in json.loads(ham).get('items', []):
                     yil, ay = x['Tarih'].split('-')[:2]
-                    if x.get('TP_FG_J0'):
-                        out[(int(yil), int(ay))] = float(x['TP_FG_J0'])
+                    v = x.get('TP_FE25_OKTG01')
+                    if v not in (None, ''):
+                        out[(int(yil), int(ay))] = float(v)
                 if len(out) > 12:
                     log('tüfe: EVDS', taban, max(out))
                     return out
