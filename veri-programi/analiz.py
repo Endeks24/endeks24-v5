@@ -212,7 +212,7 @@ def fon(ft, kok):
     kat.sort(key=lambda x: -x['g30'])
     yaz(kok, 'fon-dedektifi.json', {'guncelleme': bugun().isoformat(), 'rapor_ay': [y1, a1], 'onceki_ay': [y0, a0], 'fon_sayisi': len(ikisi),
                                     'alinan': alinan, 'satilan': satilan, 'bedelsiz_suphesi': sorted(supheli), 'kategori_giren': kat[:8], 'kategori_cikan': kat[::-1][:8],
-                                    'not': 'Lot farkı ay sonu kapanışıyla TL\'ye çevrilmiştir; fiyat etkisi içermez. Raporlar ay sonundan sonra ilk 10 günde yayımlanır. Bir günde fon büyüklüğünün yüzde 60'ından fazla görünen nakit hareketleri (tasfiye, birleşme, veri hatası) kategori toplamına katılmaz.'})
+                                    'not': 'Lot farkı ay sonu kapanışıyla TL\'ye çevrilmiştir; fiyat etkisi içermez. Raporlar ay sonundan sonra ilk 10 günde yayımlanır. Bir günde fon büyüklüğünün yüzde 60 üzerinde görünen nakit hareketleri (tasfiye, birleşme, veri hatası) kategori toplamına katılmaz.'})
     log('fon: alınan', len(alinan), 'satılan', len(satilan), 'şüpheli', len(supheli), 'kategori', len(kat))
 
 
