@@ -850,3 +850,12 @@ html.e24v5 #e24v5 .v5-fa-ac{display:flex;align-items:center;justify-content:spac
 html.e24v5 #e24v5 .v5-fa-dugme{flex:none;font:600 13px/1 var(--v5-sans);padding:11px 16px;border:1px solid var(--v5-cizgi-k);background:transparent;color:var(--v5-yazi);cursor:pointer}
 html.e24v5 #e24v5 .v5-fa-kat{border-top:1px solid var(--v5-cizgi-k)}
 @media (max-width:900px){html.e24v5 #e24v5 .v5-fa-ac{flex-direction:column;align-items:flex-start;padding:16px 18px}}
+html.e24v5 #e24v5 .v5-fa-bilgi-buyuk{font:400 15px/1.5 var(--v5-sans);color:#C9D5E1;margin:0;max-width:640px}
+html.e24v5 #e24v5 .v5-fa-donem{display:inline-block;margin-top:14px;padding:7px 10px;border:1px solid #4A6076;font:600 12px/1 var(--v5-sans);letter-spacing:.04em;color:#C9D5E1}
+html.e24v5 #e24v5 .v5-fa-akis{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;padding:22px 30px;background:var(--v5-lacivert);color:#E6ECF2;border-top:1px solid var(--v5-cizgi-k)}
+html.e24v5 #e24v5 .v5-fa-akis .v5-fa-sayi-k{font-size:34px}
+html.e24v5 #e24v5 .v5-fa-akis .v5-fa-hero{margin-top:10px}
+html.e24v5 #e24v5 .v5-fa-akis-sag{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+html.e24v5 #e24v5 .v5-fa-akis .v5-fa-dugme{color:#E6ECF2;border-color:#4A6076}
+@media (max-width:900px){html.e24v5 #e24v5 .v5-fa-akis{padding:20px 18px}}
+@media (max-width:900px){html.e24v5 #e24v5 .v5-fa-akis .v5-fa-sayi-k{font-size:30px}}
