@@ -172,14 +172,19 @@ def fon(ft, kok):
 
     def yukle(y, a):
         lot = {}
-        for s in fg.sayfala(ft, "SELECT r.fon_kodu, s.fon_kodu AS hisse, s.fondaki_lot FROM fon_portfoy_dagilim_raporlari r "
-                                "JOIN fon_portfoy_dagilim_raporu_sembol_agirliklari s ON s.fon_portfoy_dagilim_raporu_id = r.fon_portfoy_dagilim_raporu_id "
-                                f"JOIN hisse_senetleri h ON h.hisse_senedi_kodu = s.fon_kodu WHERE r.yil = {y} AND r.ay = {a} ORDER BY r.fon_kodu, s.fon_kodu"):
-            v = num(s['fondaki_lot'])
-            if v:
-                lot[(s['fon_kodu'], s['hisse'])] = lot.get((s['fon_kodu'], s['hisse']), 0) + v
-        fonlar = {s['fon_kodu'] for s in fg.sayfala(ft, f"SELECT fon_kodu FROM fon_portfoy_dagilim_raporlari WHERE yil = {y} AND ay = {a} ORDER BY fon_kodu")}
-        return lot, fonlar
+        fonlar = sorted({s['fon_kodu'] for s in fg.sayfala(ft, f"SELECT fon_kodu FROM fon_portfoy_dagilim_raporlari WHERE yil = {y} AND ay = {a} ORDER BY fon_kodu")})
+        for i in range(0, len(fonlar), 20):
+            liste = ','.join(f"'{f}'" for f in fonlar[i:i + 20])
+            for s in fg.sayfala(ft, "SELECT r.fon_kodu, s.fon_kodu AS hisse, s.fondaki_lot FROM fon_portfoy_dagilim_raporlari r "
+                                    "JOIN fon_portfoy_dagilim_raporu_sembol_agirliklari s ON s.fon_portfoy_dagilim_raporu_id = r.fon_portfoy_dagilim_raporu_id "
+                                    f"JOIN hisse_senetleri h ON h.hisse_senedi_kodu = s.fon_kodu WHERE r.yil = {y} AND r.ay = {a} AND r.fon_kodu IN ({liste}) "
+                                    "ORDER BY r.fon_kodu, s.fon_kodu"):
+                v = num(s['fondaki_lot'])
+                if v:
+                    lot[(s['fon_kodu'], s['hisse'])] = lot.get((s['fon_kodu'], s['hisse']), 0) + v
+            if (i // 20) % 5 == 0:
+                log('  fon', y, a, i, '/', len(fonlar))
+        return lot, set(fonlar)
     l0, f0 = yukle(y0, a0)
     l1, f1 = yukle(y1, a1)
     ikisi = f0 & f1
@@ -213,7 +218,7 @@ def fon(ft, kok):
 
 # ---------------------------------------------------------------- Halka arz röntgeni
 def kurumlar(metin):
-    return [k.strip() for k in (metin or '').replace('\r', '\n').split('\n') if k.strip()]
+    return [k.strip() for p in (metin or '').replace('\r', '\n').split('\n') for k in p.split(' & ') if k.strip()]
 
 
 def arz_getiri(p0, p1, usd0, usd1, tufe0, tufe1):
