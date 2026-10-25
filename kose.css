@@ -313,6 +313,13 @@ html.e24v5 #e24v5 .v5-iki{grid-template-columns:repeat(2,minmax(0,1fr))}
 html.e24v5 #e24v5 .v5-yol{font:400 13px/1.4 var(--v5-sans);color:var(--v5-yazi2);display:flex;gap:4px;align-items:baseline;flex-wrap:wrap}
 html.e24v5 #e24v5 .v5-yol a{color:var(--v5-yazi2)}
 html.e24v5 #e24v5 .v5-yol .v5-ust-etiket{margin-left:16px}
+html.e24v5 #e24v5 .v5-cubuklar{display:flex;flex-direction:column;gap:12px}
+html.e24v5 #e24v5 .v5-cbk-satir{display:grid;grid-template-columns:minmax(64px,34%) 1fr 64px;gap:12px;align-items:center;font:600 14px/1.2 var(--v5-sans)}
+html.e24v5 #e24v5 .v5-cbk{height:20px;background:var(--v5-band)}
+html.e24v5 #e24v5 .v5-cbk i{display:block;height:100%;background:var(--v5-vurgu)}
+html.e24v5 #e24v5 .v5-cbk i.up{background:var(--v5-yukselis)}
+html.e24v5 #e24v5 .v5-cbk i.dn{background:var(--v5-dusus)}
+html.e24v5 #e24v5 .v5-cbk-satir b{text-align:right}
 html.e24v5 #e24v5 h4{font:600 14px/1.2 var(--v5-sans);margin:0 0 14px}
 html.e24v5 #e24v5 .v5-kat-sektor:empty{display:none}
 html.e24v5 #e24v5 .v5-kat-sektor{margin-bottom:36px;max-width:640px}
@@ -321,6 +328,15 @@ html.e24v5 #e24v5 figcaption{margin-top:8px;font:400 12px/1.45 var(--v5-sans);co
 html.e24v5 #e24v5 figcaption:empty{display:none}
 html.e24v5 #e24v5 .v5-son-liste.v5-cizgi time{font-weight:500}
 html.e24v5 #e24v5 .v5-kat-bolumler>*{margin-bottom:56px}
+html.e24v5 #e24v5 .v5-guncel{font:400 13px/1 var(--v5-sans);color:var(--v5-yazi2)}
+html.e24v5 #e24v5 .v5-bilgi{display:flex;gap:14px;align-items:center;background:var(--v5-kutu);padding:16px 20px;margin:0 0 14px;font:400 15px/1.5 var(--v5-sans)}
+html.e24v5 #e24v5 .v5-bilgi i{flex:0 0 8px;height:8px;border-radius:50%;background:var(--v5-silik)}
+html.e24v5 #e24v5 .v5-ozet-cumle{font:600 22px/1.35 var(--v5-serif);margin:0 0 22px}
+html.e24v5 #e24v5 .v5-liste{list-style:none;margin:0;padding:0}
+html.e24v5 #e24v5 .v5-liste li{padding:14px 0;border-bottom:1px solid var(--v5-cizgi);display:flex;flex-direction:column;gap:4px}
+html.e24v5 #e24v5 .v5-liste b{font:600 15px/1.3 var(--v5-sans)}
+html.e24v5 #e24v5 .v5-liste span{font:400 13px/1.4 var(--v5-sans);color:var(--v5-yazi2)}
+html.e24v5 #e24v5 .v5-not2{font:400 14px/1.5 var(--v5-sans);margin-top:14px}
 html.e24v5 #e24v5 .v5-seans{background:var(--v5-lacivert);color:#fff;padding:24px}
 html.e24v5 #e24v5 .v5-seans .v5-ust-etiket{color:#8FB8E0}
 html.e24v5 #e24v5 .v5-seans-ust{display:flex;justify-content:space-between;font:400 13px/1 var(--v5-sans);color:#C9D2DC}
@@ -759,6 +775,9 @@ html.e24v5,html.e24v5.e24v5-hazir body{overflow-x:clip!important;max-width:100%}
 html.e24v5 #e24v5 .v5-govde .eh-tblwrap,html.e24v5 #e24v5 .v5-govde .e24-haber .eh-tblwrap{max-width:100%!important;overflow-x:auto!important;-webkit-overflow-scrolling:touch}
 html.e24v5 #e24v5 .v5-govde img,html.e24v5 #e24v5 .v5-govde iframe,html.e24v5 #e24v5 .v5-govde video{max-width:100%!important;height:auto}
 html.e24v5 #e24v5 .v5-govde{min-width:0;overflow-wrap:break-word}
+@media (min-width:992px){html.e24v5 #e24v5 .v5-ha-spk{grid-column:2}}
+html.e24v5 #e24v5 .v5-ha-spk li[hidden]{display:none}
+html.e24v5 #e24v5 .v5-spk-tum{display:block;margin:10px 0 0;padding:0;border:0;background:none;font:600 13px/1.4 var(--v5-sans);color:var(--v5-etiket);cursor:pointer;text-align:left}
 @media (min-width:768px) and (max-width:1279.98px){html.e24v5 #e24v5 .c{padding-left:24px;padding-right:24px}}
 html.e24v5 #e24v5 .v5-rk-cubuk{display:block;height:6px;background:#F6F1ED;margin-top:10px}
 html.e24v5 #e24v5 .v5-rk-cubuk i{display:block;height:100%;background:var(--v5-lacivert)}
@@ -893,6 +912,7 @@ html.e24v5 #e24v5 .v5-mod-ara{width:100%;max-width:260px;font:400 14px/1 var(--v
 html.e24v5 #e24v5 .v5-govde .v5-mod .v5-duy-alt{font:400 14px/1.45 var(--v5-sans)!important;color:var(--v5-yazi2);margin:0 0 6px!important}
 html.e24v5 #e24v5 .v5-govde .v5-mod .v5-kaynak{font:400 12px/1.45 var(--v5-sans)!important;color:var(--v5-silik,#6E625A);margin:10px 0 0!important}
 html.e24v5 #e24v5 .v5-govde .v5-mod p{margin-bottom:6px}
+html.e24v5 #e24v5 .v5-cubuklar:not(.v5-cbk-acik) .v5-cbk-gizli{display:none}
 html.e24v5 #e24v5 .v5-fa{margin:22px 0 4px;border:1px solid var(--v5-cizgi-k)}
 html.e24v5 #e24v5 .v5-fa-bas{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap;background:var(--v5-lacivert);color:#E6ECF2;padding:26px 28px}
 html.e24v5 #e24v5 .v5-fa-etiket{font:700 11px/1 var(--v5-sans);letter-spacing:.14em;text-transform:uppercase;color:#9FB3C8}
