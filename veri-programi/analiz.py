@@ -10,7 +10,7 @@ Fintables MCP'den (salt okuma) okur; <kok>/analiz/ altına yazar. Fiyatlar <kok>
 
 Kullanım: python3 analiz.py <modül> <kök_klasör>        Anahtar FINTABLES ortam değişkeninde (GitHub secret).
 """
-import collections, datetime, json, os, statistics, sys, urllib.request
+import collections, datetime, json, os, statistics, sys, urllib.error, urllib.request
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import fiyat_gecmisi as fg
 
@@ -253,7 +253,11 @@ def tufe_al(ft):
         try:
             u = f"https://evds2.tcmb.gov.tr/service/evds/series=TP.FG.J0&startDate=01-01-2020&endDate={bugun().strftime('%d-%m-%Y')}&type=json"
             req = urllib.request.Request(u, headers={'key': anahtar, 'User-Agent': 'Endeks24-analiz/1'})
-            veri = json.loads(urllib.request.urlopen(req, timeout=60).read().decode())
+            y = urllib.request.urlopen(req, timeout=60)
+            ham = y.read().decode('utf-8', 'replace')
+            if not ham.lstrip().startswith(('{', '[')):
+                log('tüfe: EVDS yanıtı JSON değil', y.status, y.headers.get('Content-Type'), repr(ham[:160]))
+            veri = json.loads(ham)
             out = {}
             for x in veri.get('items', []):
                 y, a = x['Tarih'].split('-')
@@ -262,6 +266,8 @@ def tufe_al(ft):
             if len(out) > 12:
                 log('tüfe: EVDS', max(out))
                 return out
+        except urllib.error.HTTPError as e:
+            log('tüfe: EVDS HTTP', e.code, repr(e.read()[:160]))
         except Exception as e:
             log('tüfe: EVDS okunamadı', str(e)[:120])
     out = {}
