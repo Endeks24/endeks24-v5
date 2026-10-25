@@ -465,9 +465,10 @@ def arz_endeksi(ft, bu):
                                                        f"{(bu - datetime.timedelta(days=365)).isoformat()}' AND ilk_islem_tarihi_europe_istanbul <= DATE '{bu.isoformat()}' ORDER BY hisse_senedi_kodu")]
     if len(kodlar) < 10:
         return None
-    liste = ', '.join(f"'{k}'" for k in kodlar + ['XU100'])
+    liste = ', '.join(f"'{k}'" for k in kodlar)
     bas = bu - datetime.timedelta(days=50)
     sat = fg.sayfala(ft, f"SELECT kod, zaman_utc, kapanis FROM mumlar_gunluk_gh WHERE kod IN ({liste}) AND zaman_utc >= TIMESTAMP '{bas.isoformat()} 00:00:00' ORDER BY kod, zaman_utc")
+    sat += fg.sayfala(ft, f"SELECT kod, zaman_utc, kapanis FROM endeks_mumlar_gunluk_gh WHERE kod = 'XU100' AND zaman_utc >= TIMESTAMP '{bas.isoformat()} 00:00:00' ORDER BY zaman_utc")
     seri = collections.defaultdict(dict)
     for s in sat:
         c = num(s['kapanis'])
