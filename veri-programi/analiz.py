@@ -218,7 +218,7 @@ def fon(ft, kok):
             if num(s['net']) is not None:
                 toplam[ad] = {'net': round(num(s['net'])), 'fon': int(s['fon'])}
     yaz(kok, 'fon-dedektifi.json', {'guncelleme': bugun().isoformat(), 'rapor_ay': [y1, a1], 'onceki_ay': [y0, a0], 'fon_sayisi': len(ikisi),
-                                    'alinan': alinan, 'satilan': satilan, 'bedelsiz_suphesi': sorted(supheli), 'kategori_giren': kat[:8], 'kategori_cikan': kat[::-1][:8], 'kategoriler': kat, 'akis_toplam': toplam, 'akis_bitis': bugun().isoformat(),
+                                    'alinan': alinan, 'satilan': satilan, 'bedelsiz_suphesi': sorted(supheli), 'kategori_giren': [x for x in kat if x['g30'] > 0][:8], 'kategori_cikan': [x for x in kat[::-1] if x['g30'] < 0][:8], 'kategoriler': kat, 'akis_toplam': toplam, 'akis_bitis': bugun().isoformat(),
                                     'not': 'Lot farkı ay sonu kapanışıyla TL\'ye çevrilmiştir; fiyat etkisi içermez. Raporlar ay sonundan sonra ilk 10 günde yayımlanır. Bir günde fon büyüklüğünün yüzde 60 üzerinde görünen nakit hareketleri (tasfiye, birleşme, veri hatası) kategori toplamına katılmaz.'})
     log('fon: alınan', len(alinan), 'satılan', len(satilan), 'şüpheli', len(supheli), 'kategori', len(kat))
 
