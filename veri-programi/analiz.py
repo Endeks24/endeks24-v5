@@ -458,7 +458,60 @@ def evds_tani(ft, kok):
                         log('     seri listesi alınamadı', str(e)[:80])
 
 
-MODULLER = {'tahmin': tahmin, 'tasiyici': tasiyici, 'fon': fon, 'arz': arz, 'surpriz': surpriz, 'evds': evds_tani}
+# ---------------------------------------------------------------- Halka arz hattı ve karnesi (günlük)
+def hat(ft, kok):
+    """Halka Arz sayfası: yıl özeti, son 12 arzın karnesi, son arzın vakası, SPK onaylı ama takvimi açıklanmamış, talep toplayan ve dağıtımı bekleyen arzlar."""
+    bu = bugun()
+    ana = ("SELECT a.hisse_senedi_kodu AS kod, a.baslik, a.araci_kurum, a.halka_arz_fiyati AS fiyat, a.duzeltilmis_halka_arz_fiyati AS duz, a.pay_adedi, a.durum_kodu, a.katilimci_sayisi, "
+           "a.talep_toplama_baslangic_tarihi_europe_istanbul AS bas, a.talep_toplama_bitis_tarihi_europe_istanbul AS bit, a.ilk_islem_tarihi_europe_istanbul AS ilk, h.son_fiyat AS son "
+           "FROM halka_arzlar a LEFT JOIN hisse_senetleri h ON h.hisse_senedi_kodu = a.hisse_senedi_kodu ")
+    gun10 = lambda x: (x or '')[:10] or None
+    sat = fg.sayfala(ft, ana + f"WHERE a.ilk_islem_tarihi_europe_istanbul >= DATE '{bu.year}-01-01' AND a.ilk_islem_tarihi_europe_istanbul <= DATE '{bu.isoformat()}' "
+                     "ORDER BY a.ilk_islem_tarihi_europe_istanbul DESC, a.hisse_senedi_kodu")
+    liste = []
+    for s in sat:
+        taban = num(s['duz']) or num(s['fiyat'])
+        son = num(s['son'])
+        if not taban or not son:
+            continue
+        liste.append({'kod': s['kod'], 'tarih': gun10(s['ilk']), 'fiyat': r(taban, 2), 'son': r(son, 2), 'yuzde': r((son / taban - 1) * 100, 1),
+                      'kurumlar': kurumlar(s['araci_kurum']), 'katilimci': int(num(s['katilimci_sayisi'])) if num(s['katilimci_sayisi']) else None})
+    ozet = None
+    if liste:
+        en_iyi = max(liste, key=lambda x: x['yuzde'])
+        en_kotu = min(liste, key=lambda x: x['yuzde'])
+        ozet = {'yil': bu.year, 'adet': len(liste), 'altinda': sum(1 for x in liste if x['yuzde'] < 0),
+                'ortalama': r(statistics.mean(x['yuzde'] for x in liste), 1), 'medyan': r(statistics.median(x['yuzde'] for x in liste), 1),
+                'en_iyi': en_iyi, 'en_kotu': en_kotu}
+    vaka = None
+    if liste:
+        v = liste[0]
+        mum = fg.sayfala(ft, f"SELECT zaman_utc, kapanis FROM mumlar_gunluk_gh WHERE kod = '{v['kod']}' AND zaman_utc >= TIMESTAMP '{v['tarih']} 00:00:00' - INTERVAL '1 day' ORDER BY zaman_utc")
+        mum = [(fg.gun(m['zaman_utc']), float(m['kapanis'])) for m in mum if m.get('kapanis') not in (None, '')]
+        mum = [m for m in mum if m[0] >= v['tarih']]
+        if mum:
+            zirve = max(mum, key=lambda m: m[1])
+            vaka = {'kod': v['kod'], 'tarih': v['tarih'], 'arz': v['fiyat'], 'ilk_gun': r(mum[0][1], 2), 'zirve': r(zirve[1], 2), 'zirve_tarih': zirve[0],
+                    'son': v['son'], 'islem_gunu': len(mum)}
+    bekleyen = fg.sayfala(ft, ana + "WHERE a.ilk_islem_tarihi_europe_istanbul IS NULL ORDER BY a.talep_toplama_baslangic_tarihi_europe_istanbul DESC NULLS LAST, a.hisse_senedi_kodu")
+    kayit = lambda s: {'kod': s['kod'], 'ad': s['baslik'], 'fiyat': num(s['fiyat']), 'lot': int(num(s['pay_adedi'])) if num(s['pay_adedi']) else None,
+                       'bas': gun10(s['bas']), 'bit': gun10(s['bit']), 'kurumlar': kurumlar(s['araci_kurum'])}
+    onay, talep, dagitim = [], [], []
+    for s in bekleyen:
+        k = kayit(s)
+        if not k['bas'] and not k['bit']:
+            onay.append(k)
+        elif k['bit'] and k['bit'] < bu.isoformat():
+            dagitim.append(k)
+        else:
+            talep.append(k)
+    yaz(kok, 'halka-arz-hat.json', {'guncelleme': bu.isoformat(), 'ozet': ozet, 'karne': liste[:12], 'vaka': vaka,
+                                    'onayli': onay, 'talep': talep, 'dagitim': dagitim,
+                                    'not': 'Getiri, arz fiyatı (varsa düzeltilmiş) ile son fiyat arasındaki farktır; tavan serisi ve tahsisat ayrıntısı hesaba katılmaz.'})
+    log('hat: yıl', len(liste), 'onaylı', len(onay), 'talep', len(talep), 'dağıtım', len(dagitim))
+
+
+MODULLER = {'tahmin': tahmin, 'tasiyici': tasiyici, 'fon': fon, 'arz': arz, 'surpriz': surpriz, 'evds': evds_tani, 'hat': hat}
 
 if __name__ == '__main__':
     if len(sys.argv) < 3 or sys.argv[1] not in MODULLER:

@@ -1,0 +1,30 @@
+name: endeks24-halka-arz-gunluk
+# Halka Arz sayfasının hattı ve karnesi (analiz/halka-arz-hat.json): hafta içi her akşam ya da elle. Yapay zeka çağrısı yoktur.
+on:
+  schedule:
+    - cron: '40 15 * * 1-5'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: endeks24-halka-arz-gunluk
+  cancel-in-progress: false
+jobs:
+  hat:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Hesap
+        env:
+          FINTABLES: ${{ secrets.FINTABLES }}
+        run: |
+          set -o pipefail
+          python3 veri-programi/analiz.py hat . 2>&1 | tee halka-arz-hat-log.txt
+      - name: Yaz
+        run: |
+          git config user.name e24-analiz; git config user.email e24-analiz@users.noreply.github.com
+          git add analiz/halka-arz-hat.json
+          git commit -qm "halka arz hattı $(TZ=Europe/Istanbul date '+%d.%m.%Y')" || exit 0
+          for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && exit 0; sleep 5; done
+          exit 1
