@@ -459,6 +459,46 @@ def evds_tani(ft, kok):
 
 
 # ---------------------------------------------------------------- Halka arz hattı ve karnesi (günlük)
+def arz_endeksi(ft, bu):
+    """Son 12 ayda halka arz olan hisselerin eşit ağırlıklı günlük endeksi (100 tabanlı, son ~30 işlem günü) ve BIST 100. Yeni arzın ilk işlem günü hesaba girmez."""
+    kodlar = [s['hisse_senedi_kodu'] for s in fg.sayfala(ft, "SELECT hisse_senedi_kodu FROM halka_arzlar WHERE ilk_islem_tarihi_europe_istanbul >= DATE '"
+                                                       f"{(bu - datetime.timedelta(days=365)).isoformat()}' AND ilk_islem_tarihi_europe_istanbul <= DATE '{bu.isoformat()}' ORDER BY hisse_senedi_kodu")]
+    if len(kodlar) < 10:
+        return None
+    liste = ', '.join(f"'{k}'" for k in kodlar + ['XU100'])
+    bas = bu - datetime.timedelta(days=50)
+    sat = fg.sayfala(ft, f"SELECT kod, zaman_utc, kapanis FROM mumlar_gunluk_gh WHERE kod IN ({liste}) AND zaman_utc >= TIMESTAMP '{bas.isoformat()} 00:00:00' ORDER BY kod, zaman_utc")
+    seri = collections.defaultdict(dict)
+    for s in sat:
+        c = num(s['kapanis'])
+        if c:
+            seri[s['kod']][fg.gun(s['zaman_utc'])] = c
+    gunler = sorted(set(g for k, v in seri.items() if k == 'XU100' for g in v))
+    getiri = collections.defaultdict(list)
+    for k, v in seri.items():
+        if k == 'XU100':
+            continue
+        d = sorted(v)
+        for i in range(1, len(d)):
+            getiri[d[i]].append(v[d[i]] / v[d[i - 1]] - 1)
+    xu = seri.get('XU100', {})
+    gl, ha, bi, h, b = [], [], [], 100.0, 100.0
+    for i, g in enumerate(gunler):
+        if i == 0:
+            gl.append(g); ha.append(100.0); bi.append(100.0)
+            continue
+        if len(getiri[g]) < 5:
+            continue
+        h *= 1 + statistics.mean(getiri[g])
+        b = bi[-1] * xu[g] / xu[gunler[i - 1]] if g in xu and gunler[i - 1] in xu else bi[-1]
+        gl.append(g); ha.append(r(h, 2)); bi.append(r(b, 2))
+    gl, ha, bi = gl[-31:], ha[-31:], bi[-31:]
+    if len(gl) < 10:
+        return None
+    k = 100 / ha[0]; kb = 100 / bi[0]
+    return {'adet': len(kodlar), 'gunler': gl, 'halka': [r(x * k, 2) for x in ha], 'bist': [r(x * kb, 2) for x in bi]}
+
+
 def spk_basvurular(kok):
     """SPK resmî 'İlk Halka Arz Başvurusu' sayfası: sonuçlanmayı bekleyen başvurular (sıra, şirket, başvuru tarihi). Okunamazsa önceki dosyadaki liste korunur."""
     import html as _h, re as _re
@@ -531,7 +571,7 @@ def hat(ft, kok):
         else:
             talep.append(k)
     yaz(kok, 'halka-arz-hat.json', {'guncelleme': bu.isoformat(), 'ozet': ozet, 'karne': liste, 'vaka': vaka,
-                                    'onayli': onay, 'talep': talep, 'dagitim': dagitim, 'basvuru': spk_basvurular(kok),
+                                    'onayli': onay, 'talep': talep, 'dagitim': dagitim, 'basvuru': spk_basvurular(kok), 'endeks': arz_endeksi(ft, bu),
                                     'not': 'Getiri, arz fiyatı (varsa düzeltilmiş) ile son fiyat arasındaki farktır; tavan serisi ve tahsisat ayrıntısı hesaba katılmaz.'})
     log('hat: yıl', len(liste), 'onaylı', len(onay), 'talep', len(talep), 'dağıtım', len(dagitim))
 
