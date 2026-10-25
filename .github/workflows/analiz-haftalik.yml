@@ -1,0 +1,38 @@
+name: endeks24-analiz-haftalik
+# Fon dedektifi ve halka arz röntgeni (analiz/): haftada bir ya da elle. Yapay zeka çağrısı yoktur.
+on:
+  schedule:
+    - cron: '23 5 * * 0'
+  workflow_dispatch:
+    inputs:
+      modul:
+        description: 'fon, arz ya da hepsi'
+        required: false
+        default: 'hepsi'
+permissions:
+  contents: write
+concurrency:
+  group: endeks24-analiz-haftalik
+  cancel-in-progress: false
+jobs:
+  analiz:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - name: Hesap
+        env:
+          FINTABLES: ${{ secrets.FINTABLES }}
+          EVDS_API_KEY: ${{ secrets.EVDS_API_KEY }}
+        run: |
+          set -o pipefail
+          M="${{ github.event.inputs.modul }}"; M=${M:-hepsi}
+          if [ "$M" = "fon" ] || [ "$M" = "hepsi" ]; then python3 veri-programi/analiz.py fon . 2>&1 | tee analiz-fon-log.txt || echo "UYARI: fon çalışmadı"; fi
+          if [ "$M" = "arz" ] || [ "$M" = "hepsi" ]; then python3 veri-programi/analiz.py arz . 2>&1 | tee analiz-arz-log.txt || echo "UYARI: arz çalışmadı"; fi
+      - name: Yaz
+        run: |
+          git config user.name e24-analiz; git config user.email e24-analiz@users.noreply.github.com
+          git add analiz
+          git commit -qm "analiz $(TZ=Europe/Istanbul date '+%d.%m.%Y')" || exit 0
+          for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && exit 0; sleep 5; done
+          exit 1
