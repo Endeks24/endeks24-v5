@@ -459,6 +459,31 @@ def evds_tani(ft, kok):
 
 
 # ---------------------------------------------------------------- Halka arz hattı ve karnesi (günlük)
+def spk_basvurular(kok):
+    """SPK resmî 'İlk Halka Arz Başvurusu' sayfası: sonuçlanmayı bekleyen başvurular (sıra, şirket, başvuru tarihi). Okunamazsa önceki dosyadaki liste korunur."""
+    import html as _h, re as _re
+    try:
+        req = urllib.request.Request('https://spk.gov.tr/istatistikler/basvurular/ilk-halka-arz-basvurusu', headers={'User-Agent': 'Mozilla/5.0 Endeks24-analiz/1'})
+        ham = urllib.request.urlopen(req, timeout=60).read().decode('utf-8', 'replace')
+        liste = []
+        for tr in _re.findall(r'<tr[^>]*>(.*?)</tr>', ham, _re.S):
+            h = [_h.unescape(_re.sub(r'<[^>]+>', '', x)).strip() for x in _re.findall(r'<t[dh][^>]*>(.*?)</t[dh]>', tr, _re.S)]
+            if len(h) == 3 and h[0].isdigit() and _re.fullmatch(r'\d\d\.\d\d\.\d{4}', h[2]):
+                g, a, y = h[2].split('.')
+                liste.append({'sirket': _re.sub(r'\s+', ' ', h[1]), 'tarih': f'{y}-{a}-{g}'})
+        if len(liste) < 20:
+            raise ValueError(f'liste kısa: {len(liste)}')
+    except Exception as e:
+        log('spk: okunamadı', str(e)[:100])
+        eski = oku(kok, 'halka-arz-hat.json', {}).get('basvuru')
+        return eski
+    bu = bugun()
+    for x in liste:
+        x['gun'] = (bu - datetime.date.fromisoformat(x['tarih'])).days
+    gunler = [x['gun'] for x in liste]
+    return {'adet': len(liste), 'medyan_gun': int(statistics.median(gunler)), 'son30': sum(1 for g in gunler if g <= 30), 'liste': sorted(liste, key=lambda x: -x['gun'])}
+
+
 def hat(ft, kok):
     """Halka Arz sayfası: yıl özeti, son 12 arzın karnesi, son arzın vakası, SPK onaylı ama takvimi açıklanmamış, talep toplayan ve dağıtımı bekleyen arzlar."""
     bu = bugun()
@@ -506,7 +531,7 @@ def hat(ft, kok):
         else:
             talep.append(k)
     yaz(kok, 'halka-arz-hat.json', {'guncelleme': bu.isoformat(), 'ozet': ozet, 'karne': liste, 'vaka': vaka,
-                                    'onayli': onay, 'talep': talep, 'dagitim': dagitim,
+                                    'onayli': onay, 'talep': talep, 'dagitim': dagitim, 'basvuru': spk_basvurular(kok),
                                     'not': 'Getiri, arz fiyatı (varsa düzeltilmiş) ile son fiyat arasındaki farktır; tavan serisi ve tahsisat ayrıntısı hesaba katılmaz.'})
     log('hat: yıl', len(liste), 'onaylı', len(onay), 'talep', len(talep), 'dağıtım', len(dagitim))
 
