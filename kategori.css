@@ -1465,7 +1465,7 @@ html.e24v5 #e24v5 .v5-hh-tam[hidden]{display:none}
 html.e24v5 #e24v5 .v5-hh-tam li{display:flex;justify-content:space-between;gap:12px;padding:10px 14px;border-bottom:1px solid var(--v5-cizgi);font:400 13px/1.3 var(--v5-sans)}
 html.e24v5 #e24v5 .v5-hh-tam em{font-style:normal;font-weight:600;white-space:nowrap;color:var(--v5-yazi2)}
 @media (max-width:900px){html.e24v5 #e24v5 .v5-hh-tam{grid-template-columns:1fr}}
-html.e24v5 #e24v5 .v5-hn-sar{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:36px;align-items:start;margin-top:52px}
+html.e24v5 #e24v5 .v5-hn-sar{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:44px;align-items:start;margin-top:0}
 html.e24v5 #e24v5 .v5-hn-sar .v5-mod,html.e24v5 #e24v5 .v5-hn-sar .v5-hy{margin-top:0}
 html.e24v5 #e24v5 .v5-hn-sar .v5-kat-sektor{min-width:0;max-width:none;margin:0}
 @media (max-width:1000px){html.e24v5 #e24v5 .v5-hn-sar{grid-template-columns:1fr;gap:28px}}
@@ -1520,3 +1520,37 @@ html.e24v5 #e24v5 .v5-ar-det{padding:14px 28px;background:#fff;border-top:1px so
 @media (max-width:900px){html.e24v5 #e24v5 .v5-ar-sat{grid-template-columns:22px minmax(0,1fr) 78px;gap:10px}}
 @media (max-width:900px){html.e24v5 #e24v5 .v5-ar-cubuk{grid-column:2 / 4;grid-row:2}}
 @media (max-width:900px){html.e24v5 #e24v5 .v5-ar-det{padding:14px 18px}}
+html.e24v5 #e24v5 .v5-kat-ha .v5-ha,html.e24v5 #e24v5 .v5-kat-ha .v5-hh,html.e24v5 #e24v5 .v5-kat-ha .v5-ka,html.e24v5 #e24v5 .v5-kat-ha .v5-ha-ar,html.e24v5 #e24v5 .v5-kat-ha .v5-kat-tam>.v5-kat-bolumler .v5-mod,html.e24v5 #e24v5 .v5-kat-ha .v5-piy-alt{margin-top:36px}
+html.e24v5 #e24v5 .v5-kat-ha .v5-kat-manset{margin-bottom:36px}
+html.e24v5 #e24v5 .v5-hn .v5-fa-bas{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,400px);gap:36px;align-items:start}
+html.e24v5 #e24v5 .v5-hn-dag{margin-top:26px;min-width:0;max-width:460px;flex:none}
+html.e24v5 #e24v5 .v5-hn-sag{min-width:0;min-height:220px}
+html.e24v5 #e24v5 .v5-hn-sag svg{display:block;width:100%;height:auto;margin-top:16px;overflow:visible}
+html.e24v5 #e24v5 .v5-hn-taban{stroke:#4A6076;stroke-width:1;stroke-dasharray:3 4}
+html.e24v5 #e24v5 .v5-hn-cb{fill:none;stroke:#9FB3C8;stroke-width:2;stroke-linejoin:round;stroke-dasharray:5 4}
+html.e24v5 #e24v5 .v5-hn-ca{fill:none;stroke-width:2.6;stroke-linejoin:round}
+.v5-hn-ca.dn{stroke:#FF9B93}
+.v5-hn-ca.up{stroke:#6FE0A8}
+html.e24v5 #e24v5 .v5-hn-cn{stroke:#1F3143;stroke-width:2}
+.v5-hn-cn.dn{fill:#FF9B93}
+.v5-hn-cn.up{fill:#6FE0A8}
+html.e24v5 #e24v5 .v5-hn-alt{display:flex;justify-content:space-between;margin-top:8px;font:400 12px/1 var(--v5-sans);color:#9FB3C8}
+html.e24v5 #e24v5 .v5-hn-lej{list-style:none;margin:16px 0 0;padding:0}
+html.e24v5 #e24v5 .v5-hn-lej li{display:flex;align-items:center;gap:10px;padding:9px 0;border-top:1px solid #3E566E;font:500 14px/1.2 var(--v5-sans);color:#E6ECF2}
+html.e24v5 #e24v5 .v5-hn-lej li span{flex:1}
+html.e24v5 #e24v5 .v5-hn-lej i{width:22px;height:0;border-top:3px solid #9FB3C8;flex:none}
+html.e24v5 #e24v5 .v5-hn-lej i.b{border-top-style:dashed;border-top-width:2px}
+html.e24v5 #e24v5 .v5-hn-lej i.a.up{border-color:#6FE0A8}
+html.e24v5 #e24v5 .v5-hn-lej i.a.dn{border-color:#FF9B93}
+html.e24v5 #e24v5 .v5-hn-lej b{font:700 15px/1 var(--v5-sans);font-variant-numeric:tabular-nums}
+html.e24v5 #e24v5 .v5-hn-lej b.up{color:#6FE0A8}
+html.e24v5 #e24v5 .v5-hn-lej b.dn{color:#FF9B93}
+html.e24v5 #e24v5 .v5-hn-not{margin:10px 0 0;font:400 12px/1.4 var(--v5-sans);color:#9FB3C8}
+@media (max-width:900px){html.e24v5 #e24v5 .v5-hn .v5-fa-bas{grid-template-columns:1fr}}
+@media (max-width:900px){html.e24v5 #e24v5 .v5-hn-dag{max-width:none}}
+@media (max-width:900px){html.e24v5 #e24v5 .v5-hn-sag{min-height:0}}
+html.e24v5 #e24v5 .v5-kat-ha .v5-ha,html.e24v5 #e24v5 .v5-kat-ha .e24-modul,html.e24v5 #e24v5 .v5-kat-ha .v5-ha-ar{margin-bottom:0}
+html.e24v5 #e24v5 .v5-kat-ha .v5-mod{margin-bottom:0}
+html.e24v5 #e24v5 .v5-kat-ha .v5-mod .v5-fa{margin:0}
+html.e24v5 #e24v5 .v5-kat-ha .v5-hh-tamkap p{margin-bottom:0}
+html.e24v5 #e24v5 .v5-kat-ha .v5-kat-bolumler>div{margin-bottom:0}
