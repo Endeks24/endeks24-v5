@@ -105,7 +105,7 @@ def main():
     eski_gun = eski_takvim['gun']
 
     kodlar = arg('--kod')
-    kodlar = kodlar.split(',') if kodlar else sorted({r['hisse_senedi_kodu'] for r in ft.sql("SELECT hisse_senedi_kodu FROM hisse_senetleri LIMIT 2000")})
+    kodlar = kodlar.split(',') if kodlar else sorted({r['hisse_senedi_kodu'] for r in sayfala(ft, 'SELECT hisse_senedi_kodu FROM hisse_senetleri ORDER BY hisse_senedi_kodu')})
     if sinir:
         kodlar = kodlar[:sinir]
     log('kod', len(kodlar))
