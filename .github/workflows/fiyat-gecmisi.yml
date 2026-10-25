@@ -1,0 +1,36 @@
+name: endeks24-fiyat-gecmisi
+# "Haberden bu yana" kutusu için günlük kapanışlar (fiyat/ klasörü, main kökü). Hafta içi seans sonrası artımlı; ilk kurulum ve bölünme düzeltmesi otomatik. Yapay zeka çağrısı yoktur.
+on:
+  schedule:
+    - cron: '47 15 * * 1-5'
+  workflow_dispatch:
+    inputs:
+      tam:
+        description: 'Baştan oku (evet)'
+        required: false
+        default: 'hayır'
+permissions:
+  contents: write
+concurrency:
+  group: endeks24-fiyat-gecmisi
+  cancel-in-progress: false
+jobs:
+  fiyat:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v4
+      - name: Hesap
+        env:
+          FINTABLES: ${{ secrets.FINTABLES }}
+        run: |
+          set -o pipefail
+          EK=""; if [ "${{ github.event.inputs.tam }}" = "evet" ]; then EK="--tam"; fi
+          python3 veri-programi/fiyat_gecmisi.py . $EK 2>&1 | tee fiyat-log.txt
+      - name: Yaz
+        run: |
+          git config user.name e24-fiyat; git config user.email e24-fiyat@users.noreply.github.com
+          git add fiyat
+          git commit -qm "fiyat $(TZ=Europe/Istanbul date '+%d.%m.%Y')" || exit 0
+          for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && exit 0; sleep 5; done
+          exit 1
