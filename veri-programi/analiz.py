@@ -210,8 +210,15 @@ def fon(ft, kok):
                 nakit.setdefault(s['baslik'], {'fon': int(s['fon'])})['g' + ad] = round(num(s['net']))
     kat = [{'ad': k, 'fon': v['fon'], 'g30': v.get('g30', 0), 'g7': v.get('g7', 0)} for k, v in nakit.items()]
     kat.sort(key=lambda x: -x['g30'])
+    toplam = {}
+    for ad, gun in (('g30', 30), ('g7', 7)):
+        bas = (bugun() - datetime.timedelta(days=gun)).isoformat()
+        for s in fg.sayfala(ft, "SELECT SUM(g.gunluk_nakit_giris_cikisi) AS net, COUNT(DISTINCT g.fon_kodu) AS fon FROM gunluk_fon_degerleri g JOIN fonlar f ON f.fon_kodu = g.fon_kodu "
+                                f"WHERE g.tarih_europe_istanbul >= '{bas}' AND f.fon_tipi = 'mutual' AND ABS(g.gunluk_nakit_giris_cikisi) <= 0.6 * g.fon_buyuklugu ORDER BY net"):
+            if num(s['net']) is not None:
+                toplam[ad] = {'net': round(num(s['net'])), 'fon': int(s['fon'])}
     yaz(kok, 'fon-dedektifi.json', {'guncelleme': bugun().isoformat(), 'rapor_ay': [y1, a1], 'onceki_ay': [y0, a0], 'fon_sayisi': len(ikisi),
-                                    'alinan': alinan, 'satilan': satilan, 'bedelsiz_suphesi': sorted(supheli), 'kategori_giren': kat[:8], 'kategori_cikan': kat[::-1][:8],
+                                    'alinan': alinan, 'satilan': satilan, 'bedelsiz_suphesi': sorted(supheli), 'kategori_giren': kat[:8], 'kategori_cikan': kat[::-1][:8], 'kategoriler': kat, 'akis_toplam': toplam, 'akis_bitis': bugun().isoformat(),
                                     'not': 'Lot farkı ay sonu kapanışıyla TL\'ye çevrilmiştir; fiyat etkisi içermez. Raporlar ay sonundan sonra ilk 10 günde yayımlanır. Bir günde fon büyüklüğünün yüzde 60 üzerinde görünen nakit hareketleri (tasfiye, birleşme, veri hatası) kategori toplamına katılmaz.'})
     log('fon: alınan', len(alinan), 'satılan', len(satilan), 'şüpheli', len(supheli), 'kategori', len(kat))
 
