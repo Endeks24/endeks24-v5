@@ -879,3 +879,26 @@ html.e24v5 #e24v5 .v5-fa-akis-sag{display:flex;gap:12px;align-items:center;flex-
 html.e24v5 #e24v5 .v5-fa-akis .v5-fa-dugme{color:#E6ECF2;border-color:#4A6076}
 @media (max-width:900px){html.e24v5 #e24v5 .v5-fa-akis{padding:20px 18px}}
 @media (max-width:900px){html.e24v5 #e24v5 .v5-fa-akis .v5-fa-sayi-k{font-size:30px}}
+html.e24v5 #e24v5 .v5-ar-lig{background:#fff;padding:24px 28px 20px;border-bottom:1px solid var(--v5-cizgi-k)}
+html.e24v5 #e24v5 .v5-ar-ligbas{display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:8px}
+html.e24v5 #e24v5 .v5-ar-ligbas h5{margin:0;font:700 11px/1 var(--v5-sans);letter-spacing:.14em;text-transform:uppercase;color:var(--v5-lacivert)}
+html.e24v5 #e24v5 .v5-ar-ligbas span{font:400 12px/1.3 var(--v5-sans);color:var(--v5-silik,#6E625A)}
+html.e24v5 #e24v5 .v5-ar-ligliste{list-style:none;margin:0;padding:0}
+html.e24v5 #e24v5 .v5-ar-sat{display:grid;grid-template-columns:28px minmax(150px,1.1fr) minmax(0,1.4fr) 84px;gap:14px;align-items:center;padding:11px 0;border-top:1px solid var(--v5-cizgi)}
+html.e24v5 #e24v5 .v5-ar-sat[hidden]{display:none}
+html.e24v5 #e24v5 .v5-ar-sira{font:700 15px/1 var(--v5-serif,'Source Serif 4',Georgia,serif);color:var(--v5-silik,#6E625A)}
+html.e24v5 #e24v5 .v5-ar-ad b{display:block;font:600 15px/1.25 var(--v5-sans)}
+html.e24v5 #e24v5 .v5-ar-ad small{display:block;margin-top:3px;font:400 12px/1.3 var(--v5-sans);color:var(--v5-silik,#6E625A)}
+html.e24v5 #e24v5 .v5-ar-cubuk{position:relative;height:12px;background:var(--v5-band)}
+html.e24v5 #e24v5 .v5-ar-cubuk:before{content:"";position:absolute;left:50%;top:-3px;bottom:-3px;width:1px;background:var(--v5-yazi)}
+html.e24v5 #e24v5 .v5-ar-cubuk i{position:absolute;top:0;bottom:0;background:var(--v5-dusus)}
+html.e24v5 #e24v5 .v5-ar-cubuk i.up{background:var(--v5-yukselis)}
+html.e24v5 #e24v5 .v5-ar-deger{text-align:right;font:700 15px/1 var(--v5-sans);font-variant-numeric:tabular-nums}
+html.e24v5 #e24v5 .v5-ar-deger.up{color:var(--v5-yukselis)}
+html.e24v5 #e24v5 .v5-ar-deger.dn{color:var(--v5-dusus)}
+html.e24v5 #e24v5 .v5-ar-ac{margin-top:12px;color:var(--v5-yazi);border-color:var(--v5-yazi)}
+html.e24v5 #e24v5 .v5-ar-det{padding:14px 28px;background:#fff;border-top:1px solid var(--v5-cizgi-k)}
+@media (max-width:900px){html.e24v5 #e24v5 .v5-ar-lig{padding:20px 18px}}
+@media (max-width:900px){html.e24v5 #e24v5 .v5-ar-sat{grid-template-columns:22px minmax(0,1fr) 78px;gap:10px}}
+@media (max-width:900px){html.e24v5 #e24v5 .v5-ar-cubuk{grid-column:2 / 4;grid-row:2}}
+@media (max-width:900px){html.e24v5 #e24v5 .v5-ar-det{padding:14px 18px}}
