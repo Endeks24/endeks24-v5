@@ -23,7 +23,7 @@ jobs:
       - name: Hesap
         env:
           FINTABLES: ${{ secrets.FINTABLES }}
-          EVDS_API_KEY: ${{ secrets.EVDS_API_KEY }}
+          EVDS_API_KEY: ${{ secrets.EVDS }}
         run: |
           set -o pipefail
           M="${{ github.event.inputs.modul }}"; M=${M:-hepsi}
