@@ -1457,3 +1457,11 @@ html.e24v5 #e24v5 .v5-kontrol input{width:20px;height:20px;margin:2px 0 0;flex:n
 @media (max-width:900px){html.e24v5 #e24v5 .v5-hh-kol{flex:0 0 240px}}
 @media (max-width:900px){html.e24v5 #e24v5 .v5-ka-govde{grid-template-columns:1fr;gap:26px}}
 @media (max-width:900px){html.e24v5 #e24v5 .v5-ka-sat{grid-template-columns:58px minmax(0,1fr) 62px;gap:10px}}
+html.e24v5 #e24v5 .v5-hh-izgara.v5-hh-5{grid-template-columns:repeat(5,minmax(0,1fr))}
+html.e24v5 #e24v5 .v5-hh-tum{margin-top:12px;padding:12px 14px;font-size:13px}
+html.e24v5 #e24v5 .v5-hh-tamkap{margin-top:14px}
+html.e24v5 #e24v5 .v5-hh-tam{list-style:none;margin:10px 0 0;padding:0;max-height:360px;overflow:auto;border:1px solid var(--v5-cizgi-k);background:#fff;columns:2;column-gap:0}
+html.e24v5 #e24v5 .v5-hh-tam[hidden]{display:none}
+html.e24v5 #e24v5 .v5-hh-tam li{display:flex;justify-content:space-between;gap:12px;padding:10px 14px;border-bottom:1px solid var(--v5-cizgi);font:400 13px/1.3 var(--v5-sans);break-inside:avoid}
+html.e24v5 #e24v5 .v5-hh-tam em{font-style:normal;font-weight:600;white-space:nowrap;color:var(--v5-yazi2)}
+@media (max-width:900px){html.e24v5 #e24v5 .v5-hh-tam{columns:1}}
