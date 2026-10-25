@@ -250,26 +250,28 @@ def tufe_al(ft):
     """{(yil, ay): endeks}. EVDS_API_KEY varsa TCMB EVDS (TP.FG.J0), yoksa Fintables TUFE serisi."""
     anahtar = os.environ.get('EVDS_API_KEY', '').strip()
     if anahtar:
-        try:
-            u = f"https://evds2.tcmb.gov.tr/service/evds/series=TP.FG.J0&startDate=01-01-2020&endDate={bugun().strftime('%d-%m-%Y')}&type=json"
-            req = urllib.request.Request(u, headers={'key': anahtar, 'User-Agent': 'Endeks24-analiz/1'})
-            y = urllib.request.urlopen(req, timeout=60)
-            ham = y.read().decode('utf-8', 'replace')
-            if not ham.lstrip().startswith(('{', '[')):
-                log('tüfe: EVDS yanıtı JSON değil', y.status, y.headers.get('Content-Type'), repr(ham[:160]))
-            veri = json.loads(ham)
-            out = {}
-            for x in veri.get('items', []):
-                y, a = x['Tarih'].split('-')
-                if x.get('TP_FG_J0'):
-                    out[(int(y), int(a))] = float(x['TP_FG_J0'])
-            if len(out) > 12:
-                log('tüfe: EVDS', max(out))
-                return out
-        except urllib.error.HTTPError as e:
-            log('tüfe: EVDS HTTP', e.code, repr(e.read()[:160]))
-        except Exception as e:
-            log('tüfe: EVDS okunamadı', str(e)[:120])
+        yol = f"series=TP.FG.J0&startDate=01-01-2020&endDate={bugun().strftime('%d-%m-%Y')}&type=json"
+        for taban in ('https://evds3.tcmb.gov.tr/igmevdsms-dis/', 'https://evds2.tcmb.gov.tr/service/evds/'):
+            try:
+                req = urllib.request.Request(taban + yol, headers={'key': anahtar, 'User-Agent': 'Endeks24-analiz/1', 'Accept': 'application/json'})
+                y = urllib.request.urlopen(req, timeout=60)
+                ham = y.read().decode('utf-8', 'replace')
+                if not ham.lstrip().startswith(('{', '[')):
+                    log('tüfe: EVDS yanıtı JSON değil', taban, y.status, repr(ham[:80]))
+                    continue
+                out = {}
+                for x in json.loads(ham).get('items', []):
+                    yil, ay = x['Tarih'].split('-')[:2]
+                    if x.get('TP_FG_J0'):
+                        out[(int(yil), int(ay))] = float(x['TP_FG_J0'])
+                if len(out) > 12:
+                    log('tüfe: EVDS', taban, max(out))
+                    return out
+                log('tüfe: EVDS yetersiz veri', taban, len(out))
+            except urllib.error.HTTPError as e:
+                log('tüfe: EVDS HTTP', taban, e.code, repr(e.read()[:120]))
+            except Exception as e:
+                log('tüfe: EVDS okunamadı', taban, str(e)[:100])
     out = {}
     for s in fg.sayfala(ft, "SELECT zaman_utc, kapanis FROM mumlar_gunluk_gh WHERE kod = 'TUFE' AND zaman_utc >= TIMESTAMP '2020-01-01 00:00:00' ORDER BY zaman_utc"):
         t = datetime.datetime.fromisoformat(s['zaman_utc'].replace('Z', '+00:00')).astimezone(TR).date()
