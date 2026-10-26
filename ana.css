@@ -1083,3 +1083,4 @@ html.e24v5 #e24v5 .v5-ar-det{padding:14px 28px;background:#fff;border-top:1px so
 @media (max-width:900px){html.e24v5 #e24v5 .v5-ar-sat{grid-template-columns:22px minmax(0,1fr) 78px;gap:10px}}
 @media (max-width:900px){html.e24v5 #e24v5 .v5-ar-cubuk{grid-column:2 / 4;grid-row:2}}
 @media (max-width:900px){html.e24v5 #e24v5 .v5-ar-det{padding:14px 18px}}
+@keyframes v5-nabiz{70%{box-shadow:0 0 0 10px rgba(232,89,12,0)}100%{box-shadow:0 0 0 0 rgba(232,89,12,0)}}

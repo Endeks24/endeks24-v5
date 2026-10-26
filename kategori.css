@@ -1554,3 +1554,23 @@ html.e24v5 #e24v5 .v5-kat-ha .v5-mod{margin-bottom:0}
 html.e24v5 #e24v5 .v5-kat-ha .v5-mod .v5-fa{margin:0}
 html.e24v5 #e24v5 .v5-kat-ha .v5-hh-tamkap p{margin-bottom:0}
 html.e24v5 #e24v5 .v5-kat-ha .v5-kat-bolumler>div{margin-bottom:0}
+html.e24v5 #e24v5 .v5-ha-nabiz{display:inline-block;width:10px;height:10px;border-radius:50%;background:#E8590C;flex:none;box-shadow:0 0 0 0 rgba(232,89,12,.55);animation:v5-nabiz 1.8s infinite}
+@keyframes v5-nabiz{70%{box-shadow:0 0 0 10px rgba(232,89,12,0)}100%{box-shadow:0 0 0 0 rgba(232,89,12,0)}}
+@media (prefers-reduced-motion:reduce){html.e24v5 #e24v5 .v5-ha-nabiz{animation:none}}
+html.e24v5 #e24v5 .v5-ha-uyari{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:0;margin-bottom:36px;padding:16px 22px;background:#FFF1E0;border:1px solid #F2C79B;border-left:6px solid #E8590C}
+html.e24v5 #e24v5 .v5-ha-uyari-ic{display:flex;align-items:center;gap:14px;flex-wrap:wrap;min-width:0}
+html.e24v5 #e24v5 .v5-ha-uyari-et{font:700 12px/1 var(--v5-sans);letter-spacing:.12em;text-transform:uppercase;color:#9A3A05}
+html.e24v5 #e24v5 .v5-ha-uyari-ad{font:700 20px/1.2 var(--v5-serif,'Source Serif 4',Georgia,serif);color:var(--v5-yazi)}
+html.e24v5 #e24v5 .v5-ha-uyari-ad a{color:var(--v5-yazi)}
+html.e24v5 #e24v5 .v5-ha-uyari-ayr{font:600 14px/1.3 var(--v5-sans);color:var(--v5-yazi2)}
+html.e24v5 #e24v5 .v5-ha-uyari-ek{font:600 13px/1 var(--v5-sans);color:#9A3A05}
+html.e24v5 #e24v5 .v5-ha-uyari-dg,html.e24v5 #e24v5 .v5-hy-uyari-dg{font:700 14px/1 var(--v5-sans);padding:13px 18px;border:0;background:#C2410C;color:#fff;cursor:pointer;min-height:44px}
+html.e24v5 #e24v5 .v5-hy-uyari{display:flex;flex-direction:column;align-items:flex-start;gap:6px;margin:-4px -4px 18px;padding:16px;background:#FFF1E0;border:1px solid #F2C79B;border-top:4px solid #E8590C}
+html.e24v5 #e24v5 .v5-hy-uyari-et{display:flex;align-items:center;gap:8px;font:700 11px/1 var(--v5-sans);letter-spacing:.12em;text-transform:uppercase;color:#9A3A05}
+html.e24v5 #e24v5 .v5-hy-uyari-ad{color:var(--v5-yazi);font:700 19px/1.25 var(--v5-serif,'Source Serif 4',Georgia,serif)}
+html.e24v5 #e24v5 .v5-hy-uyari-ad a{color:var(--v5-yazi)}
+html.e24v5 #e24v5 .v5-hy-uyari-ayr{font:600 13px/1.3 var(--v5-sans);color:var(--v5-yazi2)}
+html.e24v5 #e24v5 .v5-hy-uyari-kalan{font:700 13px/1.3 var(--v5-sans);color:#9A3A05}
+html.e24v5 #e24v5 .v5-hy-uyari-dg{margin-top:6px}
+@media (max-width:700px){html.e24v5 #e24v5 .v5-ha-uyari{padding:14px 16px}}
+@media (max-width:700px){html.e24v5 #e24v5 .v5-ha-uyari-dg{width:100%}}
