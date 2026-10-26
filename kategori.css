@@ -1601,3 +1601,11 @@ html.e24v5 #e24v5 .v5-altkat-ic a.v5-altkat-brs:hover{background:#13243A;color:#
 html.e24v5 #e24v5 .v5-altkat-brs i{width:8px;height:8px;border-radius:50%;background:#5BD6A0;box-shadow:0 0 0 0 rgba(91,214,160,.6);animation:v5brsCanli 2s ease-out infinite}
 @keyframes v5brsCanli{0%{box-shadow:0 0 0 0 rgba(91,214,160,.55)}70%,100%{box-shadow:0 0 0 7px rgba(91,214,160,0)}}
 @media (prefers-reduced-motion:reduce){html.e24v5 #e24v5 .v5-altkat-brs i{animation:none}}
+html.e24v5 #e24v5 .v5-kat-pi .v5-kat-manset{margin-bottom:0}
+html.e24v5 #e24v5 .v5-kat-pi .v5-kat-tam{padding-top:0}
+html.e24v5 #e24v5 .v5-kat-pi .v5-kat-tam .v5-pano{margin-top:36px}
+html.e24v5 #e24v5 .v5-son-devam{display:none}
+@media (max-width:991px){html.e24v5 #e24v5 .v5-kat-pi .v5-kat-manset{gap:0}}
+@media (max-width:991px){html.e24v5 #e24v5 .v5-kat-pi .v5-reklam300-mobil{margin-bottom:0}}
+@media (max-width:991px){html.e24v5 #e24v5 .v5-kat-pi .v5-son-liste:not(.acik) .v5-son-fazla{display:none}}
+@media (max-width:991px){html.e24v5 #e24v5 .v5-kat-pi .v5-son-devam{display:block;width:100%;margin-top:14px;min-height:44px;font:700 14px/1 var(--v5-sans);border:1px solid var(--v5-yazi);background:transparent;color:var(--v5-yazi);cursor:pointer}}
