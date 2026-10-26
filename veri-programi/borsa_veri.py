@@ -404,8 +404,17 @@ def canli(ft, kok):
             yuk += d > 0; dus += d < 0; tavan += d >= 9.5; taban += d <= -9.5
     if len(h) < 100:
         log('canlı: hisse sayısı az', len(h)); return
+    # Seansın öne çıkanı: |değişim| x hacim en büyük hisse (en az %3 ve 30 mn TL); neden maddeleri akşam hesabında gelir
+    on_fiyat = {t['k']: t['s'] for t in ozet['tablo']}
+    aday = sorted([(abs(v[1]) * v[2], k) for k, v in h.items() if v[1] is not None and abs(v[1]) >= 3 and v[2] >= 30], reverse=True)
+    neden = None
+    if aday:
+        k = aday[0][1]
+        gi = gun_ici(ft, k, gun)
+        if len(gi['c']) >= 3:
+            neden = {'k': k, 's': h[k][0], 'd': h[k][1], 'onceki': on_fiyat.get(k), 'hacim_mn': h[k][2], 'hr': None, 'gunici': gi, 'olay': [], 'kap': [], 'canli': True}
     out = {'tarih': gun, 'saat': xu['t'][-1], 'guncelleme': datetime.datetime.now(TR).isoformat(timespec='minutes'),
-           'bist100': {'gi': xu, 'on': on, 'son': xu['c'][-1], 'd': r(yuzde(on, xu['c'][-1]))}, 'yuk': yuk, 'dus': dus, 'tavan': tavan, 'taban': taban, 'h': h}
+           'bist100': {'gi': xu, 'on': on, 'son': xu['c'][-1], 'd': r(yuzde(on, xu['c'][-1]))}, 'yuk': yuk, 'dus': dus, 'tavan': tavan, 'taban': taban, 'h': h, 'neden': neden}
     os.makedirs(os.path.join(kok, 'borsa'), exist_ok=True)
     json.dump(out, open(os.path.join(kok, 'borsa', 'canli.json'), 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
     log('canlı yazıldı:', out['saat'], 'hisse', len(h), 'BIST 100', out['bist100']['son'], out['bist100']['d'])
