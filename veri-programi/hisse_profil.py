@@ -63,11 +63,11 @@ def ayristir(md):
 
 
 def il_bul(adres):
-    """Adresin son büyük harfli sözcüğü (il)."""
-    p = [x.strip() for x in (adres or '').split(',') if x.strip()]
+    """Adresin sonundan il: virgül ve eğik çizgiyle bölünür, rakamsız ve 3 harften uzun son sözcük (İstanbul, ANKARA gibi) alınır."""
+    p = [x.strip() for x in re.split(r'[,/]', adres or '') if x.strip()]
     for x in reversed(p):
-        if re.match(r'^[A-ZÇĞİÖŞÜ\s]{3,}$', x) and not x.isdigit():
-            return x.title().replace('İ', 'İ')
+        if re.match(r'^[A-Za-zÇĞİÖŞÜçğıöşü\s]{3,}$', x) and not re.search(r'(?i)mah|cad|sok|bulvar|no\b|blok|kat\b|plaza|merkez|iş\s*merkezi', x):
+            return x.title().replace('İ', 'İ').replace('I', 'I')
     return ''
 
 
