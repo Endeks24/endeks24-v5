@@ -154,8 +154,9 @@ def bist(y, ft, simdi):
     bugun = simdi.date().isoformat()
     ix = {r['endeks_kodu']: r for r in ft.sorgu("SELECT endeks_kodu, son_fiyat, son_fiyat_zaman_utc, gunici_getiri FROM endeksler_k WHERE endeks_kodu IN ('XU100','XU030','XU050','XUMAL','XUSIN','XHARZ') LIMIT 10")}
     z = datetime.datetime.fromisoformat(ix['XU100']['son_fiyat_zaman_utc'].replace('Z', '+00:00')).astimezone(TR)
-    if z.date() != simdi.date():
-        print('BIST bugün işlem görmedi (son veri ' + z.isoformat() + '); BIST tabloları güncellenmedi.')
+    if z.date() != simdi.date() or simdi.weekday() > 4 or simdi.hour * 60 + simdi.minute < 9 * 60 + 30:
+        # 26.10.2026: seans öncesi (sıfırlanmış fiyatlar) ve hafta sonu veri yazılmaz; elle tam çalıştırma %0 yazıyordu
+        print('BIST bugün işlem görmedi ya da seans öncesi (son veri ' + z.isoformat() + '); BIST tabloları güncellenmedi.')
         return False
     kapali = z.hour * 60 + z.minute >= 18 * 60 + 5 or simdi.hour * 60 + simdi.minute >= 18 * 60 + 30
     T = z.replace(second=0, microsecond=0).isoformat() if not kapali else simdi.replace(hour=18, minute=10, second=0, microsecond=0).isoformat()
