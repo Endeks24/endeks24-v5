@@ -1197,3 +1197,22 @@ html.e24v5 #e24v5 .v5-brs-hr:hover b{color:#14548C}
 html.e24v5 #e24v5 .v5-brs-hl:not(.acik) .v5-brs-hf{display:none}
 @media (max-width:640px){html.e24v5 #e24v5 .v5-brs-hr{grid-template-columns:1fr;gap:6px;padding:16px 0}}
 @media (max-width:640px){html.e24v5 #e24v5 .v5-brs-hr b{font-size:18px}}
+html.e24v5 #e24v5 .v5-brs-hdl{display:none}
+@media (max-width:700px){html.e24v5 #e24v5 .v5-brs-harita{display:grid;grid-template-columns:1fr 1fr;gap:6px;aspect-ratio:auto;height:auto}}
+@media (max-width:700px){html.e24v5 #e24v5 .v5-brs-kutu{position:relative!important;left:auto!important;top:auto!important;width:auto!important;height:auto!important;min-height:158px}}
+@media (max-width:700px){html.e24v5 #e24v5 .v5-brs-kutu:first-child{grid-column:1 / -1;min-height:200px}}
+@media (max-width:700px){html.e24v5 #e24v5 .v5-brs-kutu span{font-size:13px}}
+@media (max-width:700px){html.e24v5 #e24v5 .v5-brs-kutu:last-child:nth-child(even){grid-column:1 / -1;min-height:150px}}
+@media (max-width:700px){html.e24v5 #e24v5 .v5-brs-hdl:not(.acik) .v5-brs-hdf{display:none}}
+@media (max-width:700px){html.e24v5 #e24v5 .v5-brs-hedef>svg{display:none}}
+@media (max-width:700px){html.e24v5 #e24v5 .v5-brs-hdl{display:block;margin-top:14px}}
+@media (max-width:700px){html.e24v5 #e24v5 .v5-brs-hdr{padding:13px 0;border-top:1px solid #EFE6DF}}
+@media (max-width:700px){html.e24v5 #e24v5 .v5-brs-hdu{display:grid;grid-template-columns:1fr auto 62px;gap:10px;align-items:baseline}}
+@media (max-width:700px){html.e24v5 #e24v5 .v5-brs-hdu span{font:600 15px/1.2 var(--v5-sans)}}
+@media (max-width:700px){html.e24v5 #e24v5 .v5-brs-hdu b{font:700 16px/1.2 var(--v5-sans)}}
+@media (max-width:700px){html.e24v5 #e24v5 .v5-brs-hdu em{font:700 13px/1.2 var(--v5-sans);font-style:normal;text-align:right}}
+@media (max-width:700px){html.e24v5 #e24v5 .v5-brs-hdu em.a{color:#0B7A4B}}
+@media (max-width:700px){html.e24v5 #e24v5 .v5-brs-hdu em.d{color:#B3261E}}
+@media (max-width:700px){html.e24v5 #e24v5 .v5-brs-hdi{position:relative;height:6px;background:#EFE6DF;border-radius:3px;margin-top:10px}}
+@media (max-width:700px){html.e24v5 #e24v5 .v5-brs-hdi i{position:absolute;left:0;top:0;bottom:0;border-radius:3px;background:#0F1B2A}}
+@media (max-width:700px){html.e24v5 #e24v5 .v5-brs-hdi u{position:absolute;top:-5px;bottom:-5px;width:2px;background:#B3261E;text-decoration:none}}
