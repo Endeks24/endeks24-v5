@@ -1,0 +1,27 @@
+name: endeks24-zaman-makinesi
+# Zaman makinesi verisi (BIST 100, dolar, euro, gram altın, mevduat, TÜFE). Elle ya da haftalık. Yapay zeka çağrısı yoktur.
+on:
+  workflow_dispatch:
+    inputs:
+      islem:
+        description: 'tani ya da uret'
+        required: false
+        default: 'tani'
+permissions:
+  contents: write
+concurrency:
+  group: endeks24-zaman-makinesi
+  cancel-in-progress: false
+jobs:
+  zaman:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Hesap
+        env:
+          FINTABLES: ${{ secrets.FINTABLES }}
+          EVDS_API_KEY: ${{ secrets.EVDS }}
+        run: |
+          set -o pipefail
+          python3 veri-programi/zaman_makinesi.py "${{ github.event.inputs.islem }}" . 2>&1 | tee zaman-log.txt
