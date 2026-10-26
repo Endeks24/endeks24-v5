@@ -1,4 +1,4 @@
 BIST 100 26 Ekim seansını yüzde 0,31 yükselişle 11.151,96 puandan kapattı. Endeksteki 100 hisseden 48 hisse geriledi, 45 hisse yükseldi.
 rakamlar: {'piyasa': 8, 'gundem': 8}
-TAMAM: cikti/veri.json 114166 bayt; seans 2026-10-26T18:10:00+03:00 ; kripto 2026-10-26T18:48:00+03:00
-2026-10-26T15:49:21Z 
+TAMAM: cikti/veri.json 114166 bayt; seans 2026-10-26T18:10:00+03:00 ; kripto 2026-10-26T18:49:00+03:00
+2026-10-26T15:49:40Z 
