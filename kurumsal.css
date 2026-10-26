@@ -1331,3 +1331,5 @@ html.e24v5 #e24v5 .v5-zm-alt-sat{display:flex;gap:12px;flex-wrap:wrap;align-item
 html.e24v5 #e24v5 .v5-zm-alt-sat .v5-brs-dugme-k{display:inline-flex;align-items:center;height:48px;padding:0 20px;border-radius:6px;border:1px solid var(--v5-yazi);color:var(--v5-yazi);font:700 14px/1 var(--v5-sans);text-decoration:none;background:#fff}
 html.e24v5 #e24v5 .v5-zm-alt-sat .v5-brs-dugme{margin-top:0}
 html.e24v5 #e24v5 .v5-zm-alt-sat .v5-zm-pay:last-child{background:#fff;color:var(--v5-yazi)!important;border:1px solid var(--v5-yazi)}
+html.e24v5 #e24v5 .v5-brs-ck li a{color:#14548C;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+html.e24v5 #e24v5 .v5-brs-ck li a:hover{color:#0F1B2A}
