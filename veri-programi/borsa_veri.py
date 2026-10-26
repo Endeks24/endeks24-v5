@@ -96,6 +96,27 @@ def gun_ici(ft, kod, gun, tablo='mumlar_15dk_gh'):
     return out
 
 
+def gun_ici_toplu(ft, kodlar, gun):
+    """Birçok hissenin son seans 15 dakikalık kapanışları (kod -> {'t','c','v'}); 40'lı gruplarla"""
+    g = datetime.date.fromisoformat(gun)
+    b = datetime.datetime.combine(g - datetime.timedelta(days=1), datetime.time(21, 0))
+    e = datetime.datetime.combine(g, datetime.time(21, 0))
+    out = collections.defaultdict(lambda: {'t': [], 'c': [], 'v': []})
+    for grup in parcala(sorted(kodlar), 40):
+        try:
+            sat = fg.sayfala(ft, f"SELECT kod, zaman_utc, kapanis, hacim_15_dk_gecikmeli AS h FROM mumlar_15dk_gh WHERE kod IN ({kodlu(grup)}) AND zaman_utc >= TIMESTAMP '{b:%Y-%m-%d %H:%M:%S}' "
+                                 f"AND zaman_utc < TIMESTAMP '{e:%Y-%m-%d %H:%M:%S}' ORDER BY kod, zaman_utc")
+        except Exception as x:
+            log('  gün içi grup atlandı', str(x)[:80]); continue
+        for x in sat:
+            z = tr_gun(x['zaman_utc'])
+            if z.hour < 10 or (z.hour == 18 and z.minute > 15) or z.hour > 18 or not num(x['kapanis']):
+                continue
+            o = out[x['kod']]; o['t'].append(f'{z:%H:%M}'); o['c'].append(num(x['kapanis'])); o['v'].append(round((num(x['h']) or 0) / 1e6))
+    log('  gün içi hisse', len(out))
+    return out
+
+
 def seri_limit(c):
     """Son kapanışlardan geriye, art arda tavan (+) ya da taban (-) gün sayısı. (yön, adet)"""
     yon, n = 0, 0
@@ -236,6 +257,7 @@ def main(kok):
     USD = usd_seri(ft, bas)
     xd = dict(XU)
     kayitlar, tablo, seriler = {}, [], []
+    GI = gun_ici_toplu(ft, [k for k, v in M.items() if k in H and v and v[-1][0] == son_gun], son_gun)
     for kod, v in M.items():
         if kod not in H or not v or v[-1][0] != son_gun or len(v) < 3:
             continue
@@ -294,6 +316,7 @@ def main(kok):
         kayitlar[kod] = {
             'kod': kod, 'ad': H[kod]['ad'], 'sektor': H[kod]['sektor'], 'endeksler': H[kod]['endeksler'], 'dolasim': H[kod]['dolasim'], 'pd': pd,
             'tarih': son_gun, 'son': son[1], 'd': r(d), 'yuksek': son[2], 'dusuk': son[3], 'hacim': son[4], 'hacim_ort': r(hacim_ort, 0),
+            'gi': GI.get(kod) if GI.get(kod) and len(GI[kod]['c']) >= 8 else None, 'on': onc[1],
             'g': [x[0] for x in v[-60:]], 'c': [x[1] for x in v[-60:]], 'h': [round(x[4] / 1e6) for x in v[-60:]], 'xu': [xd.get(x[0]) for x in v[-60:]],
             'perf25': r(perf, 1), 'xu25': r(xperf, 1), 'bas25': n25[0][1], 'basg25': n25[0][0], 'xu0': x0, 'xu1': x1,
             'hedef': [{'k': x['k'], 'h': x['h'], 't': x['t'], 'v': x['v']} for x in hs], 'hedef_medyan': r(med), 'hedef_n': len(hs),
