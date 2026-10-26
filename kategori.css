@@ -1591,3 +1591,5 @@ html.e24v5 #e24v5 .v5-son-mobil{display:none}
 @media (max-width:991px){html.e24v5 #e24v5 .v5-kat-ha .v5-ha-iki{display:none}}
 @media (max-width:991px){html.e24v5 #e24v5 .v5-kat-ha .v5-son-mobil{display:block}}
 @media (max-width:991px){html.e24v5 #e24v5 .v5-kat-ha .v5-kat-yan .v5-son-bas,html.e24v5 #e24v5 .v5-kat-ha .v5-kat-yan .v5-son-liste,html.e24v5 #e24v5 .v5-kat-ha .v5-kat-yan>.v5-tum{display:none}}
+@keyframes v5brsCiz{to{stroke-dashoffset:0}}
+@keyframes v5brsNabiz{0%,100%{opacity:.15}50%{opacity:1}}
