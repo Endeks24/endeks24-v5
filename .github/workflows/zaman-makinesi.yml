@@ -1,6 +1,8 @@
 name: endeks24-zaman-makinesi
 # Zaman makinesi verisi (BIST 100, dolar, euro, gram altın, mevduat, TÜFE). Elle ya da haftalık. Yapay zeka çağrısı yoktur.
 on:
+  schedule:
+    - cron: '40 16 * * 1-5'
   workflow_dispatch:
     inputs:
       islem:
@@ -24,4 +26,12 @@ jobs:
           EVDS_API_KEY: ${{ secrets.EVDS }}
         run: |
           set -o pipefail
-          python3 veri-programi/zaman_makinesi.py "${{ github.event.inputs.islem }}" . 2>&1 | tee zaman-log.txt
+          I="${{ github.event.inputs.islem }}"; I=${I:-uret}
+          python3 veri-programi/zaman_makinesi.py "$I" . 2>&1 | tee zaman-log.txt
+      - name: Yaz
+        run: |
+          git config user.name e24-zaman; git config user.email e24-zaman@users.noreply.github.com
+          git add zaman-makinesi
+          git commit -qm "zaman makinesi $(TZ=Europe/Istanbul date '+%d.%m.%Y')" || exit 0
+          for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && exit 0; sleep 5; done
+          exit 1
