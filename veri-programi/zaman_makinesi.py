@@ -141,10 +141,25 @@ def uret(kok):
     log('yazıldı', yol, os.path.getsize(yol), 'bayt;', len(g), 'hafta;', g[0], g[-1])
 
 
+def tufe_tani():
+    """2005 numaralı kategorideki (TÜFE, TÜİK) bütün gruplarda adında 'genel' geçen serileri yazar."""
+    for g in evds_al('datagroups/mode=2&code=2005&type=json'):
+        log('grup', g.get('DATAGROUP_CODE'), g.get('DATAGROUP_NAME'), g.get('START_DATE'), g.get('END_DATE'), g.get('FREQUENCY_STR'))
+        try:
+            for x in evds_al(f"serieList/type=json&code={g['DATAGROUP_CODE']}"):
+                ad = (x.get('SERIE_NAME') or '')
+                if 'genel' in ad.lower() or 'general' in ad.lower() or 'TÜFE' == ad.strip():
+                    log('     seri', x.get('SERIE_CODE'), ad, x.get('START_DATE'), x.get('END_DATE'), x.get('FREQUENCY_STR'))
+        except Exception as e:
+            log('     seri listesi alınamadı', str(e)[:80])
+
+
 if __name__ == '__main__':
     if len(sys.argv) < 2:
         sys.exit(__doc__)
     if sys.argv[1] == 'tani':
         tani()
+    elif sys.argv[1] == 'tufe-tani':
+        tufe_tani()
     else:
         uret(sys.argv[2] if len(sys.argv) > 2 else '.')
