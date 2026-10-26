@@ -217,7 +217,8 @@ def neden_kartlari(kod, mum, xu, ac, ted, kp, hacim_ort):
     maddeler = []
     if d is not None and xg is not None:
         fark = d - xg
-        maddeler.append({'t': 'Endeks', 'm': f"BIST 100 aynı gün %{abs(xg):.2f}".replace('.', ',') + (' düştü' if xg < 0 else ' yükseldi') + f"; {kod} endeksten yaklaşık {abs(fark):.0f} puan " + ('zayıf' if fark < 0 else 'güçlü') + ' kaldı.'})
+        f1 = lambda x: f"{abs(x):.2f}".replace('.', ',')
+        maddeler.append({'t': 'Endeks', 'm': f"Son seansta BIST 100 %{f1(xg)}" + (' düştü' if xg < 0 else ' yükseldi') + f", {kod} %{f1(d)}" + (' düştü' if d < 0 else ' yükseldi') + f"; {kod} endeksten {abs(fark):.1f} puan ".replace('.', ',') + ('zayıf' if fark < 0 else 'güçlü') + ' kaldı.'})
     if hacim_ort:
         oran = son[4] / hacim_ort
         maddeler.append({'t': 'Hacim', 'm': f"{son[4] / 1e9:.1f} milyar TL".replace('.', ',') + f", son 20 işlem günü ortalamasının {oran:.1f} katı.".replace('.', ',') if oran >= 1.3 else f"{son[4] / 1e9:.1f} milyar TL; son 20 gün ortalamasına yakın.".replace('.', ',')})
