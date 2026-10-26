@@ -75,6 +75,39 @@ def endeks_seri(ft, bas):
     return [(fg.gun(s['zaman_utc']), float(s['kapanis'])) for s in sat if num(s['kapanis'])]
 
 
+def usd_seri(ft, bas):
+    sat = fg.sayfala(ft, f"SELECT zaman_utc, kapanis FROM mumlar_gunluk_gh WHERE kod = 'USDTRY' AND zaman_utc >= TIMESTAMP '{bas} 00:00:00' ORDER BY zaman_utc")
+    return [(fg.gun(s['zaman_utc']), float(s['kapanis'])) for s in sat if num(s['kapanis'])]
+
+
+def gun_ici(ft, kod, gun):
+    """Bir işlem gününün 15 dakikalık kapanışları (TR saatiyle). {'t': [...], 'c': [...], 'v': [mn TL]}"""
+    g = datetime.date.fromisoformat(gun)
+    b = datetime.datetime.combine(g - datetime.timedelta(days=1), datetime.time(21, 0))
+    e = datetime.datetime.combine(g, datetime.time(21, 0))
+    sat = fg.sayfala(ft, f"SELECT zaman_utc, kapanis, hacim_15_dk_gecikmeli AS h FROM mumlar_15dk_gh WHERE kod = '{kod}' AND zaman_utc >= TIMESTAMP '{b:%Y-%m-%d %H:%M:%S}' "
+                         f"AND zaman_utc < TIMESTAMP '{e:%Y-%m-%d %H:%M:%S}' ORDER BY zaman_utc")
+    out = {'t': [], 'c': [], 'v': []}
+    for x in sat:
+        z = tr_gun(x['zaman_utc'])
+        if z.hour < 10 or (z.hour == 18 and z.minute > 15) or z.hour > 18:
+            continue
+        out['t'].append(f'{z:%H:%M}'); out['c'].append(num(x['kapanis'])); out['v'].append(round((num(x['h']) or 0) / 1e6))
+    return out
+
+
+def seri_limit(c):
+    """Son kapanışlardan geriye, art arda tavan (+) ya da taban (-) gün sayısı. (yön, adet)"""
+    yon, n = 0, 0
+    for i in range(len(c) - 1, 0, -1):
+        d = yuzde(c[i - 1], c[i])
+        y = 1 if d is not None and d >= 9.4 else -1 if d is not None and d <= -9.4 else 0
+        if y == 0 or (yon and y != yon):
+            break
+        yon = y; n += 1
+    return yon, n
+
+
 def hedefler(ft, bas, bit):
     out = collections.defaultdict(list)
     t = datetime.date.fromisoformat(bas)
@@ -200,8 +233,9 @@ def main(kok):
     TD = tedbirler(ft, son_gun)
     KP = kap(ft, datetime.datetime.combine(bugun - datetime.timedelta(days=21), datetime.time(0, 0)), datetime.datetime.combine(bugun + datetime.timedelta(days=1), datetime.time(0, 0)))
     log('hedef', len(HF), 'aciga', len(AC), 'kap', len(KP))
+    USD = usd_seri(ft, bas)
     xd = dict(XU)
-    kayitlar, tablo = {}, []
+    kayitlar, tablo, seriler = {}, [], []
     for kod, v in M.items():
         if kod not in H or not v or v[-1][0] != son_gun or len(v) < 3:
             continue
@@ -211,7 +245,23 @@ def main(kok):
         g30 = yuzde(v[-23][1], son[1]) if len(v) >= 23 else None
         hacim_ort = ortalama([x[4] for x in v[-21:-1]]) if len(v) >= 21 else None
         pd = H[kod]['pd']
-        tablo.append({'k': kod, 's': son[1], 'd': r(d), 'h5': r(g5, 1), 'h30': r(g30, 1), 'hc': round(son[4] / 1e6), 'pd': pd, 'e': [x for x in H[kod]['endeksler'] if x in ('XU030', 'XU100', 'XUGRA')]})
+        hr = son[4] / hacim_ort if hacim_ort else None
+        fr_gun = [k for k in KP.get(kod, []) if k['tip'] == 'FR' and onc[0] <= tr_gun(k['u']).date().isoformat() <= son_gun]
+        oda_gun = [k for k in KP.get(kod, []) if k['tip'] == 'ODA' and onc[0] < tr_gun(k['u']).date().isoformat() <= son_gun]
+        n_et, n_tur = '', ''
+        if d is not None and d >= 9.5:
+            n_et, n_tur = ('Bilanço sonrası tavan' if fr_gun else 'Tavan'), 'y'
+        elif d is not None and d <= -9.5:
+            n_et, n_tur = ('Bilanço sonrası taban' if fr_gun else 'Taban'), 'k'
+        elif hr and hr >= 2:
+            n_et, n_tur = f"Hacim {hr:.1f}×".replace('.', ','), 'n'
+        elif oda_gun and d is not None and abs(d) >= 3:
+            n_et, n_tur = 'KAP açıklaması', 'n'
+        yon, adet = seri_limit([x[1] for x in v[-25:]])
+        if adet >= 3:
+            seriler.append({'k': kod, 'y': yon, 'n': adet, 'c': [round(x[1], 2) for x in v[-21:]], 's': son[1], 'd': r(yuzde(v[-adet - 1][1], son[1]), 1)})
+        tablo.append({'k': kod, 's': son[1], 'd': r(d), 'h5': r(g5, 1), 'h30': r(g30, 1), 'hc': round(son[4] / 1e6), 'hr': r(hr, 1), 'pd': pd, 'sp': [round(x[1], 2) for x in v[-20:]],
+                      'n': n_et, 'nt': n_tur, 'e': [x for x in H[kod]['endeksler'] if x in ('XU030', 'XU100', 'XUGRA')]})
         # seri
         n25 = v[-25:]
         x0, x1 = xd.get(n25[0][0]), xd.get(n25[-1][0])
@@ -244,7 +294,7 @@ def main(kok):
         kayitlar[kod] = {
             'kod': kod, 'ad': H[kod]['ad'], 'sektor': H[kod]['sektor'], 'endeksler': H[kod]['endeksler'], 'dolasim': H[kod]['dolasim'], 'pd': pd,
             'tarih': son_gun, 'son': son[1], 'd': r(d), 'yuksek': son[2], 'dusuk': son[3], 'hacim': son[4], 'hacim_ort': r(hacim_ort, 0),
-            'g': [x[0] for x in v[-60:]], 'c': [x[1] for x in v[-60:]], 'xu': [xd.get(x[0]) for x in v[-60:]],
+            'g': [x[0] for x in v[-60:]], 'c': [x[1] for x in v[-60:]], 'h': [round(x[4] / 1e6) for x in v[-60:]], 'xu': [xd.get(x[0]) for x in v[-60:]],
             'perf25': r(perf, 1), 'xu25': r(xperf, 1), 'bas25': n25[0][1], 'basg25': n25[0][0], 'xu0': x0, 'xu1': x1,
             'hedef': [{'k': x['k'], 'h': x['h'], 't': x['t'], 'v': x['v']} for x in hs], 'hedef_medyan': r(med), 'hedef_n': len(hs),
             'as': [{'t': t, 'o': r(o, 1)} for t, o in ac8], 'tedbir': TD.get(kod, []),
@@ -266,12 +316,28 @@ def main(kok):
     neden = None
     if aday:
         k = aday[0]['k']
-        neden = {'k': k, 'ad': H[k]['ad'], 's': aday[0]['s'], 'd': aday[0]['d'], 'onceki': kayitlar[k]['c'][-2], 'hacim_mn': aday[0]['hc'], 'neden': kayitlar[k]['neden']}
+        gi = gun_ici(ft, k, son_gun)
+        olay = []
+        for x in KP.get(k, []):
+            z = tr_gun(x['u'])
+            if z.date().isoformat() == son_gun and 'evre' in (x['konu'] or ''):
+                olay.append({'t': f'{z:%H:%M}', 'm': x['konu']})
+        neden = {'k': k, 'ad': H[k]['ad'], 's': aday[0]['s'], 'd': aday[0]['d'], 'onceki': kayitlar[k]['c'][-2], 'hacim_mn': aday[0]['hc'], 'hr': aday[0]['hr'],
+                 'neden': kayitlar[k]['neden'], 'gunici': gi, 'olay': sorted(olay, key=lambda z: z['t']), 'kap': kayitlar[k]['kap'][:3]}
+    gor, son_kap = set(), []
+    for kd, lst in KP.items():
+        for x in lst:
+            if x['id'] not in gor:
+                gor.add(x['id'])
+                son_kap.append({'u': x['u'], 'k': kd, 'konu': x['konu'], 'url': x.get('url')})
+    son_kap = sorted(son_kap, key=lambda z: z['u'], reverse=True)[:8]
     os.makedirs(os.path.join(kok, 'borsa', 'hisse'), exist_ok=True)
     for kod, k in kayitlar.items():
         json.dump(k, open(os.path.join(kok, 'borsa', 'hisse', kod + '.json'), 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
     ozet = {'guncelleme': datetime.datetime.now(TR).isoformat(timespec='minutes'), 'tarih': son_gun, 'n': len(tablo), 'yuk': yuk, 'dus': dus, 'tavan': tavan, 'taban': taban,
             'bist100': {'son': XU[-1][1], 'd': r(yuzde(XU[-2][1], XU[-1][1])), 'g': [x[0] for x in XU[-32:]], 'c': [x[1] for x in XU[-32:]]},
+            'usd': {'g': [x[0] for x in USD[-32:]], 'c': [x[1] for x in USD[-32:]]},
+            'seri': sorted(seriler, key=lambda z: -z['n'])[:6], 'kap': son_kap,
             'hareketli': hareketli, 'hacimli': hacimli, 'neden': neden, 'tablo': sorted(tablo, key=lambda z: -z['hc'])}
     json.dump(ozet, open(os.path.join(kok, 'borsa', 'ozet.json'), 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
     log('yazıldı: hisse', len(kayitlar), 'tablo', len(tablo), 'yuk', yuk, 'dus', dus)
