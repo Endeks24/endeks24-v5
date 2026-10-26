@@ -221,7 +221,8 @@ def neden_kartlari(kod, mum, xu, ac, ted, kp, hacim_ort):
         maddeler.append({'t': 'Endeks', 'm': f"Son seansta BIST 100 %{f1(xg)}" + (' düştü' if xg < 0 else ' yükseldi') + f", {kod} %{f1(d)}" + (' düştü' if d < 0 else ' yükseldi') + f"; {kod} endeksten {abs(fark):.1f} puan ".replace('.', ',') + ('zayıf' if fark < 0 else 'güçlü') + ' kaldı.'})
     if hacim_ort:
         oran = son[4] / hacim_ort
-        maddeler.append({'t': 'Hacim', 'm': f"{son[4] / 1e9:.1f} milyar TL".replace('.', ',') + f", son 20 işlem günü ortalamasının {oran:.1f} katı.".replace('.', ',') if oran >= 1.3 else f"{son[4] / 1e9:.1f} milyar TL; son 20 gün ortalamasına yakın.".replace('.', ',')})
+        hc = f"{son[4] / 1e9:.1f} milyar TL".replace('.', ',') if son[4] >= 1e9 else f"{son[4] / 1e6:.0f} milyon TL"
+        maddeler.append({'t': 'Hacim', 'm': hc + (f", son 20 işlem günü ortalamasının {oran:.1f} katı.".replace('.', ',', 1) if oran >= 1.3 else '; son 20 gün ortalamasına yakın.')})
     a = [x for x in ac if x[0] <= son[0]][-2:]
     if a:
         maddeler.append({'t': 'Açığa satış', 'm': f"Hacmin %{a[-1][1]:.1f}'i".replace('.', ',') + (f" (önceki gün %{a[-2][1]:.1f})".replace('.', ',') if len(a) > 1 else '') + ('; ' + ('aktif tedbir: ' + ', '.join(x['tip'] for x in ted)) if ted else '; aktif tedbir yok') + '.'})
