@@ -45,6 +45,15 @@ jobs:
           if [ "${{ github.event_name }}" != schedule ]; then EK=""; fi  # elle ya da kod değişince tam deneme
           python3 veri-programi/fintables_veri.py cikti/veri.json $EK 2>&1 | tee cikti/son-calisma.txt || echo "BASARISIZ" >> cikti/son-calisma.txt
           echo "$(date -u +%FT%TZ) $EK" >> cikti/son-calisma.txt
+      - name: Canlı borsa
+        env:
+          FINTABLES: ${{ secrets.FINTABLES }}
+        run: |
+          # 26.10.2026: Borsa Ekranı günlük kapanış verisiyle gelir; seans açıkken BIST 100 gün içi, fiyat ve değişim buradan örtülür (borsa/canli.json).
+          H=$(TZ=Europe/Istanbul date +%u%H%M); g=${H:0:1}; s=$((10#${H:1:4}))
+          if [ "$g" -le 5 ] && [ $s -ge 1000 ] && [ $s -le 1830 ]; then
+            python3 veri-programi/borsa_veri.py cikti --canli 2>&1 | tail -5 || true
+          fi
       - name: Yaz
         run: |
           cd cikti

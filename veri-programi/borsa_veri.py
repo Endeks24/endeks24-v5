@@ -366,7 +366,49 @@ def main(kok):
     log('yazıldı: hisse', len(kayitlar), 'tablo', len(tablo), 'yuk', yuk, 'dus', dus)
 
 
+def canli(ft, kok):
+    """Seans açıkken hafif güncelleme (borsa/canli.json): BIST 100 gün içi çizgisi, güncel fiyat ve değişim, hisse başına [son, değişim %, hacim mn TL].
+    Önceki kapanışlar borsa-veri dalındaki ozet.json'dan alınır. Günlük kapanış çalışması yazılana kadar arayüz ozet.json'u bununla örter."""
+    import urllib.request
+    gun = datetime.datetime.now(TR).date().isoformat()
+    ozet = json.load(urllib.request.urlopen('https://raw.githubusercontent.com/Endeks24/endeks24-v5/borsa-veri/borsa/ozet.json', timeout=30))
+    if ozet['tarih'] >= gun:
+        log('canlı: kapanış verisi zaten bugünün'); return
+    xu = gun_ici(ft, 'XU100', gun, 'endeks_mumlar_15dk_gh')
+    if not xu['c']:
+        log('canlı: bugün endeks mumu yok'); return
+    on = ozet['bist100']['son']
+    b = datetime.datetime.combine(datetime.date.fromisoformat(gun) - datetime.timedelta(days=1), datetime.time(21, 0))
+    e = datetime.datetime.combine(datetime.date.fromisoformat(gun), datetime.time(21, 0))
+    hac = {x['kod']: (num(x['h']) or 0) for x in fg.sayfala(ft, f"SELECT kod, SUM(hacim_15_dk_gecikmeli) AS h FROM mumlar_15dk_gh WHERE zaman_utc >= TIMESTAMP '{b:%Y-%m-%d %H:%M:%S}' AND zaman_utc < TIMESTAMP '{e:%Y-%m-%d %H:%M:%S}' GROUP BY kod ORDER BY kod")}
+    mz = fg.sayfala(ft, f"SELECT MAX(zaman_utc) AS z FROM mumlar_15dk_gh WHERE zaman_utc >= TIMESTAMP '{b:%Y-%m-%d %H:%M:%S}' AND zaman_utc < TIMESTAMP '{e:%Y-%m-%d %H:%M:%S}'")[0]['z']
+    z0 = datetime.datetime.fromisoformat(str(mz).replace('Z', '+00:00')) - datetime.timedelta(minutes=45)
+    son = {}
+    for x in fg.sayfala(ft, f"SELECT kod, zaman_utc, kapanis FROM mumlar_15dk_gh WHERE zaman_utc >= TIMESTAMP '{z0:%Y-%m-%d %H:%M:%S}' AND zaman_utc < TIMESTAMP '{e:%Y-%m-%d %H:%M:%S}' ORDER BY kod, zaman_utc"):
+        if num(x['kapanis']):
+            son[x['kod']] = num(x['kapanis'])
+    h, yuk, dus, tavan, taban = {}, 0, 0, 0, 0
+    for t in ozet['tablo']:
+        k = t['k']
+        if k not in son or not t['s']:
+            continue
+        d = yuzde(t['s'], son[k])
+        h[k] = [son[k], r(d), round(hac.get(k, 0) / 1e6)]
+        if d is not None:
+            yuk += d > 0; dus += d < 0; tavan += d >= 9.5; taban += d <= -9.5
+    if len(h) < 100:
+        log('canlı: hisse sayısı az', len(h)); return
+    out = {'tarih': gun, 'saat': xu['t'][-1], 'guncelleme': datetime.datetime.now(TR).isoformat(timespec='minutes'),
+           'bist100': {'gi': xu, 'on': on, 'son': xu['c'][-1], 'd': r(yuzde(on, xu['c'][-1]))}, 'yuk': yuk, 'dus': dus, 'tavan': tavan, 'taban': taban, 'h': h}
+    os.makedirs(os.path.join(kok, 'borsa'), exist_ok=True)
+    json.dump(out, open(os.path.join(kok, 'borsa', 'canli.json'), 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
+    log('canlı yazıldı:', out['saat'], 'hisse', len(h), 'BIST 100', out['bist100']['son'], out['bist100']['d'])
+
+
 if __name__ == '__main__':
     if len(sys.argv) < 2:
         sys.exit(__doc__)
-    main(sys.argv[1])
+    if '--canli' in sys.argv:
+        canli(hh.baglan(), sys.argv[1])
+    else:
+        main(sys.argv[1])
