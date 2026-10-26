@@ -1,3 +1,4 @@
+BIST 100 saat 03.11 itibarıyla değişimsiz 11.116,99 puanda. Endeksteki 100 hisseden 0 hisse geriliyor, 0 hisse yükseliyor.
 rakamlar: {'piyasa': 8, 'gundem': 8}
-TAMAM: cikti/veri.json 106706 bayt; seans 2026-10-19T18:10:00+03:00 ; kripto 2026-10-26T07:14:00+03:00
-2026-10-26T04:14:43Z --kripto-yalniz
+TAMAM: cikti/veri.json 103816 bayt; seans 2026-10-26T03:11:00+03:00 ; kripto 2026-10-26T07:28:00+03:00
+2026-10-26T04:28:52Z 
