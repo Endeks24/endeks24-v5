@@ -1,0 +1,28 @@
+name: endeks24-veri-bekci
+# veri.yml zamanlaması GitHub tarafından atlanırsa seans saatlerinde veriyi kendisi tetikler.
+on:
+  schedule:
+    - cron: '7,22,37,52 7-15 * * 1-5'
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: write
+jobs:
+  bekci:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Veri taze mi
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          H=$(TZ=Europe/Istanbul date +%u%H%M); g=${H:0:1}; s=$((10#${H:1:4}))
+          if [ "$g" -gt 5 ] || [ $s -lt 955 ] || [ $s -gt 1830 ]; then echo "seans disi"; exit 0; fi
+          T=$(gh api "repos/${{ github.repository }}/commits?sha=veri&path=veri.json&per_page=1" -q '.[0].commit.committer.date' 2>/dev/null || true)
+          if [ -z "$T" ]; then YAS=9999; else YAS=$(( ($(date +%s) - $(date -d "$T" +%s)) / 60 )); fi
+          echo "veri yasi: $YAS dk"
+          if [ $YAS -ge 25 ]; then
+            R=$(gh run list --workflow veri.yml --status in_progress --json databaseId -q 'length')
+            Q=$(gh run list --workflow veri.yml --status queued --json databaseId -q 'length')
+            if [ "$R" = 0 ] && [ "$Q" = 0 ]; then gh workflow run veri.yml --ref main && echo "veri.yml tetiklendi"; else echo "calisma suruyor"; fi
+          fi
