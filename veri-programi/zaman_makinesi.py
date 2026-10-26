@@ -118,21 +118,11 @@ def uret(kok):
         r = son_deger(mk, mv, g[i - 1])
         gun = (datetime.date.fromisoformat(g[i]) - datetime.date.fromisoformat(g[i - 1])).days
         mev.append(mev[-1] * (1 + (r or 0) / 100 * gun / 365))
-    # TÜFE: Fintables TUFE (2003'ten, aylık, tarihin ayı = ay) ile EVDS TP.FE25.OKTG01 (2025=100) örtüşen aylardan zincirlenir
-    eski = {}
-    for x in fg.sayfala(ft, "SELECT zaman_utc, kapanis FROM mumlar_gunluk_gh WHERE kod = 'TUFE' AND zaman_utc >= TIMESTAMP '2004-12-01 00:00:00' ORDER BY zaman_utc"):
-        eski[fg.gun(x['zaman_utc'])[:7]] = float(x['kapanis'])
-    yeni = {t[:7]: v for t, v in evds_seri('TP.FE25.OKTG01', '01-01-2024')}
-    ort = [m for m in yeni if m in eski]
-    log('tüfe: eski', len(eski), min(eski), max(eski), '| yeni', len(yeni), min(yeni) if yeni else None, max(yeni) if yeni else None, '| örtüşen', len(ort))
-    if len(eski) < 200 or len(ort) < 6:
-        sys.exit('HATA: TÜFE serisi zincirlenemedi')
-    kat = sum(eski[m] / yeni[m] for m in ort) / len(ort)
-    tufe = dict(eski)
-    for m, v in yeni.items():
-        if m not in tufe:
-            tufe[m] = v * kat
-    log('tüfe: son', max(tufe), round(tufe[max(tufe)], 2), 'katsayı', round(kat, 4))
+    # TÜFE: EVDS TP.GENENDEKS.T1 (Tüketici Fiyat Endeksi, genel, 2003=100, aylık)
+    tufe = {t[:7]: v for t, v in evds_seri('TP.GENENDEKS.T1', '01-01-2005')}
+    log('tüfe', len(tufe), min(tufe) if tufe else None, max(tufe) if tufe else None)
+    if len(tufe) < 200:
+        sys.exit('HATA: TÜFE serisi kısa')
     out = {'guncelleme': datetime.datetime.now(fg.TR).isoformat(timespec='minutes'), 'g': g, 'xu': seri(xu), 'usd': seri(usd), 'eur': seri(eur), 'alt': seri(alt),
            'mev': [round(x, 4) for x in mev], 'tufe': {m: round(v, 4) for m, v in sorted(tufe.items())}}
     os.makedirs(os.path.join(kok, 'zaman-makinesi'), exist_ok=True)
