@@ -1587,3 +1587,7 @@ html.e24v5 #e24v5 .v5-hh-daha{display:none}
 @media (max-width:900px){html.e24v5 #e24v5 .v5-hh-uzun:not(.v5-hh-acik) li:nth-child(n+6){display:none}}
 @media (max-width:900px){html.e24v5 #e24v5 .v5-hh-daha{display:block;grid-column:1 / -1;margin-top:10px;width:100%;min-height:44px;font:700 14px/1 var(--v5-sans);border:1px solid var(--v5-yazi);background:transparent;color:var(--v5-yazi);cursor:pointer}}
 @media (max-width:900px){html.e24v5 #e24v5 .v5-hh-tum{width:100%;min-height:44px}}
+html.e24v5 #e24v5 .v5-son-mobil{display:none}
+@media (max-width:991px){html.e24v5 #e24v5 .v5-kat-ha .v5-ha-iki{display:none}}
+@media (max-width:991px){html.e24v5 #e24v5 .v5-kat-ha .v5-son-mobil{display:block}}
+@media (max-width:991px){html.e24v5 #e24v5 .v5-kat-ha .v5-kat-yan .v5-son-bas,html.e24v5 #e24v5 .v5-kat-ha .v5-kat-yan .v5-son-liste,html.e24v5 #e24v5 .v5-kat-ha .v5-kat-yan>.v5-tum{display:none}}
