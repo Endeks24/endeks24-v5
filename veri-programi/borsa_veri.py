@@ -380,13 +380,19 @@ def canli(ft, kok):
     on = ozet['bist100']['son']
     b = datetime.datetime.combine(datetime.date.fromisoformat(gun) - datetime.timedelta(days=1), datetime.time(21, 0))
     e = datetime.datetime.combine(datetime.date.fromisoformat(gun), datetime.time(21, 0))
-    hac = {x['kod']: (num(x['h']) or 0) for x in fg.sayfala(ft, f"SELECT kod, SUM(hacim_15_dk_gecikmeli) AS h FROM mumlar_15dk_gh WHERE zaman_utc >= TIMESTAMP '{b:%Y-%m-%d %H:%M:%S}' AND zaman_utc < TIMESTAMP '{e:%Y-%m-%d %H:%M:%S}' GROUP BY kod ORDER BY kod")}
-    mz = fg.sayfala(ft, f"SELECT MAX(zaman_utc) AS z FROM mumlar_15dk_gh WHERE zaman_utc >= TIMESTAMP '{b:%Y-%m-%d %H:%M:%S}' AND zaman_utc < TIMESTAMP '{e:%Y-%m-%d %H:%M:%S}'")[0]['z']
-    z0 = datetime.datetime.fromisoformat(str(mz).replace('Z', '+00:00')) - datetime.timedelta(minutes=45)
-    son = {}
-    for x in fg.sayfala(ft, f"SELECT kod, zaman_utc, kapanis FROM mumlar_15dk_gh WHERE zaman_utc >= TIMESTAMP '{z0:%Y-%m-%d %H:%M:%S}' AND zaman_utc < TIMESTAMP '{e:%Y-%m-%d %H:%M:%S}' ORDER BY kod, zaman_utc"):
-        if num(x['kapanis']):
-            son[x['kod']] = num(x['kapanis'])
+    kodlar = [t['k'] for t in ozet['tablo']]
+    mz = fg.sayfala(ft, f"SELECT MAX(zaman_utc) AS z FROM mumlar_15dk_gh WHERE kod = 'THYAO' AND zaman_utc >= TIMESTAMP '{b:%Y-%m-%d %H:%M:%S}' AND zaman_utc < TIMESTAMP '{e:%Y-%m-%d %H:%M:%S}'")[0]['z']
+    z0 = datetime.datetime.fromisoformat(str(mz).replace('Z', '+00:00')) - datetime.timedelta(minutes=30)
+    hac, son = {}, {}
+    for grup in parcala(kodlar, 150):
+        try:
+            for x in fg.sayfala(ft, f"SELECT kod, SUM(hacim_15_dk_gecikmeli) AS h FROM mumlar_15dk_gh WHERE kod IN ({kodlu(grup)}) AND zaman_utc >= TIMESTAMP '{b:%Y-%m-%d %H:%M:%S}' AND zaman_utc < TIMESTAMP '{e:%Y-%m-%d %H:%M:%S}' GROUP BY kod ORDER BY kod"):
+                hac[x['kod']] = num(x['h']) or 0
+            for x in fg.sayfala(ft, f"SELECT kod, zaman_utc, kapanis FROM mumlar_15dk_gh WHERE kod IN ({kodlu(grup)}) AND zaman_utc >= TIMESTAMP '{z0:%Y-%m-%d %H:%M:%S}' AND zaman_utc < TIMESTAMP '{e:%Y-%m-%d %H:%M:%S}' ORDER BY kod, zaman_utc"):
+                if num(x['kapanis']):
+                    son[x['kod']] = num(x['kapanis'])
+        except Exception as x:
+            log('  canlı grup atlandı', str(x)[:80])
     h, yuk, dus, tavan, taban = {}, 0, 0, 0, 0
     for t in ozet['tablo']:
         k = t['k']
