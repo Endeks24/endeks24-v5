@@ -75,7 +75,7 @@ def evds_seri(kod, bas='01-01-2010'):
                 if len(t) == 3:
                     iso = f"{t[2]}-{t[1]}-{t[0]}" if len(t[0]) <= 2 else f"{t[0]}-{t[1]}-{t[2]}"
                 else:
-                    iso = f"{t[0]}-{t[1]}-01"
+                    iso = f"{int(t[0]):04d}-{int(t[1]):02d}-01"
                 out.append((iso, float(v)))
             if out:
                 return sorted(out)
