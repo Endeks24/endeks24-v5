@@ -1,3 +1,3 @@
-HATA: Fintables HTTP 429: b'{"error":"K\xc4\xb1sa s\xc3\xbcreli istek s\xc4\xb1n\xc4\xb1r\xc4\xb1na ula\xc5\x9ft\xc4\xb1n\xc4\xb1z. L\xc3\xbctfen 1dk sonra tekrar deneyin."}'
-BASARISIZ
-2026-10-26T05:06:08Z 
+rakamlar: {'piyasa': 8, 'gundem': 8}
+TAMAM: cikti/veri.json 106396 bayt; seans 2026-10-23T18:10:00+03:00 ; kripto 2026-10-26T08:13:00+03:00
+2026-10-26T05:13:57Z --kripto-yalniz
