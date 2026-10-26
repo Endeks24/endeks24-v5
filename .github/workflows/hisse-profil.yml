@@ -1,0 +1,38 @@
+name: endeks24-hisse-profil
+# Hisse sayfası profil verisi (künye, ortaklık, yönetim, iştirakler, finansal özet): haftada bir ya da elle. Çıktı "profil-veri" dalına yazılır. Yapay zeka çağrısı yoktur.
+on:
+  schedule:
+    - cron: '17 4 * * 0'
+  workflow_dispatch:
+    inputs:
+      sinir:
+        description: 'Test için hisse sayısı (boş: hepsi)'
+        required: false
+        default: ''
+permissions:
+  contents: write
+concurrency:
+  group: endeks24-hisse-profil
+  cancel-in-progress: false
+jobs:
+  profil:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+      - name: Hesap
+        env:
+          FINTABLES: ${{ secrets.FINTABLES }}
+        run: |
+          set -o pipefail
+          S="${{ github.event.inputs.sinir }}"
+          mkdir -p "$RUNNER_TEMP/cikti"
+          python3 veri-programi/hisse_profil.py "$RUNNER_TEMP/cikti" ${S:+--sinir $S} 2>&1 | tee profil-log.txt
+      - name: Yaz
+        run: |
+          cd "$RUNNER_TEMP/cikti"
+          git init -q -b profil-veri
+          git config user.name e24-profil; git config user.email e24-profil@users.noreply.github.com
+          git add -A; git commit -qm "profil $(TZ=Europe/Istanbul date '+%d.%m.%Y')"
+          git remote add origin "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+          git push -q -f origin profil-veri
