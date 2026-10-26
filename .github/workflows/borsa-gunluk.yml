@@ -1,0 +1,32 @@
+name: endeks24-borsa-gunluk
+# Borsa Ekranı ve hisse sayfaları verisi (veri dalı, borsa/): hafta içi her akşam ya da elle. Yapay zeka çağrısı yoktur.
+on:
+  schedule:
+    - cron: '50 15 * * 1-5'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: endeks24-borsa-gunluk
+  cancel-in-progress: false
+jobs:
+  borsa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - name: Hesap
+        env:
+          FINTABLES: ${{ secrets.FINTABLES }}
+        run: |
+          set -o pipefail
+          python3 veri-programi/borsa_veri.py "$RUNNER_TEMP/cikti" 2>&1 | tee borsa-log.txt
+      - name: Yayımla (veri dalı, geçmiş tutulmaz)
+        run: |
+          cd "$RUNNER_TEMP/cikti"
+          git init -q -b veri
+          git config user.name e24-borsa; git config user.email e24-borsa@users.noreply.github.com
+          git add -A
+          git commit -qm "borsa verisi $(TZ=Europe/Istanbul date '+%d.%m.%Y %H:%M')"
+          git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
+          git push -f origin veri
