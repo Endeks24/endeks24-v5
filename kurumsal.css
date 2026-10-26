@@ -1188,3 +1188,4 @@ html.e24v5 #e24v5 .v5-brs-kutu.lim::after{content:"";position:absolute;inset:0;b
 @media (prefers-reduced-motion:reduce){html.e24v5 #e24v5 .v5-brs-kutu.lim::after{animation:none;opacity:.7}}
 @media (max-width:1000px){html.e24v5 #e24v5 .v5-brs-kutu u{opacity:.9;transform:none}}
 @media (max-width:1000px){html.e24v5 #e24v5 .v5-brs-kutu em{font-size:17px}}
+@keyframes v5brsCanli{0%{box-shadow:0 0 0 0 rgba(91,214,160,.55)}70%,100%{box-shadow:0 0 0 7px rgba(91,214,160,0)}}
