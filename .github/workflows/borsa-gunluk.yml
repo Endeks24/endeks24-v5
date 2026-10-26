@@ -21,12 +21,12 @@ jobs:
         run: |
           set -o pipefail
           python3 veri-programi/borsa_veri.py "$RUNNER_TEMP/cikti" 2>&1 | tee borsa-log.txt
-      - name: Yayımla (veri dalı, geçmiş tutulmaz)
+      - name: Yayımla (borsa-veri dalı, geçmiş tutulmaz; veri dalına dokunulmaz)
         run: |
           cd "$RUNNER_TEMP/cikti"
-          git init -q -b veri
+          git init -q -b borsa-veri
           git config user.name e24-borsa; git config user.email e24-borsa@users.noreply.github.com
           git add -A
           git commit -qm "borsa verisi $(TZ=Europe/Istanbul date '+%d.%m.%Y %H:%M')"
           git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
-          git push -f origin veri
+          git push -f origin borsa-veri

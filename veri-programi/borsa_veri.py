@@ -80,12 +80,12 @@ def usd_seri(ft, bas):
     return [(fg.gun(s['zaman_utc']), float(s['kapanis'])) for s in sat if num(s['kapanis'])]
 
 
-def gun_ici(ft, kod, gun):
+def gun_ici(ft, kod, gun, tablo='mumlar_15dk_gh'):
     """Bir işlem gününün 15 dakikalık kapanışları (TR saatiyle). {'t': [...], 'c': [...], 'v': [mn TL]}"""
     g = datetime.date.fromisoformat(gun)
     b = datetime.datetime.combine(g - datetime.timedelta(days=1), datetime.time(21, 0))
     e = datetime.datetime.combine(g, datetime.time(21, 0))
-    sat = fg.sayfala(ft, f"SELECT zaman_utc, kapanis, hacim_15_dk_gecikmeli AS h FROM mumlar_15dk_gh WHERE kod = '{kod}' AND zaman_utc >= TIMESTAMP '{b:%Y-%m-%d %H:%M:%S}' "
+    sat = fg.sayfala(ft, f"SELECT zaman_utc, kapanis, hacim_15_dk_gecikmeli AS h FROM {tablo} WHERE kod = '{kod}' AND zaman_utc >= TIMESTAMP '{b:%Y-%m-%d %H:%M:%S}' "
                          f"AND zaman_utc < TIMESTAMP '{e:%Y-%m-%d %H:%M:%S}' ORDER BY zaman_utc")
     out = {'t': [], 'c': [], 'v': []}
     for x in sat:
@@ -335,7 +335,7 @@ def main(kok):
     for kod, k in kayitlar.items():
         json.dump(k, open(os.path.join(kok, 'borsa', 'hisse', kod + '.json'), 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
     ozet = {'guncelleme': datetime.datetime.now(TR).isoformat(timespec='minutes'), 'tarih': son_gun, 'n': len(tablo), 'yuk': yuk, 'dus': dus, 'tavan': tavan, 'taban': taban,
-            'bist100': {'son': XU[-1][1], 'd': r(yuzde(XU[-2][1], XU[-1][1])), 'g': [x[0] for x in XU[-32:]], 'c': [x[1] for x in XU[-32:]]},
+            'bist100': {'gi': gun_ici(ft, 'XU100', son_gun, 'endeks_mumlar_15dk_gh'), 'on': XU[-2][1], 'son': XU[-1][1], 'd': r(yuzde(XU[-2][1], XU[-1][1])), 'g': [x[0] for x in XU[-32:]], 'c': [x[1] for x in XU[-32:]]},
             'usd': {'g': [x[0] for x in USD[-32:]], 'c': [x[1] for x in USD[-32:]]},
             'seri': sorted(seriler, key=lambda z: -z['n'])[:6], 'kap': son_kap,
             'hareketli': hareketli, 'hacimli': hacimli, 'neden': neden, 'tablo': sorted(tablo, key=lambda z: -z['hc'])}
