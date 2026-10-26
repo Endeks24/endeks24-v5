@@ -330,7 +330,7 @@ def main(kok):
             if x['id'] not in gor:
                 gor.add(x['id'])
                 son_kap.append({'u': x['u'], 'k': kd, 'konu': x['konu'], 'url': x.get('url')})
-    son_kap = sorted(son_kap, key=lambda z: z['u'], reverse=True)[:8]
+    son_kap = sorted(son_kap, key=lambda z: z['u'], reverse=True)[:10]
     os.makedirs(os.path.join(kok, 'borsa', 'hisse'), exist_ok=True)
     for kod, k in kayitlar.items():
         json.dump(k, open(os.path.join(kok, 'borsa', 'hisse', kod + '.json'), 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
