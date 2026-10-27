@@ -281,6 +281,16 @@ def tufe_al(ft):
                 log('tüfe: EVDS HTTP', taban, e.code, repr(e.read()[:120]))
             except Exception as e:
                 log('tüfe: EVDS okunamadı', taban, str(e)[:100])
+    try:
+        # Zaman makinesi işi EVDS'ten (TP.GENENDEKS.T1) aylık TÜFE'yi her iş günü yazar; EVDS burada okunamazsa o dosya kullanılır
+        yol = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'zaman-makinesi', 'seri.json')
+        zm = json.load(open(yol, encoding='utf-8')).get('tufe') or {}
+        out = {(int(k[:4]), int(k[5:7])): float(v) for k, v in zm.items()}
+        if len(out) > 24:
+            log('tüfe: zaman-makinesi/seri.json', max(out))
+            return out
+    except Exception as e:
+        log('tüfe: seri.json okunamadı', str(e)[:80])
     out = {}
     for s in fg.sayfala(ft, "SELECT zaman_utc, kapanis FROM mumlar_gunluk_gh WHERE kod = 'TUFE' AND zaman_utc >= TIMESTAMP '2020-01-01 00:00:00' ORDER BY zaman_utc"):
         t = datetime.datetime.fromisoformat(s['zaman_utc'].replace('Z', '+00:00')).astimezone(TR).date()
