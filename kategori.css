@@ -1755,3 +1755,4 @@ html.e24v5 #e24v5 .v5-kat-kap .v5-kapr-aktif b{color:var(--v5-yazi)}
 html.e24v5 #e24v5 .v5-kt-sek[hidden]{display:none}
 @media (max-width:991px){html.e24v5 #e24v5 .v5-kat-kap .v5-kat-yan{display:none}}
 html.e24v5 #e24v5 .v5-kap-kaynak{margin:10px 0 0;font:400 12px/1.4 var(--v5-sans);color:#9FB1C4}
+@media (min-width:992px){html.e24v5 #e24v5 .v5-kat-kap .v5-kat-band>.v5-altkat .v5-altkat-ic{flex-wrap:wrap;overflow:visible}}
