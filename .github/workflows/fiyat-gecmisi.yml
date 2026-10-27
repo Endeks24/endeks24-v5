@@ -1,5 +1,5 @@
 name: endeks24-fiyat-gecmisi
-# Günlük kapanışlar (fiyat/), aracı kurum tahmin kopyası, Endeksi kim taşıdı ve bilanço sürprizi (analiz/). Hafta içi seans sonrası; yapay zeka çağrısı yoktur.
+# Günlük kapanışlar (fiyat/), aracı kurum tahmin kopyası, Endeksi kim taşıdı ve bilanço sürprizi (analiz/), Endeks24 endeksleri (endeksler/). Hafta içi seans sonrası; yapay zeka çağrısı yoktur.
 on:
   schedule:
     - cron: '47 15 * * 1-5'
@@ -34,10 +34,18 @@ jobs:
         run: |
           set -o pipefail
           for m in tahmin tasiyici surpriz; do python3 veri-programi/analiz.py $m . 2>&1 | tee -a fiyat-log.txt || echo "UYARI: $m çalışmadı"; done
+      - name: Endeks24 endeksleri (halka arz, net nakit, fon akışı)
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          git fetch -q --depth 1 origin profil-veri borsa-veri
+          git worktree add -q /tmp/profil origin/profil-veri
+          git worktree add -q /tmp/borsa origin/borsa-veri
+          python3 veri-programi/endeksler.py . --profil /tmp/profil --borsa /tmp/borsa 2>&1 | tee -a fiyat-log.txt
       - name: Yaz
         run: |
           git config user.name e24-fiyat; git config user.email e24-fiyat@users.noreply.github.com
-          git add fiyat analiz
+          git add fiyat analiz endeksler
           git commit -qm "fiyat $(TZ=Europe/Istanbul date '+%d.%m.%Y')" || exit 0
           for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && exit 0; sleep 5; done
           exit 1
