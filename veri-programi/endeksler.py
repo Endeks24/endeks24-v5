@@ -161,6 +161,7 @@ def hesapla(ad, tanim, fp, evren_f, xu, kayit):
     ag = {k: fp.seri(k)[-1] / fp.seri(k)[i0son] for k in uyeler_son}
     top = sum(ag.values()) or 1
     return {'gunler': gl, 'seviye': seviye, 'bist100': bist, 'uyeler': uyeler_son, 'agirlik': {k: r(100 * v / top, 2) for k, v in ag.items()},
+            'getiri_1a': {k: r((fp.seri(k)[-1] / fp.seri(k)[max(0, len(fp.gun) - 23)] - 1) * 100, 1) for k in uyeler_son if fp.seri(k)[max(0, len(fp.gun) - 23)]},
             'getiri_yenileme': {k: r((fp.seri(k)[-1] / fp.seri(k)[i0son] - 1) * 100, 1) for k in uyeler_son}, 'yenilemeler': gecmis[-8:]}
 
 
