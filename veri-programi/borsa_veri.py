@@ -5,7 +5,7 @@ ve hisse/<KOD>.json (her hissenin sayfası: künye, 60 günlük seri, hedef fiya
 Kullanım: python3 borsa_veri.py <kök_klasör>     Anahtar FINTABLES ortam değişkeninde.
 Fiyatlar günlük kapanıştır (hacim 15 dk gecikmeli kaynaktan); sayfa "son kapanış" der.
 """
-import collections, datetime, json, os, re, statistics, sys
+import collections, datetime, json, os, re, statistics, sys, time
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import fiyat_gecmisi as fg
 import hafiza_hesapla as hh
@@ -192,7 +192,7 @@ def kap(ft, bas, bit):
                 if not sem or len(sem) > 6:
                     continue
                 for k in sem:
-                    out[k][x['kap_bildirim_id']] = {'id': x['kap_bildirim_id'], 'u': x['yayinlanma_tarihi_utc'], 'tip': tip, 'konu': x.get('kap_bildirim_konu') or x.get('document_title'),
+                    out[k][x['kap_bildirim_id']] = {'id': x['kap_bildirim_id'], 'cid': str(x['id']) if x.get('sayfa_no') == 1 else None, 'u': x['yayinlanma_tarihi_utc'], 'tip': tip, 'konu': x.get('kap_bildirim_konu') or x.get('document_title'),
                                                     'baslik': x.get('document_title'), 'url': x.get('dokuman_orijinal_url')}
     t = bas
     while t < bit:
@@ -204,6 +204,47 @@ def kap(ft, bas, bit):
                 log('  kap hatası', t, tip, str(ex)[:80])
         t = u
     return {k: sorted(v.values(), key=lambda z: z['u'], reverse=True) for k, v in out.items()}
+
+
+GENEL_KONU = ('Özel Durum Açıklaması (Genel)', 'Özel Durum Açıklaması', 'Finansal Rapor', 'Diğer')
+
+
+def kap_konu_satiri(metin):
+    """KAP bildirim metninin ilk başlığından sonraki konu satırı (örn. 'Yönetim Kurulu Üyesi İstifası Hakkında')."""
+    for sat in (metin or '').split('\n'):
+        sat = sat.strip()
+        if not sat or sat.startswith('#') or sat.startswith('|'):
+            continue
+        return sat[:140] if len(sat) >= 6 else None
+    return None
+
+
+def kap_ozetle(ft, KP, kodlar, adet=6):
+    """Genel başlıklı bildirimlere (Özel Durum Açıklaması (Genel) gibi) metindeki konu satırını ekler: k['konu'] görünen metin olur, k['konu_asil'] özgün başlık kalır."""
+    ids = {}
+    for kod in kodlar:
+        for k in KP.get(kod, [])[:adet]:
+            if k.get('cid') and (k['konu'] or '').strip() in GENEL_KONU:
+                ids[k['cid']] = None
+    log('kap konu satırı için', len(ids), 'bildirim')
+    cid = list(ids)
+    for i in range(0, len(cid), 20):
+        g = cid[i:i + 20]
+        try:
+            for c in ft.arac('dokuman_chunk_yukle', {'ids': g}):
+                ids[str(c['id'])] = kap_konu_satiri(c.get('content', ''))
+        except Exception as e:
+            log('  kap konu grubu atlandı', str(e)[:80])
+        time.sleep(0.3)
+    n = 0
+    for kod in kodlar:
+        for k in KP.get(kod, [])[:adet]:
+            sat = ids.get(k.get('cid'))
+            if sat and (k['konu'] or '').strip() in GENEL_KONU and 'konu_asil' not in k:
+                k['konu_asil'] = k['konu']
+                k['konu'] = sat
+                n += 1
+    log('kap konu satırı eklendi', n)
 
 
 # ------------------------------------------------------------------ hesap
@@ -262,6 +303,10 @@ def main(kok):
     TD = tedbirler(ft, son_gun)
     KP = kap(ft, datetime.datetime.combine(bugun - datetime.timedelta(days=21), datetime.time(0, 0)), datetime.datetime.combine(bugun + datetime.timedelta(days=1), datetime.time(0, 0)))
     log('hedef', len(HF), 'aciga', len(AC), 'kap', len(KP))
+    try:
+        kap_ozetle(ft, KP, list(KP))
+    except Exception as e:
+        log('kap konu satırı hatası', str(e)[:100])
     USD = usd_seri(ft, bas)
     try:
         ALT = alt_seri(ft, bas)
