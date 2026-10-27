@@ -1481,3 +1481,5 @@ html.e24v5 #e24v5 .v5-ek-chipler .dah{background:transparent;color:var(--v5-sili
 html.e24v5 #e24v5 .v5-ek-lejant{display:flex;gap:22px;margin-top:12px;font:600 13px/1 var(--v5-sans);color:var(--v5-yazi2)}
 html.e24v5 #e24v5 .v5-ek-lejant i{display:inline-block;width:22px;height:8px;margin-right:8px;vertical-align:middle;background:#8FA5BB}
 html.e24v5 #e24v5 .v5-ek-lejant i.e{background:var(--v5-lacivert)}
+html.e24v5 #e24v5 .v5-ek-uye-bar.hareket i.up{background:#0B7A4B}
+html.e24v5 #e24v5 .v5-ek-uye-bar.hareket i.dn{background:#B3261E}
