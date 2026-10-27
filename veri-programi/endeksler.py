@@ -165,6 +165,80 @@ def hesapla(ad, tanim, fp, evren_f, xu, kayit):
             'getiri_yenileme': {k: r((fp.seri(k)[-1] / fp.seri(k)[i0son] - 1) * 100, 1) for k in uyeler_son}, 'yenilemeler': gecmis[-8:]}
 
 
+AYLAR = ['', 'Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık']
+
+
+def tr(x, n=1):
+    return f'{x:,.{n}f}'.replace(',', 'X').replace('.', ',').replace('X', '.')
+
+
+def yuz(x, n=1):
+    return ('+' if x > 0 else '−' if x < 0 else '') + '%' + tr(abs(x), n)
+
+
+def gun_yaz(g):
+    return f'{int(g[8:10])} {AYLAR[int(g[5:7])]} {g[:4]}'
+
+
+def getiri(d, n):
+    S, B = d['seviye'], d['bist100']
+    i = len(S) - 1 - n
+    if n < 1 or i < 0:
+        return None
+    return (S[-1] / S[i] - 1) * 100, (B[-1] / B[i] - 1) * 100
+
+
+def ozet_uret(cikti, kok):
+    """Medya kuruluşları ve haber masaları için: her endeksin dönemsel getirileri, öne çıkan bileşenleri ve hazır, olgusal cümleler. Yön tahmini ya da tavsiye içermez."""
+    ATIF = 'Kaynak: Endeks24 Endeksleri (https://www.endeks24.com/endeksler)'
+    out = {'guncelleme': datetime.datetime.now(TR).isoformat(timespec='minutes'), 'atif': ATIF,
+           'kullanim': 'Serbestçe alıntılanabilir; kaynak olarak Endeks24 Endeksleri belirtilmeli ve bağlantı verilmelidir. Yatırım tavsiyesi değildir; resmi bir borsa endeksi değildir.', 'endeksler': {}}
+    for ad, d in cikti.items():
+        gl = d['gunler']
+        e = {'ad': d['ad'], 'sayfa': 'https://www.endeks24.com/endeks24-' + ad + '-endeksi', 'veri': f'https://raw.githubusercontent.com/Endeks24/endeks24-v5/main/endeksler/{ad}.json',
+             'csv': f'https://raw.githubusercontent.com/Endeks24/endeks24-v5/main/endeksler/{ad}.csv', 'tarih': gl[-1], 'deger': d['seviye'][-1], 'bist100': d['bist100'][-1], 'baslangic': gl[0],
+             'uye_sayisi': len(d['uyeler']), 'yenileme': d['yenileme'], 'simulasyon_sonu': d['canli_baslangic'], 'getiri': {}}
+        yil_basi = next((i for i, g in enumerate(gl) if g[:4] == gl[-1][:4]), None)
+        for ad_, n in (('1_gun', 1), ('1_hafta', 5), ('1_ay', 22), ('3_ay', 63), ('baslangictan', len(gl) - 1)):
+            g = getiri(d, n)
+            if g:
+                e['getiri'][ad_] = {'endeks': round(g[0], 2), 'bist100': round(g[1], 2), 'fark_puan': round(g[0] - g[1], 2)}
+        if yil_basi and yil_basi > 0:
+            g = getiri(d, len(gl) - 1 - (yil_basi - 1))
+            if g:
+                e['getiri']['yil_basi'] = {'endeks': round(g[0], 2), 'bist100': round(g[1], 2), 'fark_puan': round(g[0] - g[1], 2)}
+        ay = d.get('getiri_1a') or {}
+        sirali = sorted(ay.items(), key=lambda z: z[1])
+        ad_ = d.get('adlar') or {}
+        e['en_cok_artan'] = [{'kod': k, 'ad': ad_.get(k), 'getiri_1_ay': v} for k, v in sirali[::-1][:3]]
+        e['en_cok_dusen'] = [{'kod': k, 'ad': ad_.get(k), 'getiri_1_ay': v} for k, v in sirali[:3]]
+        y = (d.get('yenilemeler') or [])[-1:] or [{}]
+        e['son_yenileme'] = {'tarih': y[0].get('tarih'), 'giren': y[0].get('giren'), 'cikan': y[0].get('cikan')}
+        c = []
+        t = gun_yaz(gl[-1])
+        g1 = e['getiri'].get('1_gun')
+        if g1:
+            c.append(f"{d['ad']} {t} tarihinde {yuz(g1['endeks'])} değişti; aynı gün BIST 100 {yuz(g1['bist100'])} değişti.")
+        for k, etiket in (('1_ay', 'Son bir ayda'), ('3_ay', 'Son üç ayda'), ('yil_basi', 'Yıl başından bu yana'), ('baslangictan', f'{gun_yaz(gl[0])} başlangıcından bu yana')):
+            g = e['getiri'].get(k)
+            if g:
+                yon = 'önünde' if g['fark_puan'] > 0 else 'gerisinde' if g['fark_puan'] < 0 else 'aynı seviyesinde'
+                c.append(f"{etiket} {d['ad']} {yuz(g['endeks'])} değişirken BIST 100 {yuz(g['bist100'])} değişti; endeks BIST 100'ün {tr(abs(g['fark_puan']))} puan {yon}.")
+        if sirali:
+            c.append(f"Son bir ayda {d['ad']} bileşenleri arasında en çok yükselen {sirali[-1][0]} ({yuz(sirali[-1][1])}), en çok düşen {sirali[0][0]} ({yuz(sirali[0][1])}) oldu.")
+        if d['canli_baslangic'] and gl[0] < d['canli_baslangic'] < gl[-1] and ad == 'halka-arz':
+            c.append('Halka arz endeksinin ' + gun_yaz(d['canli_baslangic']) + ' öncesi geçmişi simülasyondur (bugünün hisse evreni geçmişe uygulanmıştır).')
+        e['hazir_cumleler'] = c
+        out['endeksler'][ad] = e
+    out['gunun_notu'] = [x for e in out['endeksler'].values() for x in e['hazir_cumleler'][:1]]
+    json.dump(out, open(os.path.join(kok, 'endeksler', 'ozet.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    for ad, d in cikti.items():
+        with open(os.path.join(kok, 'endeksler', ad + '.csv'), 'w', encoding='utf-8') as f:
+            f.write('tarih,endeks,bist100\n')
+            for g, a, b in zip(d['gunler'], d['seviye'], d['bist100']):
+                f.write(f'{g},{a},{b}\n')
+
+
 def main(kok, profil, borsa):
     fp = Fiyat(kok)
     P = {os.path.basename(f)[:-5]: oku(f, {}) for f in glob.glob(os.path.join(profil, 'profil', '*.json'))}
@@ -194,6 +268,7 @@ def main(kok, profil, borsa):
     json.dump(kayitlar, open(os.path.join(kok, 'endeksler', 'uyelik.json'), 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
     for ad, d in cikti.items():
         json.dump(d, open(os.path.join(kok, 'endeksler', ad + '.json'), 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
+    ozet_uret(cikti, kok)
     json.dump({'guncelleme': datetime.datetime.now(TR).isoformat(timespec='minutes'),
                'liste': [{'id': a, 'ad': d['ad'], 'kisa': d['kisa'], 'son': d['seviye'][-1], 'bist100': d['bist100'][-1], 'baslangic': d['baslangic'], 'n': len(d['uyeler']), 'canli_baslangic': CANLI} for a, d in cikti.items()]},
               open(os.path.join(kok, 'endeksler', 'liste.json'), 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
