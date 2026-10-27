@@ -178,6 +178,31 @@ def finans(ft, kodlar):
     return son
 
 
+def halka_arz_ve_temettu(ft, kodlar):
+    """{kod: {'ha': {fiyat, duz, tarih, araci}, 'tmt': {ttm, donem}}}. Halka arz: halka_arzlar; temettü: nakit akış tablosundaki 'Ödenen Temettüler' (son 12 ay, TL, pozitif)."""
+    out = {k: {} for k in kodlar}
+    for i in range(0, len(kodlar), 100):
+        g = kodlar[i:i + 100]
+        l = ', '.join(f"'{k}'" for k in g)
+        try:
+            for x in fg.sayfala(ft, f"SELECT hisse_senedi_kodu, ilk_islem_tarihi_europe_istanbul, halka_arz_fiyati, duzeltilmis_halka_arz_fiyati, araci_kurum FROM halka_arzlar WHERE hisse_senedi_kodu IN ({l}) AND halka_arz_fiyati IS NOT NULL ORDER BY hisse_senedi_kodu, ilk_islem_tarihi_europe_istanbul"):
+                out[x['hisse_senedi_kodu']]['ha'] = {'fiyat': sayi(x['halka_arz_fiyati']), 'duz': sayi(x.get('duzeltilmis_halka_arz_fiyati')),
+                                                     'tarih': str(x.get('ilk_islem_tarihi_europe_istanbul') or '')[:10] or None, 'araci': x.get('araci_kurum')}
+        except Exception as e:
+            log('  halka arz atlandı', str(e)[:80])
+        try:
+            son = {}
+            for x in fg.sayfala(ft, f"SELECT hisse_senedi_kodu, yil, ay, try_ttm FROM hisse_finansal_tablolari_nakit_akis_tablosu_kalemleri WHERE hisse_senedi_kodu IN ({l}) AND kalem = 'Ödenen Temettüler' AND yil >= 2025 AND try_ttm IS NOT NULL ORDER BY hisse_senedi_kodu, yil, ay"):
+                son[x['hisse_senedi_kodu']] = (int(x['yil']), int(x['ay']), sayi(x['try_ttm']))
+            for k, (y, a_, v) in son.items():
+                if v is not None:
+                    out[k]['tmt'] = {'ttm': round(abs(v)), 'donem': f'{y}/{a_}'}
+        except Exception as e:
+            log('  temettü atlandı', str(e)[:80])
+    log('  halka arz', sum(1 for v in out.values() if 'ha' in v), 'temettü', sum(1 for v in out.values() if 'tmt' in v))
+    return out
+
+
 def main(kok):
     ft = hh.baglan()
     sinir = int(sys.argv[sys.argv.index('--sinir') + 1]) if '--sinir' in sys.argv else None
@@ -191,6 +216,7 @@ def main(kok):
     log('hisse', len(kodlar))
     kartlar = kartlari_al(ft, kodlar)
     F = finans(ft, kodlar)
+    HT = halka_arz_ve_temettu(ft, kodlar)
     os.makedirs(os.path.join(kok, 'profil'), exist_ok=True)
     n = 0
     for k in kodlar:
@@ -203,6 +229,7 @@ def main(kok):
             except Exception as e:
                 log('  kart çözülemedi', k, str(e)[:80])
         o['fin'] = F.get(k, {})
+        o.update(HT.get(k, {}))
         json.dump(o, open(os.path.join(kok, 'profil', k + '.json'), 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
         n += 1
     log('yazıldı: profil', n, 'kart', len(kartlar))
