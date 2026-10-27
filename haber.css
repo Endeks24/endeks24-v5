@@ -915,3 +915,11 @@ html.e24v5 #e24v5 .v5-liste-ul li{break-inside:avoid;padding:8px 0;border-bottom
 html.e24v5 #e24v5 .v5-liste-ul a{font-weight:700;margin-right:6px;text-decoration:none}
 html.e24v5 #e24v5 .v5-liste-ul span{color:var(--v5-yazi2)}
 html.e24v5 #e24v5 .v5-liste-not{margin:36px 0 0;font:400 15px/1.6 var(--v5-sans);color:var(--v5-yazi2)}
+html.e24v5 #e24v5 .v5-fa-metrikler{display:flex;flex-wrap:wrap;gap:12px 32px;align-self:flex-end}
+html.e24v5 #e24v5 .v5-fa-metrik b{display:block;font:700 26px/1 var(--v5-serif,'Source Serif 4',Georgia,serif);font-variant-numeric:tabular-nums;color:#fff}
+html.e24v5 #e24v5 .v5-fa-metrik span{display:block;margin-top:6px;max-width:170px;font:400 12px/1.35 var(--v5-sans);color:#9FB3C8}
+html.e24v5 #e24v5 .v5-fa-ayrinti{margin:0;border-top:1px solid var(--v5-cizgi);padding:12px 22px}
+html.e24v5 #e24v5 .v5-fa-ayrinti summary{cursor:pointer;font:700 13px/1.4 var(--v5-sans);color:var(--v5-yazi2)}
+html.e24v5 #e24v5 .v5-fa-ayrinti[open] summary{margin-bottom:10px}
+@media (max-width:760px){html.e24v5 #e24v5 .v5-fa-metrikler{margin-top:14px;gap:14px 22px}}
+@media (max-width:760px){html.e24v5 #e24v5 .v5-fa-metrik b{font-size:22px}}

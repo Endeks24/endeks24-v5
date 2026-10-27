@@ -432,12 +432,7 @@ html.e24v5 #e24v5 .v5-govde .e24-grafik .e24-g-sayi{font:400 64px/.92 var(--v5-s
 @media (max-width:575.98px){html.e24v5 #e24v5 .v5-govde .e24-grafik .e24-g-baslik{font-size:19px!important}}
 html.e24v5 #e24v5 .v5-govde .e24-katki{display:grid;grid-template-columns:150px 1fr;gap:24px;border-top:1px solid var(--v5-yazi);border-bottom:1px solid var(--v5-yazi);padding:22px 0;margin:28px 0}
 html.e24v5 #e24v5 .v5-govde .e24-katki p{font:400 17px/1.6 var(--v5-sans)!important;margin:0!important;grid-column:2}
-html.e24v5 #e24v5 .v5-kutu-liste{border-top:4px solid var(--v5-yazi);padding-top:12px}
-html.e24v5 #e24v5 .v5-kutu-liste h3{font:700 12px/1 var(--v5-sans);letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px}
-html.e24v5 #e24v5 .v5-kutu-liste ul{list-style:none;margin:0;padding:0}
-html.e24v5 #e24v5 .v5-kutu-liste li{border-bottom:1px solid var(--v5-cizgi)}
 html.e24v5 #e24v5 .v5-govde .e24-duyarli{margin:28px 0;clear:both}
-html.e24v5 #e24v5 .v5-govde .e24-duyarli .v5-duy-alt{font:400 15px/1.45 var(--v5-sans)!important;color:var(--v5-yazi2);margin:0 0 6px!important}
 html.e24v5 #e24v5 .v5-govde .e24-duyarli .v5-kaynak{font:400 13px/1.45 var(--v5-sans)!important;color:var(--v5-silik);margin:10px 0 0!important}
 html.e24v5 #e24v5 .v5-govde .e24-duyarli h3{font:700 12px/1 var(--v5-sans)!important;letter-spacing:.06em;text-transform:uppercase;margin:0 0 8px!important}
 html.e24v5 #e24v5 .v5-govde .e24-duyarli .v5-silik{color:var(--v5-silik)}
@@ -975,7 +970,6 @@ html.e24v5 #e24v5 .v5-govde .eh-tblnote,html.e24v5 #e24v5 .v5-govde p.eh-tblnote
 @media (max-width:767.98px){html.e24v5 #e24v5 .v5-govde table.e24-tablo-kart td:first-child::before{content:none}}
 @media (max-width:767.98px){html.e24v5 #e24v5 .v5-govde .eh-tblwrap:has(table.e24-tablo-kart){overflow-x:visible!important}}
 html.e24v5 #e24v5 .v5-mod{margin:24px 0}
-html.e24v5 #e24v5 .v5-mod .v5-duy-alt{font:400 14px/1.45 var(--v5-sans);color:var(--v5-yazi2);margin:0 0 6px}
 html.e24v5 #e24v5 .v5-mod .v5-kaynak{font:400 12px/1.45 var(--v5-sans);color:var(--v5-silik,#6E625A);margin:10px 0 0}
 html.e24v5 #e24v5 .v5-mod .v5-mod-alt{font:700 12px/1.2 var(--v5-sans);letter-spacing:.05em;text-transform:uppercase;color:var(--v5-yazi);margin:18px 0 6px}
 html.e24v5 #e24v5 .v5-mod-bar{height:5px;background:var(--v5-cizgi,#D2BAAA);margin:0 0 8px}
@@ -993,7 +987,6 @@ html.e24v5 #e24v5 .v5-mod-tablo td.n{text-align:right;white-space:nowrap;font-va
 html.e24v5 #e24v5 .v5-mod-det{margin-top:14px}
 html.e24v5 #e24v5 .v5-mod-det summary{font:700 13px/1.2 var(--v5-sans);cursor:pointer;margin-bottom:8px}
 html.e24v5 #e24v5 .v5-mod-ara{width:100%;max-width:260px;font:400 14px/1 var(--v5-sans);padding:8px;margin:0 0 8px;border:1px solid var(--v5-cizgi,#D2BAAA);background:transparent}
-html.e24v5 #e24v5 .v5-govde .v5-mod .v5-duy-alt{font:400 14px/1.45 var(--v5-sans)!important;color:var(--v5-yazi2);margin:0 0 6px!important}
 html.e24v5 #e24v5 .v5-govde .v5-mod .v5-kaynak{font:400 12px/1.45 var(--v5-sans)!important;color:var(--v5-silik,#6E625A);margin:10px 0 0!important}
 html.e24v5 #e24v5 .v5-govde .v5-mod p{margin-bottom:6px}
 html.e24v5 #e24v5 .v5-cubuklar:not(.v5-cbk-acik) .v5-cbk-gizli{display:none}
@@ -1201,3 +1194,11 @@ html.e24v5 #e24v5 .v5-liste-ul li{break-inside:avoid;padding:8px 0;border-bottom
 html.e24v5 #e24v5 .v5-liste-ul a{font-weight:700;margin-right:6px;text-decoration:none}
 html.e24v5 #e24v5 .v5-liste-ul span{color:var(--v5-yazi2)}
 html.e24v5 #e24v5 .v5-liste-not{margin:36px 0 0;font:400 15px/1.6 var(--v5-sans);color:var(--v5-yazi2)}
+html.e24v5 #e24v5 .v5-fa-metrikler{display:flex;flex-wrap:wrap;gap:12px 32px;align-self:flex-end}
+html.e24v5 #e24v5 .v5-fa-metrik b{display:block;font:700 26px/1 var(--v5-serif,'Source Serif 4',Georgia,serif);font-variant-numeric:tabular-nums;color:#fff}
+html.e24v5 #e24v5 .v5-fa-metrik span{display:block;margin-top:6px;max-width:170px;font:400 12px/1.35 var(--v5-sans);color:#9FB3C8}
+html.e24v5 #e24v5 .v5-fa-ayrinti{margin:0;border-top:1px solid var(--v5-cizgi);padding:12px 22px}
+html.e24v5 #e24v5 .v5-fa-ayrinti summary{cursor:pointer;font:700 13px/1.4 var(--v5-sans);color:var(--v5-yazi2)}
+html.e24v5 #e24v5 .v5-fa-ayrinti[open] summary{margin-bottom:10px}
+@media (max-width:760px){html.e24v5 #e24v5 .v5-fa-metrikler{margin-top:14px;gap:14px 22px}}
+@media (max-width:760px){html.e24v5 #e24v5 .v5-fa-metrik b{font-size:22px}}
