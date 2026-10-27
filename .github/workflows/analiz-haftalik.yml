@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       modul:
-        description: 'fon, arz ya da hepsi'
+        description: 'fon, arz, tufe ya da hepsi'
         required: false
         default: 'hepsi'
 permissions:
@@ -29,6 +29,7 @@ jobs:
           M="${{ github.event.inputs.modul }}"; M=${M:-hepsi}
           if [ "$M" = "fon" ] || [ "$M" = "hepsi" ]; then python3 veri-programi/analiz.py fon . 2>&1 | tee analiz-fon-log.txt || echo "UYARI: fon çalışmadı"; fi
           if [ "$M" = "evds" ]; then python3 veri-programi/analiz.py evds . 2>&1 | tee analiz-evds-log.txt || echo "UYARI: evds tanısı çalışmadı"; fi
+          if [ "$M" = "tufe" ] || [ "$M" = "hepsi" ]; then python3 veri-programi/analiz.py tufe . 2>&1 | tee analiz-tufe-log.txt || echo "UYARI: tüfe günü çalışmadı"; fi
           if [ "$M" = "arz" ] || [ "$M" = "hepsi" ]; then python3 veri-programi/analiz.py arz . 2>&1 | tee analiz-arz-log.txt || echo "UYARI: arz çalışmadı"; fi
       - name: Yaz
         run: |

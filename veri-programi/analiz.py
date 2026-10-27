@@ -7,6 +7,7 @@ Fintables MCP'den (salt okuma) okur; <kok>/analiz/ altına yazar. Fiyatlar <kok>
   fon        "Fon dedektifi": fonların aylık hisse alım satımı ve kategori nakit akışı (analiz/fon-dedektifi.json).
   arz        "Halka arz röntgeni ve aracı kurum ligi" (analiz/halka-arz.json).
   surpriz    "Bilanço sürpriz tablosu" (analiz/bilanco-surpriz.json).
+  tufe       "TÜFE günü hafızası": son açıklamalarda BIST 100 ve dolar tepkisi (analiz/tufe-gunu.json).
 
 Kullanım: python3 analiz.py <modül> <kök_klasör>        Anahtar FINTABLES ortam değişkeninde (GitHub secret).
 """
@@ -577,7 +578,75 @@ def hat(ft, kok):
     log('hat: yıl', len(liste), 'onaylı', len(onay), 'talep', len(talep), 'dağıtım', len(dagitim))
 
 
-MODULLER = {'tahmin': tahmin, 'tasiyici': tasiyici, 'fon': fon, 'arz': arz, 'surpriz': surpriz, 'evds': evds_tani, 'hat': hat}
+def tufe_gunu_hesapla(T, XU, USD, simdi):
+    """T: {(yil, ay): TÜFE endeksi}; XU, USD: {gün: kapanış}. TÜFE, ilgili ayın ardından gelen ayın 3'ünde (hafta sonu ya da tatilse sonraki işlem günü) saat 10.00'da açıklanır;
+    tepki, o işlem gününün kapanışının bir önceki kapanışa göre değişimidir. Beklenti verisi yoktur; sınıflama aylık artışın bir önceki ayın aylık artışından yüksek ya da düşük olmasıdır."""
+    gunler = sorted(XU)
+    mom = {}
+    for (y, a), v in sorted(T.items()):
+        o = (y, a - 1) if a > 1 else (y - 1, 12)
+        if o in T:
+            mom[(y, a)] = (v / T[o] - 1) * 100
+    olaylar = []
+    for (y, a), m in sorted(mom.items()):
+        yy, aa = (y, a + 1) if a < 12 else (y + 1, 1)
+        hedef = datetime.date(yy, aa, 3).isoformat()
+        if hedef > simdi.isoformat():
+            continue
+        i = next((k for k, g in enumerate(gunler) if g >= hedef), None)
+        if i is None or i < 1 or gunler[i] > (datetime.date(yy, aa, 3) + datetime.timedelta(days=6)).isoformat():
+            continue
+        g, b = gunler[i], gunler[i - 1]
+        if g > simdi.isoformat():
+            continue
+        one = (y, a - 1) if a > 1 else (y - 1, 12)
+        yil = (T[(y, a)] / T[(y - 1, a)] - 1) * 100 if (y - 1, a) in T else None
+        d = {'ay': f'{y}-{a:02d}', 'gun': g, 'aylik': r(m, 2), 'yillik': r(yil, 1) if yil is not None else None,
+             'bist': r((XU[g] / XU[b] - 1) * 100, 2), 'sinif': ('yuksek' if m > mom[one] else 'dusuk') if one in mom else None}
+        if g in USD and b in USD:
+            d['usd'] = r((USD[g] / USD[b] - 1) * 100, 2)
+        olaylar.append(d)
+    gun_ret = [(XU[gunler[i]] / XU[gunler[i - 1]] - 1) * 100 for i in range(1, len(gunler))]
+    def ozet(L):
+        bl = [x['bist'] for x in L]
+        ul = [x['usd'] for x in L if 'usd' in x]
+        if not bl:
+            return None
+        return {'n': len(L), 'bist_ort': r(statistics.mean(bl), 2), 'bist_medyan': r(statistics.median(bl), 2), 'bist_artan': r(sum(1 for x in bl if x > 0) / len(bl) * 100, 0),
+                'bist_mutlak': r(statistics.mean(abs(x) for x in bl), 2), 'usd_ort': r(statistics.mean(ul), 2) if ul else None}
+    son24 = olaylar[-24:]
+    normal = {'bist_mutlak': r(statistics.mean(abs(x) for x in gun_ret[-500:]), 2), 'bist_ort': r(statistics.mean(gun_ret[-500:]), 2)} if len(gun_ret) > 100 else None
+    sonraki = None
+    for add in range(0, 3):
+        yy, aa = (simdi.year, simdi.month + add)
+        if aa > 12:
+            yy, aa = yy + 1, aa - 12
+        d = datetime.date(yy, aa, 3)
+        if d > simdi:
+            sonraki = d.isoformat()
+            break
+    return {'olaylar': olaylar[-48:], 'son24': ozet(son24), 'yuksek': ozet([x for x in son24 if x['sinif'] == 'yuksek']), 'dusuk': ozet([x for x in son24 if x['sinif'] == 'dusuk']),
+            'normal_gun': normal, 'sonraki': sonraki, 'son_ay': olaylar[-1]['ay'] if olaylar else None}
+
+
+def tufe_gunu(ft, kok):
+    T = tufe_al(ft)
+    bas = '2019-06-01'
+    XU = {fg.gun(s['zaman_utc']): num(s['kapanis']) for s in fg.sayfala(ft, f"SELECT zaman_utc, kapanis FROM endeks_mumlar_gunluk_gh WHERE kod = 'XU100' AND zaman_utc >= TIMESTAMP '{bas} 00:00:00' ORDER BY zaman_utc") if num(s['kapanis'])}
+    USD = {fg.gun(s['zaman_utc']): num(s['kapanis']) for s in fg.sayfala(ft, f"SELECT zaman_utc, kapanis FROM mumlar_gunluk_gh WHERE kod = 'USDTRY' AND zaman_utc >= TIMESTAMP '{bas} 00:00:00' ORDER BY zaman_utc") if num(s['kapanis'])}
+    log('tüfe günü: xu', len(XU), 'usd', len(USD), 'tüfe', len(T))
+    if len(XU) < 500 or len(T) < 24:
+        log('tüfe günü: veri yetersiz, yazılmadı')
+        return
+    out = tufe_gunu_hesapla(T, XU, USD, bugun())
+    out['guncelleme'] = datetime.datetime.now(TR).isoformat(timespec='minutes')
+    out['not'] = ('Tepki, TÜFE açıklama gününün BIST 100 ve USD/TL kapanışının bir önceki kapanışa göre değişimidir; beklenti ile gerçekleşme farkı hesaba katılmaz. '
+                  'Açıklama günü ayın 3\'ü (hafta sonu ya da tatilse sonraki işlem günü) kabul edilir. Geçmiş tepki gelecekte tekrarlanacağı anlamına gelmez, yatırım tavsiyesi değildir.')
+    yaz(kok, 'tufe-gunu.json', out)
+    log('tüfe günü: olay', len(out['olaylar']), 'son', out['son_ay'], 'sonraki', out['sonraki'])
+
+
+MODULLER = {'tahmin': tahmin, 'tasiyici': tasiyici, 'fon': fon, 'arz': arz, 'surpriz': surpriz, 'evds': evds_tani, 'hat': hat, 'tufe': tufe_gunu}
 
 if __name__ == '__main__':
     if len(sys.argv) < 3 or sys.argv[1] not in MODULLER:
