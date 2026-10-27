@@ -1346,3 +1346,24 @@ html.e24v5 #e24v5 .v5-fa-ayrinti summary{cursor:pointer;font:700 13px/1.4 var(--
 html.e24v5 #e24v5 .v5-fa-ayrinti[open] summary{margin-bottom:10px}
 @media (max-width:760px){html.e24v5 #e24v5 .v5-fa-metrikler{margin-top:14px;gap:14px 22px}}
 @media (max-width:760px){html.e24v5 #e24v5 .v5-fa-metrik b{font-size:22px}}
+html.e24v5-gomulu body{margin:0!important;background:#fff!important}
+html.e24v5-gomulu .js-cookie-consent,html.e24v5-gomulu #cookie-consent,html.e24v5-gomulu .go-top{display:none!important}
+html.e24v5 #e24v5 .v5-gomulu{max-width:720px;margin:0 auto;padding:14px 16px 10px;background:#fff;color:#1A1411;font-family:var(--v5-sans,Arial,sans-serif)}
+html.e24v5 #e24v5 .v5-gomulu-ust{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:6px}
+html.e24v5 #e24v5 .v5-gomulu-bas{color:inherit;text-decoration:none;font:400 13px/1.3 var(--v5-sans)}
+html.e24v5 #e24v5 .v5-gomulu-bas b{font:700 20px/1.1 var(--v5-serif);margin-right:4px}
+html.e24v5 #e24v5 .v5-gomulu-fiyat{text-align:right}
+html.e24v5 #e24v5 .v5-gomulu-fiyat b{display:block;font:700 22px/1.1 var(--v5-serif)}
+html.e24v5 #e24v5 .v5-gomulu-fiyat em{font:600 13px/1.3 var(--v5-sans);font-style:normal}
+html.e24v5 #e24v5 .v5-gomulu svg{width:100%;height:auto;display:block}
+html.e24v5 #e24v5 .v5-gomulu-alt{margin:8px 0 0;font:400 11px/1.4 var(--v5-sans);color:#6E625A}
+html.e24v5 #e24v5 .v5-gomulu-alt a{font-weight:700;color:#14548C}
+html.e24v5 #e24v5 .v5-gomulu-yok{padding:30px 0;text-align:center;color:#6E625A}
+html.e24v5 #e24v5 .v5-brs-emb{margin:10px 0 0}
+html.e24v5 #e24v5 .v5-brs-emb-kutu{margin-top:10px;display:grid;gap:8px;max-width:640px}
+html.e24v5 #e24v5 .v5-brs-emb-kutu[hidden]{display:none}
+html.e24v5 #e24v5 .v5-brs-emb textarea{width:100%;font:12px/1.4 ui-monospace,Menlo,monospace;padding:10px;border:1px solid var(--v5-cizgi);background:transparent;color:inherit;resize:vertical}
+html.e24v5-gomulu #e24v5,html.e24v5-gomulu #e24v5 main.v5-brs,html.e24v5-gomulu #e24v5 .v5-brs-ic{background:#fff!important}
+html.e24v5.e24v5-gomulu .v5-cerez,html.e24v5.e24v5-gomulu .cookie-consent,html.e24v5.e24v5-gomulu .js-cookie-consent{display:none!important}
+html.e24v5-gomulu{background:#fff!important}
+html.e24v5.e24v5-gomulu body,html.e24v5.e24v5-gomulu #e24v5{background:#fff!important}

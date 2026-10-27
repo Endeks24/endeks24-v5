@@ -1008,3 +1008,9 @@ html.e24v5 #e24v5 .v5-fa-ayrinti summary{cursor:pointer;font:700 13px/1.4 var(--
 html.e24v5 #e24v5 .v5-fa-ayrinti[open] summary{margin-bottom:10px}
 @media (max-width:760px){html.e24v5 #e24v5 .v5-fa-metrikler{margin-top:14px;gap:14px 22px}}
 @media (max-width:760px){html.e24v5 #e24v5 .v5-fa-metrik b{font-size:22px}}
+html.e24v5-gomulu body{margin:0!important;background:#fff!important}
+html.e24v5-gomulu .js-cookie-consent,html.e24v5-gomulu #cookie-consent,html.e24v5-gomulu .go-top{display:none!important}
+html.e24v5-gomulu #e24v5{background:#fff!important}
+html.e24v5.e24v5-gomulu .v5-cerez,html.e24v5.e24v5-gomulu .cookie-consent,html.e24v5.e24v5-gomulu .js-cookie-consent{display:none!important}
+html.e24v5-gomulu{background:#fff!important}
+html.e24v5.e24v5-gomulu body,html.e24v5.e24v5-gomulu #e24v5{background:#fff!important}
