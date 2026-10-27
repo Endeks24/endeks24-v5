@@ -1,3 +1,4 @@
+BIST 100 27 Ekim seansını yüzde 0,01 düşüşle 11.151,03 puandan kapattı. Endeksteki 100 hisseden 56 hisse geriledi, 44 hisse yükseldi.
 rakamlar: {'piyasa': 8, 'gundem': 8}
-TAMAM: cikti/veri.json 112270 bayt; seans 2026-10-27T18:10:00+03:00 ; kripto 2026-10-27T20:23:00+03:00
-2026-10-27T17:23:52Z --kripto-yalniz
+TAMAM: cikti/veri.json 112331 bayt; seans 2026-10-27T18:10:00+03:00 ; kripto 2026-10-27T21:09:00+03:00
+2026-10-27T18:09:20Z 
