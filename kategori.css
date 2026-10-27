@@ -1756,3 +1756,29 @@ html.e24v5 #e24v5 .v5-kt-sek[hidden]{display:none}
 @media (max-width:991px){html.e24v5 #e24v5 .v5-kat-kap .v5-kat-yan{display:none}}
 html.e24v5 #e24v5 .v5-kap-kaynak{margin:10px 0 0;font:400 12px/1.4 var(--v5-sans);color:#9FB1C4}
 @media (min-width:992px){html.e24v5 #e24v5 .v5-kat-kap .v5-kat-band>.v5-altkat .v5-altkat-ic{flex-wrap:wrap;overflow:visible}}
+@media (min-width:992px){html.e24v5 #e24v5 .v5-kat-kap .v5-kat-manset{gap:22px}}
+html.e24v5 #e24v5 .v5-kat-kap .v5-kat-manset{margin-bottom:0}
+html.e24v5 #e24v5 .v5-kat-kap .v5-kat-tam{padding-top:32px}
+html.e24v5 #e24v5 .v5-kat-kap .v5-kat-bolumler{gap:36px}
+html.e24v5 #e24v5 .v5-kat-kap .v5-kat-bolumler>*,html.e24v5 #e24v5 .v5-kat-kap .v5-kat-bolumler>div>*{margin-bottom:0}
+html.e24v5 #e24v5 .v5-kat-kap .v5-kat-bolumler>div:empty{display:none}
+html.e24v5 #e24v5 .v5-kat-kap .v5-piy-alt{margin-top:36px;padding-top:0}
+html.e24v5 #e24v5 .v5-kat-kap .v5-ikinci{margin-top:18px}
+html.e24v5 #e24v5 .v5-kapr-bas{margin-bottom:16px}
+html.e24v5 #e24v5 .v5-kapr-satir{display:grid;grid-template-columns:70px 84px minmax(0,1fr) 160px 14px;gap:14px;align-items:center;padding:13px 16px;border-bottom:1px solid var(--v5-cizgi);color:inherit}
+html.e24v5 #e24v5 .v5-kapr-satir:hover{background:var(--v5-band)}
+html.e24v5 #e24v5 a.v5-kapr-kod{display:block;background:var(--v5-lacivert);color:#fff;font:700 12px/1 var(--v5-sans);letter-spacing:.03em;padding:7px 0;text-align:center}
+html.e24v5 #e24v5 a.v5-kapr-kod:hover{background:var(--v5-etiket);color:#fff}
+html.e24v5 #e24v5 .v5-kapr-kodk{display:flex;align-items:center;gap:6px}
+html.e24v5 #e24v5 .v5-kapr-kodk a{flex:1}
+html.e24v5 #e24v5 .v5-kapr-kodk em{font:600 11px/1 var(--v5-sans);font-style:normal;color:var(--v5-silik)}
+html.e24v5 #e24v5 a.v5-kapr-konu{display:block;font:600 15px/1.35 var(--v5-sans);color:var(--v5-yazi)}
+html.e24v5 #e24v5 a.v5-kapr-konu:hover{color:var(--v5-etiket);text-decoration:underline}
+html.e24v5 #e24v5 a.v5-kapr-sirket{display:block;margin-top:2px;font:400 13px/1.35 var(--v5-sans);color:var(--v5-silik);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+html.e24v5 #e24v5 a.v5-kapr-sirket:hover{color:var(--v5-etiket);text-decoration:underline}
+html.e24v5 #e24v5 a.v5-kapr-ok{font-weight:700;color:var(--v5-etiket);text-align:center}
+@media (max-width:991px){html.e24v5 #e24v5 .v5-kapr-satir{grid-template-columns:auto auto minmax(0,1fr);gap:8px 10px;padding:14px}}
+@media (max-width:991px){html.e24v5 #e24v5 .v5-kapr-satir .v5-kapr-metin{grid-column:1/-1;order:5}}
+@media (max-width:991px){html.e24v5 #e24v5 .v5-kapr-satir .v5-kapr-grup{justify-self:end;margin-left:auto}}
+@media (max-width:991px){html.e24v5 #e24v5 a.v5-kapr-ok{display:none}}
+@media (max-width:991px){html.e24v5 #e24v5 .v5-kat-kap .v5-kat-bolumler{gap:28px}}
