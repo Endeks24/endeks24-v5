@@ -1483,3 +1483,25 @@ html.e24v5 #e24v5 .v5-ek-lejant i{display:inline-block;width:22px;height:8px;mar
 html.e24v5 #e24v5 .v5-ek-lejant i.e{background:var(--v5-lacivert)}
 html.e24v5 #e24v5 .v5-ek-uye-bar.hareket i.up{background:#0B7A4B}
 html.e24v5 #e24v5 .v5-ek-uye-bar.hareket i.dn{background:#B3261E}
+html.e24v5 #e24v5 .v5-ek-dugmeler{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
+html.e24v5 #e24v5 .v5-ek-dugmeler .v5-ek-dugme-ince{margin:0}
+html.e24v5 #e24v5 .v5-ek-dugme-acik{background:transparent;color:var(--v5-lacivert);border:2px solid var(--v5-lacivert);padding:11px 18px}
+html.e24v5 #e24v5 .v5-ev-izgara{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+html.e24v5 #e24v5 .v5-ev-kart{display:flex;flex-direction:column;gap:10px;padding:20px;background:#fff;border:1px solid var(--v5-cizgi-k);border-top:5px solid var(--ek,#14548C)}
+html.e24v5 #e24v5 .v5-ev-kart h3{font:700 21px/1.25 var(--v5-serif);margin:2px 0 0}
+html.e24v5 #e24v5 .v5-ev-metrik{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:10px;margin:6px 0}
+html.e24v5 #e24v5 .v5-ev-metrik div{padding:10px;background:var(--v5-kutu);border:1px solid var(--v5-cizgi)}
+html.e24v5 #e24v5 .v5-ev-metrik small{display:block;margin-bottom:6px;font:600 11px/1 var(--v5-sans);color:var(--v5-silik)}
+html.e24v5 #e24v5 .v5-ev-metrik em{display:block;margin-top:6px;font:400 11px/1.3 var(--v5-sans);font-style:normal;color:var(--v5-silik)}
+html.e24v5 #e24v5 .v5-ev-baglar{display:flex;flex-wrap:wrap;gap:6px 16px;font:700 13px/1.4 var(--v5-sans)}
+html.e24v5 #e24v5 .v5-ev-cumle{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-top:1px solid var(--v5-cizgi)}
+html.e24v5 #e24v5 .v5-ev-cumle p{margin:0;flex:1;font:400 14px/1.5 var(--v5-serif)}
+html.e24v5 #e24v5 .v5-ev-kopya{flex:none;padding:7px 12px;border:1px solid var(--v5-lacivert);background:#fff;color:var(--v5-lacivert);font:700 12px/1 var(--v5-sans);cursor:pointer}
+html.e24v5 #e24v5 .v5-ev-kopya:hover{background:var(--v5-lacivert);color:#fff}
+html.e24v5 #e24v5 .v5-ev-url-liste{display:grid;gap:10px;margin-bottom:18px}
+html.e24v5 #e24v5 .v5-ev-url{display:grid;grid-template-columns:230px 1fr auto;gap:12px;align-items:center;padding:10px 12px;background:var(--v5-kutu);border:1px solid var(--v5-cizgi)}
+html.e24v5 #e24v5 .v5-ev-url span{font:700 13px/1.3 var(--v5-sans)}
+html.e24v5 #e24v5 .v5-ev-url code{font:12px/1.4 ui-monospace,Menlo,monospace;word-break:break-all;color:var(--v5-yazi2)}
+html.e24v5 #e24v5 .v5-endeks h3{font:700 20px/1.3 var(--v5-serif);margin:22px 0 6px}
+@media (max-width:980px){html.e24v5 #e24v5 .v5-ev-izgara{grid-template-columns:1fr}}
+@media (max-width:980px){html.e24v5 #e24v5 .v5-ev-url{grid-template-columns:1fr}}
