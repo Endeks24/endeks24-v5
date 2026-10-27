@@ -1182,10 +1182,12 @@ html.e24v5 #e24v5 .v5-brs-kutu.lim::after{content:"";position:absolute;inset:0;b
 @media (max-width:1000px){html.e24v5 #e24v5 .v5-brs-kutu u{opacity:.9;transform:none}}
 @media (max-width:1000px){html.e24v5 #e24v5 .v5-brs-kutu em{font-size:17px}}
 @keyframes v5brsCanli{0%{box-shadow:0 0 0 0 rgba(91,214,160,.55)}70%,100%{box-shadow:0 0 0 7px rgba(91,214,160,0)}}
+html.e24v5 #e24v5 .v5-pb-cizgi{display:block;width:100%;height:64px;margin-top:18px}
 html.e24v5 #e24v5 .v5-pb-kap{margin-top:20px;border-top:1px solid #1C1A19}
 html.e24v5 #e24v5 .v5-pb-kr{display:grid;grid-template-columns:62px 1fr;gap:14px;align-items:center;padding:13px 0;border-bottom:1px solid #E3D5C9;font:500 14px/1.3 var(--v5-sans)}
 html.e24v5 #e24v5 .v5-pb-kr:last-child{border-bottom:0}
 html.e24v5 #e24v5 .v5-pb-kr span{display:block;margin-top:5px;font:400 12px/1 var(--v5-sans);color:#6E625A}
+@media (max-width:640px){html.e24v5 #e24v5 .v5-pb-cizgi{height:44px;margin-top:12px}}
 html.e24v5 #e24v5 .v5-brs-hl{border-top:3px solid #1C1A19}
 html.e24v5 #e24v5 .v5-brs-hr{display:grid;grid-template-columns:130px 1fr;gap:24px;align-items:baseline;padding:20px 0;border-bottom:1px solid #E3D5C9;color:var(--v5-yazi)}
 html.e24v5 #e24v5 .v5-brs-hz{font:600 13px/1.4 var(--v5-sans);color:#6E625A}
@@ -1367,3 +1369,25 @@ html.e24v5-gomulu #e24v5,html.e24v5-gomulu #e24v5 main.v5-brs,html.e24v5-gomulu 
 html.e24v5.e24v5-gomulu .v5-cerez,html.e24v5.e24v5-gomulu .cookie-consent,html.e24v5.e24v5-gomulu .js-cookie-consent{display:none!important}
 html.e24v5-gomulu{background:#fff!important}
 html.e24v5.e24v5-gomulu body,html.e24v5.e24v5-gomulu #e24v5{background:#fff!important}
+html.e24v5 #e24v5 .v5-endeks{max-width:1100px;margin:0 auto;padding:24px 16px 56px}
+html.e24v5 #e24v5 .v5-endeks h1{font:600 44px/1.1 var(--v5-serif);margin:14px 0 14px}
+html.e24v5 #e24v5 .v5-endeks h2{font:700 26px/1.1 var(--v5-serif);border-top:3px solid currentColor;padding-top:10px;margin:38px 0 12px}
+html.e24v5 #e24v5 .v5-endeks-izgara{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:26px 0}
+html.e24v5 #e24v5 .v5-endeks-kart{display:flex;flex-direction:column;gap:6px;padding:20px 22px;border:1px solid var(--v5-cizgi);text-decoration:none;color:inherit;background:var(--v5-kart,transparent)}
+html.e24v5 #e24v5 .v5-endeks-kart h2{border:0;padding:0;margin:0;font:700 20px/1.2 var(--v5-serif)}
+html.e24v5 #e24v5 .v5-endeks-kart svg{width:100%;height:70px;margin-top:6px}
+html.e24v5 #e24v5 .v5-endeks-sayi{display:block;font:700 44px/1 var(--v5-serif);font-variant-numeric:tabular-nums;margin-top:6px}
+html.e24v5 #e24v5 .v5-endeks-ozet{font:600 14px/1.4 var(--v5-sans)}
+html.e24v5 #e24v5 .v5-endeks-ozet.up,html.e24v5 #e24v5 .v5-endeks-ust em.up,html.e24v5 #e24v5 .v5-endeks-met b.up{color:#0B7A4B}
+html.e24v5 #e24v5 .v5-endeks-ozet.dn,html.e24v5 #e24v5 .v5-endeks-ust em.dn,html.e24v5 #e24v5 .v5-endeks-met b.dn{color:#B3261E}
+html.e24v5 #e24v5 .v5-endeks-kural{font:400 13px/1.4 var(--v5-sans);color:var(--v5-yazi2)}
+html.e24v5 #e24v5 .v5-endeks-ust{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px;margin:18px 0 14px;padding:20px 0;border-top:1px solid var(--v5-cizgi);border-bottom:1px solid var(--v5-cizgi)}
+html.e24v5 #e24v5 .v5-endeks-ust em{display:block;font:600 15px/1.4 var(--v5-sans);font-style:normal;margin-top:4px}
+html.e24v5 #e24v5 .v5-endeks-met{display:flex;flex-wrap:wrap;gap:12px 36px}
+html.e24v5 #e24v5 .v5-endeks-met b{display:block;font:700 26px/1 var(--v5-serif);font-variant-numeric:tabular-nums}
+html.e24v5 #e24v5 .v5-endeks-met span{display:block;margin-top:6px;font:400 12px/1.35 var(--v5-sans);color:var(--v5-yazi2)}
+html.e24v5 #e24v5 .v5-endeks-grafik{margin:12px 0 4px}
+html.e24v5 #e24v5 .v5-endeks-grafik svg{width:100%;height:auto;display:block}
+html.e24v5 #e24v5 .v5-endeks-uyari{margin:30px 0 0;font:400 13px/1.6 var(--v5-sans);color:var(--v5-yazi2);padding:16px 18px;border:1px solid var(--v5-cizgi)}
+@media (max-width:860px){html.e24v5 #e24v5 .v5-endeks-izgara{grid-template-columns:1fr}}
+@media (max-width:860px){html.e24v5 #e24v5 .v5-endeks h1{font-size:34px}}
