@@ -286,6 +286,64 @@ def neden_kartlari(kod, mum, xu, ac, ted, kp, hacim_ort):
 AYLAR = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık']
 
 
+def kap_grup(tip, konu):
+    """Bildirim türü etiketi (kural tabanlı; yorum içermez). Bilinmeyenler 'Diğer'."""
+    k = (konu or '').lower()
+    if tip == 'FR' or re.search(r'finansal rapor|faaliyet raporu|sorumluluk beyan', k):
+        return 'Finansal rapor'
+    if re.search(r'pay alım satım|geri alım|pay alım teklifi|paylarının geri', k):
+        return 'Pay işlemi'
+    if re.search(r'temettü|kâr payı|kar payı|genel kurul', k):
+        return 'Temettü ve genel kurul'
+    if re.search(r'sermaye art|sermaye azalt|bedelli|bedelsiz|rüçhan|borçlanma aracı|tahvil|bono', k):
+        return 'Sermaye'
+    if re.search(r'derecelendirme', k):
+        return 'Derecelendirme'
+    if re.search(r'yönetim kurulu|istifa|atama|genel müdür|yönetici', k) and 'esas sözleşme' not in k:
+        return 'Yönetim'
+    if re.search(r'yeni iş|sipariş|ihale|sözleşme|proje|anlaşma|mutabakat', k) and 'esas sözleşme' not in k:
+        return 'İş ve sözleşme'
+    return 'Diğer'
+
+
+def kap_akisi(KP, H, kok, son_gun):
+    """Tüm şirketlerin KAP bildirimleri (son 21 gün, bildirim tek sayılır): günlük toplamlar, son günlerin satırları, haftanın en çok bildirim yapanları.
+    Çıktı: borsa/kap-akis.json"""
+    tek = {}
+    for kd, lst in KP.items():
+        for x in lst:
+            e = tek.setdefault(x['id'], {'x': x, 'k': []})
+            if kd not in e['k']:
+                e['k'].append(kd)
+    satir = []
+    for i, e in tek.items():
+        x = e['x']
+        z = tr_gun(x['u'])
+        kodlar = sorted(e['k'])[:3]
+        ad = (H.get(kodlar[0]) or {}).get('ad') or kodlar[0]
+        satir.append({'g': z.date().isoformat(), 't': f'{z:%H.%M}', 'k': kodlar, 'ad': ad, 'konu': (x.get('konu') or '').strip(), 'grup': kap_grup(x.get('tip'), x.get('konu')), 'id': x['id'], 'u': x['u']})
+    satir.sort(key=lambda z: z['u'], reverse=True)
+    gunler = {}
+    for r in satir:
+        g = gunler.setdefault(r['g'], {'toplam': 0, 'gruplar': {}})
+        g['toplam'] += 1
+        g['gruplar'][r['grup']] = g['gruplar'].get(r['grup'], 0) + 1
+    son_gunler = sorted(gunler)[-3:]
+    gosterilen = [{k: v for k, v in r.items() if k != 'u'} for r in satir if r['g'] in son_gunler][:400]
+    bas7 = (datetime.date.fromisoformat(son_gun) - datetime.timedelta(days=6)).isoformat()
+    say = collections.Counter()
+    for r in satir:
+        if r['g'] >= bas7 and r['grup'] != 'Finansal rapor':
+            for k in r['k']:
+                say[k] += 1
+    aktif = [{'k': k, 'ad': (H.get(k) or {}).get('ad') or k, 'n': n} for k, n in sorted(say.items(), key=lambda z: (-z[1], z[0]))[:8]]
+    out = {'guncelleme': datetime.datetime.now(TR).isoformat(timespec='minutes'), 'tarih': son_gun, 'gunler': {g: gunler[g] for g in sorted(gunler)[-14:]}, 'satirlar': gosterilen, 'aktif': aktif,
+           'not': 'Bildirimler Fintables KAP verisinden derlenir; tür etiketi bildirim konusundan kuralla çıkarılır. Finansal rapor ekleri (rapor, faaliyet raporu, sorumluluk beyanı) ayrı etiketlenir.'}
+    os.makedirs(os.path.join(kok, 'borsa'), exist_ok=True)
+    json.dump(out, open(os.path.join(kok, 'borsa', 'kap-akis.json'), 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
+    log('kap akışı:', len(satir), 'bildirim,', len(gosterilen), 'satır yazıldı')
+
+
 def main(kok):
     ft = hh.baglan()
     bugun = datetime.datetime.now(TR).date()
@@ -412,6 +470,10 @@ def main(kok):
                 gor.add(x['id'])
                 son_kap.append({'u': x['u'], 'k': kd, 'konu': x['konu'], 'url': x.get('url')})
     son_kap = sorted(son_kap, key=lambda z: z['u'], reverse=True)[:10]
+    try:
+        kap_akisi(KP, H, kok, son_gun)
+    except Exception as e:
+        log('kap akışı hatası', str(e)[:120])
     os.makedirs(os.path.join(kok, 'borsa', 'hisse'), exist_ok=True)
     for kod, k in kayitlar.items():
         json.dump(k, open(os.path.join(kok, 'borsa', 'hisse', kod + '.json'), 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
