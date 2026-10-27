@@ -1583,9 +1583,6 @@ html.e24v5 #e24v5 .v5-son-mobil{display:none}
 @media (max-width:991px){html.e24v5 #e24v5 .v5-kat-pi .v5-son-mobil{display:block}}
 @media (max-width:991px){html.e24v5 #e24v5 .v5-kat-pi .v5-kat-yan .v5-son-bas,html.e24v5 #e24v5 .v5-kat-pi .v5-kat-yan .v5-son-liste,html.e24v5 #e24v5 .v5-kat-pi .v5-kat-yan>.v5-tum{display:none}}
 @media (max-width:991px){html.e24v5 #e24v5 .v5-kat-ha .v5-kat-yan .v5-son-bas,html.e24v5 #e24v5 .v5-kat-ha .v5-kat-yan .v5-son-liste,html.e24v5 #e24v5 .v5-kat-ha .v5-kat-yan>.v5-tum{display:none}}
-html.e24v5 #e24v5 .v5-brs-et{display:block;font:700 11px/1 var(--v5-sans);letter-spacing:.16em;text-transform:uppercase;color:#8FA5BB}
-html.e24v5 #e24v5 .v5-brs-et.d{color:var(--b-dn)}
-html.e24v5 #e24v5 .v5-brs-et.a{color:var(--b-up)}
 @keyframes v5brsCiz{to{stroke-dashoffset:0}}
 @keyframes v5brsNabiz{0%,100%{opacity:.15}50%{opacity:1}}
 html.e24v5 #e24v5 .v5-altkat-ic a.v5-altkat-brs{background:#0F1B2A;color:#fff;box-shadow:none;gap:8px}

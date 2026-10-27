@@ -985,9 +985,6 @@ html.e24v5 #e24v5 .v5-ar-det{padding:14px 28px;background:#fff;border-top:1px so
 @media (max-width:900px){html.e24v5 #e24v5 .v5-ar-cubuk{grid-column:2 / 4;grid-row:2}}
 @media (max-width:900px){html.e24v5 #e24v5 .v5-ar-det{padding:14px 18px}}
 @keyframes v5-nabiz{70%{box-shadow:0 0 0 10px rgba(232,89,12,0)}100%{box-shadow:0 0 0 0 rgba(232,89,12,0)}}
-html.e24v5 #e24v5 .v5-brs-et{display:block;font:700 11px/1 var(--v5-sans);letter-spacing:.16em;text-transform:uppercase;color:#8FA5BB}
-html.e24v5 #e24v5 .v5-brs-et.d{color:var(--b-dn)}
-html.e24v5 #e24v5 .v5-brs-et.a{color:var(--b-up)}
 @keyframes v5brsCiz{to{stroke-dashoffset:0}}
 @keyframes v5brsNabiz{0%,100%{opacity:.15}50%{opacity:1}}
 @keyframes v5brsCanli{0%{box-shadow:0 0 0 0 rgba(91,214,160,.55)}70%,100%{box-shadow:0 0 0 7px rgba(91,214,160,0)}}
