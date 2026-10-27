@@ -173,6 +173,8 @@ def tr(x, n=1):
 
 
 def yuz(x, n=1):
+    if 0 < abs(x) < 0.1:
+        n = 2
     return ('+' if x > 0 else '−' if x < 0 else '') + '%' + tr(abs(x), n)
 
 

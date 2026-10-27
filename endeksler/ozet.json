@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-10-27T19:32+03:00",
+ "guncelleme": "2026-10-27T21:08+03:00",
  "atif": "Kaynak: Endeks24 Endeksleri (https://www.endeks24.com/endeksler)",
  "kullanim": "Serbestçe alıntılanabilir; kaynak olarak Endeks24 Endeksleri belirtilmeli ve bağlantı verilmelidir. Yatırım tavsiyesi değildir; resmi bir borsa endeksi değildir.",
  "endeksler": {
@@ -115,7 +115,7 @@
     ]
    },
    "hazir_cumleler": [
-    "Endeks24 Halka Arz Endeksi 27 Ekim 2026 tarihinde −%2,3 değişti; aynı gün BIST 100 −%0,0 değişti.",
+    "Endeks24 Halka Arz Endeksi 27 Ekim 2026 tarihinde −%2,3 değişti; aynı gün BIST 100 −%0,01 değişti.",
     "Son bir ayda Endeks24 Halka Arz Endeksi −%28,3 değişirken BIST 100 −%13,6 değişti; endeks BIST 100'ün 14,7 puan gerisinde.",
     "Son üç ayda Endeks24 Halka Arz Endeksi −%50,2 değişirken BIST 100 −%16,1 değişti; endeks BIST 100'ün 34,1 puan gerisinde.",
     "Yıl başından bu yana Endeks24 Halka Arz Endeksi −%25,8 değişirken BIST 100 −%1,0 değişti; endeks BIST 100'ün 24,8 puan gerisinde.",
@@ -208,8 +208,8 @@
     "cikan": []
    },
    "hazir_cumleler": [
-    "Endeks24 Net Nakit Endeksi 27 Ekim 2026 tarihinde −%0,1 değişti; aynı gün BIST 100 −%0,0 değişti.",
-    "26 Ekim 2026 başlangıcından bu yana Endeks24 Net Nakit Endeksi −%0,1 değişirken BIST 100 −%0,0 değişti; endeks BIST 100'ün 0,0 puan gerisinde.",
+    "Endeks24 Net Nakit Endeksi 27 Ekim 2026 tarihinde −%0,05 değişti; aynı gün BIST 100 −%0,01 değişti.",
+    "26 Ekim 2026 başlangıcından bu yana Endeks24 Net Nakit Endeksi −%0,05 değişirken BIST 100 −%0,01 değişti; endeks BIST 100'ün 0,0 puan gerisinde.",
     "Son bir ayda Endeks24 Net Nakit Endeksi bileşenleri arasında en çok yükselen MCARD (+%16,7), en çok düşen GIPTA (−%36,4) oldu."
    ]
   },
@@ -290,15 +290,15 @@
     "cikan": []
    },
    "hazir_cumleler": [
-    "Endeks24 Fon Akışı Endeksi 27 Ekim 2026 tarihinde +%0,6 değişti; aynı gün BIST 100 −%0,0 değişti.",
-    "26 Ekim 2026 başlangıcından bu yana Endeks24 Fon Akışı Endeksi +%0,6 değişirken BIST 100 −%0,0 değişti; endeks BIST 100'ün 0,6 puan önünde.",
+    "Endeks24 Fon Akışı Endeksi 27 Ekim 2026 tarihinde +%0,6 değişti; aynı gün BIST 100 −%0,01 değişti.",
+    "26 Ekim 2026 başlangıcından bu yana Endeks24 Fon Akışı Endeksi +%0,6 değişirken BIST 100 −%0,01 değişti; endeks BIST 100'ün 0,6 puan önünde.",
     "Son bir ayda Endeks24 Fon Akışı Endeksi bileşenleri arasında en çok yükselen YKBNK (−%1,1), en çok düşen ASTOR (−%34,0) oldu."
    ]
   }
  },
  "gunun_notu": [
-  "Endeks24 Halka Arz Endeksi 27 Ekim 2026 tarihinde −%2,3 değişti; aynı gün BIST 100 −%0,0 değişti.",
-  "Endeks24 Net Nakit Endeksi 27 Ekim 2026 tarihinde −%0,1 değişti; aynı gün BIST 100 −%0,0 değişti.",
-  "Endeks24 Fon Akışı Endeksi 27 Ekim 2026 tarihinde +%0,6 değişti; aynı gün BIST 100 −%0,0 değişti."
+  "Endeks24 Halka Arz Endeksi 27 Ekim 2026 tarihinde −%2,3 değişti; aynı gün BIST 100 −%0,01 değişti.",
+  "Endeks24 Net Nakit Endeksi 27 Ekim 2026 tarihinde −%0,05 değişti; aynı gün BIST 100 −%0,01 değişti.",
+  "Endeks24 Fon Akışı Endeksi 27 Ekim 2026 tarihinde +%0,6 değişti; aynı gün BIST 100 −%0,01 değişti."
  ]
 }
