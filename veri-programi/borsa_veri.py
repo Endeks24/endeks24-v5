@@ -311,6 +311,8 @@ def kap_akisi(KP, H, kok, son_gun):
     Çıktı: borsa/kap-akis.json"""
     tek = {}
     for kd, lst in KP.items():
+        if kd not in H:  # varant, fon ve benzeri kodlar hisse değildir
+            continue
         for x in lst:
             e = tek.setdefault(x['id'], {'x': x, 'k': []})
             if kd not in e['k']:
@@ -328,8 +330,12 @@ def kap_akisi(KP, H, kok, son_gun):
         g = gunler.setdefault(r['g'], {'toplam': 0, 'gruplar': {}})
         g['toplam'] += 1
         g['gruplar'][r['grup']] = g['gruplar'].get(r['grup'], 0) + 1
-    son_gunler = sorted(gunler)[-3:]
-    gosterilen = [{k: v for k, v in r.items() if k != 'u'} for r in satir if r['g'] in son_gunler][:400]
+    son_gunler = sorted(gunler)[-5:]  # hafta sonu ve pazartesi sabahı için son işlem günü de içeride kalsın
+    gosterilen, say_gun = [], collections.Counter()
+    for r in satir:
+        if r['g'] in son_gunler and say_gun[r['g']] < 120:
+            say_gun[r['g']] += 1
+            gosterilen.append({k: v for k, v in r.items() if k != 'u'})
     bas7 = (datetime.date.fromisoformat(son_gun) - datetime.timedelta(days=6)).isoformat()
     say = collections.Counter()
     for r in satir:
