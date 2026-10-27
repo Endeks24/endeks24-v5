@@ -1240,3 +1240,33 @@ html.e24v5 #e24v5 .v5-menu-ic a.v5-nokta::before{content:"";display:inline-block
 html.e24v5 #e24v5 .v5-menu-ic a.v5-nokta-y{--nk:#0B7A4B}
 html.e24v5 #e24v5 .v5-menu-ic a.v5-nokta-t{--nk:#C9791B}
 html.e24v5 #e24v5 .v5-menu-ic a.v5-nokta.on{box-shadow:inset 0 -3px 0 var(--nk)}
+@media (min-width:992px){html.e24v5 #e24v5.v5-sayfa-ana .v5-mh{font-size:58px;line-height:1.04;letter-spacing:-.025em;text-wrap:balance}}
+html.e24v5 #e24v5.v5-sayfa-ana .v5-mh a{color:var(--v5-yazi)}
+html.e24v5 #e24v5.v5-sayfa-ana .v5-mh a:hover{color:var(--v5-etiket)}
+html.e24v5 #e24v5.v5-sayfa-ana .v5-spot{text-wrap:pretty}
+html.e24v5 #e24v5.v5-sayfa-ana .v5-kicker .v5-damga{letter-spacing:.1em}
+html.e24v5 #e24v5.v5-sayfa-ana .v5-reklam{margin-bottom:0}
+html.e24v5 #e24v5.v5-sayfa-ana .v5-pb{margin-top:34px;margin-bottom:0}
+html.e24v5 #e24v5.v5-sayfa-ana .v5-es{margin:52px 0 44px}
+html.e24v5 #e24v5.v5-sayfa-ana .e24v5-3sey{margin:0 0 36px}
+html.e24v5 #e24v5.v5-sayfa-ana .v5-es-bas{border-bottom:0;border-top:3px solid #1C1A19;padding:22px 0 0;position:relative;margin-bottom:26px}
+html.e24v5 #e24v5.v5-sayfa-ana .v5-es-bas:after{content:"";position:absolute;left:0;right:0;top:4px;border-top:1px solid #1C1A19}
+html.e24v5 #e24v5.v5-sayfa-ana .v5-es-bas h2{font:600 34px/1.12 var(--v5-serif);letter-spacing:-.018em;margin:12px 0 0;text-wrap:balance}
+html.e24v5 #e24v5.v5-sayfa-ana .v5-pb-bsol h2{font-size:44px}
+html.e24v5 #e24v5.v5-sayfa-ana .v5-pb-say>.v5-pb-hucre{transition:background .18s}
+html.e24v5 #e24v5.v5-sayfa-ana .v5-pb-say>.v5-pb-hucre:hover{background:rgba(255,255,255,.55)}
+html.e24v5 #e24v5.v5-sayfa-ana .v5-pb-dev{font-variant-numeric:tabular-nums lining-nums}
+html.e24v5 #e24v5.v5-sayfa-ana .v5-pb-cizgi{height:72px}
+html.e24v5 #e24v5.v5-sayfa-ana .v5-ikinci .v5-kart{display:block}
+html.e24v5 #e24v5.v5-sayfa-ana .v5-ikinci .v5-kart img{transition:transform .5s ease}
+html.e24v5 #e24v5.v5-sayfa-ana .v5-ikinci .v5-kart:hover img{transform:scale(1.025)}
+html.e24v5 #e24v5.v5-sayfa-ana .v5-ikinci .v5-kart h3{transition:color .18s}
+html.e24v5 #e24v5.v5-sayfa-ana .v5-ikinci .v5-kart:hover h3{color:var(--v5-etiket)}
+html.e24v5 #e24v5.v5-sayfa-ana .v5-es-kart{transition:transform .2s,box-shadow .2s}
+html.e24v5 #e24v5.v5-sayfa-ana .v5-son-liste time{font-weight:600;letter-spacing:.01em}
+html.e24v5 #e24v5.v5-sayfa-ana a:focus-visible,html.e24v5 #e24v5.v5-sayfa-ana button:focus-visible{outline:2px solid var(--v5-etiket);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){html.e24v5 #e24v5.v5-sayfa-ana *{transition:none!important}}
+@media (max-width:991px){html.e24v5 #e24v5.v5-sayfa-ana .v5-pb{margin-top:40px}}
+@media (max-width:991px){html.e24v5 #e24v5.v5-sayfa-ana .v5-es{margin:40px 0 32px}}
+@media (max-width:991px){html.e24v5 #e24v5.v5-sayfa-ana .v5-es-bas h2{font-size:25px}}
+@media (max-width:991px){html.e24v5 #e24v5.v5-sayfa-ana .v5-pb-bsol h2{font-size:34px}}
