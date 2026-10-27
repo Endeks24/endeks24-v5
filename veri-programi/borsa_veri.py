@@ -288,21 +288,25 @@ AYLAR = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağu
 
 def kap_grup(tip, konu):
     """Bildirim türü etiketi (kural tabanlı; yorum içermez). Bilinmeyenler 'Diğer'."""
-    k = (konu or '').lower()
+    k = (konu or '').replace('İ', 'i').replace('I', 'ı').lower()
     if tip == 'FR' or re.search(r'finansal rapor|faaliyet raporu|sorumluluk beyan', k):
         return 'Finansal rapor'
-    if re.search(r'pay alım satım|geri alım|pay alım teklifi|paylarının geri', k):
+    if re.search(r'pay alım|pay satım|pay satış|geri alım|geri alınan pay|paylarının geri', k):
         return 'Pay işlemi'
     if re.search(r'temettü|kâr payı|kar payı|genel kurul', k):
         return 'Temettü ve genel kurul'
-    if re.search(r'sermaye art|sermaye azalt|bedelli|bedelsiz|rüçhan|borçlanma aracı|tahvil|bono', k):
-        return 'Sermaye'
+    if re.search(r'sermaye art|sermaye azalt|bedelli|bedelsiz|rüçhan|borçlanma aracı|tahvil|bono|yeniden yapılandırma', k):
+        return 'Sermaye ve borç'
     if re.search(r'derecelendirme', k):
         return 'Derecelendirme'
-    if re.search(r'yönetim kurulu|istifa|atama|genel müdür|yönetici', k) and 'esas sözleşme' not in k:
+    if re.search(r'yönetim kurulu|istifa|atama|genel müdür|yönetici|yönetim değişikliği|üst yönetim', k) and 'esas sözleşme' not in k:
         return 'Yönetim'
-    if re.search(r'yeni iş|sipariş|ihale|sözleşme|proje|anlaşma|mutabakat', k) and 'esas sözleşme' not in k:
+    if re.search(r'yeni iş|sipariş|ihale|sözleşme|proje|anlaşma|mutabakat|yatırım teşvik|fabrika|tesis|yatırımı|üretim hattı', k) and 'esas sözleşme' not in k:
         return 'İş ve sözleşme'
+    if re.search(r'ortaklık yapı|esas sözleşme|merkez|iştirak|bağlı ortaklık|birleşme|bölünme|finansal duran varlık|pay devri|ortakların|hakim ortak|hâkim ortak', k):
+        return 'Ortaklık ve yapı'
+    if re.search(r'sunum|bilgilendirme|söylenti|kamuoyu|basın|haber|finansal sonuç|faaliyet|teknik yönetim|kamuyu|net aktif değer|denetim kuruluş|varant|pazar verileri|finansal tablo', k):
+        return 'Bilgilendirme'
     return 'Diğer'
 
 
