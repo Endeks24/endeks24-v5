@@ -1782,3 +1782,5 @@ html.e24v5 #e24v5 a.v5-kapr-ok{font-weight:700;color:var(--v5-etiket);text-align
 @media (max-width:991px){html.e24v5 #e24v5 .v5-kapr-satir .v5-kapr-grup{justify-self:end;margin-left:auto}}
 @media (max-width:991px){html.e24v5 #e24v5 a.v5-kapr-ok{display:none}}
 @media (max-width:991px){html.e24v5 #e24v5 .v5-kat-kap .v5-kat-bolumler{gap:28px}}
+html.e24v5 #e24v5 .v5-kat-kap .v5-mod{margin:0}
+html.e24v5 #e24v5 .v5-kat-kap .v5-mod .v5-fa{margin:0}
