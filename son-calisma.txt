@@ -1,4 +1,3 @@
-BIST 100 28 Ekim seansını yüzde 0,13 yükselişle 11.165,44 puandan kapattı. Endeksteki 100 hisseden 49 hisse geriledi, 49 hisse yükseldi.
 rakamlar: {'piyasa': 8, 'gundem': 8}
-TAMAM: cikti/veri.json 103427 bayt; seans 2026-10-28T18:10:00+03:00 ; kripto 2026-10-28T19:12:00+03:00
-2026-10-28T16:13:12Z 
+TAMAM: cikti/veri.json 103427 bayt; seans 2026-10-28T18:10:00+03:00 ; kripto 2026-10-28T19:15:00+03:00
+2026-10-28T16:15:11Z --kripto-yalniz
