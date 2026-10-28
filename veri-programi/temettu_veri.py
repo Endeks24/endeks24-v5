@@ -86,7 +86,13 @@ def ayristir(metin, bildirim_tarihi=None):
         kalemler.append({**n, 'hak': hak, 'kesin': bool(d.get('kesin')), 'kayit': d.get('kayit'), 'odeme_tarihi': d.get('odeme')})
     if durum == 'onayli' or any(k['kesin'] for k in kalemler):
         durum = 'onayli'
-    return {'durum': durum, 'kalemler': [k for k in kalemler if k['brut']], 'genel_kurul': gk, 'baslik': baslik}
+    kalemler = [k for k in kalemler if k['brut']]
+    # Taksitli ödemelerde tabloda ayrıca "toplam" satırı bulunabilir (diğer satırların toplamı); ayrı kayıt sayılmaz.
+    for k in list(kalemler):
+        digerleri = [x for x in kalemler if x is not k and x['k'] == k['k']]
+        if len(digerleri) >= 2 and abs(sum(x['brut'] for x in digerleri) - k['brut']) <= 0.01 * k['brut']:
+            kalemler.remove(k)
+    return {'durum': durum, 'kalemler': kalemler, 'genel_kurul': gk, 'baslik': baslik}
 
 
 def ara(ft, bas, bit):
