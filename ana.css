@@ -1351,7 +1351,7 @@ html.e24v5 #e24v5.v5-sayfa-ana .v5-es.v5-ed{margin:28px 0 24px}
 html.e24v5 #e24v5.v5-sayfa-ana .v5-manset-alan{grid-template-columns:minmax(0,1fr) 360px!important;gap:0 48px!important}
 html.e24v5 #e24v5.v5-sayfa-ana .v5-kicker{padding-bottom:14px;margin-bottom:22px;border-bottom:1px solid #E2DCD1}
 html.e24v5 #e24v5.v5-sayfa-ana .v5-okuma{font:400 13px/1.3 var(--v5-sans);color:#5F656E}
-html.e24v5 #e24v5.v5-sayfa-ana .v5-mh{font:500 66px/1.03 var(--v5-serif);letter-spacing:-.025em;color:#111318;padding-bottom:0;border-bottom:0;margin-bottom:26px;text-wrap:balance}
+html.e24v5 #e24v5.v5-sayfa-ana .v5-mh{font:500 60px/1.05 var(--v5-serif);letter-spacing:-.025em;color:#111318;padding-bottom:0;border-bottom:0;margin-bottom:26px;text-wrap:balance}
 html.e24v5 #e24v5.v5-sayfa-ana .v5-manset-govde{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:32px}
 html.e24v5 #e24v5.v5-sayfa-ana .v5-manset-foto img{aspect-ratio:auto;height:300px;object-fit:cover}
 html.e24v5 #e24v5.v5-sayfa-ana .v5-manset-foto figcaption{font:400 13px/1.45 var(--v5-sans);color:#5F656E;margin-top:10px}
@@ -1374,7 +1374,7 @@ html.e24v5 #e24v5.v5-sayfa-ana .v5-son-bas h2{font:600 28px/1.1 var(--v5-serif)}
 html.e24v5 #e24v5.v5-sayfa-ana .v5-canli{display:inline-flex;align-items:center;padding:5px 10px;border-radius:99px;background:#FBE9E5;font:700 12px/1 var(--v5-sans);letter-spacing:.06em;text-transform:uppercase}
 html.e24v5 #e24v5.v5-sayfa-ana .v5-tum{border-top:1px solid #E2DCD1;padding-top:14px;display:block;font-weight:700}
 @media(max-width:991px){html.e24v5 #e24v5.v5-sayfa-ana .v5-manset-alan{grid-template-columns:minmax(0,1fr)!important}}
-@media(max-width:991px){html.e24v5 #e24v5.v5-sayfa-ana .v5-mh{font-size:34px}}
+@media(max-width:991px){html.e24v5 #e24v5.v5-sayfa-ana .v5-mh{font-size:32px}}
 @media(max-width:991px){html.e24v5 #e24v5.v5-sayfa-ana .v5-manset-govde{grid-template-columns:1fr}}
 @media(max-width:991px){html.e24v5 #e24v5.v5-sayfa-ana .v5-manset-foto img{height:auto;aspect-ratio:16/10}}
 @media(max-width:991px){html.e24v5 #e24v5.v5-sayfa-ana .v5-msayac{grid-template-columns:repeat(8,minmax(0,1fr))}}
