@@ -51,6 +51,34 @@ def iso(t):
     return f'{p[2]}-{p[1]}-{p[0]}'
 
 
+def politika():
+    """TCMB politika faizi (1 hafta vadeli repo ihale faizi): TCMB'nin resmi 'Merkez Bankası Faiz Oranları > 1 Hafta Repo' sayfasındaki tablo.
+    EVDS'de bu serinin kodu yayımlanmadığı için resmi sayfa okunur. Başarısızsa None."""
+    import re, urllib.request
+    u = ('https://www.tcmb.gov.tr/wps/wcm/connect/TR/TCMB+TR/Main+Menu/Temel+Faaliyetler/Para+Politikasi/'
+         'Merkez+Bankasi+Faiz+Oranlari/1+Hafta+Repo')
+    try:
+        h = urllib.request.urlopen(urllib.request.Request(u, headers={'User-Agent': 'Mozilla/5.0 Endeks24'}), timeout=40).read().decode('utf-8', 'ignore')
+        tb = re.search(r'<table[^>]*id="midTable".*?</table>', h, re.S).group(0)
+        satir = []
+        for tr in re.findall(r'<tr[^>]*>(.*?)</tr>', tb, re.S):
+            td = [re.sub(r'<[^>]+>', '', x).strip() for x in re.findall(r'<td[^>]*>(.*?)</td>', tr, re.S)]
+            if len(td) >= 3 and re.match(r'\d\d\.\d\d\.\d{4}$', td[0]):
+                try:
+                    g, a, y = td[0].split('.')
+                    satir.append((f'{y}-{a}-{g}', float(td[-1])))
+                except ValueError:
+                    pass
+        if len(satir) < 2:
+            return None
+        satir.sort()
+        return {'ad': 'TCMB politika faizi (1 hafta vadeli repo ihale faizi)', 'son': satir[-1][1], 'tarih': satir[-1][0],
+                'onceki': satir[-2][1], 'seri': satir[-12:]}
+    except Exception as e:
+        print('uyarı politika', str(e)[:80], flush=True)
+        return None
+
+
 def evds(anahtar):
     """TCMB ağırlıklı ortalama fonlama maliyeti (günlük) ve TÜFE yıllık değişim (aylık). Başarısızsa None."""
     import urllib.request
@@ -98,7 +126,17 @@ def main():
         gruplar.append({'kod': kod, 'ad': ad, 'satirlar': s})
     makro = None
     if os.environ.get('EVDS_API_KEY'):
-        makro = evds(os.environ['EVDS_API_KEY']) or onceki.get('tcmb')
+        makro = evds(os.environ['EVDS_API_KEY'])
+    pf = politika()
+    if pf or makro:
+        makro = dict(makro or {})
+        if pf:
+            makro['politika'] = pf
+    ob = onceki.get('tcmb') or {}
+    for k in ('politika', 'fonlama', 'tufe'):
+        if not (makro or {}).get(k) and ob.get(k):
+            makro = dict(makro or {})
+            makro[k] = ob[k]
     toplam = sum(len(g['satirlar']) for g in gruplar)
     if toplam < 8:
         print('çok az veri, dosya yazılmadı', flush=True)
