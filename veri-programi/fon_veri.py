@@ -105,18 +105,24 @@ def main(kok):
     ilk = hafta[0]
     son_nokta = fiyat_tarihi if fiyat_tarihi > hafta[-1] else None   # grafik son kapanışla biter
     ham = collections.defaultdict(dict)
-    for s in kodlar_sorgu(ft, f"SELECT m.kod, m.zaman_utc, m.kapanis FROM mumlar_gunluk_gh m JOIN fonlar f ON f.fon_kodu = m.kod WHERE m.zaman_utc >= TIMESTAMP '{(ilk - datetime.timedelta(days=1)).isoformat()} 00:00:00' "
-                           f"AND EXTRACT(DOW FROM m.zaman_utc) = 4 AND {istek} ORDER BY m.kod, m.zaman_utc"):
-        if s.get('kapanis') is not None:
-            ham[s['kod']][gun(s['zaman_utc']).isoformat()] = float(s['kapanis'])
+    kodlar = sorted(son)
+    # Sorgu başına en fazla 5000 satır okunabilir (OFFSET sınırı): seri 80 fonluk, dağılım 300 fonluk gruplarla okunur.
+    for i in range(0, len(kodlar), 80):
+        liste = ','.join(f"'{k}'" for k in kodlar[i:i + 80])
+        for s in kodlar_sorgu(ft, f"SELECT m.kod, m.zaman_utc, m.kapanis FROM mumlar_gunluk_gh m WHERE m.kod IN ({liste}) AND m.zaman_utc >= TIMESTAMP '{(ilk - datetime.timedelta(days=1)).isoformat()} 00:00:00' "
+                                   f"AND EXTRACT(DOW FROM m.zaman_utc) = 4 ORDER BY m.kod, m.zaman_utc"):
+            if s.get('kapanis') is not None:
+                ham[s['kod']][gun(s['zaman_utc']).isoformat()] = float(s['kapanis'])
     log('seri', len(ham))
 
     dag = collections.defaultdict(list)
     bas_dag = (bugun - datetime.timedelta(days=45)).isoformat()
-    for s in kodlar_sorgu(ft, f"SELECT d.fon_kodu, d.varlik_sinifi, d.yuzdesel_agirlik FROM gunluk_fon_varlik_sinifi_dagilimlari d JOIN (SELECT g.fon_kodu, MAX(g.tarih_europe_istanbul) AS t FROM gunluk_fon_varlik_sinifi_dagilimlari g "
-                           f"WHERE g.tarih_europe_istanbul >= '{bas_dag}' GROUP BY g.fon_kodu) m ON m.fon_kodu = d.fon_kodu AND m.t = d.tarih_europe_istanbul JOIN fonlar f ON f.fon_kodu = d.fon_kodu WHERE {istek} ORDER BY d.fon_kodu, d.yuzdesel_agirlik DESC, d.varlik_sinifi"):
-        if s.get('yuzdesel_agirlik') and float(s['yuzdesel_agirlik']) > 0:
-            dag[s['fon_kodu']].append([s['varlik_sinifi'], r(s['yuzdesel_agirlik'], 1)])
+    for i in range(0, len(kodlar), 300):
+        liste = ','.join(f"'{k}'" for k in kodlar[i:i + 300])
+        for s in kodlar_sorgu(ft, f"SELECT d.fon_kodu, d.varlik_sinifi, d.yuzdesel_agirlik FROM gunluk_fon_varlik_sinifi_dagilimlari d JOIN (SELECT g.fon_kodu, MAX(g.tarih_europe_istanbul) AS t FROM gunluk_fon_varlik_sinifi_dagilimlari g "
+                                   f"WHERE g.tarih_europe_istanbul >= '{bas_dag}' AND g.fon_kodu IN ({liste}) GROUP BY g.fon_kodu) m ON m.fon_kodu = d.fon_kodu AND m.t = d.tarih_europe_istanbul ORDER BY d.fon_kodu, d.yuzdesel_agirlik DESC, d.varlik_sinifi"):
+            if s.get('yuzdesel_agirlik') and float(s['yuzdesel_agirlik']) > 0:
+                dag[s['fon_kodu']].append([s['varlik_sinifi'], r(s['yuzdesel_agirlik'], 1)])
 
     satirlar = []
     for kod, f in fonlar.items():
