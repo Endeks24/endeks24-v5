@@ -54,12 +54,14 @@ def main():
         roe_ = roe_ if roe_ is None or abs(roe_) <= 100 else None
         sp = t.get('sp') or []
         bozuk = any(b and abs(a / b - 1) > 0.106 for b, a in zip(sp, sp[1:]))
+        # İkinci sınıf paylar (ör. ISBTR, ISKUR): piyasa değeri ile bilanço aynı birimde değildir (PD/DD 0,02'nin altı ya da 200'ün üstü), çarpanlar anlamsızdır ve gösterilmez.
+        sinif = bool(pd and ozk and ozk > 0 and not 0.02 <= pd / ozk <= 200) or bool(pd and net and net > 0 and pd / net < 0.02)
         satirlar.append({
             'k': p['kod'], 'ad': p['ad'], 'sek': sek, 's': t['s'], 'd': t['d'], 'h5': None if bozuk else t.get('h5'), 'h1a': None if bozuk else t.get('h30'), 'sk': 1 if bozuk else 0, 'hc': t['hc'],
-            'pd': pd, 'fk': r(pd / net, 1) if pd and net and net > 0 else None, 'zarar': 1 if net is not None and net <= 0 else 0,
-            'pddd': r(pd / ozk, 2) if pd and ozk and ozk > 0 else None,
-            'fdf': r((pd + nb) / favok, 1) if pd and favok and favok > 0 and nb is not None and pd + nb > 0 else None,
-            'tv': r(tmt / pd * 100, 2) if pd and tmt and tmt > 0 else None,
+            'pd': pd, 'fk': None if sinif else (r(pd / net, 1) if pd and net and net > 0 else None), 'zarar': 1 if net is not None and net <= 0 else 0,
+            'pddd': None if sinif else (r(pd / ozk, 2) if pd and ozk and ozk > 0 else None),
+            'fdf': None if sinif else r((pd + nb) / favok, 1) if pd and favok and favok > 0 and nb is not None and pd + nb > 0 else None,
+            'tv': None if sinif else (r(tmt / pd * 100, 2) if pd and tmt and tmt > 0 else None),
             'nm': nm_, 'roe': roe_, 'e': t.get('e') or [], 'bil': F.get('donem'),
         })
     satirlar.sort(key=lambda z: -(z['pd'] or 0))

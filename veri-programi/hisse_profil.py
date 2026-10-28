@@ -137,28 +137,34 @@ def finans(ft, kodlar):
         g = kodlar[i:i + 40]
         l = ', '.join(f"'{k}'" for k in g)
         for x in fg.sayfala(ft, f"SELECT hisse_senedi_kodu, yil, ay, kalem, try_ceyreklik, try_ttm FROM hisse_finansal_tablolari_gelir_tablosu_kalemleri WHERE hisse_senedi_kodu IN ({l}) "
-                                f"AND kalem IN ('Satış Gelirleri','FAVÖK','Ana Ortaklık Payları') AND yil >= 2024 ORDER BY hisse_senedi_kodu, yil, ay"):
+                                f"AND kalem IN ('Satış Gelirleri','FAVÖK','Ana Ortaklık Payları','Grubun Karı (Zararı)') AND yil >= 2024 ORDER BY hisse_senedi_kodu, yil, ay"):
             o = out[x['hisse_senedi_kodu']]
             d = (int(x['yil']), int(x['ay']))
-            alan = {'Satış Gelirleri': 'satis', 'FAVÖK': 'favok', 'Ana Ortaklık Payları': 'net'}[x['kalem']]
+            alan = {'Satış Gelirleri': 'satis', 'FAVÖK': 'favok', 'Ana Ortaklık Payları': 'net', 'Grubun Karı (Zararı)': 'net2'}[x['kalem']]
             o['ceyrek'].setdefault(d, {})[alan] = sayi(x['try_ceyreklik'])
             o['ttm'].setdefault(d, {})[alan] = sayi(x['try_ttm'])
         for x in fg.sayfala(ft, f"SELECT hisse_senedi_kodu, yil, ay, kalem, try_donemsel FROM hisse_finansal_tablolari_bilanco_kalemleri WHERE hisse_senedi_kodu IN ({l}) "
-                                f"AND kalem IN ('Ana Ortaklığa Ait Özkaynaklar','Net Borç') AND yil >= 2025 ORDER BY hisse_senedi_kodu, yil, ay"):
+                                f"AND kalem IN ('Ana Ortaklığa Ait Özkaynaklar','Net Borç','ÖZKAYNAKLAR') AND yil >= 2025 ORDER BY hisse_senedi_kodu, yil, ay"):
             o = out[x['hisse_senedi_kodu']]
             d = (int(x['yil']), int(x['ay']))
             if x['kalem'] == 'Net Borç':
                 o.setdefault('_nb', {})[d] = sayi(x['try_donemsel'])
+            elif x['kalem'] == 'ÖZKAYNAKLAR':
+                o.setdefault('_oz2', {})[d] = sayi(x['try_donemsel'])   # banka, sigorta, faktoring, leasing, varlık yönetimi: toplam özkaynak
             else:
                 o.setdefault('_oz', {})[d] = sayi(x['try_donemsel'])
         for x in fg.sayfala(ft, f"SELECT hisse_senedi_kodu, yil, ay, oran, deger FROM hisse_finansal_tablolari_finansal_oranlari WHERE hisse_senedi_kodu IN ({l}) "
-                                f"AND oran IN ('Özkaynak Karlılığı','Net Kar Marjı','FAVÖK Marjı','Brüt Kar Marjı','Hisse Başına Kar','Cari Oran','Net Kar (Yıllıklandırılmış)','Net Kar (Çeyreklik)','Aktif Karlılık') AND yil >= 2025 ORDER BY hisse_senedi_kodu, yil, ay"):
+                                f"AND oran IN ('Özkaynak Karlılığı','Net Kar Marjı','FAVÖK Marjı','Brüt Kar Marjı','Hisse Başına Kar','Cari Oran','Net Kar (Yıllıklandırılmış)','Net Kar (Çeyreklik)','Aktif Karlılık','Kredi Mevduat Oranı','Çeyreklik Kredi Değişimi','Çeyreklik Mevduat Değişimi','Konservasyon Oranı','Tazminat Tediye Oranı','Hasar Prim Oranı','Alınan Primler / Özkaynaklar') AND yil >= 2025 ORDER BY hisse_senedi_kodu, yil, ay"):
             o = out[x['hisse_senedi_kodu']]
             d = (int(x['yil']), int(x['ay']))
             o.setdefault('_oran', {}).setdefault(d, {})[x['oran']] = sayi(x['deger'])
         log('  finans', min(i + 40, len(kodlar)), '/', len(kodlar))
     son = {}
     for k, o in out.items():
+        for tur in ('ceyrek', 'ttm'):
+            for d, v in o[tur].items():
+                if v.get('net') is None and v.get('net2') is not None:
+                    v['net'] = v['net2']      # Ana ortaklık payı yoksa grubun kârı (banka, varlık yönetimi)
         cey = sorted(o['ceyrek'].items(), key=lambda z: donem_sirasi(z[0]))[-8:]
         r = {'ceyrek': [{'d': f'{d[0]}/{d[1]}', 's': v.get('satis'), 'f': v.get('favok'), 'n': v.get('net')} for d, v in cey]}
         if o['ttm']:
@@ -166,6 +172,8 @@ def finans(ft, kodlar):
             r['donem'] = f'{d[0]}/{d[1]}'; r['ttm'] = {'satis': t.get('satis'), 'favok': t.get('favok'), 'net': t.get('net')}
         if o.get('_oz'):
             r['oz'] = o['_oz'][max(o['_oz'], key=donem_sirasi)]
+        elif o.get('_oz2'):
+            r['oz'] = o['_oz2'][max(o['_oz2'], key=donem_sirasi)]   # finansal şirket: toplam özkaynak (azınlık payı küçüktür)
         if o.get('_nb'):
             r['nb'] = o['_nb'][max(o['_nb'], key=donem_sirasi)]
         if o.get('_oran'):
@@ -176,6 +184,47 @@ def finans(ft, kodlar):
                     r.setdefault('ttm', {})['net'] = n
         son[k] = r
     return son
+
+
+def banka_ekleri(ft, kodlar):
+    """Banka şablonu: {kod: {'tip':'bank', 'nfg_ttm', 'ucret_ttm', 'kredi', 'mevduat', 'aktif', 'nf_ceyrek':[{d, v}]}}. Satış ve FAVÖK bankalarda yoktur; yerine net faiz geliri ve net ücret/komisyon gelirleri gösterilir."""
+    out = {}
+    try:
+        bank = {x['hisse_senedi_kodu'] for x in fg.sayfala(ft, "SELECT DISTINCT hisse_senedi_kodu FROM hisse_finansal_tablolari WHERE yil >= 2025 AND finansal_tablo_sablonu = 'bank'")}
+    except Exception as e:
+        log('  banka listesi atlandı', str(e)[:80])
+        return out
+    kodlar = [k for k in kodlar if k in bank]
+    if not kodlar:
+        return out
+    l = ', '.join(f"'{k}'" for k in kodlar)
+    try:
+        nf, uc = {}, {}
+        for x in fg.sayfala(ft, f"SELECT hisse_senedi_kodu, yil, ay, kalem, try_ceyreklik, try_ttm FROM hisse_finansal_tablolari_gelir_tablosu_kalemleri WHERE hisse_senedi_kodu IN ({l}) "
+                                f"AND kalem IN ('NET FAİZ GELİRİ VEYA GİDERİ','NET ÜCRET VE KOMİSYON GELİRLERİ VEYA GİDERLERİ') AND yil >= 2024 ORDER BY hisse_senedi_kodu, yil, ay"):
+            d = (int(x['yil']), int(x['ay']))
+            (nf if x['kalem'].startswith('NET FAİZ') else uc).setdefault(x['hisse_senedi_kodu'], {})[d] = (sayi(x['try_ceyreklik']), sayi(x['try_ttm']))
+        bil = {}
+        for x in fg.sayfala(ft, f"SELECT hisse_senedi_kodu, yil, ay, kalem, try_donemsel FROM hisse_finansal_tablolari_bilanco_kalemleri WHERE hisse_senedi_kodu IN ({l}) "
+                                f"AND kalem IN ('VARLIKLAR TOPLAMI','KREDİLER (Net)','Mevduat') AND yil >= 2025 ORDER BY hisse_senedi_kodu, yil, ay"):
+            bil.setdefault(x['hisse_senedi_kodu'], {}).setdefault(x['kalem'], {})[(int(x['yil']), int(x['ay']))] = sayi(x['try_donemsel'])
+        for k in kodlar:
+            o = {'tip': 'bank'}
+            if nf.get(k):
+                d = max(nf[k], key=donem_sirasi)
+                o['nfg_ttm'] = nf[k][d][1]
+                o['nf_ceyrek'] = [{'d': f'{a[0]}/{a[1]}', 'v': v[0]} for a, v in sorted(nf[k].items(), key=lambda z: donem_sirasi(z[0]))[-8:]]
+            if uc.get(k):
+                o['ucret_ttm'] = uc[k][max(uc[k], key=donem_sirasi)][1]
+            for kalem, ad in (('VARLIKLAR TOPLAMI', 'aktif'), ('KREDİLER (Net)', 'kredi'), ('Mevduat', 'mevduat')):
+                v = bil.get(k, {}).get(kalem)
+                if v:
+                    o[ad] = v[max(v, key=donem_sirasi)]
+            out[k] = o
+    except Exception as e:
+        log('  banka ekleri atlandı', str(e)[:80])
+    log('  banka', len(out))
+    return out
 
 
 def halka_arz_ve_temettu(ft, kodlar):
@@ -216,6 +265,8 @@ def main(kok):
     log('hisse', len(kodlar))
     kartlar = kartlari_al(ft, kodlar)
     F = finans(ft, kodlar)
+    for k, v in banka_ekleri(ft, kodlar).items():
+        F.setdefault(k, {})['bk'] = v
     HT = halka_arz_ve_temettu(ft, kodlar)
     os.makedirs(os.path.join(kok, 'profil'), exist_ok=True)
     n = 0
