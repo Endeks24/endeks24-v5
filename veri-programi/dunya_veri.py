@@ -79,6 +79,42 @@ def politika():
         return None
 
 
+# Merkez bankası karar günleri, resmi takvimlerden (28.10.2026'da doğrulandı): Fed (federalreserve.gov), ECB (ecb.europa.eu), BoJ (boj.or.jp), TCMB (tcmb.gov.tr).
+# saat: Türkiye saati; None ise banka saati henüz açıklamadı. Kaynaktaki (borsapy) satır bu günlerden ±3 gün uzakta kalıyorsa atılır, resmi satır konur.
+RESMI = {
+    'Fed': {'adlar': ('Fed',), 'ulke': 'ABD', 'gunler': {'2026-10-28': '21:00'}},
+    'ECB': {'adlar': ('ECB',), 'ulke': 'Euro Bölgesi', 'gunler': {'2026-10-29': '16:15', '2026-12-17': '16:15'}},
+    'BoJ': {'adlar': ('BoJ',), 'ulke': 'Japonya', 'gunler': {'2026-10-30': None, '2026-12-18': None}},
+    'TCMB': {'adlar': ('TCMB', 'PPK'), 'ulke': 'Türkiye', 'gunler': {'2026-12-10': None}},
+}
+# Resmi kaynaklarda çelişen ya da doğrulanamayan satırlar kaynaktan atılır (Eurostat Q3 öncü GSYH: takvim sayfası 29 Ekim, yayın takvimi PDF'si 30 Ekim diyor).
+ATILAN = (('Euro Bölgesi', 'GSYH Büyüme Oranı', 'Öncü'),)
+
+
+def resmi_duzelt(liste):
+    import datetime as dt
+    cikti = []
+    for x in liste:
+        if any(x['ulke'] == u and a in x['olay'] and b in x['olay'] for u, a, b in ATILAN):
+            continue
+        banka = next((k for k, v in RESMI.items() if x['olay'].split(' ')[0] in v['adlar'] and ('Faiz Kararı' in x['olay'] or 'Basın Toplantısı' in x['olay'])), None)
+        if banka:
+            g = dt.date.fromisoformat(x['tarih'])
+            yakin = [d for d in RESMI[banka]['gunler'] if abs((dt.date.fromisoformat(d) - g).days) <= 3]
+            if yakin and x['tarih'] not in yakin:
+                continue
+        cikti.append(x)
+    bugun = datetime.datetime.now(TR).strftime('%Y-%m-%d')
+    son = (datetime.datetime.now(TR) + datetime.timedelta(days=14)).strftime('%Y-%m-%d')
+    for banka, v in RESMI.items():
+        for d, saat in v['gunler'].items():
+            if bugun <= d <= son and not any(y['tarih'] == d and y['ulke'] == v['ulke'] and 'Faiz Kararı' in y['olay'] for y in cikti):
+                cikti.append({'tarih': d, 'saat': saat or 'Saat açıklanmadı', 'ulke': v['ulke'], 'olay': ('Fed' if banka == 'Fed' else banka) + ' Faiz Kararı',
+                              'onceki': None, 'gerceklesen': None})
+    cikti.sort(key=lambda y: (y['tarih'], '99' if y['saat'][0] == 'S' else y['saat']))
+    return cikti
+
+
 def takvim():
     """Önümüzdeki iki haftanın yüksek önemli olayları (borsapy ekonomik takvimi, saatler Türkiye saati). Başarısızsa None."""
     try:
@@ -103,7 +139,7 @@ def takvim():
             onc = None if 'Faiz Kararı' in ad else deger(r['Previous'])
             cikti.append({'tarih': str(r['Date'])[:10], 'saat': str(r['Time']), 'ulke': str(r['Country']), 'olay': ad,
                           'onceki': onc, 'gerceklesen': deger(r['Actual'])})
-        cikti.sort(key=lambda x: (x['tarih'], x['saat']))
+        cikti = resmi_duzelt(cikti)
         return cikti[:16] or None
     except Exception as e:
         print('uyarı takvim', str(e)[:80], flush=True)
