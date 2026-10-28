@@ -1,0 +1,38 @@
+name: endeks24-temettu-gunluk
+# Temettü Takvimi verisi (temettu-veri dalı, temettu/ozet.json): KAP kâr payı dağıtım bildirimleri (Fintables doküman havuzu). Hafta içi günde iki kez, elle ya da bu dosya değişince. Yapay zeka çağrısı yoktur.
+on:
+  schedule:
+    - cron: '10 7,18 * * 1-5'
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/temettu-gunluk.yml'
+      - 'veri-programi/temettu_veri.py'
+permissions:
+  contents: write
+concurrency:
+  group: endeks24-temettu-gunluk
+  cancel-in-progress: false
+jobs:
+  temettu:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - name: Borsa verisi (fiyatlar)
+        run: git clone -q --depth 1 --branch borsa-veri "https://github.com/${{ github.repository }}.git" "$RUNNER_TEMP/borsa"
+      - name: Hesap
+        env:
+          FINTABLES: ${{ secrets.FINTABLES }}
+        run: |
+          set -o pipefail
+          python3 veri-programi/temettu_veri.py "$RUNNER_TEMP/cikti" "$RUNNER_TEMP/borsa/borsa/ozet.json" 2>&1 | tee temettu-log.txt
+      - name: Yayımla (temettu-veri dalı, geçmiş tutulmaz)
+        run: |
+          cd "$RUNNER_TEMP/cikti"
+          git init -q -b temettu-veri
+          git config user.name e24-temettu; git config user.email e24-temettu@users.noreply.github.com
+          git add -A
+          git commit -qm "temettü takvimi $(TZ=Europe/Istanbul date '+%d.%m.%Y %H:%M')"
+          git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
+          git push -f origin temettu-veri
