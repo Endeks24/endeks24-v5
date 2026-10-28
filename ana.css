@@ -1390,3 +1390,10 @@ html.e24v5 #e24v5.v5-sayfa-ana .v5-tum{border-top:1px solid #E2DCD1;padding-top:
 @media(max-width:991px){html.e24v5 #e24v5.v5-sayfa-ana .v5-okuma{flex:none;width:100%;white-space:normal}}
 @media(max-width:991px){html.e24v5 #e24v5.v5-sayfa-ana .v5-ms.v5-ms-aktif .v5-ms-no{color:#111318!important}}
 html.e24v5 #e24v5 .v5-mh .v5-mv{font-style:italic;color:#1F4E8C}
+html.e24v5 #e24v5.v5-sayfa-ana .v5-manset-alan{grid-template-columns:minmax(0,1fr) 280px!important;gap:0 24px!important;align-items:start}
+html.e24v5 #e24v5.v5-sayfa-ana .v5-manset-yan{height:auto!important}
+html.e24v5 #e24v5.v5-sayfa-ana .v5-manset-grafik{max-height:none!important;overflow:visible!important}
+html.e24v5 #e24v5.v5-sayfa-ana .v5-mp .v5-manset-grafik.v5-mg-tasar::after{display:none}
+html.e24v5 #e24v5.v5-sayfa-ana .v5-mp .v5-manset-yan.v5-mg-sik .v5-spot{-webkit-line-clamp:unset}
+html.e24v5 #e24v5 .v5-mh .v5-mv{font-style:normal;color:#1F4E8C}
+@media(max-width:991px){html.e24v5 #e24v5.v5-sayfa-ana .v5-manset-alan{grid-template-columns:minmax(0,1fr)!important}}
