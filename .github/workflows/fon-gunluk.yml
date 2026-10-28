@@ -1,0 +1,36 @@
+name: endeks24-fon-gunluk
+# Fon Karşılaştırma verisi (fon-veri dalı, fon/): TEFAS yatırım ve emeklilik fonları (Fintables). Hafta içi günde iki kez, elle ya da bu dosya değişince. Yapay zeka çağrısı yoktur.
+on:
+  schedule:
+    - cron: '10 7,18 * * 1-5'
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/fon-gunluk.yml'
+      - 'veri-programi/fon_veri.py'
+permissions:
+  contents: write
+concurrency:
+  group: endeks24-fon-gunluk
+  cancel-in-progress: false
+jobs:
+  fon:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - name: Hesap
+        env:
+          FINTABLES: ${{ secrets.FINTABLES }}
+        run: |
+          set -o pipefail
+          python3 veri-programi/fon_veri.py "$RUNNER_TEMP/cikti" 2>&1 | tee fon-log.txt
+      - name: Yayımla (fon-veri dalı, geçmiş tutulmaz)
+        run: |
+          cd "$RUNNER_TEMP/cikti"
+          git init -q -b fon-veri
+          git config user.name e24-fon; git config user.email e24-fon@users.noreply.github.com
+          git add -A
+          git commit -qm "fon karşılaştırma $(TZ=Europe/Istanbul date '+%d.%m.%Y %H:%M')"
+          git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
+          git push -f origin fon-veri
