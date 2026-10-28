@@ -46,13 +46,14 @@ def main():
         sek = tr_baslik((p.get('sektor') or '').split(' / ')[0].strip()) or None
         if sek:
             sektorler.add(sek)
-        # BIST'te günlük fiyat sınırı %10'dur; kapanışlar arasında bundan büyük sıçrama ya da bir ayda %45 ve üstü düşüş bölünme/bedelsiz gibi sermaye işlemi sayılır (fiyat düzeltilmemiştir), getiri gösterilmez.
+        # BIST'te günlük fiyat sınırı %10'dur; kapanışlar arasında bundan büyük sıçrama bölünme/bedelsiz gibi sermaye işlemi sayılır (fiyat düzeltilmemiştir), getiri gösterilmez.
+        # Art arda taban serisi (ör. her gün %10 düşüş) gerçek fiyat hareketidir ve gösterilir.
         nm_ = r(net / satis * 100, 1) if satis and satis > 0 and net is not None else None
         nm_ = nm_ if nm_ is None or abs(nm_) <= 100 else None   # %100'ü aşan marj faaliyet dışı kalemlerden (değerleme geliri vb.) gelir, gösterilmez
         roe_ = r(O.get('Özkaynak Karlılığı'), 1)
         roe_ = roe_ if roe_ is None or abs(roe_) <= 100 else None
         sp = t.get('sp') or []
-        bozuk = any(b and abs(a / b - 1) > 0.106 for b, a in zip(sp, sp[1:])) or (t.get('h30') is not None and t['h30'] <= -45)
+        bozuk = any(b and abs(a / b - 1) > 0.106 for b, a in zip(sp, sp[1:]))
         satirlar.append({
             'k': p['kod'], 'ad': p['ad'], 'sek': sek, 's': t['s'], 'd': t['d'], 'h5': None if bozuk else t.get('h5'), 'h1a': None if bozuk else t.get('h30'), 'sk': 1 if bozuk else 0, 'hc': t['hc'],
             'pd': pd, 'fk': r(pd / net, 1) if pd and net and net > 0 else None, 'zarar': 1 if net is not None and net <= 0 else 0,
