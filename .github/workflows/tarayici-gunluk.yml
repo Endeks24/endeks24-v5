@@ -1,0 +1,34 @@
+name: endeks24-tarayici-gunluk
+# Hisse Tarayıcısı verisi (tarayici-veri dalı, tarayici/ozet.json): profil-veri ve borsa-veri dallarından hesaplanır. Hafta içi akşam ya da elle. Yapay zeka çağrısı yoktur.
+on:
+  schedule:
+    - cron: '40 17 * * 1-5'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: endeks24-tarayici-gunluk
+  cancel-in-progress: false
+jobs:
+  tarayici:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Kaynak dallar
+        run: |
+          git clone -q --depth 1 --branch profil-veri "https://github.com/${{ github.repository }}.git" "$RUNNER_TEMP/profil"
+          git clone -q --depth 1 --branch borsa-veri "https://github.com/${{ github.repository }}.git" "$RUNNER_TEMP/borsa"
+      - name: Hesap
+        run: |
+          set -o pipefail
+          python3 veri-programi/tarayici_veri.py "$RUNNER_TEMP/profil/profil" "$RUNNER_TEMP/borsa/borsa/ozet.json" "$RUNNER_TEMP/cikti" 2>&1 | tee tarayici-log.txt
+      - name: Yayımla (tarayici-veri dalı, geçmiş tutulmaz)
+        run: |
+          cd "$RUNNER_TEMP/cikti"
+          git init -q -b tarayici-veri
+          git config user.name e24-tarayici; git config user.email e24-tarayici@users.noreply.github.com
+          git add -A
+          git commit -qm "tarayıcı verisi $(TZ=Europe/Istanbul date '+%d.%m.%Y %H:%M')"
+          git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
+          git push -f origin tarayici-veri
