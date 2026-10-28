@@ -19,7 +19,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Bağımlılık
-        run: pip install -q yfinance
+        run: pip install -q yfinance borsapy
       - name: Önceki veri (sağlam son değer için)
         run: curl -sf "https://raw.githubusercontent.com/${{ github.repository }}/dunya-veri/dunya/ozet.json" -o "$RUNNER_TEMP/onceki.json" || echo '{}' > "$RUNNER_TEMP/onceki.json"
       - name: Hesap

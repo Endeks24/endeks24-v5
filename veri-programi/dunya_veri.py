@@ -79,6 +79,53 @@ def politika():
         return None
 
 
+def takvim():
+    """Önümüzdeki iki haftanın yüksek önemli olayları (borsapy ekonomik takvimi, saatler Türkiye saati). Başarısızsa None."""
+    try:
+        import re
+        import borsapy as bp
+        df = bp.economic_calendar(period='2w', country=['TR', 'US', 'EU', 'DE', 'GB', 'JP', 'CN'], importance='high')
+        bugun = datetime.datetime.now(TR).strftime('%Y-%m-%d')
+        gor, cikti = set(), []
+        for _, r in df.iterrows():
+            ad = re.sub(r'\s*\(-\)\s*$', '', re.sub(r'\s+', ' ', str(r['Event'])).strip())
+            if re.search(r'Gösterge Faiz Oranı|Mevduat Faiz Oranı|Refinansman|Minimum|Maksimum|İskonto', ad):
+                continue
+            if str(r['Date'])[:10] < bugun:
+                continue
+            k = (str(r['Date'])[:10], str(r['Time']), ad)
+            if k in gor:
+                continue
+            gor.add(k)
+            def deger(x):
+                x = str(x).strip()
+                return None if x in ('', 'nan', 'None', '-') else x
+            onc = None if 'Faiz Kararı' in ad else deger(r['Previous'])
+            cikti.append({'tarih': str(r['Date'])[:10], 'saat': str(r['Time']), 'ulke': str(r['Country']), 'olay': ad,
+                          'onceki': onc, 'gerceklesen': deger(r['Actual'])})
+        cikti.sort(key=lambda x: (x['tarih'], x['saat']))
+        return cikti[:16] or None
+    except Exception as e:
+        print('uyarı takvim', str(e)[:80], flush=True)
+        return None
+
+
+def karsilastirma(oncul):
+    """BIST 100, S&P 500 ve DAX ortak işlem günlerinde 100'e endekslenmiş seri."""
+    ss = [('XU100.IS', 'BIST 100'), ('^GSPC', 'S&P 500'), ('^GDAXI', 'DAX')]
+    veri = {}
+    for sym, ad in ss:
+        v = oncul.get(sym) or cek(sym)
+        if not v:
+            return None
+        veri[sym] = dict(v)
+    ortak = sorted(set.intersection(*[set(v) for v in veri.values()]))[-42:]
+    if len(ortak) < 20:
+        return None
+    return {'gunler': ortak, 'seriler': [{'sembol': sym, 'ad': ad, 'deger': [round(veri[sym][g] / veri[sym][ortak[0]] * 100, 2) for g in ortak]}
+                                          for sym, ad in ss]}
+
+
 def evds(anahtar):
     """TCMB ağırlıklı ortalama fonlama maliyeti (günlük) ve TÜFE yıllık değişim (aylık). Başarısızsa None."""
     import urllib.request
@@ -113,11 +160,12 @@ def main():
         except Exception:
             pass
     eskisi = {x['sembol']: x for g in onceki.get('gruplar', []) for x in g['satirlar']}
-    gruplar, yok = [], 0
+    gruplar, yok, oncul = [], 0, {}
     for kod, ad, liste in GRUPLAR:
         s = []
         for sym, sad in liste:
-            r = satir(sym, sad, cek(sym), eskisi.get(sym))
+            oncul[sym] = cek(sym)
+            r = satir(sym, sad, oncul[sym], eskisi.get(sym))
             if r is None:
                 yok += 1
                 print('YOK', sym, flush=True)
@@ -137,13 +185,15 @@ def main():
         if not (makro or {}).get(k) and ob.get(k):
             makro = dict(makro or {})
             makro[k] = ob[k]
+    kars = karsilastirma(oncul) or onceki.get('karsilastirma')
+    tkv = takvim() or onceki.get('takvim')
     toplam = sum(len(g['satirlar']) for g in gruplar)
     if toplam < 8:
         print('çok az veri, dosya yazılmadı', flush=True)
         sys.exit(1)
     os.makedirs(f'{kok}/dunya', exist_ok=True)
     ozet = {'olusturma': datetime.datetime.now(TR).strftime('%Y-%m-%dT%H:%M:%S+03:00'),
-            'kaynak': 'Yahoo Finance (günlük kapanış, gecikmeli)', 'gruplar': gruplar, 'tcmb': makro}
+            'kaynak': 'Yahoo Finance (günlük kapanış, gecikmeli)', 'gruplar': gruplar, 'tcmb': makro, 'takvim': tkv, 'karsilastirma': kars}
     json.dump(ozet, open(f'{kok}/dunya/ozet.json', 'w'), ensure_ascii=False, separators=(',', ':'))
     print('TAMAM', toplam, 'satır,', yok, 'eksik', flush=True)
 
