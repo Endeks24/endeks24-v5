@@ -1694,7 +1694,7 @@ html.e24v5 #e24v5 .v5-dp-pil.v{background:rgba(31,49,67,.08);color:var(--v5-yazi
 html.e24v5 #e24v5 .v5-dp-gr .ay{font-size:13px;font-weight:500;padding-left:14px}
 html.e24v5 #e24v5 .v5-dp-gr .sp{padding-left:14px}
 html.e24v5 #e24v5 .v5-dp-gr .sp svg{display:block;width:100%;height:34px}
-html.e24v5 #e24v5 .v5-dp-makro{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding-top:14px}
+html.e24v5 #e24v5 .v5-dp-makro{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;padding-top:14px}
 html.e24v5 #e24v5 .v5-dp-mk{background:var(--v5-kutu);border:1px solid var(--v5-cizgi);border-radius:8px;padding:14px 16px}
 html.e24v5 #e24v5 .v5-dp-mk b{display:block;font:600 10.5px var(--v5-sans);letter-spacing:.1em;text-transform:uppercase;color:var(--v5-silik)}
 html.e24v5 #e24v5 .v5-dp-mk i{display:block;font:600 30px var(--v5-serif);font-style:normal;margin-top:6px}
