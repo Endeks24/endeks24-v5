@@ -1,0 +1,39 @@
+name: endeks24-dunya-gunluk
+# Dünya Piyasaları verisi (dunya-veri dalı, dunya/ozet.json): hafta içi günde üç kez ya da elle. Yapay zeka çağrısı yoktur.
+on:
+  schedule:
+    - cron: '30 6,14,21 * * 1-5'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: endeks24-dunya-gunluk
+  cancel-in-progress: false
+jobs:
+  dunya:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Bağımlılık
+        run: pip install -q yfinance
+      - name: Önceki veri (sağlam son değer için)
+        run: curl -sf "https://raw.githubusercontent.com/${{ github.repository }}/dunya-veri/dunya/ozet.json" -o "$RUNNER_TEMP/onceki.json" || echo '{}' > "$RUNNER_TEMP/onceki.json"
+      - name: Hesap
+        env:
+          EVDS_API_KEY: ${{ secrets.EVDS }}
+        run: |
+          set -o pipefail
+          python3 veri-programi/dunya_veri.py "$RUNNER_TEMP/cikti" --onceki "$RUNNER_TEMP/onceki.json" 2>&1 | tee dunya-log.txt
+      - name: Yayımla (dunya-veri dalı, geçmiş tutulmaz)
+        run: |
+          cd "$RUNNER_TEMP/cikti"
+          git init -q -b dunya-veri
+          git config user.name e24-dunya; git config user.email e24-dunya@users.noreply.github.com
+          git add -A
+          git commit -qm "dünya piyasaları $(TZ=Europe/Istanbul date '+%d.%m.%Y %H:%M')"
+          git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
+          git push -f origin dunya-veri

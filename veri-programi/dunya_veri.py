@@ -1,6 +1,6 @@
 """Endeks24 Dünya Piyasaları verisi (28.10.2026). Yapay zeka çağrısı yoktur.
 
-Kaynak: Yahoo Finance (yfinance), günlük kapanış; yaklaşık 15 dk gecikmeli. TCMB için EVDS (anahtar EVDS_API_KEY) varsa makro blok eklenir.
+Kaynak: Yahoo Finance (yfinance), günlük kapanış; yaklaşık 15 dk gecikmeli. TCMB için EVDS (anahtar EVDS_API_KEY) varsa makro blok eklenir (fonlama maliyeti ve TÜFE).
 Çıktı: <kök>/dunya/ozet.json. Bir sembol çekilemezse önceki dosyadaki son sağlam değeri korur ("eski": true).
 Kullanım: python3 dunya_veri.py <kök_klasör> [--onceki <ozet.json>]
 """
@@ -43,21 +43,29 @@ def satir(sembol, ad, seri, eski):
             'seri': [round(v, nd) for _, v in seri[-30:]], 'gunler': [d for d, _ in seri[-30:]]}
 
 
+def iso(t):
+    """EVDS tarihi (gg-aa-yyyy ya da yyyy-a) ISO güne çevirir."""
+    p = t.split('-')
+    if len(p[0]) == 4:
+        return f'{p[0]}-{int(p[1]):02d}-01'
+    return f'{p[2]}-{p[1]}-{p[0]}'
+
+
 def evds(anahtar):
-    """TCMB politika faizi ve TÜFE yıllık değişim (EVDS). Başarısızsa None."""
+    """TCMB ağırlıklı ortalama fonlama maliyeti (günlük) ve TÜFE yıllık değişim (aylık). Başarısızsa None."""
     import urllib.request
     bas = (datetime.date.today() - datetime.timedelta(days=800)).strftime('%d-%m-%Y')
     bit = datetime.date.today().strftime('%d-%m-%Y')
-    ss = [('politika', 'TP.PO.FAIZ.1H', 'Politika faizi (1 hafta repo)', 'gunluk'),
-          ('tufe', 'TP.FG.J0', 'TÜFE (2003=100)', 'aylik')]
+    ss = [('fonlama', 'TP.APIFON4', 'TCMB ağırlıklı ortalama fonlama maliyeti'),
+          ('tufe', 'TP.FG.J0', 'TÜFE (2003=100)')]
     cikti = {}
-    for k, kod, ad, _ in ss:
+    for k, kod, ad in ss:
         try:
             u = f'https://evds2.tcmb.gov.tr/service/evds/series={kod}&startDate={bas}&endDate={bit}&type=json'
             req = urllib.request.Request(u, headers={'key': anahtar})
             v = json.loads(urllib.request.urlopen(req, timeout=40).read())['items']
-            alan = [x for x in v[-1].keys() if x != 'Tarih' and x != 'UNIXTIME'][0]
-            nok = [(x['Tarih'], float(x[alan])) for x in v if x.get(alan) not in (None, '')]
+            alan = [x for x in v[-1].keys() if x not in ('Tarih', 'UNIXTIME')][0]
+            nok = [(iso(x['Tarih']), float(x[alan])) for x in v if x.get(alan) not in (None, '')]
             cikti[k] = {'ad': ad, 'kod': kod, 'son': nok[-1][1], 'tarih': nok[-1][0], 'seri': nok[-24:]}
         except Exception as e:
             print('uyarı evds', kod, str(e)[:80], flush=True)
