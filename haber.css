@@ -1056,3 +1056,6 @@ html.e24v5 #e24v5 .v5-tg-zk small{grid-column:1/-1;font:400 13px/1.4 var(--v5-sa
 html.e24v5 #e24v5 .v5-govde table tr.v5-tg-son td{background:var(--v5-band)!important;font-weight:700!important}
 @media(max-width:575.98px){html.e24v5 #e24v5 .v5-tg-zaman{grid-template-columns:1fr}}
 @media(max-width:575.98px){html.e24v5 #e24v5 .v5-tg-zk+.v5-tg-zk{padding-left:0;border-left:0;border-top:1px solid var(--v5-cizgi)}}
+html.e24v5 #e24v5 .v5-sirket-hisse{display:block;margin:-6px 0 10px 88px;font:600 12.5px var(--v5-sans);color:var(--v5-etiket);text-decoration:none}
+html.e24v5 #e24v5 .v5-sirket-hisse:hover{text-decoration:underline}
+@media (max-width:640px){html.e24v5 #e24v5 .v5-sirket-hisse{margin-left:82px}}

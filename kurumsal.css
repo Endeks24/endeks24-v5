@@ -1892,3 +1892,21 @@ html.e24v5 #e24v5 .v5-fn-tepsi .v5-brs-dugme{margin:0}
 html.e24v5 #e24v5 .v5-fn-tepsi .v5-brs-dugme:disabled{opacity:.45;cursor:not-allowed}
 @media (max-width:640px){html.e24v5 #e24v5 .v5-fn-tbl td.k{min-width:150px;max-width:170px}}
 @media (max-width:640px){html.e24v5 #e24v5 .v5-fn-tepsi span{flex-basis:100%;text-align:center;font-size:13px}}
+html.e24v5 #e24v5 .v5-brs-hozet{margin:6px 0 18px;max-width:880px;font:600 16px/1.55 var(--v5-sans);color:var(--v5-yazi)}
+html.e24v5 #e24v5 .v5-brs-htw{margin-top:18px;overflow-x:auto}
+html.e24v5 #e24v5 .v5-brs-htab{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+html.e24v5 #e24v5 .v5-brs-htc{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+html.e24v5 #e24v5 .v5-brs-htab th{font:600 10.5px var(--v5-sans);letter-spacing:.08em;text-transform:uppercase;color:var(--v5-silik);text-align:left;padding:8px 8px;border-bottom:2px solid var(--v5-lacivert)}
+html.e24v5 #e24v5 .v5-brs-htab th.n,html.e24v5 #e24v5 .v5-brs-htab td.n{text-align:right;white-space:nowrap}
+html.e24v5 #e24v5 .v5-brs-htab td{padding:10px 8px;border-bottom:1px solid var(--v5-cizgi);background:none;vertical-align:top}
+html.e24v5 #e24v5 .v5-brs-htab td b{display:block;font-weight:700}
+html.e24v5 #e24v5 .v5-brs-htab td small{display:block;font-size:12px;color:var(--v5-silik);margin-top:2px}
+html.e24v5 #e24v5 .v5-brs-htab td.tv{white-space:nowrap;font-weight:600}
+html.e24v5 #e24v5 .v5-brs-htab td.a{color:var(--v5-yukselis);font-weight:600}
+html.e24v5 #e24v5 .v5-brs-htab td.d{color:var(--v5-dusus);font-weight:600}
+html.e24v5 #e24v5 .v5-brs-htw:not(.acik) .v5-brs-hdf{display:none}
+html.e24v5 #e24v5 .v5-brs-htw .v5-brs-daha{display:block;margin:14px auto 0}
+@media (max-width:640px){html.e24v5 #e24v5 .v5-brs-htab th,html.e24v5 #e24v5 .v5-brs-htab td{padding:9px 4px;font-size:12.5px}}
+@media (max-width:640px){html.e24v5 #e24v5 .v5-brs-htab th{font-size:9.5px;letter-spacing:.04em}}
+@media (max-width:640px){html.e24v5 #e24v5 .v5-brs-htab td b{font-size:13px}}
+@media (max-width:640px){html.e24v5 #e24v5 .v5-brs-htab td small{font-size:11px;white-space:nowrap}}
