@@ -162,23 +162,30 @@ def karsilastirma(oncul):
                                           for sym, ad in ss]}
 
 
+TANI = []   # EVDS hataları ozet.json'a 'evds_tani' olarak yazılır (GitHub günlüğü okunamadığı için)
+
+
 def evds(anahtar):
     """TCMB ağırlıklı ortalama fonlama maliyeti (günlük) ve TÜFE yıllık değişim (aylık). Başarısızsa None."""
     import urllib.request
     bas = (datetime.date.today() - datetime.timedelta(days=800)).strftime('%d-%m-%Y')
     bit = datetime.date.today().strftime('%d-%m-%Y')
+    # EVDS 2026'da evds3.tcmb.gov.tr/igmevdsms-dis adresine taşındı (eski evds2 adresi arayüze yönlendirir ve HTML döner); TÜFE serisi 2025=100 tabanına geçti.
     ss = [('fonlama', 'TP.APIFON4', 'TCMB ağırlıklı ortalama fonlama maliyeti'),
-          ('tufe', 'TP.FG.J0', 'TÜFE (2003=100)')]
+          ('tufe', 'TP.TUKFIY2025.GENEL', 'TÜFE (2025=100)')]
     cikti = {}
     for k, kod, ad in ss:
         try:
-            u = f'https://evds2.tcmb.gov.tr/service/evds/series={kod}&startDate={bas}&endDate={bit}&type=json'
+            u = f'https://evds3.tcmb.gov.tr/igmevdsms-dis/series={kod}&startDate={bas}&endDate={bit}&type=json'
             req = urllib.request.Request(u, headers={'key': anahtar})
             v = json.loads(urllib.request.urlopen(req, timeout=40).read())['items']
             alan = [x for x in v[-1].keys() if x not in ('Tarih', 'UNIXTIME')][0]
             nok = [(iso(x['Tarih']), float(x[alan])) for x in v if x.get(alan) not in (None, '')]
+            if (datetime.date.today() - datetime.date.fromisoformat(nok[-1][0])).days > (75 if k == 'tufe' else 20):
+                raise ValueError('son gözlem eski: ' + nok[-1][0])   # bırakılmış (arşiv) seri eski değerle gösterilmesin
             cikti[k] = {'ad': ad, 'kod': kod, 'son': nok[-1][1], 'tarih': nok[-1][0], 'seri': nok[-24:]}
         except Exception as e:
+            TANI.append(f'{kod}: {str(e)[:120]}')
             print('uyarı evds', kod, str(e)[:80], flush=True)
     if 'tufe' in cikti and len(cikti['tufe']['seri']) >= 13:
         s = cikti['tufe']['seri']
@@ -211,6 +218,8 @@ def main():
     makro = None
     if os.environ.get('EVDS_API_KEY'):
         makro = evds(os.environ['EVDS_API_KEY'])
+    else:
+        TANI.append('EVDS_API_KEY tanımlı değil')
     pf = politika()
     if pf or makro:
         makro = dict(makro or {})
@@ -229,7 +238,7 @@ def main():
         sys.exit(1)
     os.makedirs(f'{kok}/dunya', exist_ok=True)
     ozet = {'olusturma': datetime.datetime.now(TR).strftime('%Y-%m-%dT%H:%M:%S+03:00'),
-            'kaynak': 'Yahoo Finance (günlük kapanış, gecikmeli)', 'gruplar': gruplar, 'tcmb': makro, 'takvim': tkv, 'karsilastirma': kars}
+            'kaynak': 'Yahoo Finance (günlük kapanış, gecikmeli)', 'gruplar': gruplar, 'tcmb': makro, 'takvim': tkv, 'karsilastirma': kars, 'evds_tani': TANI or None}
     json.dump(ozet, open(f'{kok}/dunya/ozet.json', 'w'), ensure_ascii=False, separators=(',', ':'))
     print('TAMAM', toplam, 'satır,', yok, 'eksik', flush=True)
 
