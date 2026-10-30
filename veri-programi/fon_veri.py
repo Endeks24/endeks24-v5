@@ -4,7 +4,7 @@
   ozet.json      {"olusturma","fiyat_tarihi","n","kategoriler":[...],"hafta":[tarihler],"fonlar":[{k,ad,t,pys,kat,r,yu,st,b,y,ak,h1h,h1a,h3a,h6a,hyb,h1y,vs,vsy}]}
   seri/<H>.json  {"<KOD>": [haftalık kapanışlar (ozet.hafta ile aynı sıra, yoksa null)]}   H = kodun ilk harfi
   dagilim/<H>.json {"<KOD>": [[varlık sınıfı, yüzde],...]} en büyük 6 sınıf
-Getiri = fon fiyatındaki yüzde değişim (stopaj ve yönetim ücreti fiyata dahildir). Kullanım: python3 fon_veri.py <kök_klasör>. Anahtar FINTABLES ortam değişkeninde.
+Getiri = fon fiyatındaki yüzde değişim (stopaj ve yönetim ücreti fiyata dahildir). Kullanım: python3 fon_veri.py <kök_klasör>. Anahtar FINTABLES ortam değişkeninde (GitHub sırrı; süresi dolunca yenilenir).
 """
 import datetime, json, os, sys, collections
 
