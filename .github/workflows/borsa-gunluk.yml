@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: '50 15 * * 1-5'
   workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/borsa-gunluk.yml'
 permissions:
   contents: write
 concurrency:
