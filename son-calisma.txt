@@ -1,4 +1,3 @@
-BIST 100 30 Ekim seansını yüzde 3,64 düşüşle 10.759,56 puandan kapattı. Endeksteki 100 hisseden 89 hisse geriledi, 10 hisse yükseldi.
 rakamlar: {'piyasa': 7, 'gundem': 3}
-TAMAM: cikti/veri.json 88283 bayt; seans 2026-10-30T18:10:00+03:00 ; kripto 2026-10-30T18:27:00+03:00
-2026-10-30T15:28:00Z 
+TAMAM: cikti/veri.json 88286 bayt; seans 2026-10-30T18:10:00+03:00 ; kripto 2026-10-30T18:36:00+03:00
+2026-10-30T15:36:39Z --kripto-yalniz
