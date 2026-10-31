@@ -1,0 +1,24 @@
+{
+ "yontem": [
+  "Sepet bir simit ve bir sade menemenden oluşur. Her ürün için üç işletmenin menü fiyatı alınır, ürünün fiyatı bu üç fiyatın medyanıdır; sepet bedeli iki medyanın toplamıdır.",
+  "Fiyatlar restoran ve kafe menü fiyatlarıdır; teslimat platformu fiyatları kullanılmaz. Kaynak, menufiyatlar.com'un işletme sayfalarındaki derlenmiş menülerdir; her satırda işletme, menü tarihi ve bağlantı yazılıdır.",
+  "Menü tarihleri Temmuz ile Eylül 2026 arasında değişiyor; markaların çoğu kendi sitesinde fiyat yayımlamıyor. Bu ilk derlemedir; sonraki aylarda aynı işletmelerden aynı tarihte fiyat alınarak güncellenecek.",
+  "Endeks değeri, sepet bedelinin ilk derleme ayındaki bedele oranıdır (ilk ay 100). Asgari ücrete oran, sepetin net asgari ücretin yüzde kaçı olduğunu gösterir; aylık tutar sepetin 30 gün her sabah alınmasıdır."
+ ],
+ "kaynak": "Kaynak: menufiyatlar.com işletme menü sayfaları; Endeks24 derlemesi",
+ "donemler": {
+  "2026-10": {
+   "tarih": "2026-10-31",
+   "simit": [
+    {"isletme": "Simit Sarayı", "fiyat": 50, "tarih": "2026-09-13", "kaynak": "https://menufiyatlar.com/2436-simit-sarayi-menu-fiyatlari"},
+    {"isletme": "Özsüt", "fiyat": 45, "tarih": "2026-07-07", "kaynak": "https://menufiyatlar.com/906-ozsut-menu-fiyatlari"},
+    {"isletme": "Emirgan Sütiş", "fiyat": 55, "tarih": "2026-09-04", "kaynak": "https://menufiyatlar.com/647-emirgan-sutis-menu-fiyatlari"}
+   ],
+   "menemen": [
+    {"isletme": "Özsüt", "fiyat": 315, "tarih": "2026-07-07", "kaynak": "https://menufiyatlar.com/906-ozsut-menu-fiyatlari"},
+    {"isletme": "Mado", "fiyat": 360, "tarih": "2026-07-04", "kaynak": "https://menufiyatlar.com/780-mado-menu-fiyatlari"},
+    {"isletme": "Emirgan Sütiş", "fiyat": 395, "tarih": "2026-09-04", "kaynak": "https://menufiyatlar.com/647-emirgan-sutis-menu-fiyatlari"}
+   ]
+  }
+ }
+}

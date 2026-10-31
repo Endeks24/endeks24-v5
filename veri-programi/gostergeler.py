@@ -245,31 +245,49 @@ def surpriz(kok):
 
 
 # ---------- Elle derlenen göstergeler ----------
-def girdi_simit(kok):
+def girdi_simit(kok, usd_son=None):
+    ad = {'id': 'simit-menemen', 'ad': 'Endeks24 Simit ve Menemen Endeksi', 'kisa': 'Simit ve Menemen Endeksi'}
     g = oku(f'{kok}/endeksler/girdi/simit-menemen.json')
+    hazir = dict(ad, durum='hazirlaniyor', lead='Bir simit ile bir sade menemenden oluşan sepetin aylık bedeli. Aynı işletmelerden, her ay, kaynaklı derlemeyle. İlk derleme hazırlanıyor.')
     if not g or not g.get('donemler'):
-        return {'id': 'simit-menemen', 'ad': 'Endeks24 Simit ve Menemen Endeksi', 'kisa': 'Simit ve Menemen Endeksi', 'durum': 'hazirlaniyor',
-                'lead': 'Bir simit ile bir porsiyon menemenden oluşan sepetin aylık bedeli. Aynı işletmelerden, her ay aynı tarihte, kaynaklı derlemeyle. İlk derleme hazırlanıyor.'}
-    donemler = sorted(g['donemler'])
-    seri, ayrintilar = [], []
-    for d in donemler:
+        return hazir
+    seri = []
+    for d in sorted(g['donemler']):
         x = g['donemler'][d]
         simit = [i['fiyat'] for i in x.get('simit', [])]
         men = [i['fiyat'] for i in x.get('menemen', [])]
         if len(simit) < 3 or len(men) < 3:
             continue
         s, m = statistics.median(simit), statistics.median(men)
-        seri.append({'d': d, 'simit': s, 'menemen': m, 'sepet': s + m, 'n_simit': len(simit), 'n_menemen': len(men)})
+        seri.append({'d': d, 'tarih': x.get('tarih') or d + '-01', 'simit': s, 'menemen': m, 'sepet': s + m, 'x': x})
     if not seri:
-        return {'id': 'simit-menemen', 'ad': 'Endeks24 Simit ve Menemen Endeksi', 'kisa': 'Simit ve Menemen Endeksi', 'durum': 'hazirlaniyor',
-                'lead': 'İlk derleme hazırlanıyor (her ürün için en az 3 işletme fiyatı gerekir).'}
+        return hazir
     ilk, son = seri[0], seri[-1]
-    return {'id': 'simit-menemen', 'ad': 'Endeks24 Simit ve Menemen Endeksi', 'kisa': 'Simit ve Menemen Endeksi', 'tarih': son['d'],
-            'baslik': 'Bir simit ve bir menemen şimdi kaç lira?', 'lead': 'Aynı sepetin, aynı işletmelerden aylık fiyatı.',
-            'kartlar': [{'k': 'Sepet (1 simit + 1 menemen)', 'd': f"{son['sepet']:.0f} TL"}, {'k': 'Simit', 'd': f"{son['simit']:.0f} TL"}, {'k': 'Menemen', 'd': f"{son['menemen']:.0f} TL"},
-                        {'k': 'Endeks', 'd': f"{son['sepet'] / ilk['sepet'] * 100:.1f}", 'a': f"{ilk['d']} = 100"}],
-            'seri': {'g': [x['d'] for x in seri], 'seriler': [{'ad': 'Sepet', 'birim': 'TL', 'd': [x['sepet'] for x in seri]}]},
-            'yontem': g.get('yontem', []), 'kaynak': g.get('kaynak', 'Kaynak: işletme fiyat listeleri; Endeks24 derlemesi'), 'durum': 'canli'}
+    maas = asgari(son['tarih'])
+    aylik = son['sepet'] * 30
+    dolar = usd_son
+    satirlar = []
+    for urun, anahtar in (('Simit', 'simit'), ('Sade menemen', 'menemen')):
+        for i in sorted(son['x'].get(anahtar, []), key=lambda z: z['fiyat']):
+            satirlar.append({'urun': urun, 'isletme': i['isletme'], 'fiyat': i['fiyat'], 'tarih': i.get('tarih'), 'url': i.get('kaynak')})
+    kart = [{'k': 'Sepet (1 simit + 1 menemen)', 'd': tr(son['sepet']) + ' TL', 'a': f"simit {tr(son['simit'])} TL + menemen {tr(son['menemen'])} TL, medyan"},
+            {'k': 'Net asgari ücrete oranı', 'd': '%' + tr(son['sepet'] / maas * 100, 1), 'a': 'tek bir sabahın sepeti'},
+            {'k': 'Her sabah, 30 gün', 'd': tr(aylik) + ' TL', 'a': f"net asgari ücretin %{tr(aylik / maas * 100, 1)}'ü"}]
+    if dolar:
+        kart.append({'k': 'Dolar karşılığı', 'd': tr(son['sepet'] / dolar, 2) + ' dolar', 'a': f"aylık tutar {tr(aylik / dolar, 2)} dolar"})
+    kart.append({'k': 'Maaşla alınabilecek', 'd': f"{int(maas // son['simit'])} simit", 'a': f"ya da {int(maas // son['menemen'])} sade menemen"})
+    pahali = sum(max(i['fiyat'] for i in son['x'][k]) for k in ('simit', 'menemen'))
+    ucuz = sum(min(i['fiyat'] for i in son['x'][k]) for k in ('simit', 'menemen'))
+    cumle = [f"{gun_adi(son['tarih'])} derlemesinde bir simit (medyan {tr(son['simit'])} TL) ve bir sade menemenden (medyan {tr(son['menemen'])} TL) oluşan sepet {tr(son['sepet'])} TL; bu sepet 30 gün her sabah alınırsa {tr(aylik)} TL tutuyor ve {tr(maas, 2)} TL net asgari ücretin yüzde {tr(aylik / maas * 100, 1)}'ünü oluşturuyor.",
+             f"En ucuz işletmelerle sepet {tr(ucuz)} TL (30 günde maaşın yüzde {tr(ucuz * 30 / maas * 100, 1)}'ü), en pahalı işletmelerle {tr(pahali)} TL (yüzde {tr(pahali * 30 / maas * 100, 1)}'ü)."]
+    out = dict(ad, tarih=son['tarih'], baslik='Bir simit ve bir menemen kaç lira? Her sabah alınırsa maaşın kaçı gider?',
+               lead='Aynı sepetin, aynı üç işletmeden menü fiyatıyla hesabı. Net asgari ücrete oranı ve aylık tutarı.',
+               kartlar=kart, cumleler=cumle, tablo={'kolonlar': ['Ürün', 'İşletme', 'Menü fiyatı (TL)', 'Menü tarihi', 'Kaynak'], 'satirlar': [satirlar]},
+               yontem=g.get('yontem', []), kaynak=g.get('kaynak', 'Kaynak: işletme menü fiyatları; Endeks24 derlemesi'), durum='canli')
+    if len(seri) > 1:
+        out['seri'] = {'g': [x['tarih'] for x in seri], 'seriler': [{'ad': 'Sepet bedeli', 'birim': 'TL', 'd': [x['sepet'] for x in seri]},
+                                                                   {'ad': 'Endeks (ilk ay = 100)', 'birim': '', 'd': [round(x['sepet'] / ilk['sepet'] * 100, 1) for x in seri]}]}
+    return out
 
 
 def girdi_maas(kok, alim):
@@ -299,7 +317,7 @@ def main():
     alim = alim_gucu(kok, dunya)
     for ad, f in (('alim-gucu', lambda: alim), ('potansiyel', lambda: potansiyel(kok, borsa, ob.get('potansiyel')) if borsa else ob.get('potansiyel')),
                   ('tavan-taban', lambda: tavan_taban(kok, borsa, ob.get('tavan-taban')) if borsa else ob.get('tavan-taban')), ('surpriz', lambda: surpriz(kok)),
-                  ('simit-menemen', lambda: girdi_simit(kok)), ('maas-kac', lambda: girdi_maas(kok, alim))):
+                  ('simit-menemen', lambda: girdi_simit(kok, (oku(f'{kok}/zaman-makinesi/seri.json') or {}).get('usd', [None])[-1])), ('maas-kac', lambda: girdi_maas(kok, alim))):
         try:
             x = f()
         except Exception as e:
