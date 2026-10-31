@@ -1,0 +1,13 @@
+{
+ "tarih": "2026-10-31",
+ "urunler": [
+  {"ad": "iPhone 18 Pro (Apple Türkiye başlangıç fiyatı)", "fiyat": 137999, "tarih": "2026-10-31", "kaynak": "apple.com/tr"},
+  {"ad": "PlayStation 5 Digital Edition 825 GB (MediaMarkt etiket fiyatı)", "fiyat": 54999, "tarih": "2026-10-31", "kaynak": "mediamarkt.com.tr"}
+ ],
+ "yontem": [
+  "iPhone için Apple Türkiye'nin resmî internet sitesinde yayımlanan başlangıç fiyatı, KDV dahil, kullanılır.",
+  "Sony Türkiye resmî bir satış fiyatı yayımlamadığı için PlayStation 5 için MediaMarkt'ın kendi satışındaki etiket fiyatı kullanılır; fiyatı mağaza belirler ve kampanyalarla değişebilir.",
+  "Kaç asgari ücret sütunu, ürün fiyatının net asgari ücrete bölünmesiyle bulunur. Fiyatlar her ay aynı kaynaklardan, tarihiyle güncellenir."
+ ],
+ "kaynak": "Kaynak: apple.com/tr, mediamarkt.com.tr; Endeks24 derlemesi"
+}
