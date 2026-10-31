@@ -278,8 +278,16 @@ def girdi_simit(kok, usd_son=None):
     kart.append({'k': 'Maaşla alınabilecek', 'd': f"{int(maas // son['simit'])} simit", 'a': f"ya da {int(maas // son['menemen'])} sade menemen"})
     pahali = sum(max(i['fiyat'] for i in son['x'][k]) for k in ('simit', 'menemen'))
     ucuz = sum(min(i['fiyat'] for i in son['x'][k]) for k in ('simit', 'menemen'))
-    cumle = [f"{gun_adi(son['tarih'])} derlemesinde bir simit (medyan {tr(son['simit'])} TL) ve bir sade menemenden (medyan {tr(son['menemen'])} TL) oluşan sepet {tr(son['sepet'])} TL; bu sepet 30 gün her sabah alınırsa {tr(aylik)} TL tutuyor ve {tr(maas, 2)} TL net asgari ücretin yüzde {tr(aylik / maas * 100, 1)}'ünü oluşturuyor.",
-             f"En ucuz işletmelerle sepet {tr(ucuz)} TL (30 günde maaşın yüzde {tr(ucuz * 30 / maas * 100, 1)}'ü), en pahalı işletmelerle {tr(pahali)} TL (yüzde {tr(pahali * 30 / maas * 100, 1)}'ü)."]
+    fark = ''
+    if len(seri) > 1:
+        once = seri[-2]
+        de = (son['sepet'] / once['sepet'] - 1) * 100
+        fark = f" Sepet bir önceki derlemeye göre yüzde {tr(abs(de), 1)} {'arttı' if de > 0 else 'azaldı'}."
+    else:
+        fark = ' Bu ilk derleme olduğu için aylık değişim sonraki aylarda bu sayfada izlenecek.'
+    cumle = [f"{gun_adi(son['tarih'])} derlemesine göre bir simit ile bir sade menemenden oluşan kahvaltı sepeti {tr(son['sepet'])} TL: simit {tr(son['simit'])} TL, menemen {tr(son['menemen'])} TL.{fark}",
+             f"Bu sepeti 30 gün boyunca her sabah alan biri {tr(aylik)} TL öder; bu, {tr(maas, 2)} TL olan net asgari ücretin yüzde {tr(aylik / maas * 100, 1)}'ü demek. Aynı maaşla {int(maas // son['simit'])} simit ya da {int(maas // son['menemen'])} sade menemen alınabiliyor.",
+             f"İşletmeler arasında fark büyük: en ucuz üç işletmeyle sepet {tr(ucuz)} TL (maaşın yüzde {tr(ucuz * 30 / maas * 100, 1)}'ü), en pahalı üç işletmeyle {tr(pahali)} TL (yüzde {tr(pahali * 30 / maas * 100, 1)}'ü) tutuyor. Fiyatlar restoran ve kafe menü fiyatlarıdır, paket servis fiyatları farklı olabilir."]
     out = dict(ad, tarih=son['tarih'], baslik='Bir simit ve bir menemen kaç lira? Her sabah alınırsa maaşın kaçı gider?',
                lead='Aynı sepetin, aynı üç işletmeden menü fiyatıyla hesabı. Net asgari ücrete oranı ve aylık tutarı.',
                kartlar=kart, cumleler=cumle, tablo={'kolonlar': ['Ürün', 'İşletme', 'Menü fiyatı (TL)', 'Menü tarihi', 'Kaynak'], 'satirlar': [satirlar]},
