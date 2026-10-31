@@ -1,0 +1,39 @@
+name: endeks24-gostergeler-gunluk
+# Endeks24 Göstergeleri (endeksler/gostergeler.json): alım gücü, hedef fiyat potansiyeli, tavan taban dengesi, bilanço sürprizi, simit ve menemen, maaş karşılığı.
+# Hafta içi seans sonrası (borsa-veri yazıldıktan sonra), elle ya da betik ve girdi dosyaları değişince. Yapay zeka ve Fintables çağrısı yoktur.
+on:
+  schedule:
+    - cron: '25 16 * * 1-5'
+    - cron: '55 17 * * 1-5'
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/gostergeler-gunluk.yml'
+      - 'veri-programi/gostergeler.py'
+      - 'endeksler/girdi/**'
+permissions:
+  contents: write
+concurrency:
+  group: endeks24-gostergeler-gunluk
+  cancel-in-progress: false
+jobs:
+  gostergeler:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Borsa ve dünya verisi
+        run: |
+          git clone -q --depth 1 --branch borsa-veri "https://github.com/${{ github.repository }}.git" "$RUNNER_TEMP/borsa"
+          git clone -q --depth 1 --branch dunya-veri "https://github.com/${{ github.repository }}.git" "$RUNNER_TEMP/dunya"
+      - name: Hesap
+        run: |
+          set -o pipefail
+          python3 veri-programi/gostergeler.py . --borsa "$RUNNER_TEMP/borsa" --dunya "$RUNNER_TEMP/dunya" 2>&1 | tee gostergeler-log.txt
+      - name: Yaz
+        run: |
+          git config user.name e24-gostergeler; git config user.email e24-gostergeler@users.noreply.github.com
+          git add endeksler/gostergeler.json
+          git commit -qm "göstergeler $(TZ=Europe/Istanbul date '+%d.%m.%Y %H:%M')" || exit 0
+          for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && exit 0; sleep 5; done
+          exit 1
