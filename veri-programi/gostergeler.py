@@ -53,6 +53,11 @@ def yuzde(a, b):
     return None if not b else round((a / b - 1) * 100, 1)
 
 
+def tr(x, n=0):
+    """Türkçe sayı biçimi: 28075.5 -> 28.075,50"""
+    return f'{x:,.{n}f}'.replace(',', 'X').replace('.', ',').replace('X', '.')
+
+
 def gun_adi(t):
     ay = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık']
     y, m, d = t.split('-')
@@ -95,23 +100,25 @@ def alim_gucu(kok, dunya):
             if t >= hedef:
                 return seri[i]
         return None
+    yb_d, yb_a, yb_e = yilbasi(dolar), yilbasi(altin), yilbasi(euro)
     kartlar = [
-        {'k': 'Net asgari ücret', 'd': f'{maas:,.2f}'.replace(',', 'X').replace('.', ',').replace('X', '.') + ' TL', 'a': 'ÇSGB, 1 Ocak 2026 itibarıyla'},
-        {'k': 'Dolar cinsinden', 'd': f'{dolar[-1]:.0f} dolar'.replace('.', ','), 'y': yuzde(dolar[-1], yilbasi(dolar)), 'ya': 'yıl başına göre', 'y2': yuzde(dolar[-1], yilonce(dolar)), 'ya2': 'bir yıl öncesine göre'},
-        {'k': 'Gram altın cinsinden', 'd': f'{altin[-1]:.2f} gram'.replace('.', ','), 'y': yuzde(altin[-1], yilbasi(altin)), 'ya': 'yıl başına göre', 'y2': yuzde(altin[-1], yilonce(altin)), 'ya2': 'bir yıl öncesine göre'},
-        {'k': 'Euro cinsinden', 'd': f'{euro[-1]:.0f} euro', 'y': yuzde(euro[-1], yilbasi(euro)), 'ya': 'yıl başına göre'},
+        {'k': 'Net asgari ücret', 'd': tr(maas, 2) + ' TL', 'a': 'ÇSGB, 1 Ocak 2026 itibarıyla'},
+        {'k': 'Dolar cinsinden', 'd': tr(dolar[-1]) + ' dolar', 'y': yuzde(dolar[-1], yb_d), 'ya': 'yıl başına göre', 'y2': yuzde(dolar[-1], yilonce(dolar)), 'ya2': 'bir yıl öncesine göre'},
+        {'k': 'Gram altın cinsinden', 'd': tr(altin[-1], 2) + ' gram', 'y': yuzde(altin[-1], yb_a), 'ya': 'yıl başına göre', 'y2': yuzde(altin[-1], yilonce(altin)), 'ya2': 'bir yıl öncesine göre'},
+        {'k': 'Euro cinsinden', 'd': tr(euro[-1]) + ' euro', 'y': yuzde(euro[-1], yb_e), 'ya': 'yıl başına göre'},
     ]
     if varil:
-        kartlar.append({'k': 'Brent petrol cinsinden', 'd': f'{varil:.2f} varil'.replace('.', ','), 'a': 'Güncel Brent vadeli fiyatından'})
-    cumleler = [f'{gun_adi(tarih)} itibarıyla net asgari ücret {maas:,.2f} TL; bu tutar {dolar[-1]:.0f} dolara ve {altin[-1]:.2f} gram altına denk geliyor.'.replace(',', 'X').replace('.', ',').replace('X', '.')]
-    if yilbasi(dolar):
-        cumleler.append(f'Yıl başına göre asgari ücretin dolar karşılığı yüzde {abs(yuzde(dolar[-1], yilbasi(dolar))):.1f} '.replace('.', ',') + ('arttı' if dolar[-1] > yilbasi(dolar) else 'azaldı') + f', gram altın karşılığı yüzde {abs(yuzde(altin[-1], yilbasi(altin))):.1f} '.replace('.', ',') + ('arttı.' if altin[-1] > yilbasi(altin) else 'azaldı.'))
+        kartlar.append({'k': 'Brent petrol cinsinden', 'd': tr(varil, 2) + ' varil', 'a': 'Güncel Brent vadeli fiyatından'})
+    cumleler = [f'{gun_adi(tarih)} itibarıyla net asgari ücret {tr(maas, 2)} TL; bu tutar {tr(dolar[-1])} dolara ve {tr(altin[-1], 2)} gram altına denk geliyor.']
+    if yb_d and yb_a:
+        yd, ya_ = yuzde(dolar[-1], yb_d), yuzde(altin[-1], yb_a)
+        cumleler.append(f'Yıl başına göre asgari ücretin dolar karşılığı yüzde {tr(abs(yd), 1)} ' + ('arttı' if yd > 0 else 'azaldı') + f', gram altın karşılığı yüzde {tr(abs(ya_), 1)} ' + ('arttı.' if ya_ > 0 else 'azaldı.'))
     return {
         'id': 'alim-gucu', 'ad': 'Endeks24 Alım Gücü Endeksi', 'kisa': 'Alım Gücü', 'tarih': tarih,
         'baslik': 'Asgari ücret kaç dolar, kaç gram altın, kaç varil petrol?',
         'lead': 'Net asgari ücretin dolar, euro, gram altın ve Brent petrol karşılığı. Her haftanın son kapanışıyla, 2022 başından bugüne.',
         'kartlar': kartlar, 'cumleler': cumleler,
-        'seri': {'g': gg, 'seriler': [{'ad': 'Dolar', 'birim': 'dolar', 'd': dolar}, {'ad': 'Gram altın', 'birim': 'gram', 'd': altin}, {'ad': 'Euro', 'birim': 'euro', 'd': euro}]},
+        'seri': {'g': gg, 'seriler': [{'ad': 'Dolar karşılığı', 'birim': 'dolar', 'd': dolar}, {'ad': 'Gram altın karşılığı', 'birim': 'gram', 'd': altin}, {'ad': 'Euro karşılığı', 'birim': 'euro', 'd': euro}]},
         'yontem': ['Net asgari ücret ÇSGB duyurularındaki aylık net tutardır; her ücret zammında yürürlük tarihinden itibaren yeni tutar kullanılır (Ocak 2022: 5.500,35, Temmuz 2022: 6.471,55, Ocak 2023: 8.506,80, Temmuz 2023: 11.402,32, Ocak 2024: 17.002,12, Ocak 2025: 22.104,67, Ocak 2026: 28.075,50 TL).',
                    'Seri her haftanın son işlem günü kapanışıyla hesaplanır: net asgari ücret bölü o günkü dolar, euro ve gram altın kuru. Brent kartı güncel vadeli fiyat ve güncel dolar kuruyla hesaplanır.',
                    'Maaşın alım gücü, ücret zammı günü yükselir, kurlar arttıkça aşağı iner; bu yüzden seri testere dişi görünür.'],
