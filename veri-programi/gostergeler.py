@@ -310,7 +310,11 @@ def girdi_maas(kok, alim):
     satir = []
     for u in g['urunler']:
         satir.append({'ad': u['ad'], 'fiyat': u['fiyat'], 'maas': round(u['fiyat'] / maas, 2), 'tarih': u.get('tarih'), 'kaynak': u.get('kaynak')})
-    return dict(adlar, tarih=g.get('tarih'), durum='canli', baslik='Asgari ücretle kaç iPhone alınır?', lead='Resmî TL fiyatının net asgari ücrete oranı.',
+    ip, ps = satir[0], satir[1] if len(satir) > 1 else None
+    cumle = [f"{ip['ad'].split(' (')[0]} Apple Türkiye'de {tr(ip['fiyat'])} TL; bu, {tr(maas, 2)} TL olan net asgari ücretin {tr(ip['maas'], 2)} katı. Yani bir iPhone için yaklaşık {tr(ip['maas'], 1)} maaş gerekiyor."]
+    if ps:
+        cumle.append(f"PlayStation 5 Digital Edition ise MediaMarkt'ta {tr(ps['fiyat'])} TL; net asgari ücretin {tr(ps['maas'], 2)} katı. Sony Türkiye resmî fiyat yayımlamadığı için konsol fiyatı mağaza etiketidir ve kampanyalarla değişebilir.")
+    return dict(adlar, tarih=g.get('tarih'), durum='canli', cumleler=cumle, baslik='Asgari ücretle kaç iPhone alınır?', lead='Resmî TL fiyatının net asgari ücrete oranı.',
                 tablo={'kolonlar': ['Ürün', 'Fiyat (TL)', 'Kaç asgari ücret', 'Fiyat tarihi', 'Kaynak'], 'satirlar': [satir]},
                 yontem=g.get('yontem', []), kaynak=g.get('kaynak', 'Kaynak: üretici resmî Türkiye fiyatı; Endeks24 derlemesi'))
 
