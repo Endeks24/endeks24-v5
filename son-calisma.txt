@@ -1,4 +1,3 @@
-BIST 100 2 Kasım seansını yüzde 1,88 yükselişle 10.961,67 puandan kapattı. Endeksteki 100 hisseden 26 hisse geriledi, 73 hisse yükseldi.
 rakamlar: {'piyasa': 4, 'gundem': 3}
-TAMAM: cikti/veri.json 84031 bayt; seans 2026-11-02T18:10:00+03:00 ; kripto 2026-11-02T18:30:00+03:00
-2026-11-02T15:30:28Z 
+TAMAM: cikti/veri.json 84032 bayt; seans 2026-11-02T18:10:00+03:00 ; kripto 2026-11-02T18:32:00+03:00
+2026-11-02T15:32:45Z --kripto-yalniz
