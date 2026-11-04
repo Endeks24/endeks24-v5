@@ -1,3 +1,4 @@
+BIST 100 4 Kasım seansını yüzde 4,12 yükselişle 11.478,13 puandan kapattı. Endeksteki 100 hisseden 2 hisse geriledi, 98 hisse yükseldi.
 rakamlar: {'piyasa': 4, 'gundem': 3}
-TAMAM: cikti/veri.json 83123 bayt; seans 2026-11-04T18:10:00+03:00 ; kripto 2026-11-04T18:57:00+03:00
-2026-11-04T15:57:37Z --kripto-yalniz
+TAMAM: cikti/veri.json 83126 bayt; seans 2026-11-04T18:10:00+03:00 ; kripto 2026-11-04T19:10:00+03:00
+2026-11-04T16:10:42Z 
