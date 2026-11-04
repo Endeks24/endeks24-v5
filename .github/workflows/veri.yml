@@ -56,6 +56,11 @@ jobs:
           if [ "$g" -le 5 ] && [ $s -ge 1000 ] && [ $s -le 1830 ]; then
             python3 veri-programi/borsa_veri.py cikti --canli 2>&1 | tail -5 || true
           fi
+      - name: Adres düzeltme listesi
+        continue-on-error: true
+        run: |
+          # 4.11.2026: içerik sistemi haber adresini kısaltınca listelerde 404 veren bağlantıları doğru adrese eşler (cikti/adres-duzelt.json)
+          python3 veri-programi/adres_duzelt.py cikti 2>&1 | tail -3 || true
       - name: Yaz
         run: |
           cd cikti
