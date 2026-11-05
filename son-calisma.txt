@@ -1,3 +1,3 @@
-rakamlar: {'piyasa': 6, 'gundem': 3}
-TAMAM: cikti/veri.json 88631 bayt; seans 2026-11-04T18:10:00+03:00 ; kripto 2026-11-05T03:18:00+03:00
-2026-11-05T00:18:22Z --kripto-yalniz
+rakamlar: {'piyasa': 8, 'gundem': 3}
+TAMAM: cikti/veri.json 90987 bayt; seans 2026-11-04T18:10:00+03:00 ; kripto 2026-11-05T04:50:00+03:00
+2026-11-05T01:50:32Z --kripto-yalniz
