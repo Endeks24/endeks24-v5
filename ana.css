@@ -1517,3 +1517,4 @@ html.e24v5 #e24v5 .e24-sik-ac{display:none}
 @media (max-width:767.98px){html.e24v5 #e24v5 .v5-govde table.e24-tablo-mini td:first-child::before{content:none}}
 @media (max-width:767.98px){html.e24v5 #e24v5 .v5-govde table.e24-tablo-mini td.e24-sayi,html.e24v5 #e24v5 .v5-govde table.e24-tablo-mini td.e24-tarih{text-align:left!important;white-space:normal!important;min-width:0!important}}
 html.e24v5 #e24v5 .v5-mh .v5-mv{font-style:inherit!important;color:inherit!important}
+html.e24v5 #e24v5 main.v5-kat{min-height:1300px}

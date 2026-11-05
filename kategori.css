@@ -1921,3 +1921,4 @@ html.e24v5 #e24v5 .v5-altkat-satir .v5-altkat-ic{flex:1 1 auto}
 @media (min-width:768px){html.e24v5 #e24v5 .v5-altkat-cift .v5-altkat-ic{gap:6px}}
 @media (min-width:768px){html.e24v5 #e24v5 .v5-altkat-cift .v5-altkat-ic a{padding:0 11px;font-size:13.5px}}
 @media (min-width:768px){html.e24v5 #e24v5 .v5-altkat-satir .v5-altkat-bas{flex-basis:54px}}
+html.e24v5 #e24v5 main.v5-kat,html.e24v5 #e24v5 main.v5-gd{min-height:1300px}
