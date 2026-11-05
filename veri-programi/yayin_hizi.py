@@ -22,10 +22,12 @@ def main():
     cikti = sys.argv[1]
     simdi = datetime.datetime.now(TZ)
     yol = os.path.join(cikti, 'yayin-hizi.json')
+    ilk = False
     try:
         d = json.load(open(yol))
     except Exception:
         d = {'kayit': {}}
+        ilk = True  # ilk çalışmada mevcut haberler yalnız başlangıç kaydıdır, süre ölçümüne girmez
     kayit = d['kayit']
     kod, sm = al('/sitemap-news.xml')
     haber = {}
@@ -46,12 +48,12 @@ def main():
         if y not in kayit:
             if (simdi - yay).total_seconds() > 3 * 3600:
                 continue  # ilk çalışmada eski haberler ölçüme girmez
-            kayit[y] = {'yayin': yt, 'sitemap_gorulen': simdi.isoformat(timespec='minutes'),
-                        'sitemap_dk': round((simdi - yay).total_seconds() / 60), 'durum': al(y, 'HEAD')[0]}
+            kayit[y] = {'yayin': yt, 'sitemap_gorulen': simdi.isoformat(timespec='minutes'), 'baslangic': ilk,
+                        'sitemap_dk': -1 if ilk else round((simdi - yay).total_seconds() / 60), 'durum': al(y, 'HEAD')[0]}
         k = kayit[y]
         if 'rss_gorulen' not in k and y in rssli:
             k['rss_gorulen'] = simdi.isoformat(timespec='minutes')
-            k['rss_dk'] = round((simdi - yay).total_seconds() / 60)
+            k['rss_dk'] = -1 if k.get('baslangic') else round((simdi - yay).total_seconds() / 60)
         if k.get('durum') != 200:
             k['durum'] = al(y, 'HEAD')[0]
     sinir = (simdi - datetime.timedelta(days=7)).isoformat()
