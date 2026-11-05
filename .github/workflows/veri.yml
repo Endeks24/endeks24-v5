@@ -61,6 +61,9 @@ jobs:
         run: |
           # 4.11.2026: içerik sistemi haber adresini kısaltınca listelerde 404 veren bağlantıları doğru adrese eşler (cikti/adres-duzelt.json)
           python3 veri-programi/adres_duzelt.py cikti 2>&1 | tail -3 || true
+      - name: Yayın hızı ölçümü
+        continue-on-error: true
+        run: python3 veri-programi/yayin_hizi.py cikti 2>&1 | tail -3 || true
       - name: Yaz
         run: |
           cd cikti
