@@ -55,14 +55,32 @@
    "durum": 200,
    "rss_gorulen": "2026-11-06T00:08+03:00",
    "rss_dk": 163
+  },
+  "/bddk-golden-global-yatirim-bankasinin-iznini-6-yil-5-ay-sonra-kaldirdi": {
+   "yayin": "2026-11-06T00:55:00+03:00",
+   "sitemap_gorulen": "2026-11-06T01:25+03:00",
+   "baslangic": false,
+   "sitemap_dk": 31,
+   "durum": 200,
+   "rss_gorulen": "2026-11-06T01:25+03:00",
+   "rss_dk": 31
+  },
+  "/kardemir-krdmd-payi-2023ten-beri-bilanco-sonrasi-en-sert-dususu-yasadi": {
+   "yayin": "2026-11-06T00:33:00+03:00",
+   "sitemap_gorulen": "2026-11-06T01:25+03:00",
+   "baslangic": false,
+   "sitemap_dk": 53,
+   "durum": 200,
+   "rss_gorulen": "2026-11-06T01:25+03:00",
+   "rss_dk": 53
   }
  },
  "ozet": {
-  "haber": 7,
-  "sitemap_medyan_dk": 94,
+  "haber": 9,
+  "sitemap_medyan_dk": 69,
   "sitemap_en_uzun_dk": 163,
-  "rss_medyan_dk": 94,
+  "rss_medyan_dk": 69,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-06T00:23+03:00"
+  "guncelleme": "2026-11-06T01:25+03:00"
  }
 }
