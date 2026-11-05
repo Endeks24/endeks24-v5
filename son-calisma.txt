@@ -1,3 +1,4 @@
+BIST 100 saat 10.00 itibarıyla yüzde 0,53 yükselişle 11.539,32 puanda. Endeksteki 100 hisseden 13 hisse geriliyor, 84 hisse yükseliyor.
 rakamlar: {'piyasa': 8, 'gundem': 3}
-TAMAM: cikti/veri.json 95179 bayt; seans 2026-11-04T18:10:00+03:00 ; kripto 2026-11-05T08:36:00+03:00
-2026-11-05T05:36:14Z --kripto-yalniz
+TAMAM: cikti/veri.json 96220 bayt; seans 2026-11-05T10:00:00+03:00 ; kripto 2026-11-05T10:02:00+03:00
+2026-11-05T07:02:17Z 
