@@ -1,4 +1,4 @@
 BIST bugün işlem görmedi ya da seans öncesi (son veri 2026-11-05T18:10:11+03:00); BIST tabloları güncellenmedi.
 rakamlar: {'piyasa': 8, 'gundem': 5}
 TAMAM: cikti/veri.json 105524 bayt; seans 2026-11-05T18:10:00+03:00 ; kripto 2026-11-06T00:08:00+03:00
-2026-11-05T21:08:36Z 
+2026-11-05T21:08:57Z 
