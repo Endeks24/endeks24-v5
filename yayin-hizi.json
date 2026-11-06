@@ -118,14 +118,41 @@
    "durum": 200,
    "rss_gorulen": "2026-11-06T03:16+03:00",
    "rss_dk": 105
+  },
+  "/brent-petrol-toparlandi-ara-secim-sonrasi-dususun-yuzde-29unu-geri-aldi": {
+   "yayin": "2026-11-06T04:47:00+03:00",
+   "sitemap_gorulen": "2026-11-06T04:49+03:00",
+   "baslangic": false,
+   "sitemap_dk": 2,
+   "durum": 200,
+   "rss_gorulen": "2026-11-06T04:49+03:00",
+   "rss_dk": 2
+  },
+  "/kospide-devre-kesici-calisti-nikkei-225-gun-icinde-yuzde-6-dustu": {
+   "yayin": "2026-11-06T04:16:00+03:00",
+   "sitemap_gorulen": "2026-11-06T04:49+03:00",
+   "baslangic": false,
+   "sitemap_dk": 33,
+   "durum": 200,
+   "rss_gorulen": "2026-11-06T04:49+03:00",
+   "rss_dk": 33
+  },
+  "/ons-altin-haftada-yuzde-6-artisla-agustostan-beri-en-iyi-haftaya-gidiyor": {
+   "yayin": "2026-11-06T03:46:00+03:00",
+   "sitemap_gorulen": "2026-11-06T04:49+03:00",
+   "baslangic": false,
+   "sitemap_dk": 63,
+   "durum": 200,
+   "rss_gorulen": "2026-11-06T04:49+03:00",
+   "rss_dk": 63
   }
  },
  "ozet": {
-  "haber": 14,
-  "sitemap_medyan_dk": 61.0,
+  "haber": 17,
+  "sitemap_medyan_dk": 53,
   "sitemap_en_uzun_dk": 163,
-  "rss_medyan_dk": 61.0,
+  "rss_medyan_dk": 53,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-06T03:16+03:00"
+  "guncelleme": "2026-11-06T04:49+03:00"
  }
 }
