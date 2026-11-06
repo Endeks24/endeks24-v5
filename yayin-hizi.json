@@ -280,14 +280,32 @@
    "durum": 200,
    "rss_gorulen": "2026-11-06T18:23+03:00",
    "rss_dk": 7
+  },
+  "/spk-kapali-fonlarin-acilmasi-icin-ziraat-bankasina-basvuru-gerekiyor": {
+   "yayin": "2026-11-06T19:04:00+03:00",
+   "sitemap_gorulen": "2026-11-06T19:14+03:00",
+   "baslangic": false,
+   "sitemap_dk": 11,
+   "durum": 200,
+   "rss_gorulen": "2026-11-06T19:14+03:00",
+   "rss_dk": 11
+  },
+  "/bilancoda-beklentiyi-asan-21-sirketin-7sinde-hisse-dustu-14unde-yukseldi": {
+   "yayin": "2026-11-06T18:43:00+03:00",
+   "sitemap_gorulen": "2026-11-06T19:14+03:00",
+   "baslangic": false,
+   "sitemap_dk": 32,
+   "durum": 200,
+   "rss_gorulen": "2026-11-06T19:14+03:00",
+   "rss_dk": 32
   }
  },
  "ozet": {
-  "haber": 32,
-  "sitemap_medyan_dk": 32.5,
+  "haber": 34,
+  "sitemap_medyan_dk": 32.0,
   "sitemap_en_uzun_dk": 163,
-  "rss_medyan_dk": 32.5,
+  "rss_medyan_dk": 32.0,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-06T18:32+03:00"
+  "guncelleme": "2026-11-06T19:14+03:00"
  }
 }
