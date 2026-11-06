@@ -145,14 +145,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-06T04:49+03:00",
    "rss_dk": 63
+  },
+  "/nikkei-225-gun-icinde-zirveden-yuzde-20-dustu-satis-asyaya-yayildi": {
+   "yayin": "2026-11-06T06:37:00+03:00",
+   "sitemap_gorulen": "2026-11-06T07:35+03:00",
+   "baslangic": false,
+   "sitemap_dk": 58,
+   "durum": 200,
+   "rss_gorulen": "2026-11-06T07:35+03:00",
+   "rss_dk": 58
   }
  },
  "ozet": {
-  "haber": 17,
-  "sitemap_medyan_dk": 53,
+  "haber": 18,
+  "sitemap_medyan_dk": 55.5,
   "sitemap_en_uzun_dk": 163,
-  "rss_medyan_dk": 53,
+  "rss_medyan_dk": 55.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-06T06:28+03:00"
+  "guncelleme": "2026-11-06T07:35+03:00"
  }
 }
