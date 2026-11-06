@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-05T19:48+03:00",
+ "guncelleme": "2026-11-06T19:34+03:00",
  "atif": "Kaynak: Endeks24 Endeksleri (https://www.endeks24.com/endeksler)",
  "kullanim": "Serbestçe alıntılanabilir; kaynak olarak Endeks24 Endeksleri belirtilmeli ve bağlantı verilmelidir. Yatırım tavsiyesi değildir; resmi bir borsa endeksi değildir.",
  "endeksler": {
@@ -8,60 +8,60 @@
    "sayfa": "https://www.endeks24.com/endeks24-halka-arz-endeksi",
    "veri": "https://raw.githubusercontent.com/Endeks24/endeks24-v5/main/endeksler/halka-arz.json",
    "csv": "https://raw.githubusercontent.com/Endeks24/endeks24-v5/main/endeksler/halka-arz.csv",
-   "tarih": "2026-11-05",
-   "deger": 139.668,
-   "bist100": 148.647,
+   "tarih": "2026-11-06",
+   "deger": 142.002,
+   "bist100": 150.605,
    "baslangic": "2024-01-02",
    "uye_sayisi": 72,
    "yenileme": "ceyrek",
    "simulasyon_sonu": "2026-10-27",
    "getiri": {
     "1_gun": {
-     "endeks": 2.21,
-     "bist100": -1.26,
-     "fark_puan": 3.47
+     "endeks": 1.67,
+     "bist100": 1.32,
+     "fark_puan": 0.35
     },
     "1_hafta": {
-     "endeks": 4.92,
-     "bist100": 1.5,
-     "fark_puan": 3.42
+     "endeks": 10.93,
+     "bist100": 6.72,
+     "fark_puan": 4.21
     },
     "1_ay": {
-     "endeks": -19.15,
-     "bist100": -8.93,
-     "fark_puan": -10.22
+     "endeks": -17.45,
+     "bist100": -7.21,
+     "fark_puan": -10.24
     },
     "3_ay": {
-     "endeks": -49.53,
-     "bist100": -17.75,
-     "fark_puan": -31.78
+     "endeks": -48.75,
+     "bist100": -16.86,
+     "fark_puan": -31.88
     },
     "baslangictan": {
-     "endeks": 39.67,
-     "bist100": 48.65,
-     "fark_puan": -8.98
+     "endeks": 42.0,
+     "bist100": 50.6,
+     "fark_puan": -8.6
     },
     "yil_basi": {
-     "endeks": -22.85,
-     "bist100": 0.64,
-     "fark_puan": -23.49
+     "endeks": -21.56,
+     "bist100": 1.96,
+     "fark_puan": -23.53
     }
    },
    "en_cok_artan": [
     {
      "kod": "MCARD",
      "ad": "Metropal Kurumsal Hizmetler A.Ş.",
-     "getiri_1_ay": 25.9
+     "getiri_1_ay": 26.7
     },
     {
      "kod": "BEGYO",
      "ad": "Batı Ege Gayrimenkul Yatırım Ortaklığı A.Ş.",
-     "getiri_1_ay": 15.2
+     "getiri_1_ay": 17.7
     },
     {
      "kod": "DCTTR",
      "ad": "DCT Trading Dış Ticaret A.Ş.",
-     "getiri_1_ay": 11.2
+     "getiri_1_ay": 10.0
     }
    ],
    "en_cok_dusen": [
@@ -73,12 +73,12 @@
     {
      "kod": "BIGEN",
      "ad": "Birleşim Grup Enerji Yatırımları A.Ş.",
-     "getiri_1_ay": -84.4
+     "getiri_1_ay": -80.9
     },
     {
      "kod": "ALKLC",
      "ad": "Altınkılıç Gıda ve Süt Sanayi Ticaret A.Ş.",
-     "getiri_1_ay": -83.6
+     "getiri_1_ay": -80.0
     }
    ],
    "son_yenileme": {
@@ -115,12 +115,12 @@
     ]
    },
    "hazir_cumleler": [
-    "Endeks24 Halka Arz Endeksi 5 Kasım 2026 tarihinde +%2,2 değişti; aynı gün BIST 100 −%1,3 değişti.",
-    "Son bir ayda Endeks24 Halka Arz Endeksi −%19,1 değişirken BIST 100 −%8,9 değişti; endeks BIST 100'ün 10,2 puan gerisinde.",
-    "Son üç ayda Endeks24 Halka Arz Endeksi −%49,5 değişirken BIST 100 −%17,8 değişti; endeks BIST 100'ün 31,8 puan gerisinde.",
-    "Yıl başından bu yana Endeks24 Halka Arz Endeksi −%22,9 değişirken BIST 100 +%0,6 değişti; endeks BIST 100'ün 23,5 puan gerisinde.",
-    "2 Ocak 2024 başlangıcından bu yana Endeks24 Halka Arz Endeksi +%39,7 değişirken BIST 100 +%48,6 değişti; endeks BIST 100'ün 9,0 puan gerisinde.",
-    "Son bir ayda Endeks24 Halka Arz Endeksi bileşenleri arasında en çok yükselen MCARD (+%25,9), en çok düşen OZATD (−%90,1) oldu.",
+    "Endeks24 Halka Arz Endeksi 6 Kasım 2026 tarihinde +%1,7 değişti; aynı gün BIST 100 +%1,3 değişti.",
+    "Son bir ayda Endeks24 Halka Arz Endeksi −%17,4 değişirken BIST 100 −%7,2 değişti; endeks BIST 100'ün 10,2 puan gerisinde.",
+    "Son üç ayda Endeks24 Halka Arz Endeksi −%48,8 değişirken BIST 100 −%16,9 değişti; endeks BIST 100'ün 31,9 puan gerisinde.",
+    "Yıl başından bu yana Endeks24 Halka Arz Endeksi −%21,6 değişirken BIST 100 +%2,0 değişti; endeks BIST 100'ün 23,5 puan gerisinde.",
+    "2 Ocak 2024 başlangıcından bu yana Endeks24 Halka Arz Endeksi +%42,0 değişirken BIST 100 +%50,6 değişti; endeks BIST 100'ün 8,6 puan gerisinde.",
+    "Son bir ayda Endeks24 Halka Arz Endeksi bileşenleri arasında en çok yükselen MCARD (+%26,7), en çok düşen OZATD (−%90,1) oldu.",
     "Halka arz endeksinin 27 Ekim 2026 öncesi geçmişi simülasyondur (bugünün hisse evreni geçmişe uygulanmıştır)."
    ]
   },
@@ -129,62 +129,62 @@
    "sayfa": "https://www.endeks24.com/endeks24-net-nakit-endeksi",
    "veri": "https://raw.githubusercontent.com/Endeks24/endeks24-v5/main/endeksler/net-nakit.json",
    "csv": "https://raw.githubusercontent.com/Endeks24/endeks24-v5/main/endeksler/net-nakit.csv",
-   "tarih": "2026-11-05",
-   "deger": 105.358,
-   "bist100": 101.626,
+   "tarih": "2026-11-06",
+   "deger": 106.966,
+   "bist100": 102.965,
    "baslangic": "2026-10-26",
    "uye_sayisi": 20,
    "yenileme": "ceyrek",
    "simulasyon_sonu": "2026-10-27",
    "getiri": {
     "1_gun": {
-     "endeks": 1.76,
-     "bist100": -1.26,
-     "fark_puan": 3.03
+     "endeks": 1.53,
+     "bist100": 1.32,
+     "fark_puan": 0.21
     },
     "1_hafta": {
-     "endeks": 4.59,
-     "bist100": 1.5,
-     "fark_puan": 3.09
+     "endeks": 11.67,
+     "bist100": 6.72,
+     "fark_puan": 4.95
     },
     "baslangictan": {
-     "endeks": 5.36,
-     "bist100": 1.63,
-     "fark_puan": 3.73
+     "endeks": 6.97,
+     "bist100": 2.96,
+     "fark_puan": 4.0
     }
    },
    "en_cok_artan": [
     {
      "kod": "MCARD",
      "ad": "Metropal Kurumsal Hizmetler A.Ş.",
-     "getiri_1_ay": 25.9
-    },
-    {
-     "kod": "SOKE",
-     "ad": "Söke Değirmencilik Sanayi ve Ticaret A.Ş.",
-     "getiri_1_ay": 14.0
+     "getiri_1_ay": 26.7
     },
     {
      "kod": "AFYON",
      "ad": "Afyon Çimento Sanayi T.A.Ş.",
-     "getiri_1_ay": 10.3
+     "getiri_1_ay": 7.5
+    },
+    {
+     "kod": "SOKE",
+     "ad": "Söke Değirmencilik Sanayi ve Ticaret A.Ş.",
+     "getiri_1_ay": 5.5
     }
    ],
    "en_cok_dusen": [
     {
      "kod": "RUZYE",
      "ad": "Ruzy Madencilik ve Enerji Yatırımları Sanayi ve Ticaret A.Ş.",
-     "getiri_1_ay": -26.2
+     "getiri_1_ay": -24.9
     },
     {
      "kod": "LINK",
      "ad": "Link Bilgisayar Sistemleri Yazılımı ve Donanımı Sanayi ve Ticaret A.Ş.",
-     "getiri_1_ay": -25.1
+     "getiri_1_ay": -22.8
     },
     {
-     "kod": "OBAMS",
-     "ad": "Oba Makarnacılık Sanayi ve Ticaret A.Ş",
-     "getiri_1_ay": -23.4
+     "kod": "TRENJ",
+     "ad": "TR Doğal Enerji Kaynakları Araştırma ve Üretim A.Ş.",
+     "getiri_1_ay": -21.9
     }
    ],
    "son_yenileme": {
@@ -214,9 +214,9 @@
     "cikan": []
    },
    "hazir_cumleler": [
-    "Endeks24 Net Nakit Endeksi 5 Kasım 2026 tarihinde +%1,8 değişti; aynı gün BIST 100 −%1,3 değişti.",
-    "26 Ekim 2026 başlangıcından bu yana Endeks24 Net Nakit Endeksi +%5,4 değişirken BIST 100 +%1,6 değişti; endeks BIST 100'ün 3,7 puan önünde.",
-    "Son bir ayda Endeks24 Net Nakit Endeksi bileşenleri arasında en çok yükselen MCARD (+%25,9), en çok düşen RUZYE (−%26,2) oldu."
+    "Endeks24 Net Nakit Endeksi 6 Kasım 2026 tarihinde +%1,5 değişti; aynı gün BIST 100 +%1,3 değişti.",
+    "26 Ekim 2026 başlangıcından bu yana Endeks24 Net Nakit Endeksi +%7,0 değişirken BIST 100 +%3,0 değişti; endeks BIST 100'ün 4,0 puan önünde.",
+    "Son bir ayda Endeks24 Net Nakit Endeksi bileşenleri arasında en çok yükselen MCARD (+%26,7), en çok düşen RUZYE (−%24,9) oldu."
    ]
   },
   "fon-akisi": {
@@ -224,62 +224,62 @@
    "sayfa": "https://www.endeks24.com/endeks24-fon-akisi-endeksi",
    "veri": "https://raw.githubusercontent.com/Endeks24/endeks24-v5/main/endeksler/fon-akisi.json",
    "csv": "https://raw.githubusercontent.com/Endeks24/endeks24-v5/main/endeksler/fon-akisi.csv",
-   "tarih": "2026-11-05",
-   "deger": 102.465,
-   "bist100": 101.626,
+   "tarih": "2026-11-06",
+   "deger": 104.258,
+   "bist100": 102.965,
    "baslangic": "2026-10-26",
    "uye_sayisi": 12,
    "yenileme": "ay",
    "simulasyon_sonu": "2026-10-27",
    "getiri": {
     "1_gun": {
-     "endeks": -1.25,
-     "bist100": -1.26,
-     "fark_puan": 0.02
+     "endeks": 1.75,
+     "bist100": 1.32,
+     "fark_puan": 0.43
     },
     "1_hafta": {
-     "endeks": 1.75,
-     "bist100": 1.5,
-     "fark_puan": 0.24
+     "endeks": 8.25,
+     "bist100": 6.72,
+     "fark_puan": 1.53
     },
     "baslangictan": {
-     "endeks": 2.47,
-     "bist100": 1.63,
-     "fark_puan": 0.84
+     "endeks": 4.26,
+     "bist100": 2.96,
+     "fark_puan": 1.29
     }
    },
    "en_cok_artan": [
     {
      "kod": "GARAN",
      "ad": "Türkiye Garanti Bankası A.Ş.",
-     "getiri_1_ay": 8.9
+     "getiri_1_ay": 10.0
     },
     {
-     "kod": "YKBNK",
-     "ad": "Yapı ve Kredi Bankası A.Ş.",
-     "getiri_1_ay": 1.7
+     "kod": "ISCTR",
+     "ad": "Türkiye İş Bankası A.Ş.",
+     "getiri_1_ay": 3.3
     },
     {
      "kod": "THYAO",
      "ad": "Türk Hava Yolları A.O.",
-     "getiri_1_ay": 1.6
+     "getiri_1_ay": 3.0
     }
    ],
    "en_cok_dusen": [
     {
      "kod": "ASTOR",
      "ad": "Astor Enerji A.Ş.",
-     "getiri_1_ay": -24.6
+     "getiri_1_ay": -17.0
     },
     {
      "kod": "EREGL",
      "ad": "Ereğli Demir ve Çelik Fabrikaları T.A.Ş.",
-     "getiri_1_ay": -18.2
+     "getiri_1_ay": -16.2
     },
     {
-     "kod": "TUPRS",
-     "ad": "TÜPRAŞ - Türkiye Petrol Rafinerileri A.Ş.",
-     "getiri_1_ay": -15.2
+     "kod": "TRMET",
+     "ad": "TR Anadolu Metal Madencilik İşletmeleri A.Ş.",
+     "getiri_1_ay": -13.6
     }
    ],
    "son_yenileme": {
@@ -288,15 +288,15 @@
     "cikan": []
    },
    "hazir_cumleler": [
-    "Endeks24 Fon Akışı Endeksi 5 Kasım 2026 tarihinde −%1,2 değişti; aynı gün BIST 100 −%1,3 değişti.",
-    "26 Ekim 2026 başlangıcından bu yana Endeks24 Fon Akışı Endeksi +%2,5 değişirken BIST 100 +%1,6 değişti; endeks BIST 100'ün 0,8 puan önünde.",
-    "Son bir ayda Endeks24 Fon Akışı Endeksi bileşenleri arasında en çok yükselen GARAN (+%8,9), en çok düşen ASTOR (−%24,6) oldu."
+    "Endeks24 Fon Akışı Endeksi 6 Kasım 2026 tarihinde +%1,8 değişti; aynı gün BIST 100 +%1,3 değişti.",
+    "26 Ekim 2026 başlangıcından bu yana Endeks24 Fon Akışı Endeksi +%4,3 değişirken BIST 100 +%3,0 değişti; endeks BIST 100'ün 1,3 puan önünde.",
+    "Son bir ayda Endeks24 Fon Akışı Endeksi bileşenleri arasında en çok yükselen GARAN (+%10,0), en çok düşen ASTOR (−%17,0) oldu."
    ]
   }
  },
  "gunun_notu": [
-  "Endeks24 Halka Arz Endeksi 5 Kasım 2026 tarihinde +%2,2 değişti; aynı gün BIST 100 −%1,3 değişti.",
-  "Endeks24 Net Nakit Endeksi 5 Kasım 2026 tarihinde +%1,8 değişti; aynı gün BIST 100 −%1,3 değişti.",
-  "Endeks24 Fon Akışı Endeksi 5 Kasım 2026 tarihinde −%1,2 değişti; aynı gün BIST 100 −%1,3 değişti."
+  "Endeks24 Halka Arz Endeksi 6 Kasım 2026 tarihinde +%1,7 değişti; aynı gün BIST 100 +%1,3 değişti.",
+  "Endeks24 Net Nakit Endeksi 6 Kasım 2026 tarihinde +%1,5 değişti; aynı gün BIST 100 +%1,3 değişti.",
+  "Endeks24 Fon Akışı Endeksi 6 Kasım 2026 tarihinde +%1,8 değişti; aynı gün BIST 100 +%1,3 değişti."
  ]
 }
