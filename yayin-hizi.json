@@ -154,14 +154,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-06T07:35+03:00",
    "rss_dk": 58
+  },
+  "/sasa-9-aylik-net-zararini-yuzde-89-azaltti-3-ceyrekte-zarar-buyudu": {
+   "yayin": "2026-11-06T08:29:00+03:00",
+   "sitemap_gorulen": "2026-11-06T08:35+03:00",
+   "baslangic": false,
+   "sitemap_dk": 7,
+   "durum": 200,
+   "rss_gorulen": "2026-11-06T08:35+03:00",
+   "rss_dk": 7
   }
  },
  "ozet": {
-  "haber": 18,
-  "sitemap_medyan_dk": 55.5,
+  "haber": 19,
+  "sitemap_medyan_dk": 53,
   "sitemap_en_uzun_dk": 163,
-  "rss_medyan_dk": 55.5,
+  "rss_medyan_dk": 53,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-06T07:35+03:00"
+  "guncelleme": "2026-11-06T08:35+03:00"
  }
 }
