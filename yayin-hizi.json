@@ -298,14 +298,41 @@
    "durum": 200,
    "rss_gorulen": "2026-11-06T19:14+03:00",
    "rss_dk": 32
+  },
+  "/bist-100-teknik-taramasinda-8-hissede-gosterge-al-yonune-dondu-dordu-banka": {
+   "yayin": "2026-11-06T20:25:00+03:00",
+   "sitemap_gorulen": "2026-11-06T20:28+03:00",
+   "baslangic": false,
+   "sitemap_dk": 3,
+   "durum": 200,
+   "rss_gorulen": "2026-11-06T20:28+03:00",
+   "rss_dk": 3
+  },
+  "/agholun-ana-ortaklik-kari-9-ayda-5777-milyon-tl-parasal-kazanc-one-cikti": {
+   "yayin": "2026-11-06T20:01:00+03:00",
+   "sitemap_gorulen": "2026-11-06T20:28+03:00",
+   "baslangic": false,
+   "sitemap_dk": 27,
+   "durum": 200,
+   "rss_gorulen": "2026-11-06T20:28+03:00",
+   "rss_dk": 27
+  },
+  "/sekerbank-skbnk-bedellide-kalan-paylari-satacak-en-dusuk-fiyat-1-lira": {
+   "yayin": "2026-11-06T19:29:00+03:00",
+   "sitemap_gorulen": "2026-11-06T20:28+03:00",
+   "baslangic": false,
+   "sitemap_dk": 59,
+   "durum": 200,
+   "rss_gorulen": "2026-11-06T20:28+03:00",
+   "rss_dk": 59
   }
  },
  "ozet": {
-  "haber": 34,
-  "sitemap_medyan_dk": 32.0,
+  "haber": 37,
+  "sitemap_medyan_dk": 32,
   "sitemap_en_uzun_dk": 163,
-  "rss_medyan_dk": 32.0,
+  "rss_medyan_dk": 32,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-06T19:28+03:00"
+  "guncelleme": "2026-11-06T20:28+03:00"
  }
 }
