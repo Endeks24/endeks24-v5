@@ -163,14 +163,41 @@
    "durum": 200,
    "rss_gorulen": "2026-11-06T08:35+03:00",
    "rss_dk": 7
+  },
+  "/bist-100-gune-yuzde-1-eksiyle-basladi-nikkei-225-ve-kospi-yuzde-6-dustu": {
+   "yayin": "2026-11-06T10:03:00+03:00",
+   "sitemap_gorulen": "2026-11-06T10:03+03:00",
+   "baslangic": false,
+   "sitemap_dk": 1,
+   "durum": 200,
+   "rss_gorulen": "2026-11-06T10:03+03:00",
+   "rss_dk": 1
+  },
+  "/tofas-toaso-3-ceyrek-karini-yuzde-176-artirdi-ford-otosan-geriledi": {
+   "yayin": "2026-11-06T09:32:00+03:00",
+   "sitemap_gorulen": "2026-11-06T10:03+03:00",
+   "baslangic": false,
+   "sitemap_dk": 32,
+   "durum": 200,
+   "rss_gorulen": "2026-11-06T10:03+03:00",
+   "rss_dk": 32
+  },
+  "/benzinde-6-liralik-indirim-pompaya-yansidi-1-kasim-zammi-geri-alindi": {
+   "yayin": "2026-11-06T08:59:00+03:00",
+   "sitemap_gorulen": "2026-11-06T10:03+03:00",
+   "baslangic": false,
+   "sitemap_dk": 65,
+   "durum": 200,
+   "rss_gorulen": "2026-11-06T10:03+03:00",
+   "rss_dk": 65
   }
  },
  "ozet": {
-  "haber": 19,
-  "sitemap_medyan_dk": 53,
+  "haber": 22,
+  "sitemap_medyan_dk": 50.5,
   "sitemap_en_uzun_dk": 163,
-  "rss_medyan_dk": 53,
+  "rss_medyan_dk": 50.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-06T08:35+03:00"
+  "guncelleme": "2026-11-06T10:03+03:00"
  }
 }
