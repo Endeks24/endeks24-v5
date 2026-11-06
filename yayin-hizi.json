@@ -226,14 +226,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-06T12:34+03:00",
    "rss_dk": 3
+  },
+  "/hazine-kasim-takvimindeki-4-borclanma-islemini-9-ve-10-kasimda-yapacak": {
+   "yayin": "2026-11-06T13:39:00+03:00",
+   "sitemap_gorulen": "2026-11-06T13:41+03:00",
+   "baslangic": false,
+   "sitemap_dk": 2,
+   "durum": 200,
+   "rss_gorulen": "2026-11-06T13:41+03:00",
+   "rss_dk": 2
   }
  },
  "ozet": {
-  "haber": 26,
-  "sitemap_medyan_dk": 40.0,
+  "haber": 27,
+  "sitemap_medyan_dk": 33,
   "sitemap_en_uzun_dk": 163,
-  "rss_medyan_dk": 40.0,
+  "rss_medyan_dk": 33,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-06T13:28+03:00"
+  "guncelleme": "2026-11-06T13:41+03:00"
  }
 }
