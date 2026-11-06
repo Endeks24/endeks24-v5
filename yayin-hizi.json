@@ -208,14 +208,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-06T12:02+03:00",
    "rss_dk": 28
+  },
+  "/akcansa-akcns-temettu-serisi-30-yila-ulasti-bist-100de-en-uzun-seri": {
+   "yayin": "2026-11-06T12:10:00+03:00",
+   "sitemap_gorulen": "2026-11-06T12:22+03:00",
+   "baslangic": false,
+   "sitemap_dk": 12,
+   "durum": 200,
+   "rss_gorulen": "2026-11-06T12:22+03:00",
+   "rss_dk": 12
   }
  },
  "ozet": {
-  "haber": 24,
-  "sitemap_medyan_dk": 47.5,
+  "haber": 25,
+  "sitemap_medyan_dk": 47,
   "sitemap_en_uzun_dk": 163,
-  "rss_medyan_dk": 47.5,
+  "rss_medyan_dk": 47,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-06T12:02+03:00"
+  "guncelleme": "2026-11-06T12:22+03:00"
  }
 }
