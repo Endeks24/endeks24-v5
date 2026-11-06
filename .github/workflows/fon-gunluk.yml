@@ -46,3 +46,4 @@ jobs:
           git commit -qm "fon günlüğü $(TZ=Europe/Istanbul date '+%d.%m.%Y %H:%M')"
           git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
           git push -f origin fon-log
+# tetik 2026-11-06T07:36 (anahtar yenileme dogrulamasi)
