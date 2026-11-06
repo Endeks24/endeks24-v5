@@ -271,14 +271,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-06T17:42+03:00",
    "rss_dk": 38
+  },
+  "/bist-100-yedi-haftalik-dusus-serisini-bitirdi-2005ten-beri-en-uzunuydu": {
+   "yayin": "2026-11-06T18:17:00+03:00",
+   "sitemap_gorulen": "2026-11-06T18:23+03:00",
+   "baslangic": false,
+   "sitemap_dk": 7,
+   "durum": 200,
+   "rss_gorulen": "2026-11-06T18:23+03:00",
+   "rss_dk": 7
   }
  },
  "ozet": {
-  "haber": 31,
-  "sitemap_medyan_dk": 33,
+  "haber": 32,
+  "sitemap_medyan_dk": 32.5,
   "sitemap_en_uzun_dk": 163,
-  "rss_medyan_dk": 33,
+  "rss_medyan_dk": 32.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-06T17:44+03:00"
+  "guncelleme": "2026-11-06T18:23+03:00"
  }
 }
