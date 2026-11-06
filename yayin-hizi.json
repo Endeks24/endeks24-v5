@@ -73,14 +73,59 @@
    "durum": 200,
    "rss_gorulen": "2026-11-06T01:25+03:00",
    "rss_dk": 53
+  },
+  "/simsek-gelir-kurumlar-ve-kdv-genel-oranlarinda-artis-gundemde-yok": {
+   "yayin": "2026-11-06T03:13:00+03:00",
+   "sitemap_gorulen": "2026-11-06T03:16+03:00",
+   "baslangic": false,
+   "sitemap_dk": 4,
+   "durum": 200,
+   "rss_gorulen": "2026-11-06T03:16+03:00",
+   "rss_dk": 4
+  },
+  "/migros-mgros-9-ayda-satisi-yuzde-4-artirdi-net-kari-yuzde-34-azaldi": {
+   "yayin": "2026-11-06T02:52:00+03:00",
+   "sitemap_gorulen": "2026-11-06T03:16+03:00",
+   "baslangic": false,
+   "sitemap_dk": 25,
+   "durum": 200,
+   "rss_gorulen": "2026-11-06T03:16+03:00",
+   "rss_dk": 25
+  },
+  "/albaraka-turk-albrk-3-ceyrek-kari-beklentiyi-yuzde-73-asti": {
+   "yayin": "2026-11-06T02:30:00+03:00",
+   "sitemap_gorulen": "2026-11-06T03:16+03:00",
+   "baslangic": false,
+   "sitemap_dk": 47,
+   "durum": 200,
+   "rss_gorulen": "2026-11-06T03:16+03:00",
+   "rss_dk": 47
+  },
+  "/sp-500-yuzde-4-dustu-nisan-2025ten-bu-yana-en-kotu-gun": {
+   "yayin": "2026-11-06T02:07:00+03:00",
+   "sitemap_gorulen": "2026-11-06T03:16+03:00",
+   "baslangic": false,
+   "sitemap_dk": 70,
+   "durum": 200,
+   "rss_gorulen": "2026-11-06T03:16+03:00",
+   "rss_dk": 70
+  },
+  "/mekke-anlasmasi-tbmm-genel-kurulundan-279-kabul-oyuyla-gecti": {
+   "yayin": "2026-11-06T01:32:00+03:00",
+   "sitemap_gorulen": "2026-11-06T03:16+03:00",
+   "baslangic": false,
+   "sitemap_dk": 105,
+   "durum": 200,
+   "rss_gorulen": "2026-11-06T03:16+03:00",
+   "rss_dk": 105
   }
  },
  "ozet": {
-  "haber": 9,
-  "sitemap_medyan_dk": 69,
+  "haber": 14,
+  "sitemap_medyan_dk": 61.0,
   "sitemap_en_uzun_dk": 163,
-  "rss_medyan_dk": 69,
+  "rss_medyan_dk": 61.0,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-06T01:25+03:00"
+  "guncelleme": "2026-11-06T03:16+03:00"
  }
 }
