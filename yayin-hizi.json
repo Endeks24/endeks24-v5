@@ -190,14 +190,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-06T10:03+03:00",
    "rss_dk": 65
+  },
+  "/aselsan-asels-yuzde-7-dustu-bist-100-kaybinin-ucte-ikisini-olusturdu": {
+   "yayin": "2026-11-06T10:24:00+03:00",
+   "sitemap_gorulen": "2026-11-06T10:50+03:00",
+   "baslangic": false,
+   "sitemap_dk": 26,
+   "durum": 200,
+   "rss_gorulen": "2026-11-06T10:50+03:00",
+   "rss_dk": 26
   }
  },
  "ozet": {
-  "haber": 22,
-  "sitemap_medyan_dk": 50.5,
+  "haber": 23,
+  "sitemap_medyan_dk": 48,
   "sitemap_en_uzun_dk": 163,
-  "rss_medyan_dk": 50.5,
+  "rss_medyan_dk": 48,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-06T10:03+03:00"
+  "guncelleme": "2026-11-06T10:50+03:00"
  }
 }
