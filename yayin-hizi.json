@@ -199,14 +199,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-06T10:50+03:00",
    "rss_dk": 26
+  },
+  "/ronesans-gayrimenkul-rgyas-operasyonel-geliri-yuzde-27-artti-kari-dustu": {
+   "yayin": "2026-11-06T11:35:00+03:00",
+   "sitemap_gorulen": "2026-11-06T12:02+03:00",
+   "baslangic": false,
+   "sitemap_dk": 28,
+   "durum": 200,
+   "rss_gorulen": "2026-11-06T12:02+03:00",
+   "rss_dk": 28
   }
  },
  "ozet": {
-  "haber": 23,
-  "sitemap_medyan_dk": 48,
+  "haber": 24,
+  "sitemap_medyan_dk": 47.5,
   "sitemap_en_uzun_dk": 163,
-  "rss_medyan_dk": 48,
+  "rss_medyan_dk": 47.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-06T11:22+03:00"
+  "guncelleme": "2026-11-06T12:02+03:00"
  }
 }
