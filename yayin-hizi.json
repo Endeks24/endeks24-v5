@@ -235,14 +235,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-06T13:41+03:00",
    "rss_dk": 2
+  },
+  "/rekabet-kurulu-findikta-ferrero-dahil-7-tesebbuse-sorusturma-acti": {
+   "yayin": "2026-11-06T14:39:00+03:00",
+   "sitemap_gorulen": "2026-11-06T14:43+03:00",
+   "baslangic": false,
+   "sitemap_dk": 5,
+   "durum": 200,
+   "rss_gorulen": "2026-11-06T14:43+03:00",
+   "rss_dk": 5
   }
  },
  "ozet": {
-  "haber": 27,
-  "sitemap_medyan_dk": 33,
+  "haber": 28,
+  "sitemap_medyan_dk": 32.5,
   "sitemap_en_uzun_dk": 163,
-  "rss_medyan_dk": 33,
+  "rss_medyan_dk": 32.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-06T14:35+03:00"
+  "guncelleme": "2026-11-06T14:43+03:00"
  }
 }
