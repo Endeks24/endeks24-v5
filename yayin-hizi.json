@@ -325,14 +325,50 @@
    "durum": 200,
    "rss_gorulen": "2026-11-06T20:28+03:00",
    "rss_dk": 59
+  },
+  "/borusan-boru-brsan-net-kari-9-ayda-yuzde-155-artti-3916-milyon-tl-oldu": {
+   "yayin": "2026-11-07T00:23:00+03:00",
+   "sitemap_gorulen": "2026-11-07T01:22+03:00",
+   "baslangic": false,
+   "sitemap_dk": 59,
+   "durum": 200,
+   "rss_gorulen": "2026-11-07T01:22+03:00",
+   "rss_dk": 59
+  },
+  "/tupras-tuprs-3-ceyrekte-69-milyar-tl-net-kar-yazdi-2026nin-en-yuksegi": {
+   "yayin": "2026-11-06T23:46:00+03:00",
+   "sitemap_gorulen": "2026-11-07T01:22+03:00",
+   "baslangic": false,
+   "sitemap_dk": 96,
+   "durum": 200,
+   "rss_gorulen": "2026-11-07T01:22+03:00",
+   "rss_dk": 96
+  },
+  "/oyak-cimento-oyakc-temettu-onerdi-toplam-2-milyar-431-milyon-lira": {
+   "yayin": "2026-11-06T23:16:00+03:00",
+   "sitemap_gorulen": "2026-11-07T01:22+03:00",
+   "baslangic": false,
+   "sitemap_dk": 126,
+   "durum": 200,
+   "rss_gorulen": "2026-11-07T01:22+03:00",
+   "rss_dk": 126
+  },
+  "/halkbank-halkb-9-aylik-kari-26-milyar-tl-net-faiz-geliri-ikiye-katlandi": {
+   "yayin": "2026-11-06T22:42:00+03:00",
+   "sitemap_gorulen": "2026-11-07T01:22+03:00",
+   "baslangic": false,
+   "sitemap_dk": 160,
+   "durum": 200,
+   "rss_gorulen": "2026-11-07T01:22+03:00",
+   "rss_dk": 160
   }
  },
  "ozet": {
-  "haber": 37,
-  "sitemap_medyan_dk": 32,
+  "haber": 41,
+  "sitemap_medyan_dk": 33,
   "sitemap_en_uzun_dk": 163,
-  "rss_medyan_dk": 32,
+  "rss_medyan_dk": 33,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-06T20:28+03:00"
+  "guncelleme": "2026-11-07T01:22+03:00"
  }
 }
