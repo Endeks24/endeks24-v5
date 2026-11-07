@@ -361,14 +361,41 @@
    "durum": 200,
    "rss_gorulen": "2026-11-07T01:22+03:00",
    "rss_dk": 160
+  },
+  "/ons-altin-haftayi-4069-dolardan-kapatti-haftalik-artis-yuzde-5": {
+   "yayin": "2026-11-07T10:58:00+03:00",
+   "sitemap_gorulen": "2026-11-07T12:13+03:00",
+   "baslangic": false,
+   "sitemap_dk": 76,
+   "durum": 200,
+   "rss_gorulen": "2026-11-07T12:13+03:00",
+   "rss_dk": 76
+  },
+  "/hazine-ekimde-330-milyar-lira-nakit-acigi-verdi-faiz-279-milyar-lira": {
+   "yayin": "2026-11-07T10:37:00+03:00",
+   "sitemap_gorulen": "2026-11-07T12:13+03:00",
+   "baslangic": false,
+   "sitemap_dk": 97,
+   "durum": 200,
+   "rss_gorulen": "2026-11-07T12:13+03:00",
+   "rss_dk": 97
+  },
+  "/spk-tmpol-isvea-ve-terada-88-kisi-icin-suc-duyurusu-karari-aldi": {
+   "yayin": "2026-11-07T09:59:00+03:00",
+   "sitemap_gorulen": "2026-11-07T12:13+03:00",
+   "baslangic": false,
+   "sitemap_dk": 135,
+   "durum": 200,
+   "rss_gorulen": "2026-11-07T12:13+03:00",
+   "rss_dk": 135
   }
  },
  "ozet": {
-  "haber": 41,
-  "sitemap_medyan_dk": 33,
+  "haber": 44,
+  "sitemap_medyan_dk": 36.5,
   "sitemap_en_uzun_dk": 163,
-  "rss_medyan_dk": 33,
+  "rss_medyan_dk": 36.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-07T05:21+03:00"
+  "guncelleme": "2026-11-07T12:13+03:00"
  }
 }
