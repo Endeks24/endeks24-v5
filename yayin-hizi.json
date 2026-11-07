@@ -388,14 +388,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-07T12:13+03:00",
    "rss_dk": 135
+  },
+  "/fon-sorusturmasinda-bassavcilik-neslihan-mumcu-icin-tedbir-talep-etti": {
+   "yayin": "2026-11-08T02:23:00+03:00",
+   "sitemap_gorulen": "2026-11-08T02:56+03:00",
+   "baslangic": false,
+   "sitemap_dk": 33,
+   "durum": 200,
+   "rss_gorulen": "2026-11-08T02:56+03:00",
+   "rss_dk": 33
   }
  },
  "ozet": {
-  "haber": 44,
-  "sitemap_medyan_dk": 36.5,
+  "haber": 45,
+  "sitemap_medyan_dk": 35,
   "sitemap_en_uzun_dk": 163,
-  "rss_medyan_dk": 36.5,
+  "rss_medyan_dk": 35,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-07T23:28+03:00"
+  "guncelleme": "2026-11-08T02:56+03:00"
  }
 }
