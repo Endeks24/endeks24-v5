@@ -442,14 +442,59 @@
    "durum": 200,
    "rss_gorulen": "2026-11-08T09:40+03:00",
    "rss_dk": 149
+  },
+  "/turistik-dogu-ekspresinde-oda-15-bin-liradan-sefer-21-aralikta-basliyor": {
+   "yayin": "2026-11-08T16:34:00+03:00",
+   "sitemap_gorulen": "2026-11-08T16:52+03:00",
+   "baslangic": false,
+   "sitemap_dk": 18,
+   "durum": 200,
+   "rss_gorulen": "2026-11-08T16:52+03:00",
+   "rss_dk": 18
+  },
+  "/devrim-muhafizlari-hurmuzde-uc-tanker-mayina-carpip-yandi": {
+   "yayin": "2026-11-08T16:12:00+03:00",
+   "sitemap_gorulen": "2026-11-08T16:52+03:00",
+   "baslangic": false,
+   "sitemap_dk": 40,
+   "durum": 200,
+   "rss_gorulen": "2026-11-08T16:52+03:00",
+   "rss_dk": 40
+  },
+  "/uraloglu-dron-otoyollari-olusturulacak-ucuslar-dijital-koridorda-olacak": {
+   "yayin": "2026-11-08T16:03:00+03:00",
+   "sitemap_gorulen": "2026-11-08T16:52+03:00",
+   "baslangic": false,
+   "sitemap_dk": 49,
+   "durum": 200,
+   "rss_gorulen": "2026-11-08T16:52+03:00",
+   "rss_dk": 49
+  },
+  "/bilal-soysal-tutuklandi-fon-sorusturmasinda-bddkdan-ikinci-daire-baskani": {
+   "yayin": "2026-11-08T15:08:00+03:00",
+   "sitemap_gorulen": "2026-11-08T16:52+03:00",
+   "baslangic": false,
+   "sitemap_dk": 104,
+   "durum": 200,
+   "rss_gorulen": "2026-11-08T16:52+03:00",
+   "rss_dk": 104
+  },
+  "/openai-finansman-turunun-ilk-asamasinda-11-milyar-dolar-topladi": {
+   "yayin": "2026-11-08T14:16:00+03:00",
+   "sitemap_gorulen": "2026-11-08T16:52+03:00",
+   "baslangic": false,
+   "sitemap_dk": 156,
+   "durum": 200,
+   "rss_gorulen": "2026-11-08T16:52+03:00",
+   "rss_dk": 156
   }
  },
  "ozet": {
-  "haber": 50,
-  "sitemap_medyan_dk": 42.5,
+  "haber": 55,
+  "sitemap_medyan_dk": 47,
   "sitemap_en_uzun_dk": 163,
-  "rss_medyan_dk": 42.5,
+  "rss_medyan_dk": 47,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-08T09:40+03:00"
+  "guncelleme": "2026-11-08T16:52+03:00"
  }
 }
