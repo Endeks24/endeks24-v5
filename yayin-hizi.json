@@ -397,14 +397,59 @@
    "durum": 200,
    "rss_gorulen": "2026-11-08T02:56+03:00",
    "rss_dk": 33
+  },
+  "/tcmb-yilin-son-enflasyon-raporunu-12-kasim-persembe-gunu-sunacak": {
+   "yayin": "2026-11-08T09:32:00+03:00",
+   "sitemap_gorulen": "2026-11-08T09:40+03:00",
+   "baslangic": false,
+   "sitemap_dk": 8,
+   "durum": 200,
+   "rss_gorulen": "2026-11-08T09:40+03:00",
+   "rss_dk": 8
+  },
+  "/taner-yildiz-fon-iddialarini-yalanladi-duzeltme-ve-ozur-istedi": {
+   "yayin": "2026-11-08T08:08:00+03:00",
+   "sitemap_gorulen": "2026-11-08T09:40+03:00",
+   "baslangic": false,
+   "sitemap_dk": 92,
+   "durum": 200,
+   "rss_gorulen": "2026-11-08T09:40+03:00",
+   "rss_dk": 92
+  },
+  "/pay-geri-alimi-3-milyar-lirayi-asti-yuzde-80i-turkcell-ve-garantiden": {
+   "yayin": "2026-11-08T07:49:00+03:00",
+   "sitemap_gorulen": "2026-11-08T09:40+03:00",
+   "baslangic": false,
+   "sitemap_dk": 111,
+   "durum": 200,
+   "rss_gorulen": "2026-11-08T09:40+03:00",
+   "rss_dk": 111
+  },
+  "/ulastirma-endeksi-bir-haftada-7-haftalik-kaybinin-yuzde-82sini-geri-aldi": {
+   "yayin": "2026-11-08T07:38:00+03:00",
+   "sitemap_gorulen": "2026-11-08T09:40+03:00",
+   "baslangic": false,
+   "sitemap_dk": 122,
+   "durum": 200,
+   "rss_gorulen": "2026-11-08T09:40+03:00",
+   "rss_dk": 122
+  },
+  "/yem-uretici-fiyatlari-ekimde-yuzde-40-artti-mayis-2024ten-beri-en-yuksek": {
+   "yayin": "2026-11-08T07:11:00+03:00",
+   "sitemap_gorulen": "2026-11-08T09:40+03:00",
+   "baslangic": false,
+   "sitemap_dk": 149,
+   "durum": 200,
+   "rss_gorulen": "2026-11-08T09:40+03:00",
+   "rss_dk": 149
   }
  },
  "ozet": {
-  "haber": 45,
-  "sitemap_medyan_dk": 35,
+  "haber": 50,
+  "sitemap_medyan_dk": 42.5,
   "sitemap_en_uzun_dk": 163,
-  "rss_medyan_dk": 35,
+  "rss_medyan_dk": 42.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-08T02:56+03:00"
+  "guncelleme": "2026-11-08T09:40+03:00"
  }
 }
