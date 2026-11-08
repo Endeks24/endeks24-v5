@@ -505,14 +505,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-08T20:38+03:00",
    "rss_dk": 109
+  },
+  "/turk-telekom-ttkom-cop31-alanina-1300-kilometre-fiber-kablo-dosedi": {
+   "yayin": "2026-11-08T21:06:00+03:00",
+   "sitemap_gorulen": "2026-11-08T22:05+03:00",
+   "baslangic": false,
+   "sitemap_dk": 60,
+   "durum": 200,
+   "rss_gorulen": "2026-11-08T22:05+03:00",
+   "rss_dk": 60
   }
  },
  "ozet": {
-  "haber": 57,
-  "sitemap_medyan_dk": 47,
+  "haber": 58,
+  "sitemap_medyan_dk": 47.5,
   "sitemap_en_uzun_dk": 163,
-  "rss_medyan_dk": 47,
+  "rss_medyan_dk": 47.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-08T20:38+03:00"
+  "guncelleme": "2026-11-08T22:05+03:00"
  }
 }
