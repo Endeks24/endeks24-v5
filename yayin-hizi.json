@@ -514,14 +514,59 @@
    "durum": 200,
    "rss_gorulen": "2026-11-08T22:05+03:00",
    "rss_dk": 60
+  },
+  "/bitcoin-74-bin-dolara-geriledi-ether-de-iki-ayin-dibine-indi": {
+   "yayin": "2026-11-09T01:56:00+03:00",
+   "sitemap_gorulen": "2026-11-09T02:07+03:00",
+   "baslangic": false,
+   "sitemap_dk": 11,
+   "durum": 200,
+   "rss_gorulen": "2026-11-09T02:07+03:00",
+   "rss_dk": 11
+  },
+  "/buyukgumus-fon-sorusturmalarinda-makamina-bakilmadan-geregi-yapilacak": {
+   "yayin": "2026-11-09T01:35:00+03:00",
+   "sitemap_gorulen": "2026-11-09T02:07+03:00",
+   "baslangic": false,
+   "sitemap_dk": 32,
+   "durum": 200,
+   "rss_gorulen": "2026-11-09T02:07+03:00",
+   "rss_dk": 32
+  },
+  "/ticaret-bakanligi-bogulma-ve-yanik-riskli-okul-formasini-toplatti": {
+   "yayin": "2026-11-09T01:15:00+03:00",
+   "sitemap_gorulen": "2026-11-09T02:07+03:00",
+   "baslangic": false,
+   "sitemap_dk": 52,
+   "durum": 200,
+   "rss_gorulen": "2026-11-09T02:07+03:00",
+   "rss_dk": 52
+  },
+  "/tmsf-3-sirketin-lpg-tesislerini-3-milyar-210-milyon-liraya-satisa-cikardi": {
+   "yayin": "2026-11-09T00:54:00+03:00",
+   "sitemap_gorulen": "2026-11-09T02:07+03:00",
+   "baslangic": false,
+   "sitemap_dk": 73,
+   "durum": 200,
+   "rss_gorulen": "2026-11-09T02:07+03:00",
+   "rss_dk": 73
+  },
+  "/vakifbank-vakbn-cop31de-1-milyar-700-milyon-dolarlik-anlasma-imzaliyor": {
+   "yayin": "2026-11-09T00:17:00+03:00",
+   "sitemap_gorulen": "2026-11-09T02:07+03:00",
+   "baslangic": false,
+   "sitemap_dk": 110,
+   "durum": 200,
+   "rss_gorulen": "2026-11-09T02:07+03:00",
+   "rss_dk": 110
   }
  },
  "ozet": {
-  "haber": 58,
-  "sitemap_medyan_dk": 47.5,
+  "haber": 63,
+  "sitemap_medyan_dk": 48,
   "sitemap_en_uzun_dk": 163,
-  "rss_medyan_dk": 47.5,
+  "rss_medyan_dk": 48,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-08T22:05+03:00"
+  "guncelleme": "2026-11-09T02:07+03:00"
  }
 }
