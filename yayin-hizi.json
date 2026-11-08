@@ -487,14 +487,32 @@
    "durum": 200,
    "rss_gorulen": "2026-11-08T16:52+03:00",
    "rss_dk": 156
+  },
+  "/spk-trive-yatirimin-faaliyetlerini-7-kasimdan-itibaren-gecici-durdurdu": {
+   "yayin": "2026-11-08T20:11:00+03:00",
+   "sitemap_gorulen": "2026-11-08T20:38+03:00",
+   "baslangic": false,
+   "sitemap_dk": 28,
+   "durum": 200,
+   "rss_gorulen": "2026-11-08T20:38+03:00",
+   "rss_dk": 28
+  },
+  "/spk-3-portfoy-sirketine-216-milyon-liralik-sermaye-artirimi-izni-verdi": {
+   "yayin": "2026-11-08T18:50:00+03:00",
+   "sitemap_gorulen": "2026-11-08T20:38+03:00",
+   "baslangic": false,
+   "sitemap_dk": 109,
+   "durum": 200,
+   "rss_gorulen": "2026-11-08T20:38+03:00",
+   "rss_dk": 109
   }
  },
  "ozet": {
-  "haber": 55,
+  "haber": 57,
   "sitemap_medyan_dk": 47,
   "sitemap_en_uzun_dk": 163,
   "rss_medyan_dk": 47,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-08T16:52+03:00"
+  "guncelleme": "2026-11-08T20:38+03:00"
  }
 }
