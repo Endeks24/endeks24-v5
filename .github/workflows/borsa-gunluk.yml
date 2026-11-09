@@ -33,3 +33,4 @@ jobs:
           git commit -qm "borsa verisi $(TZ=Europe/Istanbul date '+%d.%m.%Y %H:%M')"
           git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
           git push -f origin borsa-veri
+# tetik 2026-11-09T17:10 gecikme
