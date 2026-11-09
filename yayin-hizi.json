@@ -703,14 +703,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-09T14:17+03:00",
    "rss_dk": 55
+  },
+  "/habas-demir-celikte-patlamada-3-kisi-oldu-14-kisi-yaralandi": {
+   "yayin": "2026-11-09T14:21:00+03:00",
+   "sitemap_gorulen": "2026-11-09T15:06+03:00",
+   "baslangic": false,
+   "sitemap_dk": 46,
+   "durum": 200,
+   "rss_gorulen": "2026-11-09T15:06+03:00",
+   "rss_dk": 46
   }
  },
  "ozet": {
-  "haber": 79,
-  "sitemap_medyan_dk": 47,
+  "haber": 80,
+  "sitemap_medyan_dk": 46.5,
   "sitemap_en_uzun_dk": 164,
-  "rss_medyan_dk": 47,
+  "rss_medyan_dk": 46.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-09T14:17+03:00"
+  "guncelleme": "2026-11-09T15:06+03:00"
  }
 }
