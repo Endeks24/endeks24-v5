@@ -784,14 +784,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-09T21:46+03:00",
    "rss_dk": 154
+  },
+  "/doas-3-ceyrekte-434-milyon-lira-net-zarar-yazdi-9-ayda-kar-dustu": {
+   "yayin": "2026-11-09T21:49:00+03:00",
+   "sitemap_gorulen": "2026-11-09T22:06+03:00",
+   "baslangic": false,
+   "sitemap_dk": 17,
+   "durum": 200,
+   "rss_gorulen": "2026-11-09T22:06+03:00",
+   "rss_dk": 17
   }
  },
  "ozet": {
-  "haber": 88,
-  "sitemap_medyan_dk": 46.5,
+  "haber": 89,
+  "sitemap_medyan_dk": 46,
   "sitemap_en_uzun_dk": 164,
-  "rss_medyan_dk": 46.5,
+  "rss_medyan_dk": 46,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-09T21:46+03:00"
+  "guncelleme": "2026-11-09T22:06+03:00"
  }
 }
