@@ -649,14 +649,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-09T10:56+03:00",
    "rss_dk": 164
+  },
+  "/iso-ihracat-iklim-endeksi-geriledi-10-buyuk-pazarin-7sinde-uretim-artti": {
+   "yayin": "2026-11-09T11:16:00+03:00",
+   "sitemap_gorulen": "2026-11-09T11:33+03:00",
+   "baslangic": false,
+   "sitemap_dk": 17,
+   "durum": 200,
+   "rss_gorulen": "2026-11-09T11:33+03:00",
+   "rss_dk": 17
   }
  },
  "ozet": {
-  "haber": 73,
-  "sitemap_medyan_dk": 49,
+  "haber": 74,
+  "sitemap_medyan_dk": 48.5,
   "sitemap_en_uzun_dk": 164,
-  "rss_medyan_dk": 49,
+  "rss_medyan_dk": 48.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-09T11:12+03:00"
+  "guncelleme": "2026-11-09T11:33+03:00"
  }
 }
