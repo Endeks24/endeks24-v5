@@ -685,14 +685,32 @@
    "durum": 200,
    "rss_gorulen": "2026-11-09T13:11+03:00",
    "rss_dk": 29
+  },
+  "/issizlik-sigortasi-fonu-varligi-917-milyar-lira-oldu-yillik-yuzde-62-artti": {
+   "yayin": "2026-11-09T13:53:00+03:00",
+   "sitemap_gorulen": "2026-11-09T14:17+03:00",
+   "baslangic": false,
+   "sitemap_dk": 24,
+   "durum": 200,
+   "rss_gorulen": "2026-11-09T14:17+03:00",
+   "rss_dk": 24
+  },
+  "/cevdet-yilmaz-cinle-2025-ticaretinin-yalnizca-yuzde-6si-ihracatti": {
+   "yayin": "2026-11-09T13:22:00+03:00",
+   "sitemap_gorulen": "2026-11-09T14:17+03:00",
+   "baslangic": false,
+   "sitemap_dk": 55,
+   "durum": 200,
+   "rss_gorulen": "2026-11-09T14:17+03:00",
+   "rss_dk": 55
   }
  },
  "ozet": {
-  "haber": 77,
+  "haber": 79,
   "sitemap_medyan_dk": 47,
   "sitemap_en_uzun_dk": 164,
   "rss_medyan_dk": 47,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-09T13:11+03:00"
+  "guncelleme": "2026-11-09T14:17+03:00"
  }
 }
