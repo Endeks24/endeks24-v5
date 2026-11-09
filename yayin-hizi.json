@@ -676,14 +676,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-09T12:12+03:00",
    "rss_dk": 34
+  },
+  "/turk-telekom-ttkom-kurulunda-yunus-arinci-istifa-etti-8-uye-kaldi": {
+   "yayin": "2026-11-09T12:42:00+03:00",
+   "sitemap_gorulen": "2026-11-09T13:11+03:00",
+   "baslangic": false,
+   "sitemap_dk": 29,
+   "durum": 200,
+   "rss_gorulen": "2026-11-09T13:11+03:00",
+   "rss_dk": 29
   }
  },
  "ozet": {
-  "haber": 76,
-  "sitemap_medyan_dk": 47.5,
+  "haber": 77,
+  "sitemap_medyan_dk": 47,
   "sitemap_en_uzun_dk": 164,
-  "rss_medyan_dk": 47.5,
+  "rss_medyan_dk": 47,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-09T12:12+03:00"
+  "guncelleme": "2026-11-09T13:11+03:00"
  }
 }
