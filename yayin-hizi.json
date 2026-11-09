@@ -559,14 +559,41 @@
    "durum": 200,
    "rss_gorulen": "2026-11-09T02:07+03:00",
    "rss_dk": 110
+  },
+  "/hor-mor-gaz-sahasinda-uretim-durdu-kurdistanda-2800-megavat-azaldi": {
+   "yayin": "2026-11-09T05:21:00+03:00",
+   "sitemap_gorulen": "2026-11-09T05:57+03:00",
+   "baslangic": false,
+   "sitemap_dk": 37,
+   "durum": 200,
+   "rss_gorulen": "2026-11-09T05:57+03:00",
+   "rss_dk": 37
+  },
+  "/cinde-ekimde-uretici-fiyatlari-yuzde-6ya-yaklasti-tufe-geriledi": {
+   "yayin": "2026-11-09T05:00:00+03:00",
+   "sitemap_gorulen": "2026-11-09T05:57+03:00",
+   "baslangic": false,
+   "sitemap_dk": 58,
+   "durum": 200,
+   "rss_gorulen": "2026-11-09T05:57+03:00",
+   "rss_dk": 58
+  },
+  "/kamu-denetciligi-kurumu-10-uzman-yardimcisi-alacak-basvurular-basladi": {
+   "yayin": "2026-11-09T03:28:00+03:00",
+   "sitemap_gorulen": "2026-11-09T05:57+03:00",
+   "baslangic": false,
+   "sitemap_dk": 150,
+   "durum": 200,
+   "rss_gorulen": "2026-11-09T05:57+03:00",
+   "rss_dk": 150
   }
  },
  "ozet": {
-  "haber": 63,
-  "sitemap_medyan_dk": 48,
+  "haber": 66,
+  "sitemap_medyan_dk": 48.5,
   "sitemap_en_uzun_dk": 163,
-  "rss_medyan_dk": 48,
+  "rss_medyan_dk": 48.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-09T02:07+03:00"
+  "guncelleme": "2026-11-09T05:57+03:00"
  }
 }
