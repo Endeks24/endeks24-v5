@@ -793,14 +793,41 @@
    "durum": 200,
    "rss_gorulen": "2026-11-09T22:06+03:00",
    "rss_dk": 17
+  },
+  "/can2-termik-cante-9-ayda-3792-milyon-lira-zarar-etti-brut-zarar-verdi": {
+   "yayin": "2026-11-10T01:22:00+03:00",
+   "sitemap_gorulen": "2026-11-10T01:41+03:00",
+   "baslangic": false,
+   "sitemap_dk": 19,
+   "durum": 200,
+   "rss_gorulen": "2026-11-10T01:41+03:00",
+   "rss_dk": 19
+  },
+  "/astor-enerji-astor-net-kari-9-ayda-yuzde-73-geriledi-hasilat-artti": {
+   "yayin": "2026-11-10T00:22:00+03:00",
+   "sitemap_gorulen": "2026-11-10T01:41+03:00",
+   "baslangic": false,
+   "sitemap_dk": 79,
+   "durum": 200,
+   "rss_gorulen": "2026-11-10T01:41+03:00",
+   "rss_dk": 79
+  },
+  "/apple-turkiyede-yedi-merkez-acacak-ilk-akademi-2027de-istanbulda": {
+   "yayin": "2026-11-09T23:30:00+03:00",
+   "sitemap_gorulen": "2026-11-10T01:41+03:00",
+   "baslangic": false,
+   "sitemap_dk": 131,
+   "durum": 200,
+   "rss_gorulen": "2026-11-10T01:41+03:00",
+   "rss_dk": 131
   }
  },
  "ozet": {
-  "haber": 89,
-  "sitemap_medyan_dk": 46,
+  "haber": 92,
+  "sitemap_medyan_dk": 46.5,
   "sitemap_en_uzun_dk": 164,
-  "rss_medyan_dk": 46,
+  "rss_medyan_dk": 46.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-09T22:06+03:00"
+  "guncelleme": "2026-11-10T01:41+03:00"
  }
 }
