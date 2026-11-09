@@ -658,14 +658,32 @@
    "durum": 200,
    "rss_gorulen": "2026-11-09T11:33+03:00",
    "rss_dk": 17
+  },
+  "/tmsf-fon-islemlerinde-31-milyar-600-milyon-lira-gonullu-iade-tahsil-etti": {
+   "yayin": "2026-11-09T11:59:00+03:00",
+   "sitemap_gorulen": "2026-11-09T12:12+03:00",
+   "baslangic": false,
+   "sitemap_dk": 13,
+   "durum": 200,
+   "rss_gorulen": "2026-11-09T12:12+03:00",
+   "rss_dk": 13
+  },
+  "/epdk-46-lisans-verdi-36-uretim-lisansinin-32si-depolamali-santral": {
+   "yayin": "2026-11-09T11:38:00+03:00",
+   "sitemap_gorulen": "2026-11-09T12:12+03:00",
+   "baslangic": false,
+   "sitemap_dk": 34,
+   "durum": 200,
+   "rss_gorulen": "2026-11-09T12:12+03:00",
+   "rss_dk": 34
   }
  },
  "ozet": {
-  "haber": 74,
-  "sitemap_medyan_dk": 48.5,
+  "haber": 76,
+  "sitemap_medyan_dk": 47.5,
   "sitemap_en_uzun_dk": 164,
-  "rss_medyan_dk": 48.5,
+  "rss_medyan_dk": 47.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-09T11:33+03:00"
+  "guncelleme": "2026-11-09T12:12+03:00"
  }
 }
