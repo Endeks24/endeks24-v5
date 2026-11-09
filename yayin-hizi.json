@@ -739,14 +739,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-09T16:10+03:00",
    "rss_dk": 63
+  },
+  "/gurlek-acikladi-fon-sorusturmasinda-supheli-6-gunde-464e-cikti": {
+   "yayin": "2026-11-09T16:41:00+03:00",
+   "sitemap_gorulen": "2026-11-09T17:16+03:00",
+   "baslangic": false,
+   "sitemap_dk": 36,
+   "durum": 200,
+   "rss_gorulen": "2026-11-09T17:16+03:00",
+   "rss_dk": 36
   }
  },
  "ozet": {
-  "haber": 83,
-  "sitemap_medyan_dk": 46,
+  "haber": 84,
+  "sitemap_medyan_dk": 43.0,
   "sitemap_en_uzun_dk": 164,
-  "rss_medyan_dk": 46,
+  "rss_medyan_dk": 43.0,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-09T16:10+03:00"
+  "guncelleme": "2026-11-09T17:16+03:00"
  }
 }
