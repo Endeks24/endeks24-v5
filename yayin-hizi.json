@@ -712,14 +712,41 @@
    "durum": 200,
    "rss_gorulen": "2026-11-09T15:06+03:00",
    "rss_dk": 46
+  },
+  "/hazine-iki-ihalede-73-milyar-lira-borclandi-5-ekime-gore-yuzde-27-az": {
+   "yayin": "2026-11-09T16:04:00+03:00",
+   "sitemap_gorulen": "2026-11-09T16:10+03:00",
+   "baslangic": false,
+   "sitemap_dk": 7,
+   "durum": 200,
+   "rss_gorulen": "2026-11-09T16:10+03:00",
+   "rss_dk": 7
+  },
+  "/star-rafineri-jet-yakiti-unitesi-kuracak-yatirim-tutari-6-milyar-lira": {
+   "yayin": "2026-11-09T15:39:00+03:00",
+   "sitemap_gorulen": "2026-11-09T16:10+03:00",
+   "baslangic": false,
+   "sitemap_dk": 32,
+   "durum": 200,
+   "rss_gorulen": "2026-11-09T16:10+03:00",
+   "rss_dk": 32
+  },
+  "/pardus-portfoy-kapali-fonlarin-acilmasi-icin-ziraat-bankasina-basvurdu": {
+   "yayin": "2026-11-09T15:08:00+03:00",
+   "sitemap_gorulen": "2026-11-09T16:10+03:00",
+   "baslangic": false,
+   "sitemap_dk": 63,
+   "durum": 200,
+   "rss_gorulen": "2026-11-09T16:10+03:00",
+   "rss_dk": 63
   }
  },
  "ozet": {
-  "haber": 80,
-  "sitemap_medyan_dk": 46.5,
+  "haber": 83,
+  "sitemap_medyan_dk": 46,
   "sitemap_en_uzun_dk": 164,
-  "rss_medyan_dk": 46.5,
+  "rss_medyan_dk": 46,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-09T15:06+03:00"
+  "guncelleme": "2026-11-09T16:10+03:00"
  }
 }
