@@ -586,14 +586,77 @@
    "durum": 200,
    "rss_gorulen": "2026-11-09T05:57+03:00",
    "rss_dk": 150
+  },
+  "/fon-sorusturmasinda-bddk-baskan-yardimcisi-banka-genel-muduru-tutuklandi": {
+   "yayin": "2026-11-09T10:55:00+03:00",
+   "sitemap_gorulen": "2026-11-09T10:56+03:00",
+   "baslangic": false,
+   "sitemap_dk": 2,
+   "durum": 200,
+   "rss_gorulen": "2026-11-09T10:56+03:00",
+   "rss_dk": 2
+  },
+  "/bist-100-son-11-kapanisin-uzerinde-acildi-30-ekimden-yuzde-7-yukarida": {
+   "yayin": "2026-11-09T10:32:00+03:00",
+   "sitemap_gorulen": "2026-11-09T10:56+03:00",
+   "baslangic": false,
+   "sitemap_dk": 25,
+   "durum": 200,
+   "rss_gorulen": "2026-11-09T10:56+03:00",
+   "rss_dk": 25
+  },
+  "/reel-getiri-ekimde-mevduat-faizinde-en-yuksek-bist-100-en-cok-kaybettirdi": {
+   "yayin": "2026-11-09T10:18:00+03:00",
+   "sitemap_gorulen": "2026-11-09T10:56+03:00",
+   "baslangic": false,
+   "sitemap_dk": 39,
+   "durum": 200,
+   "rss_gorulen": "2026-11-09T10:56+03:00",
+   "rss_dk": 39
+  },
+  "/bakanlik-duyurdu-teskomb-kefaletli-esnaf-kredileri-900-milyar-lirayi-asti": {
+   "yayin": "2026-11-09T09:29:00+03:00",
+   "sitemap_gorulen": "2026-11-09T10:56+03:00",
+   "baslangic": false,
+   "sitemap_dk": 88,
+   "durum": 200,
+   "rss_gorulen": "2026-11-09T10:56+03:00",
+   "rss_dk": 88
+  },
+  "/altinay-savunma-altny-ilk-yari-satisinin-yuzde-11ini-ar-geye-ayirdi": {
+   "yayin": "2026-11-09T09:07:00+03:00",
+   "sitemap_gorulen": "2026-11-09T10:56+03:00",
+   "baslangic": false,
+   "sitemap_dk": 110,
+   "durum": 200,
+   "rss_gorulen": "2026-11-09T10:56+03:00",
+   "rss_dk": 110
+  },
+  "/pegasus-pgsus-ilk-yari-satisinin-yuzde-15i-kadar-kiralama-borcu-odedi": {
+   "yayin": "2026-11-09T08:47:00+03:00",
+   "sitemap_gorulen": "2026-11-09T10:56+03:00",
+   "baslangic": false,
+   "sitemap_dk": 130,
+   "durum": 200,
+   "rss_gorulen": "2026-11-09T10:56+03:00",
+   "rss_dk": 130
+  },
+  "/17-eylulden-bu-yana-10-sirket-sermaye-artirimini-iptal-etti-5i-bedelsiz": {
+   "yayin": "2026-11-09T08:13:00+03:00",
+   "sitemap_gorulen": "2026-11-09T10:56+03:00",
+   "baslangic": false,
+   "sitemap_dk": 164,
+   "durum": 200,
+   "rss_gorulen": "2026-11-09T10:56+03:00",
+   "rss_dk": 164
   }
  },
  "ozet": {
-  "haber": 66,
-  "sitemap_medyan_dk": 48.5,
-  "sitemap_en_uzun_dk": 163,
-  "rss_medyan_dk": 48.5,
+  "haber": 73,
+  "sitemap_medyan_dk": 49,
+  "sitemap_en_uzun_dk": 164,
+  "rss_medyan_dk": 49,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-09T05:57+03:00"
+  "guncelleme": "2026-11-09T10:56+03:00"
  }
 }
