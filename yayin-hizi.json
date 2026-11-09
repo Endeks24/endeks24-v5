@@ -748,14 +748,50 @@
    "durum": 200,
    "rss_gorulen": "2026-11-09T17:16+03:00",
    "rss_dk": 36
+  },
+  "/bim-bimas-9-aylik-net-kari-26-milyar-lira-oldu-yuzde-79-artti": {
+   "yayin": "2026-11-09T21:04:00+03:00",
+   "sitemap_gorulen": "2026-11-09T21:46+03:00",
+   "baslangic": false,
+   "sitemap_dk": 42,
+   "durum": 200,
+   "rss_gorulen": "2026-11-09T21:46+03:00",
+   "rss_dk": 42
+  },
+  "/pegasus-pgsus-3-ceyrekte-11-milyar-lira-kar-etti-9-aylik-zarar-daraldi": {
+   "yayin": "2026-11-09T20:29:00+03:00",
+   "sitemap_gorulen": "2026-11-09T21:46+03:00",
+   "baslangic": false,
+   "sitemap_dk": 77,
+   "durum": 200,
+   "rss_gorulen": "2026-11-09T21:46+03:00",
+   "rss_dk": 77
+  },
+  "/koc-holding-kchol-9-aylik-net-kari-56-milyar-lira-oldu-3-katina-cikti": {
+   "yayin": "2026-11-09T19:38:00+03:00",
+   "sitemap_gorulen": "2026-11-09T21:46+03:00",
+   "baslangic": false,
+   "sitemap_dk": 128,
+   "durum": 200,
+   "rss_gorulen": "2026-11-09T21:46+03:00",
+   "rss_dk": 128
+  },
+  "/turkcell-tcell-3-ceyrek-geliri-82-milyar-lira-oldu-kar-beklentiyi-asti": {
+   "yayin": "2026-11-09T19:12:00+03:00",
+   "sitemap_gorulen": "2026-11-09T21:46+03:00",
+   "baslangic": false,
+   "sitemap_dk": 154,
+   "durum": 200,
+   "rss_gorulen": "2026-11-09T21:46+03:00",
+   "rss_dk": 154
   }
  },
  "ozet": {
-  "haber": 84,
-  "sitemap_medyan_dk": 43.0,
+  "haber": 88,
+  "sitemap_medyan_dk": 46.5,
   "sitemap_en_uzun_dk": 164,
-  "rss_medyan_dk": 43.0,
+  "rss_medyan_dk": 46.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-09T18:14+03:00"
+  "guncelleme": "2026-11-09T21:46+03:00"
  }
 }
