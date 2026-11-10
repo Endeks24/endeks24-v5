@@ -946,14 +946,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-10T15:14+03:00",
    "rss_dk": 45
+  },
+  "/hanehalki-kiymetli-maden-hesaplari-22-milyar-dolar-azaldi-parite-etkisiyle": {
+   "yayin": "2026-11-10T15:49:00+03:00",
+   "sitemap_gorulen": "2026-11-10T15:58+03:00",
+   "baslangic": false,
+   "sitemap_dk": 10,
+   "durum": 200,
+   "rss_gorulen": "2026-11-10T15:58+03:00",
+   "rss_dk": 10
   }
  },
  "ozet": {
-  "haber": 106,
-  "sitemap_medyan_dk": 45.5,
+  "haber": 107,
+  "sitemap_medyan_dk": 45,
   "sitemap_en_uzun_dk": 169,
-  "rss_medyan_dk": 45.5,
+  "rss_medyan_dk": 45,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-10T15:14+03:00"
+  "guncelleme": "2026-11-10T15:58+03:00"
  }
 }
