@@ -937,14 +937,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-10T14:12+03:00",
    "rss_dk": 28
+  },
+  "/insaat-maliyetleri-eylulde-yillik-yuzde-31-artti-malzeme-isciligi-gecti": {
+   "yayin": "2026-11-10T14:30:00+03:00",
+   "sitemap_gorulen": "2026-11-10T15:14+03:00",
+   "baslangic": false,
+   "sitemap_dk": 45,
+   "durum": 200,
+   "rss_gorulen": "2026-11-10T15:14+03:00",
+   "rss_dk": 45
   }
  },
  "ozet": {
-  "haber": 105,
-  "sitemap_medyan_dk": 46,
+  "haber": 106,
+  "sitemap_medyan_dk": 45.5,
   "sitemap_en_uzun_dk": 169,
-  "rss_medyan_dk": 46,
+  "rss_medyan_dk": 45.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-10T14:12+03:00"
+  "guncelleme": "2026-11-10T15:14+03:00"
  }
 }
