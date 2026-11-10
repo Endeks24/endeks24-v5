@@ -892,14 +892,41 @@
    "durum": 200,
    "rss_gorulen": "2026-11-10T11:12+03:00",
    "rss_dk": 159
+  },
+  "/enflasyon-beklentisi-tcmb-tebligine-gore-yasanan-enflasyonla-iliskili": {
+   "yayin": "2026-11-10T12:06:00+03:00",
+   "sitemap_gorulen": "2026-11-10T12:11+03:00",
+   "baslangic": false,
+   "sitemap_dk": 6,
+   "durum": 200,
+   "rss_gorulen": "2026-11-10T12:11+03:00",
+   "rss_dk": 6
+  },
+  "/ek-sure-alan-17-sirketin-14u-borsada-5i-kayyim-ya-da-konkordatoda": {
+   "yayin": "2026-11-10T11:45:00+03:00",
+   "sitemap_gorulen": "2026-11-10T12:11+03:00",
+   "baslangic": false,
+   "sitemap_dk": 27,
+   "durum": 200,
+   "rss_gorulen": "2026-11-10T12:11+03:00",
+   "rss_dk": 27
+  },
+  "/alarko-holding-alark-ilk-yarida-amortismaninin-16-kati-yatirim-yapti": {
+   "yayin": "2026-11-10T11:24:00+03:00",
+   "sitemap_gorulen": "2026-11-10T12:11+03:00",
+   "baslangic": false,
+   "sitemap_dk": 48,
+   "durum": 200,
+   "rss_gorulen": "2026-11-10T12:11+03:00",
+   "rss_dk": 48
   }
  },
  "ozet": {
-  "haber": 100,
-  "sitemap_medyan_dk": 47.5,
+  "haber": 103,
+  "sitemap_medyan_dk": 47,
   "sitemap_en_uzun_dk": 169,
-  "rss_medyan_dk": 47.5,
+  "rss_medyan_dk": 47,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-10T11:12+03:00"
+  "guncelleme": "2026-11-10T12:11+03:00"
  }
 }
