@@ -955,14 +955,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-10T15:58+03:00",
    "rss_dk": 10
+  },
+  "/erdogan-gabarda-iki-yeni-sahada-135-milyon-varil-petrol-potansiyeli-var": {
+   "yayin": "2026-11-10T16:41:00+03:00",
+   "sitemap_gorulen": "2026-11-10T17:16+03:00",
+   "baslangic": false,
+   "sitemap_dk": 36,
+   "durum": 200,
+   "rss_gorulen": "2026-11-10T17:16+03:00",
+   "rss_dk": 36
   }
  },
  "ozet": {
-  "haber": 107,
-  "sitemap_medyan_dk": 45,
+  "haber": 108,
+  "sitemap_medyan_dk": 43.5,
   "sitemap_en_uzun_dk": 169,
-  "rss_medyan_dk": 45,
+  "rss_medyan_dk": 43.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-10T15:58+03:00"
+  "guncelleme": "2026-11-10T17:16+03:00"
  }
 }
