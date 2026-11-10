@@ -928,14 +928,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-10T13:11+03:00",
    "rss_dk": 37
+  },
+  "/netcad-netcd-halka-arz-getirisi-duzeltmeyle-yuzde-102den-109a-cikiyor": {
+   "yayin": "2026-11-10T13:44:00+03:00",
+   "sitemap_gorulen": "2026-11-10T14:12+03:00",
+   "baslangic": false,
+   "sitemap_dk": 28,
+   "durum": 200,
+   "rss_gorulen": "2026-11-10T14:12+03:00",
+   "rss_dk": 28
   }
  },
  "ozet": {
-  "haber": 104,
-  "sitemap_medyan_dk": 46.5,
+  "haber": 105,
+  "sitemap_medyan_dk": 46,
   "sitemap_en_uzun_dk": 169,
-  "rss_medyan_dk": 46.5,
+  "rss_medyan_dk": 46,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-10T13:11+03:00"
+  "guncelleme": "2026-11-10T14:12+03:00"
  }
 }
