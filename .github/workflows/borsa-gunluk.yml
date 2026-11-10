@@ -34,3 +34,4 @@ jobs:
           git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
           git push -f origin borsa-veri
 # tetik 2026-11-09T17:10 gecikme
+# tetik 2026-11-10T17:10 gecikme
