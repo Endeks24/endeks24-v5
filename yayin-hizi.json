@@ -847,14 +847,59 @@
    "durum": 200,
    "rss_gorulen": "2026-11-10T07:20+03:00",
    "rss_dk": 169
+  },
+  "/yapi-kredinin-ykbnk-yuzde-61i-kocta-paylarin-degeri-192-milyar-lira": {
+   "yayin": "2026-11-10T11:03:00+03:00",
+   "sitemap_gorulen": "2026-11-10T11:12+03:00",
+   "baslangic": false,
+   "sitemap_dk": 9,
+   "durum": 200,
+   "rss_gorulen": "2026-11-10T11:12+03:00",
+   "rss_dk": 9
+  },
+  "/sanayi-uretimi-eylulde-artti-3-ceyrekte-2-ceyregin-altinda-kaldi": {
+   "yayin": "2026-11-10T10:42:00+03:00",
+   "sitemap_gorulen": "2026-11-10T11:12+03:00",
+   "baslangic": false,
+   "sitemap_dk": 30,
+   "durum": 200,
+   "rss_gorulen": "2026-11-10T11:12+03:00",
+   "rss_dk": 30
+  },
+  "/bist-100-gune-yukselisle-basladi-2025-sonu-kapanisinin-yuzde-4-uzerinde": {
+   "yayin": "2026-11-10T10:05:00+03:00",
+   "sitemap_gorulen": "2026-11-10T11:12+03:00",
+   "baslangic": false,
+   "sitemap_dk": 67,
+   "durum": 200,
+   "rss_gorulen": "2026-11-10T11:12+03:00",
+   "rss_dk": 67
+  },
+  "/bist-100de-12-sirket-satisinin-cogunu-yurt-disinda-yapti-brsan-onde": {
+   "yayin": "2026-11-10T09:04:00+03:00",
+   "sitemap_gorulen": "2026-11-10T11:12+03:00",
+   "baslangic": false,
+   "sitemap_dk": 128,
+   "durum": 200,
+   "rss_gorulen": "2026-11-10T11:12+03:00",
+   "rss_dk": 128
+  },
+  "/family-danismanlik-koc-holdingin-kchol-229-milyar-liralik-payina-sahip": {
+   "yayin": "2026-11-10T08:33:00+03:00",
+   "sitemap_gorulen": "2026-11-10T11:12+03:00",
+   "baslangic": false,
+   "sitemap_dk": 159,
+   "durum": 200,
+   "rss_gorulen": "2026-11-10T11:12+03:00",
+   "rss_dk": 159
   }
  },
  "ozet": {
-  "haber": 95,
-  "sitemap_medyan_dk": 47,
+  "haber": 100,
+  "sitemap_medyan_dk": 47.5,
   "sitemap_en_uzun_dk": 169,
-  "rss_medyan_dk": 47,
+  "rss_medyan_dk": 47.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-10T07:20+03:00"
+  "guncelleme": "2026-11-10T11:12+03:00"
  }
 }
