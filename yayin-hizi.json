@@ -820,14 +820,41 @@
    "durum": 200,
    "rss_gorulen": "2026-11-10T01:41+03:00",
    "rss_dk": 131
+  },
+  "/ford-otosan-froto-temettusunde-ford-ve-koc-yuzde-80-alacak-kalan-borsaya": {
+   "yayin": "2026-11-10T07:18:00+03:00",
+   "sitemap_gorulen": "2026-11-10T07:20+03:00",
+   "baslangic": false,
+   "sitemap_dk": 2,
+   "durum": 200,
+   "rss_gorulen": "2026-11-10T07:20+03:00",
+   "rss_dk": 2
+  },
+  "/cw-enerji-cwene-favoku-artarken-dokuz-aylik-net-kari-yuzde-32-azaldi": {
+   "yayin": "2026-11-10T05:42:00+03:00",
+   "sitemap_gorulen": "2026-11-10T07:20+03:00",
+   "baslangic": false,
+   "sitemap_dk": 98,
+   "durum": 200,
+   "rss_gorulen": "2026-11-10T07:20+03:00",
+   "rss_dk": 98
+  },
+  "/turk-altin-tralt-3-ceyrek-net-kari-yuzde-31-azaldi-favok-yuzde-29-artti": {
+   "yayin": "2026-11-10T04:31:00+03:00",
+   "sitemap_gorulen": "2026-11-10T07:20+03:00",
+   "baslangic": false,
+   "sitemap_dk": 169,
+   "durum": 200,
+   "rss_gorulen": "2026-11-10T07:20+03:00",
+   "rss_dk": 169
   }
  },
  "ozet": {
-  "haber": 92,
-  "sitemap_medyan_dk": 46.5,
-  "sitemap_en_uzun_dk": 164,
-  "rss_medyan_dk": 46.5,
+  "haber": 95,
+  "sitemap_medyan_dk": 47,
+  "sitemap_en_uzun_dk": 169,
+  "rss_medyan_dk": 47,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-10T01:41+03:00"
+  "guncelleme": "2026-11-10T07:20+03:00"
  }
 }
