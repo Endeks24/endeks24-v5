@@ -1,4 +1,4 @@
 BIST 100 10 Kasım seansını yüzde 0,43 düşüşle 11.661,86 puandan kapattı. Endeksteki 100 hisseden 72 hisse geriledi, 27 hisse yükseldi.
 rakamlar: {'piyasa': 8, 'gundem': 8}
-TAMAM: cikti/veri.json 116383 bayt; seans 2026-11-10T18:10:00+03:00 ; kripto 2026-11-10T18:15:00+03:00
-2026-11-10T15:15:23Z 
+TAMAM: cikti/veri.json 116380 bayt; seans 2026-11-10T18:10:00+03:00 ; kripto 2026-11-10T18:19:00+03:00
+2026-11-10T15:19:39Z 
