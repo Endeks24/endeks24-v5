@@ -1090,14 +1090,50 @@
    "durum": 200,
    "rss_gorulen": "2026-11-11T11:12+03:00",
    "rss_dk": 180
+  },
+  "/hareket-proje-hrket-yeni-sozlesmelerle-4-milyon-500-bin-dolarlik-is-aldi": {
+   "yayin": "2026-11-11T12:10:00+03:00",
+   "sitemap_gorulen": "2026-11-11T12:11+03:00",
+   "baslangic": false,
+   "sitemap_dk": 1,
+   "durum": 200,
+   "rss_gorulen": "2026-11-11T12:11+03:00",
+   "rss_dk": 1
+  },
+  "/bddk-baskani-sahap-kavcioglu-cumhurbaskanindan-gorevden-affini-istedi": {
+   "yayin": "2026-11-11T11:56:00+03:00",
+   "sitemap_gorulen": "2026-11-11T12:11+03:00",
+   "baslangic": false,
+   "sitemap_dk": 15,
+   "durum": 200,
+   "rss_gorulen": "2026-11-11T12:11+03:00",
+   "rss_dk": 15
+  },
+  "/turkcell-tcell-ortagi-imtisin-ust-yapisi-degisti-payi-43-milyar-lira": {
+   "yayin": "2026-11-11T11:42:00+03:00",
+   "sitemap_gorulen": "2026-11-11T12:11+03:00",
+   "baslangic": false,
+   "sitemap_dk": 29,
+   "durum": 200,
+   "rss_gorulen": "2026-11-11T12:11+03:00",
+   "rss_dk": 29
+  },
+  "/ulker-biskuvinin-ulker-yuzde-47si-pladiste-degeri-14-milyar-lira": {
+   "yayin": "2026-11-11T11:28:00+03:00",
+   "sitemap_gorulen": "2026-11-11T12:11+03:00",
+   "baslangic": false,
+   "sitemap_dk": 43,
+   "durum": 200,
+   "rss_gorulen": "2026-11-11T12:11+03:00",
+   "rss_dk": 43
   }
  },
  "ozet": {
-  "haber": 122,
-  "sitemap_medyan_dk": 47.5,
+  "haber": 126,
+  "sitemap_medyan_dk": 45.5,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 47.5,
+  "rss_medyan_dk": 45.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-11T11:23+03:00"
+  "guncelleme": "2026-11-11T12:11+03:00"
  }
 }
