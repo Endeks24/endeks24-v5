@@ -1234,14 +1234,50 @@
    "durum": 200,
    "rss_gorulen": "2026-11-11T15:33+03:00",
    "rss_dk": 16
+  },
+  "/orge-enerji-veri-merkezi-sozlesmesini-imzaladi-tutari-276-milyon-lira": {
+   "yayin": "2026-11-11T19:32:00+03:00",
+   "sitemap_gorulen": "2026-11-11T19:35+03:00",
+   "baslangic": false,
+   "sitemap_dk": 3,
+   "durum": 200,
+   "rss_gorulen": "2026-11-11T19:35+03:00",
+   "rss_dk": 3
+  },
+  "/mobiltel-mobtl-turk-telekom-distributorlugunun-sona-erecegini-duyurdu": {
+   "yayin": "2026-11-11T19:17:00+03:00",
+   "sitemap_gorulen": "2026-11-11T19:35+03:00",
+   "baslangic": false,
+   "sitemap_dk": 18,
+   "durum": 200,
+   "rss_gorulen": "2026-11-11T19:35+03:00",
+   "rss_dk": 18
+  },
+  "/kocaer-celik-kcaer-jeotermal-santral-icin-exergy-ile-sozlesme-imzaladi": {
+   "yayin": "2026-11-11T18:51:00+03:00",
+   "sitemap_gorulen": "2026-11-11T19:35+03:00",
+   "baslangic": false,
+   "sitemap_dk": 44,
+   "durum": 200,
+   "rss_gorulen": "2026-11-11T19:35+03:00",
+   "rss_dk": 44
+  },
+  "/bist-100-yatay-kapandi-69-hisse-geriledi-tupras-endeksi-yukari-tasidi": {
+   "yayin": "2026-11-11T18:37:00+03:00",
+   "sitemap_gorulen": "2026-11-11T19:35+03:00",
+   "baslangic": false,
+   "sitemap_dk": 58,
+   "durum": 200,
+   "rss_gorulen": "2026-11-11T19:35+03:00",
+   "rss_dk": 58
   }
  },
  "ozet": {
-  "haber": 138,
+  "haber": 142,
   "sitemap_medyan_dk": 41.0,
   "sitemap_en_uzun_dk": 180,
   "rss_medyan_dk": 41.0,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-11T18:30+03:00"
+  "guncelleme": "2026-11-11T19:35+03:00"
  }
 }
