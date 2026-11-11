@@ -1225,14 +1225,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-11T15:18+03:00",
    "rss_dk": 15
+  },
+  "/gulermak-glrmk-iki-gunde-yuzde-19-dustu-yillik-zirvenin-yuzde-61-altinda": {
+   "yayin": "2026-11-11T15:18:00+03:00",
+   "sitemap_gorulen": "2026-11-11T15:33+03:00",
+   "baslangic": false,
+   "sitemap_dk": 16,
+   "durum": 200,
+   "rss_gorulen": "2026-11-11T15:33+03:00",
+   "rss_dk": 16
   }
  },
  "ozet": {
-  "haber": 137,
-  "sitemap_medyan_dk": 42,
+  "haber": 138,
+  "sitemap_medyan_dk": 41.0,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 42,
+  "rss_medyan_dk": 41.0,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-11T15:18+03:00"
+  "guncelleme": "2026-11-11T15:33+03:00"
  }
 }
