@@ -1472,6 +1472,37 @@
      }
     }
    ]
+  },
+  "PGSUS": {
+   "ad": "Pegasus Hava Taşımacılığı A.Ş.",
+   "etiketler": [
+    {
+     "id": "brent-petrol",
+     "not": "Şirket, tahmini yakıt sarfiyatının 1 yıldan kısa dönemde %44,6'sını, 1 yıldan uzun dönemde %13,4'ünü vadeli akaryakıt alımı opsiyon sözleşmeleriyle riskten korumaya almış.",
+     "alinti": "Grup, 1 yıldan kısa ve 1 yıldan uzun dönem içerisinde oluşması tahmin edilen toplam yakıt sarfiyatının sırası ile %44,6 ve %13,4'ü kadar riskten korunma muhasebesine konu ettiği vadeli akaryakıt alımı opsiyon sözleşmelerine sahiptir.",
+     "kaynak": {
+      "tur": "KAP",
+      "baslik": "PGSUS 2026/09 Finansal Tablo ve Dipnotlar",
+      "tarih": "9 Kasım 2026",
+      "tarih_iso": "2026-11-09",
+      "dokuman": "bfywtgnd",
+      "kap_bildirim": 1695827
+     }
+    },
+    {
+     "id": "havacilik-yakit",
+     "not": "Şirket, tahmini yakıt sarfiyatının 1 yıldan kısa dönemde %44,6'sını, 1 yıldan uzun dönemde %13,4'ünü vadeli akaryakıt alımı opsiyon sözleşmeleriyle riskten korumaya almış.",
+     "alinti": "Grup, 1 yıldan kısa ve 1 yıldan uzun dönem içerisinde oluşması tahmin edilen toplam yakıt sarfiyatının sırası ile %44,6 ve %13,4'ü kadar riskten korunma muhasebesine konu ettiği vadeli akaryakıt alımı opsiyon sözleşmelerine sahiptir.",
+     "kaynak": {
+      "tur": "KAP",
+      "baslik": "PGSUS 2026/09 Finansal Tablo ve Dipnotlar",
+      "tarih": "9 Kasım 2026",
+      "tarih_iso": "2026-11-09",
+      "dokuman": "bfywtgnd",
+      "kap_bildirim": 1695827
+     }
+    }
+   ]
   }
  },
  "taranan": {
