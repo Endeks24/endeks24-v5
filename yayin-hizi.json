@@ -1270,14 +1270,95 @@
    "durum": 200,
    "rss_gorulen": "2026-11-11T19:35+03:00",
    "rss_dk": 58
+  },
+  "/seddk-butunlesik-sigortada-yillik-prim-tavanini-33-bin-lirayla-sinirladi": {
+   "yayin": "2026-11-12T00:34:00+03:00",
+   "sitemap_gorulen": "2026-11-12T00:39+03:00",
+   "baslangic": false,
+   "sitemap_dk": 6,
+   "durum": 200,
+   "rss_gorulen": "2026-11-12T00:39+03:00",
+   "rss_dk": 6
+  },
+  "/mkk-duyurdu-borls-dnyva-nurvk-ve-usakin-5-aracinda-odeme-yapilamadi": {
+   "yayin": "2026-11-12T00:20:00+03:00",
+   "sitemap_gorulen": "2026-11-12T00:39+03:00",
+   "baslangic": false,
+   "sitemap_dk": 20,
+   "durum": 200,
+   "rss_gorulen": "2026-11-12T00:39+03:00",
+   "rss_dk": 20
+  },
+  "/nasdaq-bilesik-gun-icinde-yuzde-2-sp-500-yuzde-1-deger-kazandi": {
+   "yayin": "2026-11-11T23:11:00+03:00",
+   "sitemap_gorulen": "2026-11-12T00:39+03:00",
+   "baslangic": false,
+   "sitemap_dk": 89,
+   "durum": 200,
+   "rss_gorulen": "2026-11-12T00:39+03:00",
+   "rss_dk": 89
+  },
+  "/ebrd-reacte-katildi-turkiye-enerjisine-5-yilda-6-milyar-dolar-planliyor": {
+   "yayin": "2026-11-11T22:55:00+03:00",
+   "sitemap_gorulen": "2026-11-12T00:39+03:00",
+   "baslangic": false,
+   "sitemap_dk": 105,
+   "durum": 200,
+   "rss_gorulen": "2026-11-12T00:39+03:00",
+   "rss_dk": 105
+  },
+  "/dolartl-11-kasim-aksami-50-liranin-uzerinde-yilbasindan-yuzde-17-yukarida": {
+   "yayin": "2026-11-11T22:42:00+03:00",
+   "sitemap_gorulen": "2026-11-12T00:39+03:00",
+   "baslangic": false,
+   "sitemap_dk": 118,
+   "durum": 200,
+   "rss_gorulen": "2026-11-12T00:39+03:00",
+   "rss_dk": 118
+  },
+  "/gumus-ons-basina-52-dolardan-islem-goruyor-yil-basinin-yuzde-28-altinda": {
+   "yayin": "2026-11-11T22:27:00+03:00",
+   "sitemap_gorulen": "2026-11-12T00:39+03:00",
+   "baslangic": false,
+   "sitemap_dk": 133,
+   "durum": 200,
+   "rss_gorulen": "2026-11-12T00:39+03:00",
+   "rss_dk": 133
+  },
+  "/tasfiyedeki-fonlardan-citas-svgyo-ve-blume-paylarini-geri-aliyor": {
+   "yayin": "2026-11-11T22:11:00+03:00",
+   "sitemap_gorulen": "2026-11-12T00:39+03:00",
+   "baslangic": false,
+   "sitemap_dk": 149,
+   "durum": 200,
+   "rss_gorulen": "2026-11-12T00:39+03:00",
+   "rss_dk": 149
+  },
+  "/savur-gyo-svgyo-geri-alim-butcesini-artirdi-314-milyon-liraya-pay-alacak": {
+   "yayin": "2026-11-11T21:57:00+03:00",
+   "sitemap_gorulen": "2026-11-12T00:39+03:00",
+   "baslangic": false,
+   "sitemap_dk": 163,
+   "durum": 200,
+   "rss_gorulen": "2026-11-12T00:39+03:00",
+   "rss_dk": 163
+  },
+  "/vestel-vestl-tahvil-sahipleri-teklifi-onayladi-oylarin-yuzde-82si-lehte": {
+   "yayin": "2026-11-11T21:43:00+03:00",
+   "sitemap_gorulen": "2026-11-12T00:39+03:00",
+   "baslangic": false,
+   "sitemap_dk": 177,
+   "durum": 200,
+   "rss_gorulen": "2026-11-12T00:39+03:00",
+   "rss_dk": 177
   }
  },
  "ozet": {
-  "haber": 142,
-  "sitemap_medyan_dk": 41.0,
+  "haber": 151,
+  "sitemap_medyan_dk": 43,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 41.0,
+  "rss_medyan_dk": 43,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-11T19:35+03:00"
+  "guncelleme": "2026-11-12T00:39+03:00"
  }
 }
