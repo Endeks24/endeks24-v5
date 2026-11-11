@@ -1126,14 +1126,41 @@
    "durum": 200,
    "rss_gorulen": "2026-11-11T12:11+03:00",
    "rss_dk": 43
+  },
+  "/gubrfde-aciga-satis-payi-geri-alim-olan-ve-olmayan-gunde-yuzde-10-civari": {
+   "yayin": "2026-11-11T13:08:00+03:00",
+   "sitemap_gorulen": "2026-11-11T13:12+03:00",
+   "baslangic": false,
+   "sitemap_dk": 4,
+   "durum": 200,
+   "rss_gorulen": "2026-11-11T13:12+03:00",
+   "rss_dk": 4
+  },
+  "/oyayo-payi-10-kasimda-net-aktif-degerinin-yuzde-265-ustunde-islem-gordu": {
+   "yayin": "2026-11-11T12:41:00+03:00",
+   "sitemap_gorulen": "2026-11-11T13:12+03:00",
+   "baslangic": false,
+   "sitemap_dk": 31,
+   "durum": 200,
+   "rss_gorulen": "2026-11-11T13:12+03:00",
+   "rss_dk": 31
+  },
+  "/gentas-gents-iki-haftalik-aradan-sonra-525-bin-pay-geri-aldi": {
+   "yayin": "2026-11-11T12:24:00+03:00",
+   "sitemap_gorulen": "2026-11-11T13:12+03:00",
+   "baslangic": false,
+   "sitemap_dk": 48,
+   "durum": 200,
+   "rss_gorulen": "2026-11-11T13:12+03:00",
+   "rss_dk": 48
   }
  },
  "ozet": {
-  "haber": 126,
-  "sitemap_medyan_dk": 45.5,
+  "haber": 129,
+  "sitemap_medyan_dk": 45,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 45.5,
+  "rss_medyan_dk": 45,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-11T12:11+03:00"
+  "guncelleme": "2026-11-11T13:12+03:00"
  }
 }
