@@ -1,6 +1,6 @@
 {
  "surum": 1,
- "guncelleme": "2026-10-24",
+ "guncelleme": "2026-11-11",
  "aciklama": "Kelebek Etkisi: BIST şirketlerinin kamuya açık belgelerdeki (faaliyet raporu, KAP) bağımlılıkları. Her eşleşme kaynağa ve alıntıya dayanır; kaynaksız eşleşme girmez. Yön ve tahmin içermez.",
  "etiketler": {
   "brent-petrol": {
@@ -331,6 +331,19 @@
   "THYAO": {
    "ad": "Türk Hava Yolları A.O.",
    "etiketler": [
+    {
+     "id": "brent-petrol",
+     "not": "Şirket, akaryakıtı havacılık sektörünün en büyük maliyet kalemi olarak anıyor; akaryakıtın faaliyet giderleri içindeki payı 2026'nın ilk dokuz ayında yüzde 33.",
+     "alinti": "Havacılık sektörünün en büyük maliyet kalemini oluşturan akaryakıtın fiyat gelişimi aşağıdaki tabloda yer almaktadır.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "THYAO 2026/09 Faaliyet Raporu",
+      "tarih": "4 Kasım 2026",
+      "tarih_iso": "2026-11-04",
+      "dokuman": "DBKmiAkS",
+      "kap_bildirim": 1691984
+     }
+    },
     {
      "id": "havacilik-yakit",
      "not": "Akaryakıt giderleri ortaklığın en yüksek hacimli operasyonel maliyet kalemi olup, akaryakıt fiyatındaki değişimler nakit akışı ve kârlılıkta büyük dalgalanma potansiyeli taşıyor.",
