@@ -1,0 +1,64 @@
+name: endeks24-veri-kontrol
+# 11.11.2026: GitHub zamanlanmış günlük çalışmaları (borsa özeti, dünya, tarayıcı, temettü, fon) sık atlıyor.
+# Bu iş akışı hafta içi 07.00 ile 23.20 (TR) arasında 20 dakikada bir kendini yeniden başlatır ve bayat kalan günlük çalışmaları başlatır.
+# Zincir koparsa 30 dakikalık zamanlama ya da bu dosyanın değişmesi onu yeniden başlatır (concurrency tek çalışma bırakır).
+on:
+  schedule:
+    - cron: '5,35 4-20 * * 1-5'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [.github/workflows/veri-kontrol.yml]
+permissions:
+  contents: read
+  actions: write
+concurrency:
+  group: endeks24-veri-kontrol
+  cancel-in-progress: false
+jobs:
+  kontrol:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Bayat günlük çalışmaları başlat
+        env:
+          GH_TOKEN: ${{ github.token }}
+          R: ${{ github.repository }}
+        run: |
+          H=$(TZ=Europe/Istanbul date +%u%H%M); g=${H:0:1}; s=$((10#${H:1:4}))
+          if [ "$g" -gt 5 ]; then echo "hafta sonu"; exit 0; fi
+          simdi=$(date +%s)
+          yas_dk() { T=$(gh api "repos/$R/commits?sha=$1&per_page=1" -q '.[0].commit.committer.date' 2>/dev/null || true); if [ -z "$T" ]; then echo 99999; else echo $(( (simdi - $(date -d "$T" +%s)) / 60 )); fi; }
+          son_calisma_dk() { T=$(gh run list --workflow "$1" --limit 1 --json createdAt -q '.[0].createdAt' 2>/dev/null || true); if [ -z "$T" ]; then echo 99999; else echo $(( (simdi - $(date -d "$T" +%s)) / 60 )); fi; }
+          baslat() {
+            S=$(son_calisma_dk "$1")
+            if [ "$S" -lt 75 ]; then echo "$1: yakın zamanda çalışmış ($S dk), atlandı"; return; fi
+            R2=$(gh run list --workflow "$1" --status in_progress --json databaseId -q 'length'); Q=$(gh run list --workflow "$1" --status queued --json databaseId -q 'length')
+            if [ "$R2" != 0 ] || [ "$Q" != 0 ]; then echo "$1: çalışıyor"; return; fi
+            gh workflow run "$1" --ref main && echo "$1 başlatıldı: $2"
+          }
+          # Dünya verisi: 9 saat sınırı, 8 saati geçince
+          if [ $s -ge 730 ] && [ $s -le 2300 ] && [ "$(yas_dk dunya-veri)" -gt 480 ]; then baslat dunya-gunluk.yml "dünya verisi bayat"; fi
+          # Borsa özeti: 19.50 sonrası bugünün tarihi olmalı
+          if [ $s -ge 1950 ] && [ $s -le 2300 ]; then
+            TARIH=$(gh api "repos/$R/contents/borsa/ozet.json?ref=borsa-veri" -q .content 2>/dev/null | base64 -d 2>/dev/null | python3 -c "import sys,json;print(json.load(sys.stdin).get('tarih',''))" 2>/dev/null || true)
+            BUGUN=$(TZ=Europe/Istanbul date +%F)
+            if [ "$TARIH" != "$BUGUN" ]; then baslat borsa-gunluk.yml "borsa özeti $TARIH, bugün $BUGUN"; fi
+          fi
+          # Tarayıcı: 20.50 sonrası 20 saati geçtiyse
+          if [ $s -ge 2050 ] && [ $s -le 2300 ] && [ "$(yas_dk tarayici-veri)" -gt 1200 ]; then baslat tarayici-gunluk.yml "tarayıcı bayat"; fi
+          # Temettü ve fon: 11.00 sonrası 20 saati geçtiyse
+          if [ $s -ge 1100 ] && [ $s -le 2300 ]; then
+            if [ "$(yas_dk temettu-veri)" -gt 1200 ]; then baslat temettu-gunluk.yml "temettü bayat"; fi
+            if [ "$(yas_dk fon-veri)" -gt 1200 ]; then baslat fon-gunluk.yml "fon bayat"; fi
+          fi
+      - name: Sonraki kontrol (zincir)
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          H=$(TZ=Europe/Istanbul date +%u%H%M); g=${H:0:1}; s=$((10#${H:1:4}))
+          if [ "$g" -le 5 ] && [ $s -ge 700 ] && [ $s -lt 2320 ]; then
+            sleep 1200
+            gh workflow run veri-kontrol.yml --ref main || true
+          fi
