@@ -1207,14 +1207,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-11T14:50+03:00",
    "rss_dk": 15
+  },
+  "/emlak-konut-ekgyo-sukuk-tavaninin-yuzde-45ini-satti-14-tertip-onaylandi": {
+   "yayin": "2026-11-11T14:50:00+03:00",
+   "sitemap_gorulen": "2026-11-11T15:04+03:00",
+   "baslangic": false,
+   "sitemap_dk": 14,
+   "durum": 200,
+   "rss_gorulen": "2026-11-11T15:04+03:00",
+   "rss_dk": 14
   }
  },
  "ozet": {
-  "haber": 135,
-  "sitemap_medyan_dk": 43,
+  "haber": 136,
+  "sitemap_medyan_dk": 42.5,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 43,
+  "rss_medyan_dk": 42.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-11T14:50+03:00"
+  "guncelleme": "2026-11-11T15:04+03:00"
  }
 }
