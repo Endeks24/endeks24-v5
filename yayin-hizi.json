@@ -1198,14 +1198,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-11T14:21+03:00",
    "rss_dk": 2
+  },
+  "/cosmos-yatirim-holding-kayitli-sermaye-tavanini-750-milyon-liraya-cikardi": {
+   "yayin": "2026-11-11T14:35:00+03:00",
+   "sitemap_gorulen": "2026-11-11T14:50+03:00",
+   "baslangic": false,
+   "sitemap_dk": 15,
+   "durum": 200,
+   "rss_gorulen": "2026-11-11T14:50+03:00",
+   "rss_dk": 15
   }
  },
  "ozet": {
-  "haber": 134,
-  "sitemap_medyan_dk": 43.0,
+  "haber": 135,
+  "sitemap_medyan_dk": 43,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 43.0,
+  "rss_medyan_dk": 43,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-11T14:36+03:00"
+  "guncelleme": "2026-11-11T14:50+03:00"
  }
 }
