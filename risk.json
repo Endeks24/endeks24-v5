@@ -30,7 +30,14 @@
     "doğalgaz",
     "lng",
     "botaş",
-    "ttf"
+    "ttf",
+    "gaz fiyat",
+    "gaz tedarik",
+    "spot gaz",
+    "boru hattı gaz",
+    "rus gazı",
+    "gazprom",
+    "epdk gaz"
    ]
   },
   "elektrik": {
@@ -39,7 +46,15 @@
     "elektrik fiyat",
     "elektrik zam",
     "elektrik tarife",
-    "epdk"
+    "epdk",
+    "spot elektrik",
+    "ptf",
+    "pazar takas fiyat",
+    "epiaş",
+    "epias",
+    "elektrik piyasası",
+    "elektrik tüketim",
+    "elektrik maliyet"
    ]
   },
   "celik-hammadde": {
@@ -48,7 +63,12 @@
     "demir cevheri",
     "kok kömürü",
     "hurda",
-    "cevher"
+    "cevher",
+    "pik demir",
+    "hurda fiyat",
+    "çelik hammadde",
+    "coking coal",
+    "kok fiyat"
    ]
   },
   "celik-ticaret": {
@@ -60,7 +80,14 @@
     "damping",
     "korunma önlemi",
     "çelik tarife",
-    "çelik gümrük"
+    "çelik gümrük",
+    "hrc",
+    "sıcak haddelenmiş",
+    "çelik fiyat",
+    "antidamping",
+    "anti-damping",
+    "korunma tedbir",
+    "ithalat kota"
    ]
   },
   "cbam-karbon": {
@@ -70,7 +97,12 @@
     "karbon sınır",
     "sınırda karbon",
     "emisyon ticaret",
-    "karbon vergisi"
+    "karbon vergisi",
+    "karbon fiyat",
+    "karbon piyasa",
+    "emisyon fiyat",
+    "karbon ayak",
+    "sınır karbon düzenle"
    ]
   },
   "kizildeniz-rota": {
@@ -81,7 +113,13 @@
     "süveyş",
     "husi",
     "babülmendep",
-    "umut burnu"
+    "umut burnu",
+    "bab el mandeb",
+    "bab-el-mandeb",
+    "husiler",
+    "yemen",
+    "gemi saldırı",
+    "rota değişik"
    ]
   },
   "konteyner-navlun": {
@@ -92,7 +130,15 @@
     "freight",
     "drewry",
     "deniz taşımacılığı",
-    "baltık"
+    "baltık",
+    "navlun fiyat",
+    "gemi taşımacılık",
+    "deniz yolu",
+    "denizyolu",
+    "liman",
+    "scfi",
+    "shanghai konteyner",
+    "baltık kuru yük"
    ]
   },
   "avrupa-talep": {
@@ -103,7 +149,13 @@
     "avrupa ekonomisi",
     "almanya",
     "alman sanayi",
-    "avrupa birliği"
+    "avrupa birliği",
+    "avro bölgesi",
+    "avrupa pmi",
+    "euro bölgesi büyüme",
+    "almanya imalat",
+    "alman ekonomi",
+    "ifo"
    ]
   },
   "abd-gumruk": {
@@ -114,7 +166,13 @@
     "trump",
     "abd tarife",
     "ticaret savaşı",
-    "gümrük vergisi"
+    "gümrük vergisi",
+    "karşılıklı tarife",
+    "ticaret savaşları",
+    "gümrük duvarı",
+    "abd ithalat vergisi",
+    "section 232",
+    "tarife artış"
    ]
   },
   "cin-talep": {
@@ -124,7 +182,12 @@
     "çin talebi",
     "çin'in",
     "pekin",
-    "çin imalat"
+    "çin imalat",
+    "çin büyüme",
+    "çin pmi",
+    "çin ihracat",
+    "çin sanayi",
+    "çin tüketim"
    ]
   },
   "dolar-borc": {
@@ -134,7 +197,13 @@
     "dxy",
     "fed faiz",
     "fed kararı",
-    "kur riski"
+    "kur riski",
+    "dolar kuru",
+    "döviz kuru",
+    "kur şoku",
+    "kur farkı",
+    "döviz borcu",
+    "döviz yükümlülük"
    ]
   },
   "metal-fiyat": {
@@ -145,7 +214,12 @@
     "nikel",
     "çinko",
     "lme",
-    "metal fiyat"
+    "metal fiyat",
+    "alüminyum fiyat",
+    "bakır fiyat",
+    "demir dışı",
+    "nikel fiyat",
+    "çinko fiyat"
    ]
   },
   "tarim-emtia": {
@@ -157,7 +231,16 @@
     "ayçiçek",
     "tarım emtia",
     "fao",
-    "gıda fiyat endeksi"
+    "gıda fiyat endeksi",
+    "tarım ürün",
+    "hububat",
+    "buğday fiyat",
+    "arpa",
+    "pamuk",
+    "fındık",
+    "kuraklık",
+    "süt fiyat",
+    "et fiyat"
    ]
   },
   "gubre-hammadde": {
@@ -167,7 +250,12 @@
     "amonyak",
     "üre fiyat",
     "fosfat",
-    "potas"
+    "potas",
+    "azotlu gübre",
+    "fosforik asit",
+    "kükürt",
+    "amonyak fiyat",
+    "gübre fiyat"
    ]
   },
   "havacilik-yakit": {
@@ -190,7 +278,14 @@
     "turist",
     "rezervasyon",
     "otel doluluk",
-    "tatil sezon"
+    "tatil sezon",
+    "otel",
+    "konaklama",
+    "turist sayı",
+    "turizm geliri",
+    "yabancı ziyaretçi",
+    "turizm sezon",
+    "gece sayısı"
    ]
   },
   "yari-iletken-tedarik": {
@@ -201,7 +296,13 @@
     "çip tedarik",
     "tsmc",
     "nexperia",
-    "elektronik bileşen"
+    "elektronik bileşen",
+    "çip kıtlığı",
+    "semikondüktör",
+    "mikroçip",
+    "wafer",
+    "çip fiyat",
+    "chip"
    ]
   },
   "batarya-mineral": {
@@ -211,7 +312,13 @@
     "kobalt",
     "batarya",
     "nadir toprak",
-    "elektrikli araç pil"
+    "elektrikli araç pil",
+    "lityum fiyat",
+    "kobalt fiyat",
+    "grafit",
+    "batarya hammadde",
+    "pil hammadde",
+    "nadir element"
    ]
   },
   "komur-petrokok": {
@@ -221,7 +328,11 @@
     "petrokok",
     "petrol koku",
     "taş kömürü",
-    "linyit"
+    "linyit",
+    "kömür",
+    "newcastle",
+    "kok kömür",
+    "petrokok fiyat"
    ]
   },
   "hurmuz-korfez": {
@@ -230,7 +341,13 @@
     "hürmüz",
     "basra körfezi",
     "körfez bölgesi",
-    "körfez ülkeleri"
+    "körfez ülkeleri",
+    "körfez",
+    "basra",
+    "iran gerilim",
+    "iran savaş",
+    "iran abd",
+    "boğaz kapat"
    ]
   }
  },
@@ -1622,10 +1739,46 @@
  },
  "iliskili": {
   "brent-petrol": [
-   "havacilik-yakit"
+   "havacilik-yakit",
+   "hurmuz-korfez"
   ],
   "havacilik-yakit": [
    "brent-petrol"
+  ],
+  "hurmuz-korfez": [
+   "brent-petrol"
+  ],
+  "dogalgaz": [
+   "elektrik",
+   "gubre-hammadde"
+  ],
+  "elektrik": [
+   "dogalgaz"
+  ],
+  "gubre-hammadde": [
+   "dogalgaz"
+  ],
+  "kizildeniz-rota": [
+   "konteyner-navlun"
+  ],
+  "konteyner-navlun": [
+   "kizildeniz-rota"
+  ],
+  "celik-hammadde": [
+   "celik-ticaret"
+  ],
+  "celik-ticaret": [
+   "celik-hammadde",
+   "cbam-karbon"
+  ],
+  "cbam-karbon": [
+   "celik-ticaret"
+  ],
+  "metal-fiyat": [
+   "batarya-mineral"
+  ],
+  "batarya-mineral": [
+   "metal-fiyat"
   ]
  }
 }
