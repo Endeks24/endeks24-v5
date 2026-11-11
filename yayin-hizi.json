@@ -1153,14 +1153,50 @@
    "durum": 200,
    "rss_gorulen": "2026-11-11T13:12+03:00",
    "rss_dk": 48
+  },
+  "/visne-madencilik-vsnmd-kirma-eleme-tesisi-icin-uygunluk-yazisi-aldi": {
+   "yayin": "2026-11-11T14:06:00+03:00",
+   "sitemap_gorulen": "2026-11-11T14:19+03:00",
+   "baslangic": false,
+   "sitemap_dk": 14,
+   "durum": 200,
+   "rss_gorulen": "2026-11-11T14:19+03:00",
+   "rss_dk": 14
+  },
+  "/dct-trading-dcttr-yurt-icinden-35-milyon-liralik-pamuk-alacak": {
+   "yayin": "2026-11-11T13:51:00+03:00",
+   "sitemap_gorulen": "2026-11-11T14:19+03:00",
+   "baslangic": false,
+   "sitemap_dk": 29,
+   "durum": 200,
+   "rss_gorulen": "2026-11-11T14:19+03:00",
+   "rss_dk": 29
+  },
+  "/flap-kongre-flap-10-milyon-lira-temettuyu-13-kasimda-odeyecek": {
+   "yayin": "2026-11-11T13:37:00+03:00",
+   "sitemap_gorulen": "2026-11-11T14:19+03:00",
+   "baslangic": false,
+   "sitemap_dk": 43,
+   "durum": 200,
+   "rss_gorulen": "2026-11-11T14:19+03:00",
+   "rss_dk": 43
+  },
+  "/beta-enerji-betae-geri-alim-programinda-546597-paya-ulasti": {
+   "yayin": "2026-11-11T13:23:00+03:00",
+   "sitemap_gorulen": "2026-11-11T14:19+03:00",
+   "baslangic": false,
+   "sitemap_dk": 57,
+   "durum": 200,
+   "rss_gorulen": "2026-11-11T14:19+03:00",
+   "rss_dk": 57
   }
  },
  "ozet": {
-  "haber": 129,
-  "sitemap_medyan_dk": 45,
+  "haber": 133,
+  "sitemap_medyan_dk": 43,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 45,
+  "rss_medyan_dk": 43,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-11T13:12+03:00"
+  "guncelleme": "2026-11-11T14:19+03:00"
  }
 }
