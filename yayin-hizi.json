@@ -1216,14 +1216,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-11T15:04+03:00",
    "rss_dk": 14
+  },
+  "/inveo-yatirim-holding-inveo-1-milyar-400-milyon-liralik-bono-satti": {
+   "yayin": "2026-11-11T15:04:00+03:00",
+   "sitemap_gorulen": "2026-11-11T15:18+03:00",
+   "baslangic": false,
+   "sitemap_dk": 15,
+   "durum": 200,
+   "rss_gorulen": "2026-11-11T15:18+03:00",
+   "rss_dk": 15
   }
  },
  "ozet": {
-  "haber": 136,
-  "sitemap_medyan_dk": 42.5,
+  "haber": 137,
+  "sitemap_medyan_dk": 42,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 42.5,
+  "rss_medyan_dk": 42,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-11T15:04+03:00"
+  "guncelleme": "2026-11-11T15:18+03:00"
  }
 }
