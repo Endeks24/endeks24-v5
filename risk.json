@@ -424,6 +424,45 @@
       "dokuman": "dbpaDXmn",
       "kap_bildirim": 1643117
      }
+    },
+    {
+     "id": "kizildeniz-rota",
+     "not": "Şirket, Orta Doğu'daki gerilimler ile Hürmüz Boğazı ve Kızıldeniz'deki arz ve lojistik risklerinin üçüncü çeyrekte petrol ürünleri piyasasını ve ürün marjlarını etkilediğini aktarıyor.",
+     "alinti": "Petrol ürünleri piyasalarında üçüncü çeyrekte, Orta Doğu'da devam eden jeopolitik gerilimler ile Hürmüz Boğazı ve Kızıldeniz'deki arz ve lojistik riskleri piyasa sıkılığını artırarak ürün marjlarını desteklemiştir.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "TUPRS 2026/09 Faaliyet Raporu",
+      "tarih": "6 Kasım 2026",
+      "tarih_iso": "2026-11-06",
+      "dokuman": "ulYg5sa3",
+      "kap_bildirim": 1694199
+     }
+    },
+    {
+     "id": "hurmuz-korfez",
+     "not": "Şirket, Orta Doğu'daki gerilimler ile Hürmüz Boğazı ve Kızıldeniz'deki arz ve lojistik risklerinin üçüncü çeyrekte petrol ürünleri piyasasını ve ürün marjlarını etkilediğini aktarıyor.",
+     "alinti": "Petrol ürünleri piyasalarında üçüncü çeyrekte, Orta Doğu'da devam eden jeopolitik gerilimler ile Hürmüz Boğazı ve Kızıldeniz'deki arz ve lojistik riskleri piyasa sıkılığını artırarak ürün marjlarını desteklemiştir.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "TUPRS 2026/09 Faaliyet Raporu",
+      "tarih": "6 Kasım 2026",
+      "tarih_iso": "2026-11-06",
+      "dokuman": "ulYg5sa3",
+      "kap_bildirim": 1694199
+     }
+    },
+    {
+     "id": "dolar-borc",
+     "not": "Grup, döviz cinsinden operasyonları nedeniyle döviz kuru riskine maruz kaldığını belirtiyor ve net bilanço yabancı para pozisyonunu tablo halinde veriyor.",
+     "alinti": "Grup, döviz cinsinden yaptığı operasyonları nedeniyle döviz kuru riskine maruz kalmaktadır.",
+     "kaynak": {
+      "tur": "KAP",
+      "baslik": "TUPRS 2026/09 Finansal Tablo ve Dipnotlar",
+      "tarih": "6 Kasım 2026",
+      "tarih_iso": "2026-11-06",
+      "dokuman": "E3LEc62f",
+      "kap_bildirim": 1694197
+     }
     }
    ]
   },
@@ -454,6 +493,19 @@
       "tarih_iso": "2026-03-05",
       "dokuman": "cuxiukD7",
       "kap_bildirim": 1566144
+     }
+    },
+    {
+     "id": "konteyner-navlun",
+     "not": "Şirket, navlun fiyatlarının hızlı bir şekilde arttığını ve bunun ürün fiyatlarına destek verdiğini aktarıyor.",
+     "alinti": "Tedarik zincirindeki aksaklıklar ve artan ham petrol fiyatlarının da etkisiyle bu dönemde navlun fiyatları hızlı bir şekilde yükseldi. Bu da ürün fiyatlarına destek verdi.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "PETKM 2026/09 Faaliyet Raporu",
+      "tarih": "5 Kasım 2026",
+      "tarih_iso": "2026-11-05",
+      "dokuman": "cNJ0tfTv",
+      "kap_bildirim": 1692859
      }
     }
    ]
@@ -555,6 +607,19 @@
       "tarih_iso": "2026-02-18",
       "dokuman": "rce6f6bW",
       "kap_bildirim": 1558661
+     }
+    },
+    {
+     "id": "dolar-borc",
+     "not": "Grup, ağırlıklı olarak Avro ve kısmen ABD Doları cinsinden kur riskine maruz kaldığını, bu riskin uzun vadeli Avro yatırım kredilerinden oluştuğunu belirtiyor.",
+     "alinti": "Grup, ağırlıklı olarak Avro ve kısmen de ABD Doları cinsinden kur riskine maruz kalmaktadır. Grup'un döviz kuru riski uzun vadeli Avro yatırım kredilerinden oluşmaktadır.",
+     "kaynak": {
+      "tur": "KAP",
+      "baslik": "FROTO 2026/09 Finansal Tablo ve Dipnotlar",
+      "tarih": "5 Kasım 2026",
+      "tarih_iso": "2026-11-05",
+      "dokuman": "OiVfoSxa",
+      "kap_bildirim": 1693370
      }
     }
    ]
@@ -714,6 +779,19 @@
       "dokuman": "HPsM1zFJ",
       "kap_bildirim": 1590413
      }
+    },
+    {
+     "id": "hurmuz-korfez",
+     "not": "Şirket, Hürmüz Boğazı üzerinden yapılan sevkiyatlardaki aksamaların azotlu gübrelerde arz güvenliği ve lojistik maliyetleri açısından baskı oluşturduğunu belirtiyor.",
+     "alinti": "İran'daki savaş ve Hürmüz Boğazı üzerinden gerçekleştirilen sevkiyatlarda yaşanan aksamalar, özellikle azotlu gübrelerde arz güvenliği ve lojistik maliyetleri açısından baskı oluşturmuştur.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "GUBRF 2026/09 Faaliyet Raporu",
+      "tarih": "9 Kasım 2026",
+      "tarih_iso": "2026-11-09",
+      "dokuman": "GIynH8Wn",
+      "kap_bildirim": 1695446
+     }
     }
    ]
   },
@@ -783,6 +861,19 @@
       "tarih_iso": "2026-08-10",
       "dokuman": "rD1Wrm4n",
       "kap_bildirim": 1647077
+     }
+    },
+    {
+     "id": "metal-fiyat",
+     "not": "Şirket, 12 aya kadar tahmini kutu alımları için alüminyum fiyat riskinden korunmak amacıyla alüminyum swap işlemleri ve swap satın alma opsiyonu yapıyor.",
+     "alinti": "12 aya kadar tahmini kutu alımları baz alınarak, emtia fiyat (alüminyum) riskinden korunmak adına şirket, alüminyum swap işlemleri ve alüminyum swap satın alma opsiyonu gerçekleştirmektedir (Not 6).",
+     "kaynak": {
+      "tur": "KAP",
+      "baslik": "CCOLA 2026/09 Finansal Tablo ve Dipnotlar",
+      "tarih": "3 Kasım 2026",
+      "tarih_iso": "2026-11-03",
+      "dokuman": "xZ3XuglJ",
+      "kap_bildirim": 1691889
      }
     }
    ]
@@ -940,6 +1031,19 @@
       "tarih_iso": "2026-08-05",
       "dokuman": "BV8Sy3mj",
       "kap_bildirim": 1643943
+     }
+    },
+    {
+     "id": "cbam-karbon",
+     "not": "Şirket, emisyon yoğunluğunu ton başına 691 kg'dan 674 kg'a indirdiğini belirtiyor ve bunu SKDM (CBAM) kapsamındaki rekabetçiliğiyle ilişkilendiriyor.",
+     "alinti": "Bu iyileşmeler sayesinde çimento ve türevleri için CO₂ emisyon yoğunluğu ton başına 691 kg'dan 674 kg'a düşmüş; böylece Akçansa'nın sürdürülebilirlik profili güçlenmiş ve SKDM (CBAM) kapsamındaki rekabetçiliği artmıştır.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "AKCNS 2026/09 Faaliyet Raporu",
+      "tarih": "27 Ekim 2026",
+      "tarih_iso": "2026-10-27",
+      "dokuman": "C5GaZ048",
+      "kap_bildirim": 1688578
      }
     }
    ]
@@ -1412,6 +1516,19 @@
       "dokuman": "MX0UlY1x",
       "kap_bildirim": 1480331
      }
+    },
+    {
+     "id": "gubre-hammadde",
+     "not": "Şirket, fosforlu gübre ve kükürt piyasalarındaki fiyat hareketlerinin bitki besleme iş kolunda tedarik süreçlerini ve maliyet yönetimini etkilediğini belirtiyor.",
+     "alinti": "Özellikle fosforlu gübre ve kükürt piyasalarında yaşanan fiyat artışları, tedarik süreçlerini ve maliyet yönetimini daha kritik hâle getirmiştir.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "HEKTS 2026/09 Faaliyet Raporu",
+      "tarih": "6 Kasım 2026",
+      "tarih_iso": "2026-11-06",
+      "dokuman": "FvNEYuVw",
+      "kap_bildirim": 1694458
+     }
     }
    ]
   },
@@ -1492,6 +1609,19 @@
       "dokuman": "wqJeL8HR",
       "kap_bildirim": 1570982
      }
+    },
+    {
+     "id": "metal-fiyat",
+     "not": "Şirket, proje işleri dışında hammadde stoklarının değeri ve piyasadaki çelik fiyat değişimleri nedeniyle satış fiyatlarının etkilenmesinden fiyat riskine maruz olduğunu belirtiyor.",
+     "alinti": "Grup, boru hattı proje işleri dışında hammadde stoklarının değeri ile piyasalardaki çelik fiyat değişimlerinden dolayı satış fiyatlarının etkilenmesi nedeniyle fiyat riskine maruz kalmaktadır.",
+     "kaynak": {
+      "tur": "KAP",
+      "baslik": "BRSAN 2026/09 Finansal Tablo ve Dipnotlar",
+      "tarih": "6 Kasım 2026",
+      "tarih_iso": "2026-11-06",
+      "dokuman": "zJrSdLQc",
+      "kap_bildirim": 1694465
+     }
     }
    ]
   },
@@ -1509,6 +1639,19 @@
       "tarih_iso": "2026-03-05",
       "dokuman": "pczRpOTi",
       "kap_bildirim": 1566780
+     }
+    },
+    {
+     "id": "konteyner-navlun",
+     "not": "Şirket, ithalat ve ihracat pazarlarında lojistik imkanların daralmasının navlun maliyetlerini ve ticaret kanalları üzerindeki baskıyı artırdığını belirtiyor.",
+     "alinti": "Hem ithalat hem de ihracat pazarları değerlendirildiğinde lojiktik imkanların daralması, navlun maliyetlerinin artışına yol açmış, ticaret kanalları üzerinde baskının artmasına yol açmıştır.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "AKSA 2026/09 Faaliyet Raporu",
+      "tarih": "4 Kasım 2026",
+      "tarih_iso": "2026-11-04",
+      "dokuman": "v6mC9pHG",
+      "kap_bildirim": 1692741
      }
     }
    ]
@@ -1631,6 +1774,702 @@
       "dokuman": "bfywtgnd",
       "kap_bildirim": 1695827
      }
+    },
+    {
+     "id": "dolar-borc",
+     "not": "Şirket, Türk Lirası gelirine karşılık ABD Doları bazlı borçlanma ve yakıt alımlarını kur riskine maruz kalma nedeni olarak gösteriyor.",
+     "alinti": "Grup, özellikle Türk Lirası gelir, ABD Doları bazlı borçlanma ve yakıt alımları gibi Avro dışındaki para birimlerinde işlemler gerçekleştirmektedir. Avro dışındaki para birimleri ile gerçekleştirilen bu işlemler Grup'u kur riskine maruz bırakmaktadır.",
+     "kaynak": {
+      "tur": "KAP",
+      "baslik": "PGSUS 2026/09 Finansal Tablo ve Dipnotlar",
+      "tarih": "9 Kasım 2026",
+      "tarih_iso": "2026-11-09",
+      "dokuman": "bfywtgnd",
+      "kap_bildirim": 1695827
+     }
+    }
+   ]
+  },
+  "SASA": {
+   "ad": "Sasa Polyester Sanayi A.Ş.",
+   "etiketler": [
+    {
+     "id": "brent-petrol",
+     "not": "Şirket, petrol ve petrokimya hammaddelerindeki maliyet oynaklığının PX ve MEG hammadde maliyetlerini ve kâr marjlarını etkilediğini belirtiyor.",
+     "alinti": "Özellikle enerji arzındaki belirsizlikler, petrol ve petrokimya hammaddelerindeki maliyet oynaklığını artırmaktadır. Bu durum hammaddelerimiz olan PX ve MEG maliyetlerini artırırken, artan maliyetlerin aynı oranda fiyata yansımaması kar marjlarını baskılamaktadır.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "SASA 2026/09 Faaliyet Raporu",
+      "tarih": "6 Kasım 2026",
+      "tarih_iso": "2026-11-06",
+      "dokuman": "yC4uXm5K",
+      "kap_bildirim": 1693507
+     }
+    },
+    {
+     "id": "hurmuz-korfez",
+     "not": "Şirket, Hürmüz Boğazı ve Ortadoğu rotalarında uluslararası ticaretin sekteye uğramasını ve ABD ile Avrupa'nın Asya dışı tedarikçi arayışını kendi faaliyetlerine etki eden unsurlar arasında sayıyor.",
+     "alinti": "Ticaret savaşları kaynaklı olarak ABD ve Avrupa Kıtası'nın Asya kaynakları dışında tedarikçi arayışları, Hürmüz Boğazı ve Ortadoğu'daki rotalarda uluslararası ticaretin sekteye uğraması SASA için bu dönemde avantaj sağlamıştır.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "SASA 2026/09 Faaliyet Raporu",
+      "tarih": "6 Kasım 2026",
+      "tarih_iso": "2026-11-06",
+      "dokuman": "yC4uXm5K",
+      "kap_bildirim": 1693507
+     }
+    },
+    {
+     "id": "dolar-borc",
+     "not": "Şirket, döviz cinsinden borç ve alacakların Türk lirasına çevrilmesinden doğan döviz kuru riskine maruz kaldığını belirtiyor.",
+     "alinti": "Şirket, döviz cinsinden borçlu veya alacaklı bulunulan meblağların Türk lirasına çevrilmesinden dolayı kur değişiklerinden doğan döviz kuru riskine maruz kalmaktadır.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "SASA 2026/09 Faaliyet Raporu",
+      "tarih": "6 Kasım 2026",
+      "tarih_iso": "2026-11-06",
+      "dokuman": "yC4uXm5K",
+      "kap_bildirim": 1693507
+     }
+    }
+   ]
+  },
+  "PRKME": {
+   "ad": "Park Elektrik Üretim Madencilik Sanayi ve Ticaret A.Ş.",
+   "etiketler": [
+    {
+     "id": "brent-petrol",
+     "not": "Şirket, linyit madenciliğinde üretim maliyetinin ve kömür satış fiyatının belirlenmesinde en önemli etmenin akaryakıt fiyatları olduğunu belirtiyor.",
+     "alinti": "Linyit madenciliği açısından ise hem üretim maliyetlerinin hem de kömür satış fiyatlarının belirlenmesindeki en önemli etmen akaryakıt fiyatlarıdır.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "PRKME 2026/09 Faaliyet Raporu",
+      "tarih": "6 Kasım 2026",
+      "tarih_iso": "2026-11-06",
+      "dokuman": "KSUGZ3nb",
+      "kap_bildirim": 1694312
+     }
+    },
+    {
+     "id": "komur-petrokok",
+     "not": "Şirket, ithal kömür fiyatlarındaki değişikliklerin ikame ürün niteliğindeki yerli kömür fiyatlarını dolaylı olarak etkilediğini belirtiyor.",
+     "alinti": "İlaveten, ithal kömür fiyatlarındaki değişiklikler ikame ürün niteliğindeki yerli kömür fiyatlarını da dolaylı olarak etkilemektedir.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "PRKME 2026/09 Faaliyet Raporu",
+      "tarih": "6 Kasım 2026",
+      "tarih_iso": "2026-11-06",
+      "dokuman": "KSUGZ3nb",
+      "kap_bildirim": 1694312
+     }
+    }
+   ]
+  },
+  "TUREX": {
+   "ad": "Tureks Turizm Taşımacılık A.Ş.",
+   "etiketler": [
+    {
+     "id": "brent-petrol",
+     "not": "Şirket, akaryakıt fiyatlarındaki değişimlerle ilişkili risklere maruz kaldığını ve yakıt giderlerinin mali durumunu ve faaliyet sonuçlarını etkileyebileceğini belirtiyor.",
+     "alinti": "Akaryakıt fiyatlarındaki değişimler ile ilişkili risklere maruz kalmaktadır. Yakıt giderlerindeki artışlar Şirket'in mali durumunu ve faaliyet sonuçlarını olumsuz etkileyebilir.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "TUREX 2026/09 Faaliyet Raporu",
+      "tarih": "9 Kasım 2026",
+      "tarih_iso": "2026-11-09",
+      "dokuman": "ygsCfpfy",
+      "kap_bildirim": 1695530
+     }
+    }
+   ]
+  },
+  "KCHOL": {
+   "ad": "Koç Holding A.Ş.",
+   "etiketler": [
+    {
+     "id": "brent-petrol",
+     "not": "Holding, bağlı ortaklığı Tüpraş'ın ham petrol stokları nedeniyle petrol fiyatlarındaki dalgalanmaların etkilerine maruz kaldığını belirtiyor.",
+     "alinti": "Grup'un Bağlı Ortaklıkları'ndan Tüpraş, üretimde kullanmak üzere edindiği ham petrol stokları ile ilgili olarak petrol fiyatlarındaki dalgalanmaların etkilerine maruz kalmaktadır.",
+     "kaynak": {
+      "tur": "KAP",
+      "baslik": "KCHOL 2026/09 Finansal Tablo ve Dipnotlar",
+      "tarih": "9 Kasım 2026",
+      "tarih_iso": "2026-11-09",
+      "dokuman": "2PHbgUls",
+      "kap_bildirim": 1695371
+     }
+    }
+   ]
+  },
+  "ISKPL": {
+   "ad": "Işık Plastik Sanayi ve Dış Ticaret A.Ş.",
+   "etiketler": [
+    {
+     "id": "brent-petrol",
+     "not": "Şirket, endüstriyel levha ve gıda ambalajında kullandığı granül polimer plastiğin arz ve fiyatının ham petrol fiyatlarına bağlı olarak değişebildiğini belirtiyor.",
+     "alinti": "granül polimer plastiğin arzı ve fiyatı ham petrol fiyatlarına, rafineri ve petrokimya endüstrilerinin kar marjlarına, büyük uluslararası üreticilerin fabrikalarındaki üretimde yaşanabilen geçici duraklamalara ve dünya çapındaki gelişmelere bağlı olarak değişebilme potansiyeline sahiptir.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "ISKPL 2026/09 Faaliyet Raporu",
+      "tarih": "9 Kasım 2026",
+      "tarih_iso": "2026-11-09",
+      "dokuman": "eG9OlIkW",
+      "kap_bildirim": 1695491
+     }
+    }
+   ]
+  },
+  "AHGAZ": {
+   "ad": "Ahlatcı Doğal Gaz Dağıtım Enerji ve Yatırım A.Ş.",
+   "etiketler": [
+    {
+     "id": "dogalgaz",
+     "not": "Şirket, doğal gaz satış fiyatlarını piyasa riski unsuru sayıyor ve fiyatlarda yüzde bir farkın gelir tahakkuklarına etkisini duyarlılık olarak veriyor.",
+     "alinti": "Eğer doğal gaz satış fiyatları 30 Eylül 2026 ve 31 Aralık 2025 tarihleri itibarıyla yüzde bir daha fazla olsaydı, gelir tahakkukları sırasıyla 6.640.119 TL ve 55.757.942 TL daha fazla olacaktı.",
+     "kaynak": {
+      "tur": "KAP",
+      "baslik": "AHGAZ 2026/09 Finansal Tablo ve Dipnotlar",
+      "tarih": "6 Kasım 2026",
+      "tarih_iso": "2026-11-06",
+      "dokuman": "RZFLymZx",
+      "kap_bildirim": 1694291
+     }
+    }
+   ]
+  },
+  "BUCIM": {
+   "ad": "Bursa Çimento Fabrikası A.Ş.",
+   "etiketler": [
+    {
+     "id": "dogalgaz",
+     "not": "Şirket, çimento üretim maliyetlerinde en büyük payı yakıt (kömür, doğal gaz) ve elektrik giderlerinin oluşturduğunu ve enerji fiyatlarındaki dalgalanmaların karlılığı etkileyebileceğini belirtiyor.",
+     "alinti": "Şirket'in çimento üretim maliyetlerde en büyük paya sahip giderler, yakıt (Kömür, Doğal gaz vb.) ve elektrik giderlerinden oluşturmaktadır. Enerji fiyatlarında yaşanacak dalgalanmalar Şirket'in karlılığını önemli ölçüde etkileyebilir.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "BUCIM 2026/09 Faaliyet Raporu",
+      "tarih": "9 Kasım 2026",
+      "tarih_iso": "2026-11-09",
+      "dokuman": "zmw0DaMZ",
+      "kap_bildirim": 1695465
+     }
+    },
+    {
+     "id": "elektrik",
+     "not": "Şirket, elektrik giderlerini çimento üretim maliyetindeki en büyük kalemler arasında sayıyor ve enerji fiyatlarındaki dalgalanmaların karlılığı önemli ölçüde etkileyebileceğini belirtiyor.",
+     "alinti": "Şirket'in çimento üretim maliyetlerde en büyük paya sahip giderler, yakıt (Kömür, Doğal gaz vb.) ve elektrik giderlerinden oluşturmaktadır. Enerji fiyatlarında yaşanacak dalgalanmalar Şirket'in karlılığını önemli ölçüde etkileyebilir.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "BUCIM 2026/09 Faaliyet Raporu",
+      "tarih": "9 Kasım 2026",
+      "tarih_iso": "2026-11-09",
+      "dokuman": "zmw0DaMZ",
+      "kap_bildirim": 1695465
+     }
+    },
+    {
+     "id": "komur-petrokok",
+     "not": "Şirket, döviz kurlarına bağlı olarak değişen kömür fiyatlarının karlılığı etkileyebileceğini belirtiyor.",
+     "alinti": "Döviz kurlarına bağlı olarak değişen kömür fiyatları da Şirket'in karlılığını etkileyebilir. Buna göre enerji ve kömür fiyatlarında yaşanacak artışlar Şirket'in karlılığını önemli ölçüde olumsuz yönde etkileyebilir.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "BUCIM 2026/09 Faaliyet Raporu",
+      "tarih": "9 Kasım 2026",
+      "tarih_iso": "2026-11-09",
+      "dokuman": "zmw0DaMZ",
+      "kap_bildirim": 1695465
+     }
+    }
+   ]
+  },
+  "CMENT": {
+   "ad": "Çimentaş İzmir Çimento Fabrikası T.A.Ş.",
+   "etiketler": [
+    {
+     "id": "elektrik",
+     "not": "Şirket, yakıt ve elektrik dahil enerjinin maliyetlerinin yarıdan fazlasını oluşturduğunu belirtiyor.",
+     "alinti": "Sektörde yer alan tüm işletmelerin ve bölgesel bazda şirketimizin maliyetlerinin %50'den fazlasını yakıt ve elektrik olmak üzere enerji oluşturmaktadır.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "CMENT 2026/09 Faaliyet Raporu",
+      "tarih": "5 Kasım 2026",
+      "tarih_iso": "2026-11-05",
+      "dokuman": "jUYULi4x",
+      "kap_bildirim": 1693313
+     }
+    },
+    {
+     "id": "komur-petrokok",
+     "not": "Şirket, kömür ve petrokok fiyatlarındaki ve kurlardaki değişimlerin ve elektrik fiyatlarındaki dalgalanmaların kapasite kullanımını ve rekabet gücünü etkilediğini belirtiyor.",
+     "alinti": "büyük bölümü ithal girdiler olan kömür ve petrokok fiyatlarındaki ve/veya kurlardaki yukarı yönlü değişimler ile elektrik fiyatlarındaki dalgalanmalar sektörün kapasite kullanımını ve rekabet gücünü olumsuz yönde etkilemektedir.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "CMENT 2026/09 Faaliyet Raporu",
+      "tarih": "5 Kasım 2026",
+      "tarih_iso": "2026-11-05",
+      "dokuman": "jUYULi4x",
+      "kap_bildirim": 1693313
+     }
+    }
+   ]
+  },
+  "SARKY": {
+   "ad": "Sarkuysan Elektrolit Bakır Sanayi ve Ticaret A.Ş.",
+   "etiketler": [
+    {
+     "id": "metal-fiyat",
+     "not": "Şirket, maliyetinin büyük ağırlığını oluşturan bakır fiyatlarının dünya piyasalarınca belirlendiğini ve değişken seyir izlediğini belirtiyor.",
+     "alinti": "Grup'un maliyetinin büyük bir ağırlığını oluşturan bakır fiyatları, dünya piyasalarınca belirlenmekte olup, oldukça değişken bir seyir izlemektedir.",
+     "kaynak": {
+      "tur": "KAP",
+      "baslik": "SARKY 2026/09 Finansal Tablo ve Dipnotlar",
+      "tarih": "9 Kasım 2026",
+      "tarih_iso": "2026-11-09",
+      "dokuman": "JCMwIFdJ",
+      "kap_bildirim": 1695604
+     }
+    }
+   ]
+  },
+  "YIGIT": {
+   "ad": "Yiğit Akü Malzemeleri Nakliyat Turizm İnşaat Sanayi ve Ticaret A.Ş.",
+   "etiketler": [
+    {
+     "id": "batarya-mineral",
+     "not": "Şirket, lityum piyasasında yaşanan normalleşme eğilimini maliyet yönetimiyle ilişkilendiriyor.",
+     "alinti": "Kurşun piyasasında görece istikrarlı fiyat hareketleri gözlenirken, lityum piyasasında yaşanan normalleşme eğilimi maliyet yönetimine olumlu katkı sağlamıştır.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "YIGIT 2026/06 Faaliyet Raporu",
+      "tarih": "10 Ağustos 2026",
+      "tarih_iso": "2026-08-10",
+      "dokuman": "HAuPlDSY",
+      "kap_bildirim": 1647328
+     }
+    },
+    {
+     "id": "metal-fiyat",
+     "not": "Şirket, yurt dışı satış fiyatlarını Londra Metal Borsası kurşun fiyatları ve döviz kurlarındaki gelişmeleri dikkate alarak belirliyor.",
+     "alinti": "Yurt dışı satış fiyatlandırmaları, Londra Metal Borsası (LME) kurşun fiyatları ile döviz kurlarındaki gelişmeler dikkate alınarak belirlenmekte; piyasa koşullarına bağlı olarak düzenli şekilde güncellenmektedir.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "YIGIT 2026/09 Faaliyet Raporu",
+      "tarih": "30 Ekim 2026",
+      "tarih_iso": "2026-10-30",
+      "dokuman": "SXBlvZCv",
+      "kap_bildirim": 1690108
+     }
+    }
+   ]
+  },
+  "EGSER": {
+   "ad": "Ege Seramik San. ve Tic. A.Ş.",
+   "etiketler": [
+    {
+     "id": "kizildeniz-rota",
+     "not": "Şirket, Kızıldeniz, Hürmüz Boğazı ve Süveyş Kanalı'ndaki jeopolitik riskler nedeniyle ithalatta nakliye süreleri ve navlun maliyetlerinin arttığını, bunun üretim maliyetlerini olumsuz etkilediğini belirtiyor.",
+     "alinti": "Kızıldeniz, Hürmüz Boğazı ve Süveyş Kanalı'ndaki jeopolitik riskler nedeniyle, özellikle ithalatta nakliye süreleri ve navlun maliyetleri ciddi oranda artmıştır. Bu durum beraberinde üretim maliyetlerini olumsuz etkilemiştir.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "EGSER 2026/09 Faaliyet Raporu",
+      "tarih": "28 Ekim 2026",
+      "tarih_iso": "2026-10-28",
+      "dokuman": "mcPYRMFD",
+      "kap_bildirim": 1689121
+     }
+    },
+    {
+     "id": "konteyner-navlun",
+     "not": "Şirket, jeopolitik riskler nedeniyle ithalatta nakliye süreleri ve navlun maliyetlerinin ciddi oranda arttığını, bu durumun üretim maliyetlerini olumsuz etkilediğini belirtiyor.",
+     "alinti": "Kızıldeniz, Hürmüz Boğazı ve Süveyş Kanalı'ndaki jeopolitik riskler nedeniyle, özellikle ithalatta nakliye süreleri ve navlun maliyetleri ciddi oranda artmıştır. Bu durum beraberinde üretim maliyetlerini olumsuz etkilemiştir.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "EGSER 2026/09 Faaliyet Raporu",
+      "tarih": "28 Ekim 2026",
+      "tarih_iso": "2026-10-28",
+      "dokuman": "mcPYRMFD",
+      "kap_bildirim": 1689121
+     }
+    }
+   ]
+  },
+  "LILAK": {
+   "ad": "Lila Kağıt Sanayi ve Ticaret A.Ş.",
+   "etiketler": [
+    {
+     "id": "hurmuz-korfez",
+     "not": "Şirket, Hürmüz Boğazı ve deniz ticaret rotalarındaki aksamaların tedarik zincirinde ve büyük müşterilerin siparişlerinde gecikmelere yol açtığını bildiriyor.",
+     "alinti": "Jeopolitik koşullarda devam eden problemler, İran İsrail savaşının devam eden etkileri, Hürmüz Boğazı ve deniz ticaret rotalarında aksamalara sebep olurken, tedarik zincirindeki aksamalar, büyük oyuncuların siparişlerinde gecikmelere ve talep koşullarında kısmi bozulmalara sebep olmuştur.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "LILAK 2026/09 Faaliyet Raporu",
+      "tarih": "26 Ekim 2026",
+      "tarih_iso": "2026-10-26",
+      "dokuman": "oCyui77Y",
+      "kap_bildirim": 1687543
+     }
+    },
+    {
+     "id": "avrupa-talep",
+     "not": "Şirket, üçüncü çeyrekte Avrupa'da talebin zayıflamasının, perakendecilerin stok azaltmasının ve sipariş ertelemelerinin satış hacimlerini baskıladığını belirtiyor.",
+     "alinti": "üçüncü çeyrekte özellikle Avrupa'da talebin zayıflaması, perakendecilerin stok azaltma eğilimi ve sipariş ertelemeleri satış hacimlerini baskılamıştır.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "LILAK 2026/09 Faaliyet Raporu",
+      "tarih": "26 Ekim 2026",
+      "tarih_iso": "2026-10-26",
+      "dokuman": "oCyui77Y",
+      "kap_bildirim": 1687543
+     }
+    }
+   ]
+  },
+  "KBORU": {
+   "ad": "Kuzey Boru A.Ş.",
+   "etiketler": [
+    {
+     "id": "konteyner-navlun",
+     "not": "Şirket, deniz ve kara navlun fiyatlarındaki artışı maliyetleri üzerinde baskı unsuru olarak sayıyor ve bunun ürün adet satışlarını azaltma riski taşıdığını belirtiyor.",
+     "alinti": "Enerji, işçilik maliyetlerindeki artış ve deniz, kara navlun fiyatlarındaki artış, maliyetler üzerinde baskı yaratmaktadır. Bu baskı nedeniyle ürün fiyatlarındaki artışın ve talebin azalmasının ürün adet satışlarını azaltma riski bulunmaktadır.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "KBORU 2026/09 Faaliyet Raporu",
+      "tarih": "30 Ekim 2026",
+      "tarih_iso": "2026-10-30",
+      "dokuman": "aK5636Sj",
+      "kap_bildirim": 1690161
+     }
+    }
+   ]
+  },
+  "KRTEK": {
+   "ad": "Karsu Tekstil Sanayii ve Ticaret A.Ş.",
+   "etiketler": [
+    {
+     "id": "konteyner-navlun",
+     "not": "Şirket, lojistik güzergâhlarının değişmesi ve uzaması nedeniyle navlun fiyatlarının ve teslim sürelerinin arttığını, bunun yakın coğrafyalardan tedarikin önemini artırdığını belirtiyor.",
+     "alinti": "Küresel çapta yaşanan siyasi gerilimler dolayısıyla lojistik güzergâhlarının değişmesi ve uzaması nedeniyle artan navlun fiyatları ve teslim süreleri yakın coğrafyalardan tedarikin önemini arttırmıştır.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "KRTEK 2026/09 Faaliyet Raporu",
+      "tarih": "30 Ekim 2026",
+      "tarih_iso": "2026-10-30",
+      "dokuman": "dNqbewsz",
+      "kap_bildirim": 1689955
+     }
+    }
+   ]
+  },
+  "OSTIM": {
+   "ad": "Ostim Endüstriyel Yatırımlar ve İşletme A.Ş.",
+   "etiketler": [
+    {
+     "id": "konteyner-navlun",
+     "not": "Şirket raporunda küresel tedarik hatlarındaki navlun dalgalanmaları ve yurt içi operasyonel maliyetler nedeniyle kar marjını korumak için lojistik yönetimine ihtiyaç duyulduğu belirtiliyor.",
+     "alinti": "Küresel tedarik hatlarındaki navlun dalgalanmaları ve yurt içi operasyonel maliyetler, kar marjlarını korumak adına akıllı lojistik yönetimini zorunlu kılmaktadır.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "OSTIM 2026/09 Faaliyet Raporu",
+      "tarih": "6 Kasım 2026",
+      "tarih_iso": "2026-11-06",
+      "dokuman": "vFv8WaTY",
+      "kap_bildirim": 1694446
+     }
+    }
+   ]
+  },
+  "MAKIM": {
+   "ad": "Makim Makina Teknolojileri Sanayi ve Ticaret A.Ş.",
+   "etiketler": [
+    {
+     "id": "hurmuz-korfez",
+     "not": "Şirket, Hürmüz Boğazı'ndaki jeopolitik gelişmeler ve küresel belirsizliklerin etkisiyle ilk çeyreğin yıl başı hedeflerinin gerisinde kaldığını belirtiyor.",
+     "alinti": "Hürmüz Boğazı'nda yaşanan jeopolitik gelişmeler ve artan küresel belirsizlikler halen sonuçlanmamış durumdadır. Bu zorlu koşulların etkisiyle yıl başında belirlenen hedeflerin gerisinde kalan ilk çeyreğe göre ikinci çeyrek bir miktar toparlanma ile tamamlanmıştı.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "MAKIM 2026/09 Faaliyet Raporu",
+      "tarih": "9 Kasım 2026",
+      "tarih_iso": "2026-11-09",
+      "dokuman": "FabemIn7",
+      "kap_bildirim": 1695313
+     }
+    }
+   ]
+  },
+  "ELITE": {
+   "ad": "Elite Naturel Organik Gıda Sanayi ve Ticaret A.Ş.",
+   "etiketler": [
+    {
+     "id": "abd-gumruk",
+     "not": "Şirket, ABD'nin gümrük tarifelerindeki belirsizliğin ABD'den gelen siparişlerini olumsuz etkilediğini bildiriyor.",
+     "alinti": "ABD tarafından uygulanan gümrük tariflerindeki belirsizlik, her ne kadar Türkiye'ye yüksek oranda gümrük tarifesi uygulanmasa da ABD'den gelen siparişlerimizi olumsuz etkilemiştir.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "ELITE 2026/06 Faaliyet Raporu",
+      "tarih": "19 Ağustos 2026",
+      "tarih_iso": "2026-08-19",
+      "dokuman": "3TsCjGiC",
+      "kap_bildirim": 1653168
+     }
+    }
+   ]
+  },
+  "DITAS": {
+   "ad": "Ditaş BDY Yedek Parça İmalat ve Teknik A.Ş.",
+   "etiketler": [
+    {
+     "id": "cin-talep",
+     "not": "Şirket, Çin menşeli düşük maliyetli ürünlerin satış sonrası pazardaki rekabetinin ihracat pazarlarında fiyatlandırma ve kârlılık yönetimini önemli hale getirdiğini belirtiyor.",
+     "alinti": "Çin menşeli düşük maliyetli ürünlerin uluslararası satış sonrası pazarlardaki rekabeti, şirketin ihracat pazarlarında fiyatlandırma ve kârlılık yönetimini önemli hale getirmiştir.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "DITAS 2026/09 Faaliyet Raporu",
+      "tarih": "9 Kasım 2026",
+      "tarih_iso": "2026-11-09",
+      "dokuman": "yQ0Mb8ew",
+      "kap_bildirim": 1695715
+     }
+    }
+   ]
+  },
+  "FRIGO": {
+   "ad": "Frigo-Pak Gıda Maddeleri Sanayi ve Ticaret A.Ş.",
+   "etiketler": [
+    {
+     "id": "avrupa-talep",
+     "not": "Şirket, en yoğun pazarı Avrupa'da yaşanan talebe bağlı olarak dokuz aylık satışlarının dolar bazında % 4,4 oranında arttığını bildiriyor.",
+     "alinti": "en yoğun pazarımız Avrupa da yaşanan talebe bağlı olarak 2026 yılı 9 aylık dönemde satışlarımız, 2025 yılının aynı dönemine göre dolar bazında % 4,4 oranında, Türk Lirası bazında % 23,8 oranında artış göstermiştir.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "FRIGO 2026/09 Faaliyet Raporu",
+      "tarih": "9 Kasım 2026",
+      "tarih_iso": "2026-11-09",
+      "dokuman": "Tg8POOrO",
+      "kap_bildirim": 1695766
+     }
+    }
+   ]
+  },
+  "GOLTS": {
+   "ad": "Göltaş Göller Bölgesi Çimento Sanayi ve Ticaret A.Ş.",
+   "etiketler": [
+    {
+     "id": "cbam-karbon",
+     "not": "Şirket, ihracata konu çimento ürünlerinin gömülü emisyonlarının hesaplanması, raporlanması ve ön doğrulaması için CBAM kesin uygulama dönemine yönelik çalışma yürüttüğünü belirtiyor.",
+     "alinti": "AB Sınırda Karbon Düzenleme Mekanizması (CBAM) kapsamında ise 2026 yılında başlayan kesin uygulama dönemine uyum sağlanması amacıyla, ihracata konu çimento ürünlerinin gömülü emisyonlarının hesaplanması, raporlanması ve ön doğrulama (pre -verification) sürecine yönelik çalışmalar sürdürülmektedir.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "GOLTS 2026/09 Faaliyet Raporu",
+      "tarih": "9 Kasım 2026",
+      "tarih_iso": "2026-11-09",
+      "dokuman": "PPdptVvu",
+      "kap_bildirim": 1695383
+     }
+    }
+   ]
+  },
+  "PNLSN": {
+   "ad": "Panelsan Çatı Cephe Sistemleri Sanayi ve Ticaret A.Ş.",
+   "etiketler": [
+    {
+     "id": "cbam-karbon",
+     "not": "Şirket, SKDM/CBAM kapsamında ürün bazlı gömülü emisyon hesaplamaları, tedarikçi verilerinin temini ve karbon verisi izlenebilirliği için çalışma yürüttüğünü belirtiyor.",
+     "alinti": "Avrupa Birliği Sınırda Karbon Düzenleme Mekanizması (SKDM/CBAM) kapsamında ürün bazlı gömülü emisyon hesaplamaları, tedarikçi verilerinin temini ve karbon verilerinin izlenebilirliğine yönelik çalışmalar gerçekleştirilmiştir.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "PNLSN 2026/09 Faaliyet Raporu",
+      "tarih": "6 Kasım 2026",
+      "tarih_iso": "2026-11-06",
+      "dokuman": "LF1AhM0G",
+      "kap_bildirim": 1694050
+     }
+    }
+   ]
+  },
+  "DURKN": {
+   "ad": "Durukan Şekerleme Sanayi ve Ticaret A.Ş.",
+   "etiketler": [
+    {
+     "id": "turizm-talep",
+     "not": "Şirket raporunda şekerleme talebinin dayanakları arasında genç nüfus ve geleneksel alışkanlıkların yanında turist sayısını da sayıyor.",
+     "alinti": "Şirket'in ana faaliyet konusu olan şekerleme ürünlerine olan talep, genç ve hızlı büyüyen nüfus, turist sayısındaki artış ve geleneksel alışkanlıklar sebebi ile büyümektedir.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "DURKN 2026/09 Faaliyet Raporu",
+      "tarih": "30 Ekim 2026",
+      "tarih_iso": "2026-10-30",
+      "dokuman": "iLq5e259",
+      "kap_bildirim": 1690060
+     }
+    }
+   ]
+  },
+  "ATATR": {
+   "ad": "Ata Turizm İşletmecilik Taşımacılık Madencilik Kuyumculuk Sanayi ve Dış Ticaret A.Ş.",
+   "etiketler": [
+    {
+     "id": "turizm-talep",
+     "not": "Turist akışına dayalı iş modeli olan şirket, savaşların ve jeopolitik risklerin gelen turist sayısı üzerinde baskı oluşturduğunu bildiriyor.",
+     "alinti": "2026 yılının ilk yarısında Türkiye’nin yakın coğrafyasındaki savaşlar ve artan jeopolitik riskler, gelen turist sayısı üzerinde baskı oluşturmuştur.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "ATATR 2026/06 Faaliyet Raporu",
+      "tarih": "19 Ağustos 2026",
+      "tarih_iso": "2026-08-19",
+      "dokuman": "Y9paXK6P",
+      "kap_bildirim": 1653279
+     }
+    }
+   ]
+  },
+  "SVGYO": {
+   "ad": "Savur Gayrimenkul Yatırım Ortaklığı A.Ş.",
+   "etiketler": [
+    {
+     "id": "turizm-talep",
+     "not": "Otel portföyü sahibi şirket, Tarihi Yarımada'daki doluluk ve oda fiyatlandırmasını yabancı ziyaretçilerin konaklama sürelerindeki gelişmelerle ilişkilendiriyor.",
+     "alinti": "Nitelikli ve yüksek alım gücüne sahip yabancı ziyaretçilerin konaklama sürelerindeki bu sadakat ve pazar genelindeki hacimsel canlanma, Tarihi Yarımada'daki oda arzımızın yüksek doluluk ve oda fiyatlandırması (ADR) politikasıyla desteklenmeye devam edeceğini doğrulamaktadır.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "SVGYO 2026/09 Faaliyet Raporu",
+      "tarih": "28 Ekim 2026",
+      "tarih_iso": "2026-10-28",
+      "dokuman": "6OAruwfk",
+      "kap_bildirim": 1689092
+     }
+    }
+   ]
+  },
+  "GOLDA": {
+   "ad": "Golda Gıda Sanayi ve Ticaret A.Ş.",
+   "etiketler": [
+    {
+     "id": "tarim-emtia",
+     "not": "Şirket, buğday ve diğer tarımsal hammadde fiyatlarındaki değişimleri faaliyet sonuçlarını etkileyebilecek unsurlar arasında sayıyor.",
+     "alinti": "Şirket'in faaliyet gösterdiği gıda sektörünün yapısı gereği özellikle buğday ve diğer tarımsal hammadde fiyatları, enerji maliyetleri, döviz kurları ve lojistik maliyetlerindeki değişimler faaliyet sonuçları üzerinde etkili olabilmektedir.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "GOLDA 2026/09 Faaliyet Raporu",
+      "tarih": "27 Ekim 2026",
+      "tarih_iso": "2026-10-27",
+      "dokuman": "bircJ62x",
+      "kap_bildirim": 1688593
+     }
+    },
+    {
+     "id": "dolar-borc",
+     "not": "Şirket, döviz kuru dalgalanmalarını üretim maliyetleri, ihracat gelirleri ve yabancı para cinsinden varlık ile yükümlülükleri üzerinde etkili bir unsur olarak anıyor.",
+     "alinti": "Döviz kurlarında meydana gelen dalgalanmalar, Şirket'in üretim maliyetleri, ihracat gelirleri ve yabancı para cinsinden varlık ve yükümlülükleri üzerinde etkili olabilir.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "GOLDA 2026/09 Faaliyet Raporu",
+      "tarih": "27 Ekim 2026",
+      "tarih_iso": "2026-10-27",
+      "dokuman": "bircJ62x",
+      "kap_bildirim": 1688593
+     }
+    }
+   ]
+  },
+  "ULUUN": {
+   "ad": "Ulusoy Un Sanayi ve Ticaret A.Ş.",
+   "etiketler": [
+    {
+     "id": "tarim-emtia",
+     "not": "Şirket, uluslararası organize piyasalardaki buğday fiyat değişimlerini kendi aleyhine oluşabilecek bir risk olarak tanımlıyor.",
+     "alinti": "Uluslararası düzeyde organize piyasalarda buğday fiyatlarında Şirket aleyhine oluşabilecek fiyat değişimleri riskini kapsamaktadır.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "ULUUN 2026/09 Faaliyet Raporu",
+      "tarih": "9 Kasım 2026",
+      "tarih_iso": "2026-11-09",
+      "dokuman": "WfCkg80Y",
+      "kap_bildirim": 1696110
+     }
+    },
+    {
+     "id": "dolar-borc",
+     "not": "Şirket, döviz riskinin döviz cinsi yükümlülükler ile varlıklar arasındaki açık pozisyondan doğduğunu belirtiyor.",
+     "alinti": "Döviz riski Şirket'in döviz cinsi yükümlülükleri ile varlıkları arasındaki döviz açık pozisyonundan kaynaklanmaktadır.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "ULUUN 2026/09 Faaliyet Raporu",
+      "tarih": "9 Kasım 2026",
+      "tarih_iso": "2026-11-09",
+      "dokuman": "WfCkg80Y",
+      "kap_bildirim": 1696110
+     }
+    }
+   ]
+  },
+  "LRSHO": {
+   "ad": "Loras Holding A.Ş.",
+   "etiketler": [
+    {
+     "id": "tarim-emtia",
+     "not": "Şirket, buğdayı ana girdilerinden biri olarak tanımlıyor ve fiyat, kalite ve tedarik koşullarının üretim maliyetlerini etkileyebildiğini belirtiyor.",
+     "alinti": "Buğday, şirketimizin ana girdilerinden biri olup fiyat, kalite ve tedarik koşullarındaki değişimler üretim maliyetlerini doğrudan etkileyebilmektedir.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "LRSHO 2026/09 Faaliyet Raporu",
+      "tarih": "9 Kasım 2026",
+      "tarih_iso": "2026-11-09",
+      "dokuman": "cC1nPer3",
+      "kap_bildirim": 1695459
+     }
+    }
+   ]
+  },
+  "SELVA": {
+   "ad": "Selva Gıda Sanayi A.Ş.",
+   "etiketler": [
+    {
+     "id": "tarim-emtia",
+     "not": "Makarna üreticisi şirket, buğdayı ana girdilerinden biri olarak tanımlıyor ve fiyat, kalite ve tedarik koşullarının üretim maliyetlerini etkileyebildiğini belirtiyor.",
+     "alinti": "Buğday, şirketimizin ana girdilerinden biri olup fiyat, kalite ve tedarik koşullarındaki değişimler üretim maliyetlerini doğrudan etkileyebilmektedir.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "SELVA 2026/09 Faaliyet Raporu",
+      "tarih": "9 Kasım 2026",
+      "tarih_iso": "2026-11-09",
+      "dokuman": "sd0p9WhH",
+      "kap_bildirim": 1695499
+     }
+    }
+   ]
+  },
+  "AYGAZ": {
+   "ad": "Aygaz A.Ş.",
+   "etiketler": [
+    {
+     "id": "dolar-borc",
+     "not": "Şirket, kur riskinin yabancı para cinsinden alımlar ve alınan yabancı para kredilerden doğduğunu belirtiyor.",
+     "alinti": "Kur riski, ticari faaliyetler gereği yabancı para cinsinden yapılan alımlar ya da likidite amaçlı alınan yabancı para cinsi krediler nedeniyle oluşmaktadır.",
+     "kaynak": {
+      "tur": "Faaliyet raporu",
+      "baslik": "AYGAZ 2026/09 Faaliyet Raporu",
+      "tarih": "6 Kasım 2026",
+      "tarih_iso": "2026-11-06",
+      "dokuman": "fvInLHTF",
+      "kap_bildirim": 1694267
+     }
+    }
+   ]
+  },
+  "SAHOL": {
+   "ad": "Hacı Ömer Sabancı Holding A.Ş.",
+   "etiketler": [
+    {
+     "id": "dolar-borc",
+     "not": "Holding, döviz cinsinden borçlu bulunulan tutarların fonksiyonel para birimine çevrilmesinden doğan döviz riskine sahip olduğunu belirtiyor.",
+     "alinti": "Grup, döviz cinsinden borçlu bulunulan tutarların fonksiyonel para birimine çevrilmesinden dolayı kur değişiklerinden doğan döviz riskine sahiptir.",
+     "kaynak": {
+      "tur": "KAP",
+      "baslik": "SAHOL 2026/09 Finansal Tablo ve Dipnotlar",
+      "tarih": "4 Kasım 2026",
+      "tarih_iso": "2026-11-04",
+      "dokuman": "L6xxl8Z2",
+      "kap_bildirim": 1692755
+     }
     }
    ]
   }
@@ -1735,7 +2574,32 @@
   "TOASO": "2026-10-24",
   "ARCLK": "2026-10-24",
   "GUBRF": "2026-10-24",
-  "CCOLA": "2026-10-24"
+  "CCOLA": "2026-10-24",
+  "PRKME": "2026-11-11",
+  "TUREX": "2026-11-11",
+  "ISKPL": "2026-11-11",
+  "BUCIM": "2026-11-11",
+  "CMENT": "2026-11-11",
+  "SARKY": "2026-11-11",
+  "YIGIT": "2026-11-11",
+  "EGSER": "2026-11-11",
+  "LILAK": "2026-11-11",
+  "KBORU": "2026-11-11",
+  "KRTEK": "2026-11-11",
+  "OSTIM": "2026-11-11",
+  "MAKIM": "2026-11-11",
+  "ELITE": "2026-11-11",
+  "DITAS": "2026-11-11",
+  "FRIGO": "2026-11-11",
+  "GOLTS": "2026-11-11",
+  "PNLSN": "2026-11-11",
+  "DURKN": "2026-11-11",
+  "ATATR": "2026-11-11",
+  "SVGYO": "2026-11-11",
+  "GOLDA": "2026-11-11",
+  "ULUUN": "2026-11-11",
+  "LRSHO": "2026-11-11",
+  "SELVA": "2026-11-11"
  },
  "iliskili": {
   "brent-petrol": [
