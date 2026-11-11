@@ -11,7 +11,16 @@
     "petrol fiyat",
     "varil",
     "akaryakıt",
-    "opec"
+    "opec",
+    "petrol",
+    "benzin",
+    "motorin",
+    "mazot",
+    "nafta",
+    "wti",
+    "opec+",
+    "petrol arz",
+    "petrol üretim"
    ]
   },
   "dogalgaz": {
@@ -167,7 +176,11 @@
     "jet yakıt",
     "havacılık yakıt",
     "uçak yakıt",
-    "iata"
+    "iata",
+    "jet-a",
+    "kerosen",
+    "gazyağı",
+    "havacılık akaryakıt"
    ]
   },
   "turizm-talep": {
@@ -1606,5 +1619,13 @@
   "ARCLK": "2026-10-24",
   "GUBRF": "2026-10-24",
   "CCOLA": "2026-10-24"
+ },
+ "iliskili": {
+  "brent-petrol": [
+   "havacilik-yakit"
+  ],
+  "havacilik-yakit": [
+   "brent-petrol"
+  ]
  }
 }
