@@ -1027,14 +1027,77 @@
    "durum": 200,
    "rss_gorulen": "2026-11-10T23:36+03:00",
    "rss_dk": 165
+  },
+  "/perakende-satis-hacmi-eylulde-yillik-yuzde-8-artti-9-ayin-en-dusugu": {
+   "yayin": "2026-11-11T11:11:00+03:00",
+   "sitemap_gorulen": "2026-11-11T11:12+03:00",
+   "baslangic": false,
+   "sitemap_dk": 2,
+   "durum": 200,
+   "rss_gorulen": "2026-11-11T11:12+03:00",
+   "rss_dk": 2
+  },
+  "/tugcelik-tuclk-kar-payi-dagitmayacak-2025-net-zarari-127-milyon-lira": {
+   "yayin": "2026-11-11T10:56:00+03:00",
+   "sitemap_gorulen": "2026-11-11T11:12+03:00",
+   "baslangic": false,
+   "sitemap_dk": 17,
+   "durum": 200,
+   "rss_gorulen": "2026-11-11T11:12+03:00",
+   "rss_dk": 17
+  },
+  "/tcmb-iki-elektronik-para-kurulusunun-faaliyet-iznini-iptal-etti": {
+   "yayin": "2026-11-11T10:42:00+03:00",
+   "sitemap_gorulen": "2026-11-11T11:12+03:00",
+   "baslangic": false,
+   "sitemap_dk": 31,
+   "durum": 200,
+   "rss_gorulen": "2026-11-11T11:12+03:00",
+   "rss_dk": 31
+  },
+  "/suudi-arabistandan-turkiyeyle-demir-yolu-onayi-elektrikte-imza-atildi": {
+   "yayin": "2026-11-11T10:22:00+03:00",
+   "sitemap_gorulen": "2026-11-11T11:12+03:00",
+   "baslangic": false,
+   "sitemap_dk": 51,
+   "durum": 200,
+   "rss_gorulen": "2026-11-11T11:12+03:00",
+   "rss_dk": 51
+  },
+  "/bist-100-gune-yukselisle-basladi-52-haftalik-zirvenin-yuzde-23-altinda": {
+   "yayin": "2026-11-11T10:01:00+03:00",
+   "sitemap_gorulen": "2026-11-11T11:12+03:00",
+   "baslangic": false,
+   "sitemap_dk": 72,
+   "durum": 200,
+   "rss_gorulen": "2026-11-11T11:12+03:00",
+   "rss_dk": 72
+  },
+  "/yapi-kredi-ykbnk-933-milyon-dolarlik-sendikasyon-aldi-avro-marji-dustu": {
+   "yayin": "2026-11-11T08:34:00+03:00",
+   "sitemap_gorulen": "2026-11-11T11:12+03:00",
+   "baslangic": false,
+   "sitemap_dk": 159,
+   "durum": 200,
+   "rss_gorulen": "2026-11-11T11:12+03:00",
+   "rss_dk": 159
+  },
+  "/migrosun-mgros-yuzde-49u-mh-perakendecilikte-degeri-43-milyar-lira": {
+   "yayin": "2026-11-11T08:13:00+03:00",
+   "sitemap_gorulen": "2026-11-11T11:12+03:00",
+   "baslangic": false,
+   "sitemap_dk": 180,
+   "durum": 200,
+   "rss_gorulen": "2026-11-11T11:12+03:00",
+   "rss_dk": 180
   }
  },
  "ozet": {
-  "haber": 115,
-  "sitemap_medyan_dk": 47,
-  "sitemap_en_uzun_dk": 169,
-  "rss_medyan_dk": 47,
+  "haber": 122,
+  "sitemap_medyan_dk": 47.5,
+  "sitemap_en_uzun_dk": 180,
+  "rss_medyan_dk": 47.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-11T03:53+03:00"
+  "guncelleme": "2026-11-11T11:12+03:00"
  }
 }
