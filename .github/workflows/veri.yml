@@ -16,6 +16,7 @@ on:
     paths: [veri-programi/**, .github/workflows/veri.yml]
 permissions:
   contents: write
+  actions: write
 concurrency:
   group: endeks24-veri
   cancel-in-progress: false
@@ -71,3 +72,14 @@ jobs:
           git add -A; git commit -qm "veri $(TZ=Europe/Istanbul date '+%d.%m %H.%M')" || exit 0
           git push -q origin HEAD:veri
           grep -q BASARISIZ son-calisma.txt && exit 1 || true
+      - name: Sonraki çalışma (zincir)
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # 11.11.2026: GitHub zamanlaması her saat atlıyor; seans saatlerinde çalışma bitince 12 dk sonra kendini yeniden başlatır (concurrency tek çalışma bırakır).
+          H=$(TZ=Europe/Istanbul date +%u%H%M); g=${H:0:1}; s=$((10#${H:1:4}))
+          if [ "$g" -le 5 ] && [ $s -ge 955 ] && [ $s -lt 1820 ]; then
+            sleep 720
+            gh workflow run veri.yml --ref main || true
+          fi
