@@ -1,5 +1,6 @@
 name: endeks24-veri-kontrol
 # 11.11.2026: GitHub zamanlanmış çalışmaları (canlı veri, borsa özeti, dünya, tarayıcı, temettü, fon) sık atlıyor.
+# 12.11.2026: GH_REPO eklendi (depo çıkışı olmadığı için gh komutları depoyu bulamıyor, akış başlatılamıyordu).
 # 12.11.2026: kendini yeniden başlatma (workflow_dispatch zinciri) sessizce yeni çalışma oluşturmadığı için tek uzun çalışmaya çevrildi:
 # bu iş hafta içi 07.00 ile 23.20 (TR) arasında 10 dakikada bir kendi içinde kontrol eder, bayat kalan akışları başlatır.
 # En çok 5 saat 40 dakika sürer; sonra 30 dakikalık zamanlama ya da bu dosyanın değişmesi onu yeniden başlatır (concurrency tek çalışma bırakır).
@@ -14,7 +15,7 @@ permissions:
   contents: write
   actions: write
 concurrency:
-  group: endeks24-veri-kontrol-v2
+  group: endeks24-veri-kontrol-v3
   cancel-in-progress: false
 jobs:
   kontrol:
@@ -24,6 +25,7 @@ jobs:
       - name: Bayat akışları başlat (10 dakikada bir)
         env:
           GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
           R: ${{ github.repository }}
         run: |
           set +e  # bir komut başarısız olsa da diğer kontroller sürsün
