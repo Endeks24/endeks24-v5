@@ -1432,14 +1432,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-12T12:17+03:00",
    "rss_dk": 8
+  },
+  "/bist-100de-90-hisse-yukseliste-tavandaki-vestl-ve-zorende-hacim-dar": {
+   "yayin": "2026-11-12T12:27:00+03:00",
+   "sitemap_gorulen": "2026-11-12T12:33+03:00",
+   "baslangic": false,
+   "sitemap_dk": 6,
+   "durum": 200,
+   "rss_gorulen": "2026-11-12T12:33+03:00",
+   "rss_dk": 6
   }
  },
  "ozet": {
-  "haber": 160,
-  "sitemap_medyan_dk": 38.5,
+  "haber": 161,
+  "sitemap_medyan_dk": 38,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 38.5,
+  "rss_medyan_dk": 38,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-12T12:17+03:00"
+  "guncelleme": "2026-11-12T12:33+03:00"
  }
 }
