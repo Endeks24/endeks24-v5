@@ -1495,14 +1495,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-12T14:02+03:00",
    "rss_dk": 12
+  },
+  "/dax-52-haftalik-zirveyi-asti-avrupa-borsalari-artida-abd-vadelisi-ekside": {
+   "yayin": "2026-11-12T14:05:00+03:00",
+   "sitemap_gorulen": "2026-11-12T14:17+03:00",
+   "baslangic": false,
+   "sitemap_dk": 13,
+   "durum": 200,
+   "rss_gorulen": "2026-11-12T14:17+03:00",
+   "rss_dk": 13
   }
  },
  "ozet": {
-  "haber": 167,
-  "sitemap_medyan_dk": 36,
+  "haber": 168,
+  "sitemap_medyan_dk": 36.0,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 36,
+  "rss_medyan_dk": 36.0,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-12T14:02+03:00"
+  "guncelleme": "2026-11-12T14:17+03:00"
  }
 }
