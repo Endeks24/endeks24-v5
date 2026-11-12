@@ -38,6 +38,14 @@ jobs:
             if [ "$R2" != 0 ] || [ "$Q" != 0 ]; then echo "$1: çalışıyor"; return; fi
             gh workflow run "$1" --ref main && echo "$1 başlatıldı: $2" || echo "$1 başlatılamadı"
           }
+          # Canlı veri: seans saatlerinde (hafta içi 10.00 ile 18.30) 25 dakikayı geçtiyse veri akışını başlat (zamanlama atlarsa zincir de başlamıyordu)
+          if [ $s -ge 1000 ] && [ $s -le 1830 ]; then
+            CY=$(yas_dk veri)
+            if [ "$CY" -gt 25 ]; then
+              VS=$(gh run list --workflow veri.yml --status in_progress --json databaseId -q 'length'); VQ=$(gh run list --workflow veri.yml --status queued --json databaseId -q 'length')
+              if [ "$VS" = 0 ] && [ "$VQ" = 0 ]; then gh workflow run veri.yml --ref main && echo "veri.yml başlatıldı: canlı veri $CY dk eski" || echo "veri.yml başlatılamadı"; else echo "veri.yml çalışıyor"; fi
+            fi
+          fi
           # Dünya verisi: 9 saat sınırı, 8 saati geçince
           if [ $s -ge 730 ] && [ $s -le 2300 ] && [ "$(yas_dk dunya-veri)" -gt 480 ]; then baslat dunya-gunluk.yml "dünya verisi bayat"; fi
           # Borsa özeti: 19.50 sonrası bugünün tarihi olmalı
