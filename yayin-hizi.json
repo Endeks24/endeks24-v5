@@ -1405,14 +1405,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-12T11:34+03:00",
    "rss_dk": 14
+  },
+  "/tcmb-2027-enflasyon-tahminini-yuzde-15ten-21e-cikardi-2028-de-yukseldi": {
+   "yayin": "2026-11-12T11:35:00+03:00",
+   "sitemap_gorulen": "2026-11-12T11:48+03:00",
+   "baslangic": false,
+   "sitemap_dk": 13,
+   "durum": 200,
+   "rss_gorulen": "2026-11-12T11:48+03:00",
+   "rss_dk": 13
   }
  },
  "ozet": {
-  "haber": 157,
-  "sitemap_medyan_dk": 40,
+  "haber": 158,
+  "sitemap_medyan_dk": 39.5,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 40,
+  "rss_medyan_dk": 39.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-12T11:34+03:00"
+  "guncelleme": "2026-11-12T11:48+03:00"
  }
 }
