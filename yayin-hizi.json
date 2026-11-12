@@ -1396,14 +1396,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-12T11:19+03:00",
    "rss_dk": 15
+  },
+  "/oncosem-oncsm-9-ayda-hasilati-yuzde-19-net-kari-yuzde-83-artirdi": {
+   "yayin": "2026-11-12T11:20:00+03:00",
+   "sitemap_gorulen": "2026-11-12T11:34+03:00",
+   "baslangic": false,
+   "sitemap_dk": 14,
+   "durum": 200,
+   "rss_gorulen": "2026-11-12T11:34+03:00",
+   "rss_dk": 14
   }
  },
  "ozet": {
-  "haber": 156,
-  "sitemap_medyan_dk": 41.0,
+  "haber": 157,
+  "sitemap_medyan_dk": 40,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 41.0,
+  "rss_medyan_dk": 40,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-12T11:19+03:00"
+  "guncelleme": "2026-11-12T11:34+03:00"
  }
 }
