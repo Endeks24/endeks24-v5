@@ -1486,14 +1486,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-12T13:47+03:00",
    "rss_dk": 11
+  },
+  "/gubretas-gubrf-9-aylik-net-karini-yuzde-43-artirdi-7-milyar-lirayi-asti": {
+   "yayin": "2026-11-12T13:51:00+03:00",
+   "sitemap_gorulen": "2026-11-12T14:02+03:00",
+   "baslangic": false,
+   "sitemap_dk": 12,
+   "durum": 200,
+   "rss_gorulen": "2026-11-12T14:02+03:00",
+   "rss_dk": 12
   }
  },
  "ozet": {
-  "haber": 166,
-  "sitemap_medyan_dk": 36.5,
+  "haber": 167,
+  "sitemap_medyan_dk": 36,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 36.5,
+  "rss_medyan_dk": 36,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-12T13:47+03:00"
+  "guncelleme": "2026-11-12T14:02+03:00"
  }
 }
