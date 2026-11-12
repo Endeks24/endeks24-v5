@@ -25,6 +25,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           R: ${{ github.repository }}
         run: |
+          set +e  # bir komut başarısız olsa da diğer kontroller sürsün (12.11.2026: ilk çalışma ilk hatada düşmüştü)
           H=$(TZ=Europe/Istanbul date +%u%H%M); g=${H:0:1}; s=$((10#${H:1:4}))
           if [ "$g" -gt 5 ]; then echo "hafta sonu"; exit 0; fi
           simdi=$(date +%s)
@@ -35,7 +36,7 @@ jobs:
             if [ "$S" -lt 75 ]; then echo "$1: yakın zamanda çalışmış ($S dk), atlandı"; return; fi
             R2=$(gh run list --workflow "$1" --status in_progress --json databaseId -q 'length'); Q=$(gh run list --workflow "$1" --status queued --json databaseId -q 'length')
             if [ "$R2" != 0 ] || [ "$Q" != 0 ]; then echo "$1: çalışıyor"; return; fi
-            gh workflow run "$1" --ref main && echo "$1 başlatıldı: $2"
+            gh workflow run "$1" --ref main && echo "$1 başlatıldı: $2" || echo "$1 başlatılamadı"
           }
           # Dünya verisi: 9 saat sınırı, 8 saati geçince
           if [ $s -ge 730 ] && [ $s -le 2300 ] && [ "$(yas_dk dunya-veri)" -gt 480 ]; then baslat dunya-gunluk.yml "dünya verisi bayat"; fi
@@ -60,5 +61,5 @@ jobs:
           H=$(TZ=Europe/Istanbul date +%u%H%M); g=${H:0:1}; s=$((10#${H:1:4}))
           if [ "$g" -le 5 ] && [ $s -ge 700 ] && [ $s -lt 2320 ]; then
             sleep 1200
-            gh workflow run veri-kontrol.yml --ref main || true
+            gh workflow run veri-kontrol.yml --ref main || echo "zincir yeniden başlatılamadı"
           fi
