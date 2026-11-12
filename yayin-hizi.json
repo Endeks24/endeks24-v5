@@ -1,23 +1,5 @@
 {
  "kayit": {
-  "/bddk-golden-global-yatirim-bankasinin-iznini-6-yil-5-ay-sonra-kaldirdi": {
-   "yayin": "2026-11-06T00:55:00+03:00",
-   "sitemap_gorulen": "2026-11-06T01:25+03:00",
-   "baslangic": false,
-   "sitemap_dk": 31,
-   "durum": 200,
-   "rss_gorulen": "2026-11-06T01:25+03:00",
-   "rss_dk": 31
-  },
-  "/kardemir-krdmd-payi-2023ten-beri-bilanco-sonrasi-en-sert-dususu-yasadi": {
-   "yayin": "2026-11-06T00:33:00+03:00",
-   "sitemap_gorulen": "2026-11-06T01:25+03:00",
-   "baslangic": false,
-   "sitemap_dk": 53,
-   "durum": 200,
-   "rss_gorulen": "2026-11-06T01:25+03:00",
-   "rss_dk": 53
-  },
   "/simsek-gelir-kurumlar-ve-kdv-genel-oranlarinda-artis-gundemde-yok": {
    "yayin": "2026-11-06T03:13:00+03:00",
    "sitemap_gorulen": "2026-11-06T03:16+03:00",
@@ -1628,14 +1610,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-13T00:05+03:00",
    "rss_dk": 172
+  },
+  "/mevduat-faizi-153-hafta-konut-faizini-asti-fark-1-puanin-altina-indi": {
+   "yayin": "2026-11-13T00:51:00+03:00",
+   "sitemap_gorulen": "2026-11-13T00:55+03:00",
+   "baslangic": false,
+   "sitemap_dk": 5,
+   "durum": 200,
+   "rss_gorulen": "2026-11-13T00:55+03:00",
+   "rss_dk": 5
   }
  },
  "ozet": {
-  "haber": 181,
-  "sitemap_medyan_dk": 32,
+  "haber": 180,
+  "sitemap_medyan_dk": 32.0,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 32,
+  "rss_medyan_dk": 32.0,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-13T00:05+03:00"
+  "guncelleme": "2026-11-13T00:55+03:00"
  }
 }
