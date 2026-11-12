@@ -1549,14 +1549,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-12T15:17+03:00",
    "rss_dk": 2
+  },
+  "/galata-wind-gwind-basta-37-bist-100-sirketinin-brut-kar-marji-geriledi": {
+   "yayin": "2026-11-12T15:29:00+03:00",
+   "sitemap_gorulen": "2026-11-12T15:33+03:00",
+   "baslangic": false,
+   "sitemap_dk": 4,
+   "durum": 200,
+   "rss_gorulen": "2026-11-12T15:33+03:00",
+   "rss_dk": 4
   }
  },
  "ozet": {
-  "haber": 173,
-  "sitemap_medyan_dk": 34,
+  "haber": 174,
+  "sitemap_medyan_dk": 33.5,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 34,
+  "rss_medyan_dk": 33.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-12T15:17+03:00"
+  "guncelleme": "2026-11-12T15:33+03:00"
  }
 }
