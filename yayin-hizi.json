@@ -1387,14 +1387,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-12T10:51+03:00",
    "rss_dk": 3
+  },
+  "/5-sirkette-vergi-geliri-donem-karinin-yarisini-asti-ilk-yarida-sayi-8di": {
+   "yayin": "2026-11-12T11:05:00+03:00",
+   "sitemap_gorulen": "2026-11-12T11:19+03:00",
+   "baslangic": false,
+   "sitemap_dk": 15,
+   "durum": 200,
+   "rss_gorulen": "2026-11-12T11:19+03:00",
+   "rss_dk": 15
   }
  },
  "ozet": {
-  "haber": 155,
-  "sitemap_medyan_dk": 42,
+  "haber": 156,
+  "sitemap_medyan_dk": 41.0,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 42,
+  "rss_medyan_dk": 41.0,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-12T11:05+03:00"
+  "guncelleme": "2026-11-12T11:19+03:00"
  }
 }
