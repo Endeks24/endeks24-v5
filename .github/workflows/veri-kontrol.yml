@@ -11,10 +11,10 @@ on:
     branches: [main]
     paths: [.github/workflows/veri-kontrol.yml]
 permissions:
-  contents: read
+  contents: write
   actions: write
 concurrency:
-  group: endeks24-veri-kontrol
+  group: endeks24-veri-kontrol-v2
   cancel-in-progress: false
 jobs:
   kontrol:
@@ -27,14 +27,22 @@ jobs:
           R: ${{ github.repository }}
         run: |
           set +e  # bir komut başarısız olsa da diğer kontroller sürsün
+          LOG=$RUNNER_TEMP/kontrol-log.txt; : > "$LOG"
+          kayit() { echo "$(date -u +%FT%TZ) $*" | tee -a "$LOG"; }
+          log_gonder() {
+            rm -rf "$RUNNER_TEMP/kl"; mkdir "$RUNNER_TEMP/kl"; cp "$LOG" "$RUNNER_TEMP/kl/log.txt"; cd "$RUNNER_TEMP/kl"
+            git init -q -b kontrol-log; git config user.name e24-kontrol; git config user.email e24-kontrol@users.noreply.github.com
+            git add -A; git commit -qm "kontrol günlüğü $(date -u +%FT%TZ)"
+            git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${R}.git"; git push -q -f origin kontrol-log 2>/dev/null; cd - >/dev/null
+          }
           yas_dk() { T=$(gh api "repos/$R/commits?sha=$1&per_page=1" -q '.[0].commit.committer.date' 2>/dev/null); if [ -z "$T" ]; then echo 99999; else echo $(( (simdi - $(date -d "$T" +%s)) / 60 )); fi; }
           son_calisma_dk() { T=$(gh run list --workflow "$1" --limit 1 --json createdAt -q '.[0].createdAt' 2>/dev/null); if [ -z "$T" ]; then echo 99999; else echo $(( (simdi - $(date -d "$T" +%s)) / 60 )); fi; }
           calisiyor() { A=$(gh run list --workflow "$1" --status in_progress --json databaseId -q 'length' 2>/dev/null); B=$(gh run list --workflow "$1" --status queued --json databaseId -q 'length' 2>/dev/null); [ "${A:-0}" != 0 ] || [ "${B:-0}" != 0 ]; }
           baslat() {
             S=$(son_calisma_dk "$1")
-            if [ "$S" -lt 75 ]; then echo "$1: yakın zamanda çalışmış ($S dk), atlandı"; return; fi
-            if calisiyor "$1"; then echo "$1: çalışıyor"; return; fi
-            gh workflow run "$1" --ref main && echo "$1 başlatıldı: $2" || echo "$1 başlatılamadı"
+            if [ "$S" -lt 75 ]; then kayit "$1: yakın zamanda çalışmış ($S dk), atlandı"; return; fi
+            if calisiyor "$1"; then kayit "$1: çalışıyor"; return; fi
+            O=$(gh workflow run "$1" --ref main 2>&1) && kayit "$1 başlatıldı: $2" || kayit "$1 başlatılamadı: $O"
           }
           kontrol() {
             H=$(TZ=Europe/Istanbul date +%u%H%M); g=${H:0:1}; s=$((10#${H:1:4})); simdi=$(date +%s)
@@ -43,7 +51,7 @@ jobs:
             if [ $s -ge 1000 ] && [ $s -le 1830 ]; then
               CY=$(yas_dk veri)
               if [ "$CY" -gt 25 ]; then
-                if calisiyor veri.yml; then echo "veri.yml çalışıyor"; else gh workflow run veri.yml --ref main && echo "veri.yml başlatıldı: canlı veri $CY dk eski" || echo "veri.yml başlatılamadı"; fi
+                if calisiyor veri.yml; then echo "veri.yml çalışıyor"; else O=$(gh workflow run veri.yml --ref main 2>&1) && kayit "veri.yml başlatıldı: canlı veri $CY dk eski" || kayit "veri.yml başlatılamadı: $O"; fi
               fi
             fi
             # Dünya verisi: 9 saat sınırı, 8 saati geçince
@@ -66,6 +74,7 @@ jobs:
           bitis=$(( $(date +%s) + 20400 ))
           while true; do
             kontrol || { echo "hafta sonu"; exit 0; }
+            kayit "kontrol tamam (dünya $(yas_dk dunya-veri) dk, canlı $(yas_dk veri) dk)"; log_gonder
             H=$(TZ=Europe/Istanbul date +%H%M); s=$((10#$H))
             if [ $s -ge 2320 ] || [ $s -lt 700 ]; then echo "mesai bitti"; exit 0; fi
             if [ $(date +%s) -ge $bitis ]; then echo "süre doldu, zamanlama yeniden başlatır"; exit 0; fi
