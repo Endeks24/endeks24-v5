@@ -1504,14 +1504,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-12T14:17+03:00",
    "rss_dk": 13
+  },
+  "/odas-elektrik-odas-9-ayda-5-milyar-lira-zarar-yazdi-zarar-2-katina-cikti": {
+   "yayin": "2026-11-12T14:19:00+03:00",
+   "sitemap_gorulen": "2026-11-12T14:32+03:00",
+   "baslangic": false,
+   "sitemap_dk": 14,
+   "durum": 200,
+   "rss_gorulen": "2026-11-12T14:32+03:00",
+   "rss_dk": 14
   }
  },
  "ozet": {
-  "haber": 168,
-  "sitemap_medyan_dk": 36.0,
+  "haber": 169,
+  "sitemap_medyan_dk": 36,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 36.0,
+  "rss_medyan_dk": 36,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-12T14:17+03:00"
+  "guncelleme": "2026-11-12T14:32+03:00"
  }
 }
