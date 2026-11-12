@@ -1468,14 +1468,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-12T13:17+03:00",
    "rss_dk": 8
+  },
+  "/9-ayda-32-bist-100-sirketinin-serbest-nakit-akisi-eksi-turk-telekom-basta": {
+   "yayin": "2026-11-12T13:23:00+03:00",
+   "sitemap_gorulen": "2026-11-12T13:32+03:00",
+   "baslangic": false,
+   "sitemap_dk": 10,
+   "durum": 200,
+   "rss_gorulen": "2026-11-12T13:32+03:00",
+   "rss_dk": 10
   }
  },
  "ozet": {
-  "haber": 164,
-  "sitemap_medyan_dk": 37.0,
+  "haber": 165,
+  "sitemap_medyan_dk": 37,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 37.0,
+  "rss_medyan_dk": 37,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-12T13:17+03:00"
+  "guncelleme": "2026-11-12T13:32+03:00"
  }
 }
