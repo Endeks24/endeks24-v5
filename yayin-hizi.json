@@ -1450,14 +1450,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-12T12:48+03:00",
    "rss_dk": 7
+  },
+  "/kirac-galvaniz-tckrc-otokorkuluk-ihalesini-kazandi-bedel-173-milyon-lira": {
+   "yayin": "2026-11-12T12:56:00+03:00",
+   "sitemap_gorulen": "2026-11-12T13:02+03:00",
+   "baslangic": false,
+   "sitemap_dk": 7,
+   "durum": 200,
+   "rss_gorulen": "2026-11-12T13:02+03:00",
+   "rss_dk": 7
   }
  },
  "ozet": {
-  "haber": 162,
-  "sitemap_medyan_dk": 37.5,
+  "haber": 163,
+  "sitemap_medyan_dk": 37,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 37.5,
+  "rss_medyan_dk": 37,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-12T12:48+03:00"
+  "guncelleme": "2026-11-12T13:02+03:00"
  }
 }
