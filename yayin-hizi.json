@@ -1513,14 +1513,32 @@
    "durum": 200,
    "rss_gorulen": "2026-11-12T14:32+03:00",
    "rss_dk": 14
+  },
+  "/tcmb-toplam-rezervi-161-milyar-dolara-cikti-zirvenin-57-milyar-altinda": {
+   "yayin": "2026-11-12T14:47:00+03:00",
+   "sitemap_gorulen": "2026-11-12T14:47+03:00",
+   "baslangic": false,
+   "sitemap_dk": 1,
+   "durum": 200,
+   "rss_gorulen": "2026-11-12T14:47+03:00",
+   "rss_dk": 1
+  },
+  "/is-yatirim-ismen-9-aylik-kari-yuzde-32-azaldi-ucuncu-ceyrekte-artti": {
+   "yayin": "2026-11-12T14:33:00+03:00",
+   "sitemap_gorulen": "2026-11-12T14:47+03:00",
+   "baslangic": false,
+   "sitemap_dk": 15,
+   "durum": 200,
+   "rss_gorulen": "2026-11-12T14:47+03:00",
+   "rss_dk": 15
   }
  },
  "ozet": {
-  "haber": 169,
-  "sitemap_medyan_dk": 36,
+  "haber": 171,
+  "sitemap_medyan_dk": 35,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 36,
+  "rss_medyan_dk": 35,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-12T14:32+03:00"
+  "guncelleme": "2026-11-12T14:47+03:00"
  }
 }
