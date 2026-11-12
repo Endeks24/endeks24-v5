@@ -1594,14 +1594,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-12T17:02+03:00",
    "rss_dk": 13
+  },
+  "/bist-100-15-ekimden-bu-yana-en-yuksekte-kapandi-8-bankadan-4u-geriledi": {
+   "yayin": "2026-11-12T18:09:00+03:00",
+   "sitemap_gorulen": "2026-11-12T18:17+03:00",
+   "baslangic": false,
+   "sitemap_dk": 8,
+   "durum": 200,
+   "rss_gorulen": "2026-11-12T18:17+03:00",
+   "rss_dk": 8
   }
  },
  "ozet": {
-  "haber": 178,
-  "sitemap_medyan_dk": 32.5,
+  "haber": 179,
+  "sitemap_medyan_dk": 32,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 32.5,
+  "rss_medyan_dk": 32,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-12T18:02+03:00"
+  "guncelleme": "2026-11-12T18:17+03:00"
  }
 }
