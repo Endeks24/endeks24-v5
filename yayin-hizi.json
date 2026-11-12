@@ -1531,14 +1531,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-12T14:47+03:00",
    "rss_dk": 15
+  },
+  "/para-piyasasi-fonlari-iki-haftada-131-milyar-lira-buyudu-zirvenin-altinda": {
+   "yayin": "2026-11-12T15:01:00+03:00",
+   "sitemap_gorulen": "2026-11-12T15:02+03:00",
+   "baslangic": false,
+   "sitemap_dk": 1,
+   "durum": 200,
+   "rss_gorulen": "2026-11-12T15:02+03:00",
+   "rss_dk": 1
   }
  },
  "ozet": {
-  "haber": 171,
-  "sitemap_medyan_dk": 35,
+  "haber": 172,
+  "sitemap_medyan_dk": 34.5,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 35,
+  "rss_medyan_dk": 34.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-12T14:47+03:00"
+  "guncelleme": "2026-11-12T15:02+03:00"
  }
 }
