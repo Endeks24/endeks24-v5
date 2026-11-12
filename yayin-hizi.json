@@ -1567,14 +1567,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-12T15:47+03:00",
    "rss_dk": 5
+  },
+  "/menderes-tekstil-mndrs-110-milyon-liralik-geri-alim-baslatti-zarardaydi": {
+   "yayin": "2026-11-12T15:58:00+03:00",
+   "sitemap_gorulen": "2026-11-12T16:03+03:00",
+   "baslangic": false,
+   "sitemap_dk": 5,
+   "durum": 200,
+   "rss_gorulen": "2026-11-12T16:03+03:00",
+   "rss_dk": 5
   }
  },
  "ozet": {
-  "haber": 175,
-  "sitemap_medyan_dk": 33,
+  "haber": 176,
+  "sitemap_medyan_dk": 33.0,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 33,
+  "rss_medyan_dk": 33.0,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-12T15:47+03:00"
+  "guncelleme": "2026-11-12T16:03+03:00"
  }
 }
