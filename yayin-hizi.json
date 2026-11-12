@@ -1621,14 +1621,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-12T18:40+03:00",
    "rss_dk": 3
+  },
+  "/nvidia-nvda-ceosu-jensen-huang-istifa-etti-kress-gecici-ceo-oldu": {
+   "yayin": "2026-11-12T18:52:00+03:00",
+   "sitemap_gorulen": "2026-11-12T18:53+03:00",
+   "baslangic": false,
+   "sitemap_dk": 2,
+   "durum": 200,
+   "rss_gorulen": "2026-11-12T18:53+03:00",
+   "rss_dk": 2
   }
  },
  "ozet": {
-  "haber": 181,
-  "sitemap_medyan_dk": 32,
+  "haber": 182,
+  "sitemap_medyan_dk": 32.0,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 32,
+  "rss_medyan_dk": 32.0,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-12T18:40+03:00"
+  "guncelleme": "2026-11-12T18:53+03:00"
  }
 }
