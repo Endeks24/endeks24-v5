@@ -1,4 +1,4 @@
 BIST 100 12 Kasım seansını yüzde 1,24 yükselişle 11.811,19 puandan kapattı. Endeksteki 100 hisseden 18 hisse geriledi, 80 hisse yükseldi.
 rakamlar: {'piyasa': 8, 'gundem': 6}
-TAMAM: cikti/veri.json 116595 bayt; seans 2026-11-12T18:10:00+03:00 ; kripto 2026-11-12T18:15:00+03:00
-2026-11-12T15:15:24Z 
+TAMAM: cikti/veri.json 116590 bayt; seans 2026-11-12T18:10:00+03:00 ; kripto 2026-11-12T18:29:00+03:00
+2026-11-12T15:29:43Z 

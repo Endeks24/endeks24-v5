@@ -1603,14 +1603,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-12T18:17+03:00",
    "rss_dk": 8
+  },
+  "/wall-street-dususle-basladi-nvidia-yuzde-5-geriledi-dow-fonu-hafif-ekside": {
+   "yayin": "2026-11-12T18:24:00+03:00",
+   "sitemap_gorulen": "2026-11-12T18:31+03:00",
+   "baslangic": false,
+   "sitemap_dk": 8,
+   "durum": 200,
+   "rss_gorulen": "2026-11-12T18:31+03:00",
+   "rss_dk": 8
   }
  },
  "ozet": {
-  "haber": 179,
-  "sitemap_medyan_dk": 32,
+  "haber": 180,
+  "sitemap_medyan_dk": 32.0,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 32,
+  "rss_medyan_dk": 32.0,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-12T18:17+03:00"
+  "guncelleme": "2026-11-12T18:31+03:00"
  }
 }
