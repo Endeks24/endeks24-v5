@@ -1576,14 +1576,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-12T16:03+03:00",
    "rss_dk": 5
+  },
+  "/abdde-ilk-issizlik-maasi-basvurulari-200-bine-cikti-ortalama-degismedi": {
+   "yayin": "2026-11-12T16:37:00+03:00",
+   "sitemap_gorulen": "2026-11-12T16:47+03:00",
+   "baslangic": false,
+   "sitemap_dk": 11,
+   "durum": 200,
+   "rss_gorulen": "2026-11-12T16:47+03:00",
+   "rss_dk": 11
   }
  },
  "ozet": {
-  "haber": 176,
-  "sitemap_medyan_dk": 33.0,
+  "haber": 177,
+  "sitemap_medyan_dk": 33,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 33.0,
+  "rss_medyan_dk": 33,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-12T16:33+03:00"
+  "guncelleme": "2026-11-12T16:47+03:00"
  }
 }
