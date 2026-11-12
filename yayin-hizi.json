@@ -1459,14 +1459,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-12T13:02+03:00",
    "rss_dk": 7
+  },
+  "/cuhadaroglu-metal-cusan-9-aylik-net-zararini-162-milyon-liraya-indirdi": {
+   "yayin": "2026-11-12T13:10:00+03:00",
+   "sitemap_gorulen": "2026-11-12T13:17+03:00",
+   "baslangic": false,
+   "sitemap_dk": 8,
+   "durum": 200,
+   "rss_gorulen": "2026-11-12T13:17+03:00",
+   "rss_dk": 8
   }
  },
  "ozet": {
-  "haber": 163,
-  "sitemap_medyan_dk": 37,
+  "haber": 164,
+  "sitemap_medyan_dk": 37.0,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 37,
+  "rss_medyan_dk": 37.0,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-12T13:02+03:00"
+  "guncelleme": "2026-11-12T13:17+03:00"
  }
 }
