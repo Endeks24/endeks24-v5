@@ -1441,14 +1441,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-12T12:33+03:00",
    "rss_dk": 6
+  },
+  "/gram-altin-haftada-yuzde-4-geriledi-eurotl-zirvesinin-yuzde-1-altinda": {
+   "yayin": "2026-11-12T12:41:00+03:00",
+   "sitemap_gorulen": "2026-11-12T12:48+03:00",
+   "baslangic": false,
+   "sitemap_dk": 7,
+   "durum": 200,
+   "rss_gorulen": "2026-11-12T12:48+03:00",
+   "rss_dk": 7
   }
  },
  "ozet": {
-  "haber": 161,
-  "sitemap_medyan_dk": 38,
+  "haber": 162,
+  "sitemap_medyan_dk": 37.5,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 38,
+  "rss_medyan_dk": 37.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-12T12:33+03:00"
+  "guncelleme": "2026-11-12T12:48+03:00"
  }
 }
