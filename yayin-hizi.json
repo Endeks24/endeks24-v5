@@ -1369,14 +1369,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-12T10:23+03:00",
    "rss_dk": 17
+  },
+  "/thynin-thyao-vergi-oncesi-karinin-yuzde-87si-yatirim-gelirinden-geldi": {
+   "yayin": "2026-11-12T10:34:00+03:00",
+   "sitemap_gorulen": "2026-11-12T10:37+03:00",
+   "baslangic": false,
+   "sitemap_dk": 3,
+   "durum": 200,
+   "rss_gorulen": "2026-11-12T10:37+03:00",
+   "rss_dk": 3
   }
  },
  "ozet": {
-  "haber": 153,
-  "sitemap_medyan_dk": 43,
+  "haber": 154,
+  "sitemap_medyan_dk": 42.5,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 43,
+  "rss_medyan_dk": 42.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-12T10:23+03:00"
+  "guncelleme": "2026-11-12T10:37+03:00"
  }
 }
