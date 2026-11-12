@@ -1,61 +1,5 @@
 {
  "kayit": {
-  "/bitcoin-76-bin-dolarin-altina-indi-zirvenin-yuzde-40-altinda-kaldi": {
-   "yayin": "2026-11-05T23:59:00+03:00",
-   "sitemap_gorulen": "2026-11-06T00:08+03:00",
-   "sitemap_dk": 10,
-   "durum": 200,
-   "rss_gorulen": "2026-11-06T00:08+03:00",
-   "rss_dk": 10
-  },
-  "/bayraktar-halka-arza-hazirlanan-5-sirket-210-milyar-dolar-yatirim-yapmali": {
-   "yayin": "2026-11-05T23:21:00+03:00",
-   "sitemap_gorulen": "2026-11-06T00:08+03:00",
-   "sitemap_dk": 48,
-   "durum": 200,
-   "rss_gorulen": "2026-11-06T00:08+03:00",
-   "rss_dk": 48
-  },
-  "/ziraat-bankasi-tcz-yurt-disi-ihrac-yetkisini-16-milyar-dolara-yeniledi": {
-   "yayin": "2026-11-05T23:00:00+03:00",
-   "sitemap_gorulen": "2026-11-06T00:08+03:00",
-   "sitemap_dk": 69,
-   "durum": 200,
-   "rss_gorulen": "2026-11-06T00:08+03:00",
-   "rss_dk": 69
-  },
-  "/nasdaq-100-6-ekim-zirvesinin-yuzde-14-altinda-islem-goruyor": {
-   "yayin": "2026-11-05T22:35:00+03:00",
-   "sitemap_gorulen": "2026-11-06T00:08+03:00",
-   "sitemap_dk": 94,
-   "durum": 200,
-   "rss_gorulen": "2026-11-06T00:08+03:00",
-   "rss_dk": 94
-  },
-  "/sokm-net-karini-ucuncu-ceyrekte-989-milyon-liraya-cikardi": {
-   "yayin": "2026-11-05T22:11:00+03:00",
-   "sitemap_gorulen": "2026-11-06T00:08+03:00",
-   "sitemap_dk": 118,
-   "durum": 200,
-   "rss_gorulen": "2026-11-06T00:08+03:00",
-   "rss_dk": 118
-  },
-  "/ford-otosan-froto-9-aylik-net-kari-yuzde-34-azalarak-19-milyar-lira-oldu": {
-   "yayin": "2026-11-05T21:49:00+03:00",
-   "sitemap_gorulen": "2026-11-06T00:08+03:00",
-   "sitemap_dk": 140,
-   "durum": 200,
-   "rss_gorulen": "2026-11-06T00:08+03:00",
-   "rss_dk": 140
-  },
-  "/sisecam-sise-3-ceyrekte-295-milyon-lira-net-zarar-yazdi": {
-   "yayin": "2026-11-05T21:26:00+03:00",
-   "sitemap_gorulen": "2026-11-06T00:08+03:00",
-   "sitemap_dk": 163,
-   "durum": 200,
-   "rss_gorulen": "2026-11-06T00:08+03:00",
-   "rss_dk": 163
-  },
   "/bddk-golden-global-yatirim-bankasinin-iznini-6-yil-5-ay-sonra-kaldirdi": {
    "yayin": "2026-11-06T00:55:00+03:00",
    "sitemap_gorulen": "2026-11-06T01:25+03:00",
@@ -1630,14 +1574,68 @@
    "durum": 200,
    "rss_gorulen": "2026-11-12T18:53+03:00",
    "rss_dk": 2
+  },
+  "/dervisoglu-bakliyat-spkya-basvurdu-halka-aciklik-orani-yuzde-25-olacak": {
+   "yayin": "2026-11-12T22:38:00+03:00",
+   "sitemap_gorulen": "2026-11-13T00:05+03:00",
+   "baslangic": false,
+   "sitemap_dk": 87,
+   "durum": 200,
+   "rss_gorulen": "2026-11-13T00:05+03:00",
+   "rss_dk": 87
+  },
+  "/dardanel-dardl-9-ayda-zarari-yuzde-42-artirdi-vergi-oncesi-zarar-yatay": {
+   "yayin": "2026-11-12T22:23:00+03:00",
+   "sitemap_gorulen": "2026-11-13T00:05+03:00",
+   "baslangic": false,
+   "sitemap_dk": 102,
+   "durum": 200,
+   "rss_gorulen": "2026-11-13T00:05+03:00",
+   "rss_dk": 102
+  },
+  "/simpro-halka-arz-icin-spkya-basvurdu-80-milyon-pay-arz-edilecek": {
+   "yayin": "2026-11-12T22:09:00+03:00",
+   "sitemap_gorulen": "2026-11-13T00:05+03:00",
+   "baslangic": false,
+   "sitemap_dk": 116,
+   "durum": 200,
+   "rss_gorulen": "2026-11-13T00:05+03:00",
+   "rss_dk": 116
+  },
+  "/besler-beslr-9-ayda-zarardan-cikti-ana-ortaklik-kari-816-milyon-lira": {
+   "yayin": "2026-11-12T21:55:00+03:00",
+   "sitemap_gorulen": "2026-11-13T00:05+03:00",
+   "baslangic": false,
+   "sitemap_dk": 130,
+   "durum": 200,
+   "rss_gorulen": "2026-11-13T00:05+03:00",
+   "rss_dk": 130
+  },
+  "/wall-street-acilis-kaybini-sildi-fonlar-artida-nvidia-yuzde-4-ekside": {
+   "yayin": "2026-11-12T21:38:00+03:00",
+   "sitemap_gorulen": "2026-11-13T00:05+03:00",
+   "baslangic": false,
+   "sitemap_dk": 147,
+   "durum": 200,
+   "rss_gorulen": "2026-11-13T00:05+03:00",
+   "rss_dk": 147
+  },
+  "/jantsa-jants-9-ayda-zarardan-cikti-karin-yuzde-74u-vergi-geliri": {
+   "yayin": "2026-11-12T21:13:00+03:00",
+   "sitemap_gorulen": "2026-11-13T00:05+03:00",
+   "baslangic": false,
+   "sitemap_dk": 172,
+   "durum": 200,
+   "rss_gorulen": "2026-11-13T00:05+03:00",
+   "rss_dk": 172
   }
  },
  "ozet": {
-  "haber": 182,
-  "sitemap_medyan_dk": 32.0,
+  "haber": 181,
+  "sitemap_medyan_dk": 32,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 32.0,
+  "rss_medyan_dk": 32,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-12T18:56+03:00"
+  "guncelleme": "2026-11-13T00:05+03:00"
  }
 }
