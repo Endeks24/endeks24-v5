@@ -1423,14 +1423,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-12T12:02+03:00",
    "rss_dk": 13
+  },
+  "/hisse-fonlarindan-bes-haftada-7-milyar-tl-cikti-yabancilar-da-net-satti": {
+   "yayin": "2026-11-12T12:09:00+03:00",
+   "sitemap_gorulen": "2026-11-12T12:17+03:00",
+   "baslangic": false,
+   "sitemap_dk": 8,
+   "durum": 200,
+   "rss_gorulen": "2026-11-12T12:17+03:00",
+   "rss_dk": 8
   }
  },
  "ozet": {
-  "haber": 159,
-  "sitemap_medyan_dk": 39,
+  "haber": 160,
+  "sitemap_medyan_dk": 38.5,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 39,
+  "rss_medyan_dk": 38.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-12T12:02+03:00"
+  "guncelleme": "2026-11-12T12:17+03:00"
  }
 }
