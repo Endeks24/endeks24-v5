@@ -1378,14 +1378,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-12T10:37+03:00",
    "rss_dk": 3
+  },
+  "/kartli-harcamanin-reel-artisi-yuzde-6ya-indi-mart-2021den-beri-en-dusuk": {
+   "yayin": "2026-11-12T10:48:00+03:00",
+   "sitemap_gorulen": "2026-11-12T10:51+03:00",
+   "baslangic": false,
+   "sitemap_dk": 3,
+   "durum": 200,
+   "rss_gorulen": "2026-11-12T10:51+03:00",
+   "rss_dk": 3
   }
  },
  "ozet": {
-  "haber": 154,
-  "sitemap_medyan_dk": 42.5,
+  "haber": 155,
+  "sitemap_medyan_dk": 42,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 42.5,
+  "rss_medyan_dk": 42,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-12T10:37+03:00"
+  "guncelleme": "2026-11-12T10:51+03:00"
  }
 }
