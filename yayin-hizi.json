@@ -1585,14 +1585,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-12T16:47+03:00",
    "rss_dk": 11
+  },
+  "/mia-teknoloji-miatk-tcdd-projesini-18-milyon-liraya-tamamladi": {
+   "yayin": "2026-11-12T16:50:00+03:00",
+   "sitemap_gorulen": "2026-11-12T17:02+03:00",
+   "baslangic": false,
+   "sitemap_dk": 13,
+   "durum": 200,
+   "rss_gorulen": "2026-11-12T17:02+03:00",
+   "rss_dk": 13
   }
  },
  "ozet": {
-  "haber": 177,
-  "sitemap_medyan_dk": 33,
+  "haber": 178,
+  "sitemap_medyan_dk": 32.5,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 33,
+  "rss_medyan_dk": 32.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-12T16:47+03:00"
+  "guncelleme": "2026-11-12T17:02+03:00"
  }
 }
