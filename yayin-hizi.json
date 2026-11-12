@@ -1351,14 +1351,32 @@
    "durum": 200,
    "rss_gorulen": "2026-11-12T00:39+03:00",
    "rss_dk": 177
+  },
+  "/kari-dusen-36-bist-100-hissesi-ilk-seansta-medyan-yuzde-2-dustu": {
+   "yayin": "2026-11-12T10:20:00+03:00",
+   "sitemap_gorulen": "2026-11-12T10:23+03:00",
+   "baslangic": false,
+   "sitemap_dk": 3,
+   "durum": 200,
+   "rss_gorulen": "2026-11-12T10:23+03:00",
+   "rss_dk": 3
+  },
+  "/bist-100-gune-yatay-basladi-2025-sonu-kapanisinin-yuzde-4-uzerinde": {
+   "yayin": "2026-11-12T10:06:00+03:00",
+   "sitemap_gorulen": "2026-11-12T10:23+03:00",
+   "baslangic": false,
+   "sitemap_dk": 17,
+   "durum": 200,
+   "rss_gorulen": "2026-11-12T10:23+03:00",
+   "rss_dk": 17
   }
  },
  "ozet": {
-  "haber": 151,
+  "haber": 153,
   "sitemap_medyan_dk": 43,
   "sitemap_en_uzun_dk": 180,
   "rss_medyan_dk": 43,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-12T07:10+03:00"
+  "guncelleme": "2026-11-12T10:23+03:00"
  }
 }
