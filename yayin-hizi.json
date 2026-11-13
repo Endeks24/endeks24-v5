@@ -1,14 +1,5 @@
 {
  "kayit": {
-  "/ronesans-gayrimenkul-rgyas-operasyonel-geliri-yuzde-27-artti-kari-dustu": {
-   "yayin": "2026-11-06T11:35:00+03:00",
-   "sitemap_gorulen": "2026-11-06T12:02+03:00",
-   "baslangic": false,
-   "sitemap_dk": 28,
-   "durum": 200,
-   "rss_gorulen": "2026-11-06T12:02+03:00",
-   "rss_dk": 28
-  },
   "/akcansa-akcns-temettu-serisi-30-yila-ulasti-bist-100de-en-uzun-seri": {
    "yayin": "2026-11-06T12:10:00+03:00",
    "sitemap_gorulen": "2026-11-06T12:22+03:00",
@@ -1532,11 +1523,11 @@
   }
  },
  "ozet": {
-  "haber": 170,
-  "sitemap_medyan_dk": 32.5,
+  "haber": 169,
+  "sitemap_medyan_dk": 33,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 32.5,
+  "rss_medyan_dk": 33,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-13T11:33+03:00"
+  "guncelleme": "2026-11-13T11:48+03:00"
  }
 }
