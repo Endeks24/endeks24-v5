@@ -1,14 +1,5 @@
 {
  "kayit": {
-  "/rekabet-kurulu-findikta-ferrero-dahil-7-tesebbuse-sorusturma-acti": {
-   "yayin": "2026-11-06T14:39:00+03:00",
-   "sitemap_gorulen": "2026-11-06T14:43+03:00",
-   "baslangic": false,
-   "sitemap_dk": 5,
-   "durum": 200,
-   "rss_gorulen": "2026-11-06T14:43+03:00",
-   "rss_dk": 5
-  },
   "/turk-somonu-ihracati-ekimde-yuzde-54-artti-10-ayda-2025in-tamamini-asti": {
    "yayin": "2026-11-06T15:38:00+03:00",
    "sitemap_gorulen": "2026-11-06T16:13+03:00",
@@ -1592,6 +1583,15 @@
    "durum": 200,
    "rss_gorulen": "2026-11-13T14:32+03:00",
    "rss_dk": 8
+  },
+  "/denizbank-jica-ile-100-milyon-dolarlik-is-birligi-anlasmasi-imzaladi": {
+   "yayin": "2026-11-13T14:38:43+03:00",
+   "sitemap_gorulen": "2026-11-13T14:47+03:00",
+   "baslangic": false,
+   "sitemap_dk": 9,
+   "durum": 200,
+   "rss_gorulen": "2026-11-13T14:47+03:00",
+   "rss_dk": 9
   }
  },
  "ozet": {
@@ -1600,6 +1600,6 @@
   "sitemap_en_uzun_dk": 180,
   "rss_medyan_dk": 31,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-13T14:32+03:00"
+  "guncelleme": "2026-11-13T14:47+03:00"
  }
 }
