@@ -1,0 +1,5 @@
+fon 1256 pyş 105
+değer 1254 akış 1255
+getiri referansları {'h1h': 1252, 'h1a': 1253, 'h3a': 1238, 'h6a': 1207, 'hyb': 1176, 'h1y': 1150}
+seri 1254
+TAMAM 1254 fon | 1A 1252 1Y 1150 YBB 1175 büyüklük 1254 dağılım 1253
