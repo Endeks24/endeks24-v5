@@ -1520,14 +1520,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-13T11:33+03:00",
    "rss_dk": 167
+  },
+  "/tcmb-anketinde-yil-sonu-enflasyon-beklentisi-yuzde-30-u-asti-10-kez-artti": {
+   "yayin": "2026-11-13T11:58:50+03:00",
+   "sitemap_gorulen": "2026-11-13T12:03+03:00",
+   "baslangic": false,
+   "sitemap_dk": 4,
+   "durum": 200,
+   "rss_gorulen": "2026-11-13T12:03+03:00",
+   "rss_dk": 4
   }
  },
  "ozet": {
-  "haber": 169,
-  "sitemap_medyan_dk": 33,
+  "haber": 170,
+  "sitemap_medyan_dk": 32.5,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 33,
+  "rss_medyan_dk": 32.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-13T11:48+03:00"
+  "guncelleme": "2026-11-13T12:03+03:00"
  }
 }
