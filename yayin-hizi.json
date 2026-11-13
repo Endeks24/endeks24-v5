@@ -9,33 +9,6 @@
    "rss_gorulen": "2026-11-07T01:22+03:00",
    "rss_dk": 59
   },
-  "/tupras-tuprs-3-ceyrekte-69-milyar-tl-net-kar-yazdi-2026nin-en-yuksegi": {
-   "yayin": "2026-11-06T23:46:00+03:00",
-   "sitemap_gorulen": "2026-11-07T01:22+03:00",
-   "baslangic": false,
-   "sitemap_dk": 96,
-   "durum": 200,
-   "rss_gorulen": "2026-11-07T01:22+03:00",
-   "rss_dk": 96
-  },
-  "/oyak-cimento-oyakc-temettu-onerdi-toplam-2-milyar-431-milyon-lira": {
-   "yayin": "2026-11-06T23:16:00+03:00",
-   "sitemap_gorulen": "2026-11-07T01:22+03:00",
-   "baslangic": false,
-   "sitemap_dk": 126,
-   "durum": 200,
-   "rss_gorulen": "2026-11-07T01:22+03:00",
-   "rss_dk": 126
-  },
-  "/halkbank-halkb-9-aylik-kari-26-milyar-tl-net-faiz-geliri-ikiye-katlandi": {
-   "yayin": "2026-11-06T22:42:00+03:00",
-   "sitemap_gorulen": "2026-11-07T01:22+03:00",
-   "baslangic": false,
-   "sitemap_dk": 160,
-   "durum": 200,
-   "rss_gorulen": "2026-11-07T01:22+03:00",
-   "rss_dk": 160
-  },
   "/ons-altin-haftayi-4069-dolardan-kapatti-haftalik-artis-yuzde-5": {
    "yayin": "2026-11-07T10:58:00+03:00",
    "sitemap_gorulen": "2026-11-07T12:13+03:00",
@@ -1727,14 +1700,68 @@
    "durum": 200,
    "rss_gorulen": "2026-11-13T22:18+03:00",
    "rss_dk": 73
+  },
+  "/spk-karcl-edata-ve-grtho-da-65-kisiye-2-yil-islem-yasagi-getirdi": {
+   "yayin": "2026-11-14T00:12:51+03:00",
+   "sitemap_gorulen": "2026-11-14T00:17+03:00",
+   "baslangic": false,
+   "sitemap_dk": 4,
+   "durum": 200,
+   "rss_gorulen": "2026-11-14T00:17+03:00",
+   "rss_dk": 4
+  },
+  "/spk-plastikkart-ta-yuzde-1-219-flap-ta-yuzde-327-bedelsizi-onayladi": {
+   "yayin": "2026-11-13T23:59:00+03:00",
+   "sitemap_gorulen": "2026-11-14T00:17+03:00",
+   "baslangic": false,
+   "sitemap_dk": 18,
+   "durum": 200,
+   "rss_gorulen": "2026-11-14T00:17+03:00",
+   "rss_dk": 18
+  },
+  "/aselsan-asels-13-kasim-da-13-milyar-lira-hacimle-islem-lideri-oldu": {
+   "yayin": "2026-11-13T23:04:18+03:00",
+   "sitemap_gorulen": "2026-11-14T00:17+03:00",
+   "baslangic": false,
+   "sitemap_dk": 73,
+   "durum": 200,
+   "rss_gorulen": "2026-11-14T00:17+03:00",
+   "rss_dk": 73
+  },
+  "/kartonsan-kartn-kurul-secimine-gidiyor-6-uyeden-4-u-yeni-goreve-geldi": {
+   "yayin": "2026-11-13T22:51:11+03:00",
+   "sitemap_gorulen": "2026-11-14T00:17+03:00",
+   "baslangic": false,
+   "sitemap_dk": 86,
+   "durum": 200,
+   "rss_gorulen": "2026-11-14T00:17+03:00",
+   "rss_dk": 86
+  },
+  "/alarko-holding-alark-alarko-carrier-aliminda-rekabet-kurumu-onayini-aldi": {
+   "yayin": "2026-11-13T22:37:51+03:00",
+   "sitemap_gorulen": "2026-11-14T00:17+03:00",
+   "baslangic": false,
+   "sitemap_dk": 99,
+   "durum": 200,
+   "rss_gorulen": "2026-11-14T00:17+03:00",
+   "rss_dk": 99
+  },
+  "/deniz-gyo-dzgyo-bodrum-otelinin-979-milyon-liralik-bedelini-tahsil-etti": {
+   "yayin": "2026-11-13T22:24:41+03:00",
+   "sitemap_gorulen": "2026-11-14T00:17+03:00",
+   "baslangic": false,
+   "sitemap_dk": 112,
+   "durum": 200,
+   "rss_gorulen": "2026-11-14T00:17+03:00",
+   "rss_dk": 112
   }
  },
  "ozet": {
-  "haber": 192,
-  "sitemap_medyan_dk": 32.0,
+  "haber": 195,
+  "sitemap_medyan_dk": 32,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 32.0,
+  "rss_medyan_dk": 32,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-13T22:18+03:00"
+  "guncelleme": "2026-11-14T00:17+03:00"
  }
 }
