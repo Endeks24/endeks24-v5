@@ -1,14 +1,5 @@
 {
  "kayit": {
-  "/borusan-boru-brsan-net-kari-9-ayda-yuzde-155-artti-3916-milyon-tl-oldu": {
-   "yayin": "2026-11-07T00:23:00+03:00",
-   "sitemap_gorulen": "2026-11-07T01:22+03:00",
-   "baslangic": false,
-   "sitemap_dk": 59,
-   "durum": 200,
-   "rss_gorulen": "2026-11-07T01:22+03:00",
-   "rss_dk": 59
-  },
   "/ons-altin-haftayi-4069-dolardan-kapatti-haftalik-artis-yuzde-5": {
    "yayin": "2026-11-07T10:58:00+03:00",
    "sitemap_gorulen": "2026-11-07T12:13+03:00",
@@ -1754,14 +1745,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-14T00:17+03:00",
    "rss_dk": 112
+  },
+  "/wall-street-karisik-kapandi-nasdaq-haftada-yuzde-2-artida-cipler-ekside": {
+   "yayin": "2026-11-14T00:26:12+03:00",
+   "sitemap_gorulen": "2026-11-14T00:28+03:00",
+   "baslangic": false,
+   "sitemap_dk": 3,
+   "durum": 200,
+   "rss_gorulen": "2026-11-14T00:28+03:00",
+   "rss_dk": 3
   }
  },
  "ozet": {
   "haber": 195,
-  "sitemap_medyan_dk": 32,
+  "sitemap_medyan_dk": 31,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 32,
+  "rss_medyan_dk": 31,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-14T00:17+03:00"
+  "guncelleme": "2026-11-14T00:28+03:00"
  }
 }
