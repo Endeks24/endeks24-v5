@@ -1574,14 +1574,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-13T14:03+03:00",
    "rss_dk": 8
+  },
+  "/europower-eupwr-teias-in-206-milyon-liralik-ihalesinde-birinci-oldu": {
+   "yayin": "2026-11-13T14:10:05+03:00",
+   "sitemap_gorulen": "2026-11-13T14:18+03:00",
+   "baslangic": false,
+   "sitemap_dk": 8,
+   "durum": 200,
+   "rss_gorulen": "2026-11-13T14:18+03:00",
+   "rss_dk": 8
   }
  },
  "ozet": {
-  "haber": 175,
-  "sitemap_medyan_dk": 32,
+  "haber": 176,
+  "sitemap_medyan_dk": 31.5,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 32,
+  "rss_medyan_dk": 31.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-13T14:03+03:00"
+  "guncelleme": "2026-11-13T14:18+03:00"
  }
 }
