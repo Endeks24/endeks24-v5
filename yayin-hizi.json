@@ -1,14 +1,5 @@
 {
  "kayit": {
-  "/turk-somonu-ihracati-ekimde-yuzde-54-artti-10-ayda-2025in-tamamini-asti": {
-   "yayin": "2026-11-06T15:38:00+03:00",
-   "sitemap_gorulen": "2026-11-06T16:13+03:00",
-   "baslangic": false,
-   "sitemap_dk": 35,
-   "durum": 200,
-   "rss_gorulen": "2026-11-06T16:13+03:00",
-   "rss_dk": 35
-  },
   "/abdde-tarim-disi-istihdam-ekimde-165-bin-artti-issizlik-orani-geriledi": {
    "yayin": "2026-11-06T16:43:00+03:00",
    "sitemap_gorulen": "2026-11-06T16:49+03:00",
@@ -1619,14 +1610,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-13T15:32+03:00",
    "rss_dk": 11
+  },
+  "/turk-eximbank-dort-krediyle-yaklasik-41-milyar-lira-sagladi": {
+   "yayin": "2026-11-13T15:36:37+03:00",
+   "sitemap_gorulen": "2026-11-13T15:47+03:00",
+   "baslangic": false,
+   "sitemap_dk": 11,
+   "durum": 200,
+   "rss_gorulen": "2026-11-13T15:47+03:00",
+   "rss_dk": 11
   }
  },
  "ozet": {
   "haber": 180,
-  "sitemap_medyan_dk": 30.5,
+  "sitemap_medyan_dk": 30.0,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 30.5,
+  "rss_medyan_dk": 30.0,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-13T15:32+03:00"
+  "guncelleme": "2026-11-13T15:47+03:00"
  }
 }
