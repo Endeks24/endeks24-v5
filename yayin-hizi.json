@@ -1,50 +1,5 @@
 {
  "kayit": {
-  "/spk-kapali-fonlarin-acilmasi-icin-ziraat-bankasina-basvuru-gerekiyor": {
-   "yayin": "2026-11-06T19:04:00+03:00",
-   "sitemap_gorulen": "2026-11-06T19:14+03:00",
-   "baslangic": false,
-   "sitemap_dk": 11,
-   "durum": 200,
-   "rss_gorulen": "2026-11-06T19:14+03:00",
-   "rss_dk": 11
-  },
-  "/bilancoda-beklentiyi-asan-21-sirketin-7sinde-hisse-dustu-14unde-yukseldi": {
-   "yayin": "2026-11-06T18:43:00+03:00",
-   "sitemap_gorulen": "2026-11-06T19:14+03:00",
-   "baslangic": false,
-   "sitemap_dk": 32,
-   "durum": 200,
-   "rss_gorulen": "2026-11-06T19:14+03:00",
-   "rss_dk": 32
-  },
-  "/bist-100-teknik-taramasinda-8-hissede-gosterge-al-yonune-dondu-dordu-banka": {
-   "yayin": "2026-11-06T20:25:00+03:00",
-   "sitemap_gorulen": "2026-11-06T20:28+03:00",
-   "baslangic": false,
-   "sitemap_dk": 3,
-   "durum": 200,
-   "rss_gorulen": "2026-11-06T20:28+03:00",
-   "rss_dk": 3
-  },
-  "/agholun-ana-ortaklik-kari-9-ayda-5777-milyon-tl-parasal-kazanc-one-cikti": {
-   "yayin": "2026-11-06T20:01:00+03:00",
-   "sitemap_gorulen": "2026-11-06T20:28+03:00",
-   "baslangic": false,
-   "sitemap_dk": 27,
-   "durum": 200,
-   "rss_gorulen": "2026-11-06T20:28+03:00",
-   "rss_dk": 27
-  },
-  "/sekerbank-skbnk-bedellide-kalan-paylari-satacak-en-dusuk-fiyat-1-lira": {
-   "yayin": "2026-11-06T19:29:00+03:00",
-   "sitemap_gorulen": "2026-11-06T20:28+03:00",
-   "baslangic": false,
-   "sitemap_dk": 59,
-   "durum": 200,
-   "rss_gorulen": "2026-11-06T20:28+03:00",
-   "rss_dk": 59
-  },
   "/borusan-boru-brsan-net-kari-9-ayda-yuzde-155-artti-3916-milyon-tl-oldu": {
    "yayin": "2026-11-07T00:23:00+03:00",
    "sitemap_gorulen": "2026-11-07T01:22+03:00",
@@ -1619,14 +1574,113 @@
    "durum": 200,
    "rss_gorulen": "2026-11-13T18:32+03:00",
    "rss_dk": 8
+  },
+  "/tav-tavhl-batum-sirketinin-kalan-yuzde-24-unu-3-milyon-dolara-aldi": {
+   "yayin": "2026-11-13T20:52:16+03:00",
+   "sitemap_gorulen": "2026-11-13T21:02+03:00",
+   "baslangic": false,
+   "sitemap_dk": 11,
+   "durum": 200,
+   "rss_gorulen": "2026-11-13T21:02+03:00",
+   "rss_dk": 11
+  },
+  "/gen-ilac-genil-seleda-biyogaz-in-yuzde-81-ini-5-milyar-liraya-satin-aldi": {
+   "yayin": "2026-11-13T20:39:00+03:00",
+   "sitemap_gorulen": "2026-11-13T21:02+03:00",
+   "baslangic": false,
+   "sitemap_dk": 24,
+   "durum": 200,
+   "rss_gorulen": "2026-11-13T21:02+03:00",
+   "rss_dk": 24
+  },
+  "/cip-hisseleri-ekside-amd-yuzde-10-ve-broadcom-yuzde-5-deger-kaybetti": {
+   "yayin": "2026-11-13T20:25:41+03:00",
+   "sitemap_gorulen": "2026-11-13T21:02+03:00",
+   "baslangic": false,
+   "sitemap_dk": 37,
+   "durum": 200,
+   "rss_gorulen": "2026-11-13T21:02+03:00",
+   "rss_dk": 37
+  },
+  "/avrupa-borsalari-gunu-karisik-kapatti-dax-haftada-yuzde-4-kazandi": {
+   "yayin": "2026-11-13T20:12:33+03:00",
+   "sitemap_gorulen": "2026-11-13T21:02+03:00",
+   "baslangic": false,
+   "sitemap_dk": 50,
+   "durum": 200,
+   "rss_gorulen": "2026-11-13T21:02+03:00",
+   "rss_dk": 50
+  },
+  "/ethereum-haftada-yuzde-14-xrp-yuzde-14-solana-yuzde-12-geriledi": {
+   "yayin": "2026-11-13T19:59:15+03:00",
+   "sitemap_gorulen": "2026-11-13T21:02+03:00",
+   "baslangic": false,
+   "sitemap_dk": 64,
+   "durum": 200,
+   "rss_gorulen": "2026-11-13T21:02+03:00",
+   "rss_dk": 64
+  },
+  "/dogusan-dogub-9-ayda-net-zarari-yuzde-66-azaldi-hasilat-yuzde-60-dustu": {
+   "yayin": "2026-11-13T19:45:56+03:00",
+   "sitemap_gorulen": "2026-11-13T21:02+03:00",
+   "baslangic": false,
+   "sitemap_dk": 77,
+   "durum": 200,
+   "rss_gorulen": "2026-11-13T21:02+03:00",
+   "rss_dk": 77
+  },
+  "/say-yenilenebilir-sayas-yilin-dokuzuncu-ruzgar-kulesi-ihalesini-aldi": {
+   "yayin": "2026-11-13T19:32:32+03:00",
+   "sitemap_gorulen": "2026-11-13T21:02+03:00",
+   "baslangic": false,
+   "sitemap_dk": 90,
+   "durum": 200,
+   "rss_gorulen": "2026-11-13T21:02+03:00",
+   "rss_dk": 90
+  },
+  "/fonet-fonet-hatay-daki-217-milyon-liralik-saglik-ihalesini-kazandi": {
+   "yayin": "2026-11-13T19:19:14+03:00",
+   "sitemap_gorulen": "2026-11-13T21:02+03:00",
+   "baslangic": false,
+   "sitemap_dk": 104,
+   "durum": 200,
+   "rss_gorulen": "2026-11-13T21:02+03:00",
+   "rss_dk": 104
+  },
+  "/bist-100-de-haftanin-en-cok-yukselen-hissesi-zoren-en-cok-duseni-doas-oldu": {
+   "yayin": "2026-11-13T19:04:19+03:00",
+   "sitemap_gorulen": "2026-11-13T21:02+03:00",
+   "baslangic": false,
+   "sitemap_dk": 119,
+   "durum": 200,
+   "rss_gorulen": "2026-11-13T21:02+03:00",
+   "rss_dk": 119
+  },
+  "/dolar-tl-50-liranin-uzerinde-haftalik-artisi-bes-haftadir-ayni-hizda-kaldi": {
+   "yayin": "2026-11-13T18:51:08+03:00",
+   "sitemap_gorulen": "2026-11-13T21:02+03:00",
+   "baslangic": false,
+   "sitemap_dk": 132,
+   "durum": 200,
+   "rss_gorulen": "2026-11-13T21:02+03:00",
+   "rss_dk": 132
+  },
+  "/konut-kredisi-stok-faizi-55-ay-ust-uste-artti-eylul-2026-da-yuzde-33-oldu": {
+   "yayin": "2026-11-13T18:37:53+03:00",
+   "sitemap_gorulen": "2026-11-13T21:02+03:00",
+   "baslangic": false,
+   "sitemap_dk": 145,
+   "durum": 200,
+   "rss_gorulen": "2026-11-13T21:02+03:00",
+   "rss_dk": 145
   }
  },
  "ozet": {
-  "haber": 180,
-  "sitemap_medyan_dk": 29.5,
+  "haber": 186,
+  "sitemap_medyan_dk": 31.5,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 29.5,
+  "rss_medyan_dk": 31.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-13T18:32+03:00"
+  "guncelleme": "2026-11-13T21:02+03:00"
  }
 }
