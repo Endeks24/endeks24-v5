@@ -1,14 +1,5 @@
 {
  "kayit": {
-  "/abdde-tarim-disi-istihdam-ekimde-165-bin-artti-issizlik-orani-geriledi": {
-   "yayin": "2026-11-06T16:43:00+03:00",
-   "sitemap_gorulen": "2026-11-06T16:49+03:00",
-   "baslangic": false,
-   "sitemap_dk": 6,
-   "durum": 200,
-   "rss_gorulen": "2026-11-06T16:49+03:00",
-   "rss_dk": 6
-  },
   "/alarko-carrier-alcar-gebzeyi-kapatiyor-calisanlarin-ucte-biri-cikiyor": {
    "yayin": "2026-11-06T17:04:00+03:00",
    "sitemap_gorulen": "2026-11-06T17:42+03:00",
@@ -1631,11 +1622,11 @@
   }
  },
  "ozet": {
-  "haber": 181,
-  "sitemap_medyan_dk": 30,
+  "haber": 180,
+  "sitemap_medyan_dk": 30.0,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 30,
+  "rss_medyan_dk": 30.0,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-13T16:33+03:00"
+  "guncelleme": "2026-11-13T16:48+03:00"
  }
 }
