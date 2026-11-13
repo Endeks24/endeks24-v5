@@ -1,14 +1,5 @@
 {
  "kayit": {
-  "/sasanin-sasa-9-bedelsizi-2016daki-100-payi-19055-paya-cikardi": {
-   "yayin": "2026-11-06T12:31:00+03:00",
-   "sitemap_gorulen": "2026-11-06T12:34+03:00",
-   "baslangic": false,
-   "sitemap_dk": 3,
-   "durum": 200,
-   "rss_gorulen": "2026-11-06T12:34+03:00",
-   "rss_dk": 3
-  },
   "/hazine-kasim-takvimindeki-4-borclanma-islemini-9-ve-10-kasimda-yapacak": {
    "yayin": "2026-11-06T13:39:00+03:00",
    "sitemap_gorulen": "2026-11-06T13:41+03:00",
@@ -1529,6 +1520,15 @@
    "durum": 200,
    "rss_gorulen": "2026-11-13T12:17+03:00",
    "rss_dk": 5
+  },
+  "/dax-ve-euro-stoxx-50-ekside-nasdaq-100-vadelisi-zirvenin-yuzde-10-altinda": {
+   "yayin": "2026-11-13T12:26:59+03:00",
+   "sitemap_gorulen": "2026-11-13T12:32+03:00",
+   "baslangic": false,
+   "sitemap_dk": 6,
+   "durum": 200,
+   "rss_gorulen": "2026-11-13T12:32+03:00",
+   "rss_dk": 6
   }
  },
  "ozet": {
@@ -1537,6 +1537,6 @@
   "sitemap_en_uzun_dk": 180,
   "rss_medyan_dk": 32.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-13T12:17+03:00"
+  "guncelleme": "2026-11-13T12:32+03:00"
  }
 }
