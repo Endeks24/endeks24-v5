@@ -1,59 +1,5 @@
 {
  "kayit": {
-  "/nikkei-225-gun-icinde-zirveden-yuzde-20-dustu-satis-asyaya-yayildi": {
-   "yayin": "2026-11-06T06:37:00+03:00",
-   "sitemap_gorulen": "2026-11-06T07:35+03:00",
-   "baslangic": false,
-   "sitemap_dk": 58,
-   "durum": 200,
-   "rss_gorulen": "2026-11-06T07:35+03:00",
-   "rss_dk": 58
-  },
-  "/sasa-9-aylik-net-zararini-yuzde-89-azaltti-3-ceyrekte-zarar-buyudu": {
-   "yayin": "2026-11-06T08:29:00+03:00",
-   "sitemap_gorulen": "2026-11-06T08:35+03:00",
-   "baslangic": false,
-   "sitemap_dk": 7,
-   "durum": 200,
-   "rss_gorulen": "2026-11-06T08:35+03:00",
-   "rss_dk": 7
-  },
-  "/bist-100-gune-yuzde-1-eksiyle-basladi-nikkei-225-ve-kospi-yuzde-6-dustu": {
-   "yayin": "2026-11-06T10:03:00+03:00",
-   "sitemap_gorulen": "2026-11-06T10:03+03:00",
-   "baslangic": false,
-   "sitemap_dk": 1,
-   "durum": 200,
-   "rss_gorulen": "2026-11-06T10:03+03:00",
-   "rss_dk": 1
-  },
-  "/tofas-toaso-3-ceyrek-karini-yuzde-176-artirdi-ford-otosan-geriledi": {
-   "yayin": "2026-11-06T09:32:00+03:00",
-   "sitemap_gorulen": "2026-11-06T10:03+03:00",
-   "baslangic": false,
-   "sitemap_dk": 32,
-   "durum": 200,
-   "rss_gorulen": "2026-11-06T10:03+03:00",
-   "rss_dk": 32
-  },
-  "/benzinde-6-liralik-indirim-pompaya-yansidi-1-kasim-zammi-geri-alindi": {
-   "yayin": "2026-11-06T08:59:00+03:00",
-   "sitemap_gorulen": "2026-11-06T10:03+03:00",
-   "baslangic": false,
-   "sitemap_dk": 65,
-   "durum": 200,
-   "rss_gorulen": "2026-11-06T10:03+03:00",
-   "rss_dk": 65
-  },
-  "/aselsan-asels-yuzde-7-dustu-bist-100-kaybinin-ucte-ikisini-olusturdu": {
-   "yayin": "2026-11-06T10:24:00+03:00",
-   "sitemap_gorulen": "2026-11-06T10:50+03:00",
-   "baslangic": false,
-   "sitemap_dk": 26,
-   "durum": 200,
-   "rss_gorulen": "2026-11-06T10:50+03:00",
-   "rss_dk": 26
-  },
   "/ronesans-gayrimenkul-rgyas-operasyonel-geliri-yuzde-27-artti-kari-dustu": {
    "yayin": "2026-11-06T11:35:00+03:00",
    "sitemap_gorulen": "2026-11-06T12:02+03:00",
@@ -1547,14 +1493,50 @@
    "durum": 200,
    "rss_gorulen": "2026-11-13T00:55+03:00",
    "rss_dk": 5
+  },
+  "/cari-islemler-eylulde-fazla-verdi-yillik-acik-39-milyar-dolara-geriledi": {
+   "yayin": "2026-11-13T10:26:00+03:00",
+   "sitemap_gorulen": "2026-11-13T11:33+03:00",
+   "baslangic": false,
+   "sitemap_dk": 68,
+   "durum": 200,
+   "rss_gorulen": "2026-11-13T11:33+03:00",
+   "rss_dk": 68
+  },
+  "/bist-100-acilista-yatay-seyretti-15-ekim-kapanisinin-yuzde-2-altinda-kaldi": {
+   "yayin": "2026-11-13T10:01:00+03:00",
+   "sitemap_gorulen": "2026-11-13T11:33+03:00",
+   "baslangic": false,
+   "sitemap_dk": 93,
+   "durum": 200,
+   "rss_gorulen": "2026-11-13T11:33+03:00",
+   "rss_dk": 93
+  },
+  "/mcard-9-aylik-kari-495-milyon-lira-esen-ve-eksun-ceyrekte-zarar-yazdi": {
+   "yayin": "2026-11-13T09:07:00+03:00",
+   "sitemap_gorulen": "2026-11-13T11:33+03:00",
+   "baslangic": false,
+   "sitemap_dk": 147,
+   "durum": 200,
+   "rss_gorulen": "2026-11-13T11:33+03:00",
+   "rss_dk": 147
+  },
+  "/elite-naturel-elite-vergi-oncesi-kari-katladi-net-kar-yuzde-49-azaldi": {
+   "yayin": "2026-11-13T08:47:00+03:00",
+   "sitemap_gorulen": "2026-11-13T11:33+03:00",
+   "baslangic": false,
+   "sitemap_dk": 167,
+   "durum": 200,
+   "rss_gorulen": "2026-11-13T11:33+03:00",
+   "rss_dk": 167
   }
  },
  "ozet": {
-  "haber": 172,
-  "sitemap_medyan_dk": 32.0,
+  "haber": 170,
+  "sitemap_medyan_dk": 32.5,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 32.0,
+  "rss_medyan_dk": 32.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-13T05:07+03:00"
+  "guncelleme": "2026-11-13T11:33+03:00"
  }
 }
