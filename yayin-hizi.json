@@ -1754,14 +1754,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-14T00:28+03:00",
    "rss_dk": 3
+  },
+  "/bitcoin-68-bin-dolarda-islem-goruyor-xrp-gun-icinde-1-dolarin-altina-indi": {
+   "yayin": "2026-11-14T01:18:06+03:00",
+   "sitemap_gorulen": "2026-11-14T02:51+03:00",
+   "baslangic": false,
+   "sitemap_dk": 94,
+   "durum": 200,
+   "rss_gorulen": "2026-11-14T02:51+03:00",
+   "rss_dk": 94
   }
  },
  "ozet": {
-  "haber": 195,
-  "sitemap_medyan_dk": 31,
+  "haber": 196,
+  "sitemap_medyan_dk": 31.5,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 31,
+  "rss_medyan_dk": 31.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-14T00:28+03:00"
+  "guncelleme": "2026-11-14T02:51+03:00"
  }
 }
