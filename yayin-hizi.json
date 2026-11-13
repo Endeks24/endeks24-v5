@@ -1529,14 +1529,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-13T12:32+03:00",
    "rss_dk": 6
+  },
+  "/ons-altin-3-895-dolarda-52-haftalik-dibin-hemen-uzerinde": {
+   "yayin": "2026-11-13T12:41:28+03:00",
+   "sitemap_gorulen": "2026-11-13T12:47+03:00",
+   "baslangic": false,
+   "sitemap_dk": 6,
+   "durum": 200,
+   "rss_gorulen": "2026-11-13T12:47+03:00",
+   "rss_dk": 6
   }
  },
  "ozet": {
-  "haber": 170,
-  "sitemap_medyan_dk": 32.5,
+  "haber": 171,
+  "sitemap_medyan_dk": 32,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 32.5,
+  "rss_medyan_dk": 32,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-13T12:32+03:00"
+  "guncelleme": "2026-11-13T12:47+03:00"
  }
 }
