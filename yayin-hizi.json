@@ -1,14 +1,5 @@
 {
  "kayit": {
-  "/akcansa-akcns-temettu-serisi-30-yila-ulasti-bist-100de-en-uzun-seri": {
-   "yayin": "2026-11-06T12:10:00+03:00",
-   "sitemap_gorulen": "2026-11-06T12:22+03:00",
-   "baslangic": false,
-   "sitemap_dk": 12,
-   "durum": 200,
-   "rss_gorulen": "2026-11-06T12:22+03:00",
-   "rss_dk": 12
-  },
   "/sasanin-sasa-9-bedelsizi-2016daki-100-payi-19055-paya-cikardi": {
    "yayin": "2026-11-06T12:31:00+03:00",
    "sitemap_gorulen": "2026-11-06T12:34+03:00",
@@ -1529,6 +1520,15 @@
    "durum": 200,
    "rss_gorulen": "2026-11-13T12:03+03:00",
    "rss_dk": 4
+  },
+  "/efor-yatirim-efor-220-milyon-imtiyazli-payi-imtiyazsiz-yapmak-istiyor": {
+   "yayin": "2026-11-13T12:13:02+03:00",
+   "sitemap_gorulen": "2026-11-13T12:17+03:00",
+   "baslangic": false,
+   "sitemap_dk": 5,
+   "durum": 200,
+   "rss_gorulen": "2026-11-13T12:17+03:00",
+   "rss_dk": 5
   }
  },
  "ozet": {
@@ -1537,6 +1537,6 @@
   "sitemap_en_uzun_dk": 180,
   "rss_medyan_dk": 32.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-13T12:03+03:00"
+  "guncelleme": "2026-11-13T12:17+03:00"
  }
 }
