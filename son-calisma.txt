@@ -1,4 +1,4 @@
-BIST 100 saat 18.00 itibarıyla yüzde 0,28 yükselişle 11.844,64 puanda. Endeksteki 100 hisseden 45 hisse geriliyor, 48 hisse yükseliyor.
+BIST 100 13 Kasım seansını yüzde 0,27 yükselişle 11.842,82 puandan kapattı. Endeksteki 100 hisseden 49 hisse geriledi, 49 hisse yükseldi.
 rakamlar: {'piyasa': 8, 'gundem': 8}
-TAMAM: cikti/veri.json 117292 bayt; seans 2026-11-13T18:00:00+03:00 ; kripto 2026-11-13T18:00:00+03:00
-2026-11-13T15:00:25Z 
+TAMAM: cikti/veri.json 117364 bayt; seans 2026-11-13T18:10:00+03:00 ; kripto 2026-11-13T18:14:00+03:00
+2026-11-13T15:15:38Z 

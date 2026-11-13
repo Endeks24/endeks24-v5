@@ -1,14 +1,5 @@
 {
  "kayit": {
-  "/bist-100-yedi-haftalik-dusus-serisini-bitirdi-2005ten-beri-en-uzunuydu": {
-   "yayin": "2026-11-06T18:17:00+03:00",
-   "sitemap_gorulen": "2026-11-06T18:23+03:00",
-   "baslangic": false,
-   "sitemap_dk": 7,
-   "durum": 200,
-   "rss_gorulen": "2026-11-06T18:23+03:00",
-   "rss_dk": 7
-  },
   "/spk-kapali-fonlarin-acilmasi-icin-ziraat-bankasina-basvuru-gerekiyor": {
    "yayin": "2026-11-06T19:04:00+03:00",
    "sitemap_gorulen": "2026-11-06T19:14+03:00",
@@ -1610,6 +1601,15 @@
    "durum": 200,
    "rss_gorulen": "2026-11-13T16:03+03:00",
    "rss_dk": 13
+  },
+  "/wall-street-karisik-seyrediyor-nasdaq-6-ekim-kapanisinin-yuzde-9-altinda": {
+   "yayin": "2026-11-13T18:14:06+03:00",
+   "sitemap_gorulen": "2026-11-13T18:17+03:00",
+   "baslangic": false,
+   "sitemap_dk": 4,
+   "durum": 200,
+   "rss_gorulen": "2026-11-13T18:17+03:00",
+   "rss_dk": 4
   }
  },
  "ozet": {
@@ -1618,6 +1618,6 @@
   "sitemap_en_uzun_dk": 180,
   "rss_medyan_dk": 30,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-13T18:02+03:00"
+  "guncelleme": "2026-11-13T18:17+03:00"
  }
 }
