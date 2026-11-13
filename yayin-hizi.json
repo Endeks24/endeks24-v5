@@ -1,14 +1,5 @@
 {
  "kayit": {
-  "/hazine-kasim-takvimindeki-4-borclanma-islemini-9-ve-10-kasimda-yapacak": {
-   "yayin": "2026-11-06T13:39:00+03:00",
-   "sitemap_gorulen": "2026-11-06T13:41+03:00",
-   "baslangic": false,
-   "sitemap_dk": 2,
-   "durum": 200,
-   "rss_gorulen": "2026-11-06T13:41+03:00",
-   "rss_dk": 2
-  },
   "/rekabet-kurulu-findikta-ferrero-dahil-7-tesebbuse-sorusturma-acti": {
    "yayin": "2026-11-06T14:39:00+03:00",
    "sitemap_gorulen": "2026-11-06T14:43+03:00",
@@ -1565,6 +1556,15 @@
    "durum": 200,
    "rss_gorulen": "2026-11-13T13:33+03:00",
    "rss_dk": 9
+  },
+  "/merko-gida-merko-45-milyon-liralik-yeni-pay-geri-alim-programi-baslatti": {
+   "yayin": "2026-11-13T13:41:19+03:00",
+   "sitemap_gorulen": "2026-11-13T13:48+03:00",
+   "baslangic": false,
+   "sitemap_dk": 7,
+   "durum": 200,
+   "rss_gorulen": "2026-11-13T13:48+03:00",
+   "rss_dk": 7
   }
  },
  "ozet": {
@@ -1573,6 +1573,6 @@
   "sitemap_en_uzun_dk": 180,
   "rss_medyan_dk": 32.0,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-13T13:33+03:00"
+  "guncelleme": "2026-11-13T13:48+03:00"
  }
 }
