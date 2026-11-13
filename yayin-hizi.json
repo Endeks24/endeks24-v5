@@ -1601,14 +1601,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-13T15:02+03:00",
    "rss_dk": 9
+  },
+  "/best-brands-beste-genel-kurulu-halka-arz-fonunu-arac-muayeneye-ayirdi": {
+   "yayin": "2026-11-13T15:07:28+03:00",
+   "sitemap_gorulen": "2026-11-13T15:18+03:00",
+   "baslangic": false,
+   "sitemap_dk": 11,
+   "durum": 200,
+   "rss_gorulen": "2026-11-13T15:18+03:00",
+   "rss_dk": 11
   }
  },
  "ozet": {
-  "haber": 178,
-  "sitemap_medyan_dk": 31.0,
+  "haber": 179,
+  "sitemap_medyan_dk": 31,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 31.0,
+  "rss_medyan_dk": 31,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-13T15:02+03:00"
+  "guncelleme": "2026-11-13T15:18+03:00"
  }
 }
