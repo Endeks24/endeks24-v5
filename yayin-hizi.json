@@ -1547,14 +1547,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-13T13:02+03:00",
    "rss_dk": 6
+  },
+  "/euro-tl-yilbasindan-yuzde-10-artti-dolar-tl-nin-gerisinde-kaldi": {
+   "yayin": "2026-11-13T13:10:33+03:00",
+   "sitemap_gorulen": "2026-11-13T13:18+03:00",
+   "baslangic": false,
+   "sitemap_dk": 8,
+   "durum": 200,
+   "rss_gorulen": "2026-11-13T13:18+03:00",
+   "rss_dk": 8
   }
  },
  "ozet": {
-  "haber": 172,
-  "sitemap_medyan_dk": 32.0,
+  "haber": 173,
+  "sitemap_medyan_dk": 32,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 32.0,
+  "rss_medyan_dk": 32,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-13T13:02+03:00"
+  "guncelleme": "2026-11-13T13:18+03:00"
  }
 }
