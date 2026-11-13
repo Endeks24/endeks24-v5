@@ -1583,14 +1583,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-13T14:18+03:00",
    "rss_dk": 8
+  },
+  "/qnb-finansal-kiralama-qnbfk-75-milyon-avroluk-kredi-anlasmasi-imzaladi": {
+   "yayin": "2026-11-13T14:24:27+03:00",
+   "sitemap_gorulen": "2026-11-13T14:32+03:00",
+   "baslangic": false,
+   "sitemap_dk": 8,
+   "durum": 200,
+   "rss_gorulen": "2026-11-13T14:32+03:00",
+   "rss_dk": 8
   }
  },
  "ozet": {
-  "haber": 176,
-  "sitemap_medyan_dk": 31.5,
+  "haber": 177,
+  "sitemap_medyan_dk": 31,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 31.5,
+  "rss_medyan_dk": 31,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-13T14:18+03:00"
+  "guncelleme": "2026-11-13T14:32+03:00"
  }
 }
