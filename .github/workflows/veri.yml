@@ -65,6 +65,20 @@ jobs:
       - name: Yayın hızı ölçümü
         continue-on-error: true
         run: python3 veri-programi/yayin_hizi.py cikti 2>&1 | tail -3 || true
+      - name: Fintables anahtarı süresi
+        continue-on-error: true
+        env:
+          FINTABLES: ${{ secrets.FINTABLES }}
+        run: |
+          python3 - <<'PY'
+          import os, json, base64, datetime
+          bitis = None
+          try:
+              bitis = json.loads(base64.b64decode(os.environ.get('FINTABLES', '').strip())).get('bitis')
+          except Exception:
+              pass
+          json.dump({'bitis': bitis, 'kontrol': datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')}, open('cikti/fintables-durum.json', 'w'))
+          PY
       - name: Yaz
         run: |
           cd cikti
