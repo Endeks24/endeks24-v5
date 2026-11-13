@@ -1538,14 +1538,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-13T12:47+03:00",
    "rss_dk": 6
+  },
+  "/borsa-ogle-arasinda-22-sektor-endeksi-artida-metal-esya-ve-makine-ekside": {
+   "yayin": "2026-11-13T12:56:08+03:00",
+   "sitemap_gorulen": "2026-11-13T13:02+03:00",
+   "baslangic": false,
+   "sitemap_dk": 6,
+   "durum": 200,
+   "rss_gorulen": "2026-11-13T13:02+03:00",
+   "rss_dk": 6
   }
  },
  "ozet": {
-  "haber": 171,
-  "sitemap_medyan_dk": 32,
+  "haber": 172,
+  "sitemap_medyan_dk": 32.0,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 32,
+  "rss_medyan_dk": 32.0,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-13T12:47+03:00"
+  "guncelleme": "2026-11-13T13:02+03:00"
  }
 }
