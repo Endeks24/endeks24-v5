@@ -1592,14 +1592,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-13T14:47+03:00",
    "rss_dk": 9
+  },
+  "/is-finansal-kiralama-isfin-100-milyon-avroluk-kredi-sozlesmesi-imzaladi": {
+   "yayin": "2026-11-13T14:54:06+03:00",
+   "sitemap_gorulen": "2026-11-13T15:02+03:00",
+   "baslangic": false,
+   "sitemap_dk": 9,
+   "durum": 200,
+   "rss_gorulen": "2026-11-13T15:02+03:00",
+   "rss_dk": 9
   }
  },
  "ozet": {
-  "haber": 177,
-  "sitemap_medyan_dk": 31,
+  "haber": 178,
+  "sitemap_medyan_dk": 31.0,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 31,
+  "rss_medyan_dk": 31.0,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-13T14:47+03:00"
+  "guncelleme": "2026-11-13T15:02+03:00"
  }
 }
