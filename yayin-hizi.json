@@ -1,23 +1,5 @@
 {
  "kayit": {
-  "/ons-altin-haftayi-4069-dolardan-kapatti-haftalik-artis-yuzde-5": {
-   "yayin": "2026-11-07T10:58:00+03:00",
-   "sitemap_gorulen": "2026-11-07T12:13+03:00",
-   "baslangic": false,
-   "sitemap_dk": 76,
-   "durum": 200,
-   "rss_gorulen": "2026-11-07T12:13+03:00",
-   "rss_dk": 76
-  },
-  "/hazine-ekimde-330-milyar-lira-nakit-acigi-verdi-faiz-279-milyar-lira": {
-   "yayin": "2026-11-07T10:37:00+03:00",
-   "sitemap_gorulen": "2026-11-07T12:13+03:00",
-   "baslangic": false,
-   "sitemap_dk": 97,
-   "durum": 200,
-   "rss_gorulen": "2026-11-07T12:13+03:00",
-   "rss_dk": 97
-  },
   "/fon-sorusturmasinda-bassavcilik-neslihan-mumcu-icin-tedbir-talep-etti": {
    "yayin": "2026-11-08T02:23:00+03:00",
    "sitemap_gorulen": "2026-11-08T02:56+03:00",
@@ -1781,14 +1763,41 @@
    "durum": 200,
    "rss_gorulen": "2026-11-14T10:00+03:00",
    "rss_dk": 165
+  },
+  "/nikkei-225-haftada-yuzde-6-yukseldi-hang-seng-yuzde-3-geriledi": {
+   "yayin": "2026-11-14T17:12:11+03:00",
+   "sitemap_gorulen": "2026-11-14T17:30+03:00",
+   "baslangic": false,
+   "sitemap_dk": 18,
+   "durum": 200,
+   "rss_gorulen": "2026-11-14T17:30+03:00",
+   "rss_dk": 18
+  },
+  "/en-buyuk-10-abd-sirketi-haftada-380-milyar-dolar-kazandi-nvidia-geriledi": {
+   "yayin": "2026-11-14T16:12:41+03:00",
+   "sitemap_gorulen": "2026-11-14T17:30+03:00",
+   "baslangic": false,
+   "sitemap_dk": 78,
+   "durum": 200,
+   "rss_gorulen": "2026-11-14T17:30+03:00",
+   "rss_dk": 78
+  },
+  "/tl-alti-paranin-besi-karsisinda-haftada-deger-kazandi-yuanda-geriledi": {
+   "yayin": "2026-11-14T15:14:07+03:00",
+   "sitemap_gorulen": "2026-11-14T17:30+03:00",
+   "baslangic": false,
+   "sitemap_dk": 136,
+   "durum": 200,
+   "rss_gorulen": "2026-11-14T17:30+03:00",
+   "rss_dk": 136
   }
  },
  "ozet": {
-  "haber": 198,
-  "sitemap_medyan_dk": 32.0,
+  "haber": 199,
+  "sitemap_medyan_dk": 32,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 32.0,
+  "rss_medyan_dk": 32,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-14T10:00+03:00"
+  "guncelleme": "2026-11-14T17:30+03:00"
  }
 }
