@@ -18,15 +18,6 @@
    "rss_gorulen": "2026-11-07T12:13+03:00",
    "rss_dk": 97
   },
-  "/spk-tmpol-isvea-ve-terada-88-kisi-icin-suc-duyurusu-karari-aldi": {
-   "yayin": "2026-11-07T09:59:00+03:00",
-   "sitemap_gorulen": "2026-11-07T12:13+03:00",
-   "baslangic": false,
-   "sitemap_dk": 135,
-   "durum": 200,
-   "rss_gorulen": "2026-11-07T12:13+03:00",
-   "rss_dk": 135
-  },
   "/fon-sorusturmasinda-bassavcilik-neslihan-mumcu-icin-tedbir-talep-etti": {
    "yayin": "2026-11-08T02:23:00+03:00",
    "sitemap_gorulen": "2026-11-08T02:56+03:00",
@@ -1763,14 +1754,41 @@
    "durum": 200,
    "rss_gorulen": "2026-11-14T02:51+03:00",
    "rss_dk": 94
+  },
+  "/durukan-ve-gipta-temettu-hakki-kullandiracak-etiler-17-kasim-da-odeyecek": {
+   "yayin": "2026-11-14T09:12:56+03:00",
+   "sitemap_gorulen": "2026-11-14T10:00+03:00",
+   "baslangic": false,
+   "sitemap_dk": 48,
+   "durum": 200,
+   "rss_gorulen": "2026-11-14T10:00+03:00",
+   "rss_dk": 48
+  },
+  "/bist-100-de-44-sirketin-9-aylik-sonucu-geriledi-toplam-k-r-yuzde-27-artti": {
+   "yayin": "2026-11-14T08:18:46+03:00",
+   "sitemap_gorulen": "2026-11-14T10:00+03:00",
+   "baslangic": false,
+   "sitemap_dk": 102,
+   "durum": 200,
+   "rss_gorulen": "2026-11-14T10:00+03:00",
+   "rss_dk": 102
+  },
+  "/iletisim-endeksi-haftanin-lideri-oldu-8-endeks-bist-100-u-geride-birakti": {
+   "yayin": "2026-11-14T07:16:15+03:00",
+   "sitemap_gorulen": "2026-11-14T10:00+03:00",
+   "baslangic": false,
+   "sitemap_dk": 165,
+   "durum": 200,
+   "rss_gorulen": "2026-11-14T10:00+03:00",
+   "rss_dk": 165
   }
  },
  "ozet": {
-  "haber": 196,
-  "sitemap_medyan_dk": 31.5,
+  "haber": 198,
+  "sitemap_medyan_dk": 32.0,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 31.5,
+  "rss_medyan_dk": 32.0,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-14T02:51+03:00"
+  "guncelleme": "2026-11-14T10:00+03:00"
  }
 }
