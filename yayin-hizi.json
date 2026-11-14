@@ -1,14 +1,5 @@
 {
  "kayit": {
-  "/fon-sorusturmasinda-bassavcilik-neslihan-mumcu-icin-tedbir-talep-etti": {
-   "yayin": "2026-11-08T02:23:00+03:00",
-   "sitemap_gorulen": "2026-11-08T02:56+03:00",
-   "baslangic": false,
-   "sitemap_dk": 33,
-   "durum": 200,
-   "rss_gorulen": "2026-11-08T02:56+03:00",
-   "rss_dk": 33
-  },
   "/tcmb-yilin-son-enflasyon-raporunu-12-kasim-persembe-gunu-sunacak": {
    "yayin": "2026-11-08T09:32:00+03:00",
    "sitemap_gorulen": "2026-11-08T09:40+03:00",
@@ -1907,14 +1898,32 @@
    "durum": 200,
    "rss_gorulen": "2026-11-14T22:28+03:00",
    "rss_dk": 175
+  },
+  "/ethereum-1-750-dolarin-altina-indi-bitcoin-63-bin-dolarda-islem-goruyor": {
+   "yayin": "2026-11-15T02:13:40+03:00",
+   "sitemap_gorulen": "2026-11-15T02:23+03:00",
+   "baslangic": false,
+   "sitemap_dk": 10,
+   "durum": 200,
+   "rss_gorulen": "2026-11-15T02:23+03:00",
+   "rss_dk": 10
+  },
+  "/ethereum-1-800-dolarin-altini-gordu-bitcoin-haftada-yuzde-15-geriledi": {
+   "yayin": "2026-11-15T00:15:33+03:00",
+   "sitemap_gorulen": "2026-11-15T02:23+03:00",
+   "baslangic": false,
+   "sitemap_dk": 128,
+   "durum": 200,
+   "rss_gorulen": "2026-11-15T02:23+03:00",
+   "rss_dk": 128
   }
  },
  "ozet": {
-  "haber": 212,
-  "sitemap_medyan_dk": 35.0,
+  "haber": 213,
+  "sitemap_medyan_dk": 36,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 35.0,
+  "rss_medyan_dk": 36,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-14T22:28+03:00"
+  "guncelleme": "2026-11-15T02:23+03:00"
  }
 }
