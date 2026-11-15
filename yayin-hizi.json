@@ -1,59 +1,5 @@
 {
  "kayit": {
-  "/turistik-dogu-ekspresinde-oda-15-bin-liradan-sefer-21-aralikta-basliyor": {
-   "yayin": "2026-11-08T16:34:00+03:00",
-   "sitemap_gorulen": "2026-11-08T16:52+03:00",
-   "baslangic": false,
-   "sitemap_dk": 18,
-   "durum": 200,
-   "rss_gorulen": "2026-11-08T16:52+03:00",
-   "rss_dk": 18
-  },
-  "/devrim-muhafizlari-hurmuzde-uc-tanker-mayina-carpip-yandi": {
-   "yayin": "2026-11-08T16:12:00+03:00",
-   "sitemap_gorulen": "2026-11-08T16:52+03:00",
-   "baslangic": false,
-   "sitemap_dk": 40,
-   "durum": 200,
-   "rss_gorulen": "2026-11-08T16:52+03:00",
-   "rss_dk": 40
-  },
-  "/uraloglu-dron-otoyollari-olusturulacak-ucuslar-dijital-koridorda-olacak": {
-   "yayin": "2026-11-08T16:03:00+03:00",
-   "sitemap_gorulen": "2026-11-08T16:52+03:00",
-   "baslangic": false,
-   "sitemap_dk": 49,
-   "durum": 200,
-   "rss_gorulen": "2026-11-08T16:52+03:00",
-   "rss_dk": 49
-  },
-  "/bilal-soysal-tutuklandi-fon-sorusturmasinda-bddkdan-ikinci-daire-baskani": {
-   "yayin": "2026-11-08T15:08:00+03:00",
-   "sitemap_gorulen": "2026-11-08T16:52+03:00",
-   "baslangic": false,
-   "sitemap_dk": 104,
-   "durum": 200,
-   "rss_gorulen": "2026-11-08T16:52+03:00",
-   "rss_dk": 104
-  },
-  "/spk-trive-yatirimin-faaliyetlerini-7-kasimdan-itibaren-gecici-durdurdu": {
-   "yayin": "2026-11-08T20:11:00+03:00",
-   "sitemap_gorulen": "2026-11-08T20:38+03:00",
-   "baslangic": false,
-   "sitemap_dk": 28,
-   "durum": 200,
-   "rss_gorulen": "2026-11-08T20:38+03:00",
-   "rss_dk": 28
-  },
-  "/spk-3-portfoy-sirketine-216-milyon-liralik-sermaye-artirimi-izni-verdi": {
-   "yayin": "2026-11-08T18:50:00+03:00",
-   "sitemap_gorulen": "2026-11-08T20:38+03:00",
-   "baslangic": false,
-   "sitemap_dk": 109,
-   "durum": 200,
-   "rss_gorulen": "2026-11-08T20:38+03:00",
-   "rss_dk": 109
-  },
   "/turk-telekom-ttkom-cop31-alanina-1300-kilometre-fiber-kablo-dosedi": {
    "yayin": "2026-11-08T21:06:00+03:00",
    "sitemap_gorulen": "2026-11-08T22:05+03:00",
@@ -1988,14 +1934,77 @@
    "durum": 200,
    "rss_gorulen": "2026-11-15T14:28+03:00",
    "rss_dk": 168
+  },
+  "/66-sirket-203-milyon-pay-geri-aldi-8-sirket-tasfiyedeki-fonlardan-aldi": {
+   "yayin": "2026-11-15T20:30:58+03:00",
+   "sitemap_gorulen": "2026-11-15T20:59+03:00",
+   "baslangic": false,
+   "sitemap_dk": 28,
+   "durum": 200,
+   "rss_gorulen": "2026-11-15T20:59+03:00",
+   "rss_dk": 28
+  },
+  "/emeklilik-fonlarinda-medyan-getiri-yuzde-22-hisse-fonlarinda-yuzde-15-oldu": {
+   "yayin": "2026-11-15T20:12:26+03:00",
+   "sitemap_gorulen": "2026-11-15T20:59+03:00",
+   "baslangic": false,
+   "sitemap_dk": 47,
+   "durum": 200,
+   "rss_gorulen": "2026-11-15T20:59+03:00",
+   "rss_dk": 47
+  },
+  "/spk-tasfiyedeki-fon-paylarinin-sirketlere-satisindaki-yontemi-acikladi": {
+   "yayin": "2026-11-15T19:59:00+03:00",
+   "sitemap_gorulen": "2026-11-15T20:59+03:00",
+   "baslangic": false,
+   "sitemap_dk": 60,
+   "durum": 200,
+   "rss_gorulen": "2026-11-15T20:59+03:00",
+   "rss_dk": 60
+  },
+  "/fon-getirisinde-medyan-para-piyasasinda-yuzde-38-hissede-yuzde-12-oldu": {
+   "yayin": "2026-11-15T18:51:19+03:00",
+   "sitemap_gorulen": "2026-11-15T20:59+03:00",
+   "baslangic": false,
+   "sitemap_dk": 128,
+   "durum": 200,
+   "rss_gorulen": "2026-11-15T20:59+03:00",
+   "rss_dk": 128
+  },
+  "/bist-100-disi-378-hissenin-312-si-2026-da-dustu-66-si-yukseldi": {
+   "yayin": "2026-11-15T18:38:09+03:00",
+   "sitemap_gorulen": "2026-11-15T20:59+03:00",
+   "baslangic": false,
+   "sitemap_dk": 141,
+   "durum": 200,
+   "rss_gorulen": "2026-11-15T20:59+03:00",
+   "rss_dk": 141
+  },
+  "/bist-100-de-60-hisse-yilbasindan-beri-deger-kaybetti-40-hisse-artida": {
+   "yayin": "2026-11-15T18:21:11+03:00",
+   "sitemap_gorulen": "2026-11-15T20:59+03:00",
+   "baslangic": false,
+   "sitemap_dk": 158,
+   "durum": 200,
+   "rss_gorulen": "2026-11-15T20:59+03:00",
+   "rss_dk": 158
+  },
+  "/spk-onayi-bekleyen-6-bedelsiz-basvuru-var-en-eskisi-17-haziran-dan": {
+   "yayin": "2026-11-15T18:07:53+03:00",
+   "sitemap_gorulen": "2026-11-15T20:59+03:00",
+   "baslangic": false,
+   "sitemap_dk": 171,
+   "durum": 200,
+   "rss_gorulen": "2026-11-15T20:59+03:00",
+   "rss_dk": 171
   }
  },
  "ozet": {
-  "haber": 221,
-  "sitemap_medyan_dk": 37,
+  "haber": 222,
+  "sitemap_medyan_dk": 37.0,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 37,
+  "rss_medyan_dk": 37.0,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-15T14:28+03:00"
+  "guncelleme": "2026-11-15T20:59+03:00"
  }
 }
