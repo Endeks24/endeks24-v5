@@ -1,50 +1,5 @@
 {
  "kayit": {
-  "/tcmb-yilin-son-enflasyon-raporunu-12-kasim-persembe-gunu-sunacak": {
-   "yayin": "2026-11-08T09:32:00+03:00",
-   "sitemap_gorulen": "2026-11-08T09:40+03:00",
-   "baslangic": false,
-   "sitemap_dk": 8,
-   "durum": 200,
-   "rss_gorulen": "2026-11-08T09:40+03:00",
-   "rss_dk": 8
-  },
-  "/taner-yildiz-fon-iddialarini-yalanladi-duzeltme-ve-ozur-istedi": {
-   "yayin": "2026-11-08T08:08:00+03:00",
-   "sitemap_gorulen": "2026-11-08T09:40+03:00",
-   "baslangic": false,
-   "sitemap_dk": 92,
-   "durum": 200,
-   "rss_gorulen": "2026-11-08T09:40+03:00",
-   "rss_dk": 92
-  },
-  "/pay-geri-alimi-3-milyar-lirayi-asti-yuzde-80i-turkcell-ve-garantiden": {
-   "yayin": "2026-11-08T07:49:00+03:00",
-   "sitemap_gorulen": "2026-11-08T09:40+03:00",
-   "baslangic": false,
-   "sitemap_dk": 111,
-   "durum": 200,
-   "rss_gorulen": "2026-11-08T09:40+03:00",
-   "rss_dk": 111
-  },
-  "/ulastirma-endeksi-bir-haftada-7-haftalik-kaybinin-yuzde-82sini-geri-aldi": {
-   "yayin": "2026-11-08T07:38:00+03:00",
-   "sitemap_gorulen": "2026-11-08T09:40+03:00",
-   "baslangic": false,
-   "sitemap_dk": 122,
-   "durum": 200,
-   "rss_gorulen": "2026-11-08T09:40+03:00",
-   "rss_dk": 122
-  },
-  "/yem-uretici-fiyatlari-ekimde-yuzde-40-artti-mayis-2024ten-beri-en-yuksek": {
-   "yayin": "2026-11-08T07:11:00+03:00",
-   "sitemap_gorulen": "2026-11-08T09:40+03:00",
-   "baslangic": false,
-   "sitemap_dk": 149,
-   "durum": 200,
-   "rss_gorulen": "2026-11-08T09:40+03:00",
-   "rss_dk": 149
-  },
   "/turistik-dogu-ekspresinde-oda-15-bin-liradan-sefer-21-aralikta-basliyor": {
    "yayin": "2026-11-08T16:34:00+03:00",
    "sitemap_gorulen": "2026-11-08T16:52+03:00",
@@ -80,15 +35,6 @@
    "durum": 200,
    "rss_gorulen": "2026-11-08T16:52+03:00",
    "rss_dk": 104
-  },
-  "/openai-finansman-turunun-ilk-asamasinda-11-milyar-dolar-topladi": {
-   "yayin": "2026-11-08T14:16:00+03:00",
-   "sitemap_gorulen": "2026-11-08T16:52+03:00",
-   "baslangic": false,
-   "sitemap_dk": 156,
-   "durum": 200,
-   "rss_gorulen": "2026-11-08T16:52+03:00",
-   "rss_dk": 156
   },
   "/spk-trive-yatirimin-faaliyetlerini-7-kasimdan-itibaren-gecici-durdurdu": {
    "yayin": "2026-11-08T20:11:00+03:00",
@@ -1925,14 +1871,131 @@
    "durum": 200,
    "rss_gorulen": "2026-11-15T06:04+03:00",
    "rss_dk": 49
+  },
+  "/veyas-in-bagli-ortakligi-vedas-3-milyar-345-milyon-liralik-kredi-imzaladi": {
+   "yayin": "2026-11-15T14:19:18+03:00",
+   "sitemap_gorulen": "2026-11-15T14:28+03:00",
+   "baslangic": false,
+   "sitemap_dk": 10,
+   "durum": 200,
+   "rss_gorulen": "2026-11-15T14:28+03:00",
+   "rss_dk": 10
+  },
+  "/kardemir-celik-karcl-haddehane-icin-12-yil-vadeli-kredi-imzaladi": {
+   "yayin": "2026-11-15T14:06:07+03:00",
+   "sitemap_gorulen": "2026-11-15T14:28+03:00",
+   "baslangic": false,
+   "sitemap_dk": 23,
+   "durum": 200,
+   "rss_gorulen": "2026-11-15T14:28+03:00",
+   "rss_dk": 23
+  },
+  "/para-piyasasi-fonlarina-66-milyar-lira-girdi-onceki-hafta-23-milyardi": {
+   "yayin": "2026-11-15T13:52:59+03:00",
+   "sitemap_gorulen": "2026-11-15T14:28+03:00",
+   "baslangic": false,
+   "sitemap_dk": 36,
+   "durum": 200,
+   "rss_gorulen": "2026-11-15T14:28+03:00",
+   "rss_dk": 36
+  },
+  "/pasifik-eurasia-paseu-xi-an-free-trade-port-la-tren-mutabakati-imzaladi": {
+   "yayin": "2026-11-15T13:39:47+03:00",
+   "sitemap_gorulen": "2026-11-15T14:28+03:00",
+   "baslangic": false,
+   "sitemap_dk": 49,
+   "durum": 200,
+   "rss_gorulen": "2026-11-15T14:28+03:00",
+   "rss_dk": 49
+  },
+  "/hisse-senedi-fonlarindan-419-milyon-lira-cikti-en-buyuk-cikis-pmg-de": {
+   "yayin": "2026-11-15T13:26:35+03:00",
+   "sitemap_gorulen": "2026-11-15T14:28+03:00",
+   "baslangic": false,
+   "sitemap_dk": 62,
+   "durum": 200,
+   "rss_gorulen": "2026-11-15T14:28+03:00",
+   "rss_dk": 62
+  },
+  "/orge-enerji-orge-hastane-sozlesmesi-iki-kat-buyudu-93-milyon-lira-oldu": {
+   "yayin": "2026-11-15T13:13:26+03:00",
+   "sitemap_gorulen": "2026-11-15T14:28+03:00",
+   "baslangic": false,
+   "sitemap_dk": 76,
+   "durum": 200,
+   "rss_gorulen": "2026-11-15T14:28+03:00",
+   "rss_dk": 76
+  },
+  "/bist-100-de-haftalik-aciga-satis-yuzde-12-azaldi-koc-holding-kchol-basta": {
+   "yayin": "2026-11-15T13:00:10+03:00",
+   "sitemap_gorulen": "2026-11-15T14:28+03:00",
+   "baslangic": false,
+   "sitemap_dk": 89,
+   "durum": 200,
+   "rss_gorulen": "2026-11-15T14:28+03:00",
+   "rss_dk": 89
+  },
+  "/sanayide-48-sirketin-net-finansman-gideri-favok-u-asti-gecen-yil-60-ti": {
+   "yayin": "2026-11-15T12:46:53+03:00",
+   "sitemap_gorulen": "2026-11-15T14:28+03:00",
+   "baslangic": false,
+   "sitemap_dk": 102,
+   "durum": 200,
+   "rss_gorulen": "2026-11-15T14:28+03:00",
+   "rss_dk": 102
+  },
+  "/girisim-elektrik-gesan-ilave-siparis-aldi-iki-sozlesme-yuzde-24-buyudu": {
+   "yayin": "2026-11-15T12:33:42+03:00",
+   "sitemap_gorulen": "2026-11-15T14:28+03:00",
+   "baslangic": false,
+   "sitemap_dk": 115,
+   "durum": 200,
+   "rss_gorulen": "2026-11-15T14:28+03:00",
+   "rss_dk": 115
+  },
+  "/ulusoy-elektrik-uluse-yurt-disi-satis-payinda-ilk-oldu-oran-yuzde-99": {
+   "yayin": "2026-11-15T12:20:22+03:00",
+   "sitemap_gorulen": "2026-11-15T14:28+03:00",
+   "baslangic": false,
+   "sitemap_dk": 129,
+   "durum": 200,
+   "rss_gorulen": "2026-11-15T14:28+03:00",
+   "rss_dk": 129
+  },
+  "/balatacilar-balat-dortel-fren-le-anlasti-yuzde-25-pay-edinmeyi-ongoruyor": {
+   "yayin": "2026-11-15T12:07:13+03:00",
+   "sitemap_gorulen": "2026-11-15T14:28+03:00",
+   "baslangic": false,
+   "sitemap_dk": 142,
+   "durum": 200,
+   "rss_gorulen": "2026-11-15T14:28+03:00",
+   "rss_dk": 142
+  },
+  "/ulusal-adil-gecis-plani-resmi-gazete-de-17-sektor-ve-77-eylem-iceriyor": {
+   "yayin": "2026-11-15T11:53:58+03:00",
+   "sitemap_gorulen": "2026-11-15T14:28+03:00",
+   "baslangic": false,
+   "sitemap_dk": 155,
+   "durum": 200,
+   "rss_gorulen": "2026-11-15T14:28+03:00",
+   "rss_dk": 155
+  },
+  "/tuik-ve-tcmb-8-veri-aciklayacak-konut-fiyat-endeksi-17-kasim-da-gelecek": {
+   "yayin": "2026-11-15T11:40:40+03:00",
+   "sitemap_gorulen": "2026-11-15T14:28+03:00",
+   "baslangic": false,
+   "sitemap_dk": 168,
+   "durum": 200,
+   "rss_gorulen": "2026-11-15T14:28+03:00",
+   "rss_dk": 168
   }
  },
  "ozet": {
-  "haber": 214,
-  "sitemap_medyan_dk": 36.0,
+  "haber": 221,
+  "sitemap_medyan_dk": 37,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 36.0,
+  "rss_medyan_dk": 37,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-15T06:04+03:00"
+  "guncelleme": "2026-11-15T14:28+03:00"
  }
 }
