@@ -1988,14 +1988,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-16T16:47+03:00",
    "rss_dk": 10
+  },
+  "/wall-street-gune-ekside-basladi-8-buyuk-teknoloji-hissesinin-6-si-geriledi": {
+   "yayin": "2026-11-16T17:38:08+03:00",
+   "sitemap_gorulen": "2026-11-16T17:40+03:00",
+   "baslangic": false,
+   "sitemap_dk": 2,
+   "durum": 200,
+   "rss_gorulen": "2026-11-16T17:40+03:00",
+   "rss_dk": 2
   }
  },
  "ozet": {
-  "haber": 221,
-  "sitemap_medyan_dk": 29,
+  "haber": 222,
+  "sitemap_medyan_dk": 29.0,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 29,
+  "rss_medyan_dk": 29.0,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-16T17:26+03:00"
+  "guncelleme": "2026-11-16T17:40+03:00"
  }
 }
