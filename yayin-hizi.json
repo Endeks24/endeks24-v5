@@ -2033,14 +2033,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-16T19:21+03:00",
    "rss_dk": 3
+  },
+  "/anel-elektrik-anele-3-bagli-ortakligini-devralacak-sermaye-artmayacak": {
+   "yayin": "2026-11-16T19:32:00+03:00",
+   "sitemap_gorulen": "2026-11-16T19:37+03:00",
+   "baslangic": false,
+   "sitemap_dk": 6,
+   "durum": 200,
+   "rss_gorulen": "2026-11-16T19:37+03:00",
+   "rss_dk": 6
   }
  },
  "ozet": {
-  "haber": 226,
-  "sitemap_medyan_dk": 28.5,
+  "haber": 227,
+  "sitemap_medyan_dk": 28,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 28.5,
+  "rss_medyan_dk": 28,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-16T19:28+03:00"
+  "guncelleme": "2026-11-16T19:37+03:00"
  }
 }
