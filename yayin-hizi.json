@@ -1979,14 +1979,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-16T14:57+03:00",
    "rss_dk": 12
+  },
+  "/bist-banka-endeksi-gun-icinde-ekside-10-banka-hissesinin-7-si-geriledi": {
+   "yayin": "2026-11-16T15:22:34+03:00",
+   "sitemap_gorulen": "2026-11-16T15:27+03:00",
+   "baslangic": false,
+   "sitemap_dk": 5,
+   "durum": 200,
+   "rss_gorulen": "2026-11-16T15:27+03:00",
+   "rss_dk": 5
   }
  },
  "ozet": {
-  "haber": 220,
-  "sitemap_medyan_dk": 30.5,
+  "haber": 221,
+  "sitemap_medyan_dk": 30,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 30.5,
+  "rss_medyan_dk": 30,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-16T15:12+03:00"
+  "guncelleme": "2026-11-16T15:27+03:00"
  }
 }
