@@ -1979,14 +1979,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-16T14:42+03:00",
    "rss_dk": 11
+  },
+  "/dolar-tl-gun-icinde-en-yuksek-kapanisi-asti-euro-tl-ve-sterlin-geriledi": {
+   "yayin": "2026-11-16T14:45:16+03:00",
+   "sitemap_gorulen": "2026-11-16T14:57+03:00",
+   "baslangic": false,
+   "sitemap_dk": 12,
+   "durum": 200,
+   "rss_gorulen": "2026-11-16T14:57+03:00",
+   "rss_dk": 12
   }
  },
  "ozet": {
-  "haber": 220,
-  "sitemap_medyan_dk": 31.0,
+  "haber": 221,
+  "sitemap_medyan_dk": 31,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 31.0,
+  "rss_medyan_dk": 31,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-16T14:42+03:00"
+  "guncelleme": "2026-11-16T14:57+03:00"
  }
 }
