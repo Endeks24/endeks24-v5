@@ -1,14 +1,5 @@
 {
  "kayit": {
-  "/issizlik-sigortasi-fonu-varligi-917-milyar-lira-oldu-yillik-yuzde-62-artti": {
-   "yayin": "2026-11-09T13:53:00+03:00",
-   "sitemap_gorulen": "2026-11-09T14:17+03:00",
-   "baslangic": false,
-   "sitemap_dk": 24,
-   "durum": 200,
-   "rss_gorulen": "2026-11-09T14:17+03:00",
-   "rss_dk": 24
-  },
   "/habas-demir-celikte-patlamada-3-kisi-oldu-14-kisi-yaralandi": {
    "yayin": "2026-11-09T14:21:00+03:00",
    "sitemap_gorulen": "2026-11-09T15:06+03:00",
@@ -1961,6 +1952,15 @@
    "durum": 200,
    "rss_gorulen": "2026-11-16T13:41+03:00",
    "rss_dk": 3
+  },
+  "/lokman-hekim-lkmnh-859-milyon-kar-etti-varlik-satis-kari-884-milyon-lira": {
+   "yayin": "2026-11-16T13:52:19+03:00",
+   "sitemap_gorulen": "2026-11-16T13:56+03:00",
+   "baslangic": false,
+   "sitemap_dk": 4,
+   "durum": 200,
+   "rss_gorulen": "2026-11-16T13:56+03:00",
+   "rss_dk": 4
   }
  },
  "ozet": {
@@ -1969,6 +1969,6 @@
   "sitemap_en_uzun_dk": 180,
   "rss_medyan_dk": 32.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-16T13:41+03:00"
+  "guncelleme": "2026-11-16T13:56+03:00"
  }
 }
