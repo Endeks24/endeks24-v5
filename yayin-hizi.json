@@ -1,14 +1,5 @@
 {
  "kayit": {
-  "/habas-demir-celikte-patlamada-3-kisi-oldu-14-kisi-yaralandi": {
-   "yayin": "2026-11-09T14:21:00+03:00",
-   "sitemap_gorulen": "2026-11-09T15:06+03:00",
-   "baslangic": false,
-   "sitemap_dk": 46,
-   "durum": 200,
-   "rss_gorulen": "2026-11-09T15:06+03:00",
-   "rss_dk": 46
-  },
   "/hazine-iki-ihalede-73-milyar-lira-borclandi-5-ekime-gore-yuzde-27-az": {
    "yayin": "2026-11-09T16:04:00+03:00",
    "sitemap_gorulen": "2026-11-09T16:10+03:00",
@@ -1970,14 +1961,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-16T14:11+03:00",
    "rss_dk": 6
+  },
+  "/nasdaq-100-vadelisi-13-kasim-kapanisinin-altinda-dow-vadelisi-uzerinde": {
+   "yayin": "2026-11-16T14:18:43+03:00",
+   "sitemap_gorulen": "2026-11-16T14:26+03:00",
+   "baslangic": false,
+   "sitemap_dk": 8,
+   "durum": 200,
+   "rss_gorulen": "2026-11-16T14:26+03:00",
+   "rss_dk": 8
   }
  },
  "ozet": {
   "haber": 219,
-  "sitemap_medyan_dk": 32,
+  "sitemap_medyan_dk": 31,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 32,
+  "rss_medyan_dk": 31,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-16T14:11+03:00"
+  "guncelleme": "2026-11-16T14:26+03:00"
  }
 }
