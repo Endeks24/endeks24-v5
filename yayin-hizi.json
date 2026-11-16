@@ -1925,14 +1925,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-16T12:26+03:00",
    "rss_dk": 9
+  },
+  "/doviz-unvanli-fonlardan-2026-da-331-milyar-tl-cikis-oldu-8-ay-ekside": {
+   "yayin": "2026-11-16T12:31:09+03:00",
+   "sitemap_gorulen": "2026-11-16T12:41+03:00",
+   "baslangic": false,
+   "sitemap_dk": 10,
+   "durum": 200,
+   "rss_gorulen": "2026-11-16T12:41+03:00",
+   "rss_dk": 10
   }
  },
  "ozet": {
-  "haber": 214,
-  "sitemap_medyan_dk": 36.0,
+  "haber": 215,
+  "sitemap_medyan_dk": 36,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 36.0,
+  "rss_medyan_dk": 36,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-16T12:26+03:00"
+  "guncelleme": "2026-11-16T12:41+03:00"
  }
 }
