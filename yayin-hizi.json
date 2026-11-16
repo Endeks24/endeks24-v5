@@ -1,14 +1,5 @@
 {
  "kayit": {
-  "/gurlek-acikladi-fon-sorusturmasinda-supheli-6-gunde-464e-cikti": {
-   "yayin": "2026-11-09T16:41:00+03:00",
-   "sitemap_gorulen": "2026-11-09T17:16+03:00",
-   "baslangic": false,
-   "sitemap_dk": 36,
-   "durum": 200,
-   "rss_gorulen": "2026-11-09T17:16+03:00",
-   "rss_dk": 36
-  },
   "/bim-bimas-9-aylik-net-kari-26-milyar-lira-oldu-yuzde-79-artti": {
    "yayin": "2026-11-09T21:04:00+03:00",
    "sitemap_gorulen": "2026-11-09T21:46+03:00",
@@ -1988,14 +1979,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-16T16:33+03:00",
    "rss_dk": 14
+  },
+  "/bera-holding-bera-vergi-bazli-tabloda-9-aylik-net-kar-yuzde-50-azaldi": {
+   "yayin": "2026-11-16T16:37:00+03:00",
+   "sitemap_gorulen": "2026-11-16T16:47+03:00",
+   "baslangic": false,
+   "sitemap_dk": 10,
+   "durum": 200,
+   "rss_gorulen": "2026-11-16T16:47+03:00",
+   "rss_dk": 10
   }
  },
  "ozet": {
   "haber": 221,
-  "sitemap_medyan_dk": 30,
+  "sitemap_medyan_dk": 29,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 30,
+  "rss_medyan_dk": 29,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-16T16:33+03:00"
+  "guncelleme": "2026-11-16T16:47+03:00"
  }
 }
