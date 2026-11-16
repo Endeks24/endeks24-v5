@@ -2024,14 +2024,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-16T19:14+03:00",
    "rss_dk": 49
+  },
+  "/burcelik-vana-burva-9-aylik-net-zarari-yuzde-55-azaldi-hasilat-artti": {
+   "yayin": "2026-11-16T19:18:44+03:00",
+   "sitemap_gorulen": "2026-11-16T19:21+03:00",
+   "baslangic": false,
+   "sitemap_dk": 3,
+   "durum": 200,
+   "rss_gorulen": "2026-11-16T19:21+03:00",
+   "rss_dk": 3
   }
  },
  "ozet": {
-  "haber": 225,
-  "sitemap_medyan_dk": 29,
+  "haber": 226,
+  "sitemap_medyan_dk": 28.5,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 29,
+  "rss_medyan_dk": 28.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-16T19:14+03:00"
+  "guncelleme": "2026-11-16T19:21+03:00"
  }
 }
