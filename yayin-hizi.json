@@ -1,14 +1,5 @@
 {
  "kayit": {
-  "/hazine-iki-ihalede-73-milyar-lira-borclandi-5-ekime-gore-yuzde-27-az": {
-   "yayin": "2026-11-09T16:04:00+03:00",
-   "sitemap_gorulen": "2026-11-09T16:10+03:00",
-   "baslangic": false,
-   "sitemap_dk": 7,
-   "durum": 200,
-   "rss_gorulen": "2026-11-09T16:10+03:00",
-   "rss_dk": 7
-  },
   "/gurlek-acikladi-fon-sorusturmasinda-supheli-6-gunde-464e-cikti": {
    "yayin": "2026-11-09T16:41:00+03:00",
    "sitemap_gorulen": "2026-11-09T17:16+03:00",
@@ -1979,6 +1970,15 @@
    "durum": 200,
    "rss_gorulen": "2026-11-16T15:27+03:00",
    "rss_dk": 5
+  },
+  "/konut-kredisi-faizi-29-ay-tcmb-fonlamasinin-altinda-kaldi-haziran-da-asti": {
+   "yayin": "2026-11-16T15:52:58+03:00",
+   "sitemap_gorulen": "2026-11-16T16:18+03:00",
+   "baslangic": false,
+   "sitemap_dk": 25,
+   "durum": 200,
+   "rss_gorulen": "2026-11-16T16:18+03:00",
+   "rss_dk": 25
   }
  },
  "ozet": {
@@ -1987,6 +1987,6 @@
   "sitemap_en_uzun_dk": 180,
   "rss_medyan_dk": 30.0,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-16T15:42+03:00"
+  "guncelleme": "2026-11-16T16:18+03:00"
  }
 }
