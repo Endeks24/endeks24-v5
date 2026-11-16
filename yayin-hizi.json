@@ -1934,14 +1934,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-16T12:56+03:00",
    "rss_dk": 12
+  },
+  "/ons-altin-3-862-dolara-indi-29-eylul-2025-ten-bu-yana-en-dusuk-duzeyde": {
+   "yayin": "2026-11-16T12:57:37+03:00",
+   "sitemap_gorulen": "2026-11-16T13:11+03:00",
+   "baslangic": false,
+   "sitemap_dk": 14,
+   "durum": 200,
+   "rss_gorulen": "2026-11-16T13:11+03:00",
+   "rss_dk": 14
   }
  },
  "ozet": {
-  "haber": 215,
-  "sitemap_medyan_dk": 36,
+  "haber": 216,
+  "sitemap_medyan_dk": 36.0,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 36,
+  "rss_medyan_dk": 36.0,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-16T12:56+03:00"
+  "guncelleme": "2026-11-16T13:11+03:00"
  }
 }
