@@ -1,8 +1,7 @@
 name: endeks24-temettu-gunluk
 # Temettü Takvimi verisi (temettu-veri dalı, temettu/ozet.json): KAP kâr payı dağıtım bildirimleri (Fintables doküman havuzu). Hafta içi günde iki kez, elle ya da bu dosya değişince. Yapay zeka çağrısı yoktur.
 on:
-  schedule:
-    - cron: '10 7,18 * * 1-5'
+  # Zamanlama Cloudflare Worker'a taşındı (16.11.2026; endeks24-cms src/agirhat.ts, src/verihat.ts, src/veriworker.ts). Elle çalıştırma (workflow_dispatch) duruyor.
   workflow_dispatch:
   push:
     paths:
