@@ -1916,14 +1916,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-16T12:10+03:00",
    "rss_dk": 6
+  },
+  "/gulermak-glrmk-ortagi-gulermak-emlak-fon-payi-devriyle-yuzde-50-yi-asti": {
+   "yayin": "2026-11-16T12:18:04+03:00",
+   "sitemap_gorulen": "2026-11-16T12:26+03:00",
+   "baslangic": false,
+   "sitemap_dk": 9,
+   "durum": 200,
+   "rss_gorulen": "2026-11-16T12:26+03:00",
+   "rss_dk": 9
   }
  },
  "ozet": {
-  "haber": 213,
-  "sitemap_medyan_dk": 36,
+  "haber": 214,
+  "sitemap_medyan_dk": 36.0,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 36,
+  "rss_medyan_dk": 36.0,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-16T12:10+03:00"
+  "guncelleme": "2026-11-16T12:26+03:00"
  }
 }
