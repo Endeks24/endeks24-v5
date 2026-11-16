@@ -1,59 +1,5 @@
 {
  "kayit": {
-  "/bim-bimas-9-aylik-net-kari-26-milyar-lira-oldu-yuzde-79-artti": {
-   "yayin": "2026-11-09T21:04:00+03:00",
-   "sitemap_gorulen": "2026-11-09T21:46+03:00",
-   "baslangic": false,
-   "sitemap_dk": 42,
-   "durum": 200,
-   "rss_gorulen": "2026-11-09T21:46+03:00",
-   "rss_dk": 42
-  },
-  "/pegasus-pgsus-3-ceyrekte-11-milyar-lira-kar-etti-9-aylik-zarar-daraldi": {
-   "yayin": "2026-11-09T20:29:00+03:00",
-   "sitemap_gorulen": "2026-11-09T21:46+03:00",
-   "baslangic": false,
-   "sitemap_dk": 77,
-   "durum": 200,
-   "rss_gorulen": "2026-11-09T21:46+03:00",
-   "rss_dk": 77
-  },
-  "/doas-3-ceyrekte-434-milyon-lira-net-zarar-yazdi-9-ayda-kar-dustu": {
-   "yayin": "2026-11-09T21:49:00+03:00",
-   "sitemap_gorulen": "2026-11-09T22:06+03:00",
-   "baslangic": false,
-   "sitemap_dk": 17,
-   "durum": 200,
-   "rss_gorulen": "2026-11-09T22:06+03:00",
-   "rss_dk": 17
-  },
-  "/can2-termik-cante-9-ayda-3792-milyon-lira-zarar-etti-brut-zarar-verdi": {
-   "yayin": "2026-11-10T01:22:00+03:00",
-   "sitemap_gorulen": "2026-11-10T01:41+03:00",
-   "baslangic": false,
-   "sitemap_dk": 19,
-   "durum": 200,
-   "rss_gorulen": "2026-11-10T01:41+03:00",
-   "rss_dk": 19
-  },
-  "/astor-enerji-astor-net-kari-9-ayda-yuzde-73-geriledi-hasilat-artti": {
-   "yayin": "2026-11-10T00:22:00+03:00",
-   "sitemap_gorulen": "2026-11-10T01:41+03:00",
-   "baslangic": false,
-   "sitemap_dk": 79,
-   "durum": 200,
-   "rss_gorulen": "2026-11-10T01:41+03:00",
-   "rss_dk": 79
-  },
-  "/apple-turkiyede-yedi-merkez-acacak-ilk-akademi-2027de-istanbulda": {
-   "yayin": "2026-11-09T23:30:00+03:00",
-   "sitemap_gorulen": "2026-11-10T01:41+03:00",
-   "baslangic": false,
-   "sitemap_dk": 131,
-   "durum": 200,
-   "rss_gorulen": "2026-11-10T01:41+03:00",
-   "rss_dk": 131
-  },
   "/ford-otosan-froto-temettusunde-ford-ve-koc-yuzde-80-alacak-kalan-borsaya": {
    "yayin": "2026-11-10T07:18:00+03:00",
    "sitemap_gorulen": "2026-11-10T07:20+03:00",
@@ -2033,14 +1979,32 @@
    "durum": 200,
    "rss_gorulen": "2026-11-16T19:37+03:00",
    "rss_dk": 6
+  },
+  "/wall-street-dususle-kapandi-cip-endeksi-sox-yuzde-5-ten-fazla-geriledi": {
+   "yayin": "2026-11-17T01:22:12+03:00",
+   "sitemap_gorulen": "2026-11-17T01:30+03:00",
+   "baslangic": false,
+   "sitemap_dk": 8,
+   "durum": 200,
+   "rss_gorulen": "2026-11-17T01:30+03:00",
+   "rss_dk": 8
+  },
+  "/spk-tukas-tukas-paylarinda-2-kisiye-6-ay-islem-yasagi-getirdi": {
+   "yayin": "2026-11-17T01:08:38+03:00",
+   "sitemap_gorulen": "2026-11-17T01:30+03:00",
+   "baslangic": false,
+   "sitemap_dk": 21,
+   "durum": 200,
+   "rss_gorulen": "2026-11-17T01:30+03:00",
+   "rss_dk": 21
   }
  },
  "ozet": {
-  "haber": 226,
-  "sitemap_medyan_dk": 28.0,
+  "haber": 222,
+  "sitemap_medyan_dk": 26.5,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 28.0,
+  "rss_medyan_dk": 26.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-16T19:58+03:00"
+  "guncelleme": "2026-11-17T01:30+03:00"
  }
 }
