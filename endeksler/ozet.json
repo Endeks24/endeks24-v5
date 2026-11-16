@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-16T19:14+03:00",
+ "guncelleme": "2026-11-17T02:55+03:00",
  "atif": "Kaynak: Endeks24 Endeksleri (https://www.endeks24.com/endeksler)",
  "kullanim": "Serbestçe alıntılanabilir; kaynak olarak Endeks24 Endeksleri belirtilmeli ve bağlantı verilmelidir. Yatırım tavsiyesi değildir; resmi bir borsa endeksi değildir.",
  "endeksler": {
@@ -130,7 +130,7 @@
    "veri": "https://raw.githubusercontent.com/Endeks24/endeks24-v5/main/endeksler/net-nakit.json",
    "csv": "https://raw.githubusercontent.com/Endeks24/endeks24-v5/main/endeksler/net-nakit.csv",
    "tarih": "2026-11-16",
-   "deger": 107.711,
+   "deger": 107.709,
    "bist100": 106.186,
    "baslangic": "2026-10-26",
    "uye_sayisi": 20,
