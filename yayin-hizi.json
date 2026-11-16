@@ -18,15 +18,6 @@
    "rss_gorulen": "2026-11-09T21:46+03:00",
    "rss_dk": 77
   },
-  "/koc-holding-kchol-9-aylik-net-kari-56-milyar-lira-oldu-3-katina-cikti": {
-   "yayin": "2026-11-09T19:38:00+03:00",
-   "sitemap_gorulen": "2026-11-09T21:46+03:00",
-   "baslangic": false,
-   "sitemap_dk": 128,
-   "durum": 200,
-   "rss_gorulen": "2026-11-09T21:46+03:00",
-   "rss_dk": 128
-  },
   "/doas-3-ceyrekte-434-milyon-lira-net-zarar-yazdi-9-ayda-kar-dustu": {
    "yayin": "2026-11-09T21:49:00+03:00",
    "sitemap_gorulen": "2026-11-09T22:06+03:00",
@@ -2045,11 +2036,11 @@
   }
  },
  "ozet": {
-  "haber": 227,
-  "sitemap_medyan_dk": 28,
+  "haber": 226,
+  "sitemap_medyan_dk": 28.0,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 28,
+  "rss_medyan_dk": 28.0,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-16T19:37+03:00"
+  "guncelleme": "2026-11-16T19:58+03:00"
  }
 }
