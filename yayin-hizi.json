@@ -1,32 +1,5 @@
 {
  "kayit": {
-  "/hor-mor-gaz-sahasinda-uretim-durdu-kurdistanda-2800-megavat-azaldi": {
-   "yayin": "2026-11-09T05:21:00+03:00",
-   "sitemap_gorulen": "2026-11-09T05:57+03:00",
-   "baslangic": false,
-   "sitemap_dk": 37,
-   "durum": 200,
-   "rss_gorulen": "2026-11-09T05:57+03:00",
-   "rss_dk": 37
-  },
-  "/cinde-ekimde-uretici-fiyatlari-yuzde-6ya-yaklasti-tufe-geriledi": {
-   "yayin": "2026-11-09T05:00:00+03:00",
-   "sitemap_gorulen": "2026-11-09T05:57+03:00",
-   "baslangic": false,
-   "sitemap_dk": 58,
-   "durum": 200,
-   "rss_gorulen": "2026-11-09T05:57+03:00",
-   "rss_dk": 58
-  },
-  "/kamu-denetciligi-kurumu-10-uzman-yardimcisi-alacak-basvurular-basladi": {
-   "yayin": "2026-11-09T03:28:00+03:00",
-   "sitemap_gorulen": "2026-11-09T05:57+03:00",
-   "baslangic": false,
-   "sitemap_dk": 150,
-   "durum": 200,
-   "rss_gorulen": "2026-11-09T05:57+03:00",
-   "rss_dk": 150
-  },
   "/fon-sorusturmasinda-bddk-baskan-yardimcisi-banka-genel-muduru-tutuklandi": {
    "yayin": "2026-11-09T10:55:00+03:00",
    "sitemap_gorulen": "2026-11-09T10:56+03:00",
@@ -1943,14 +1916,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-15T20:59+03:00",
    "rss_dk": 171
+  },
+  "/kospi-seans-icinde-yuzde-3-e-yakin-geriledi-hang-seng-artida-islem-goruyor": {
+   "yayin": "2026-11-16T05:15:04+03:00",
+   "sitemap_gorulen": "2026-11-16T06:05+03:00",
+   "baslangic": false,
+   "sitemap_dk": 50,
+   "durum": 200,
+   "rss_gorulen": "2026-11-16T06:05+03:00",
+   "rss_dk": 50
   }
  },
  "ozet": {
-  "haber": 216,
-  "sitemap_medyan_dk": 37.0,
+  "haber": 214,
+  "sitemap_medyan_dk": 36.5,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 37.0,
+  "rss_medyan_dk": 36.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-16T02:10+03:00"
+  "guncelleme": "2026-11-16T06:05+03:00"
  }
 }
