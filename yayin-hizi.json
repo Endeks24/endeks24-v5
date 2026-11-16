@@ -1961,14 +1961,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-16T13:56+03:00",
    "rss_dk": 4
+  },
+  "/kalekim-klkim-kenya-istirakinin-sermaye-artirimina-200-bin-dolar-verecek": {
+   "yayin": "2026-11-16T14:05:34+03:00",
+   "sitemap_gorulen": "2026-11-16T14:11+03:00",
+   "baslangic": false,
+   "sitemap_dk": 6,
+   "durum": 200,
+   "rss_gorulen": "2026-11-16T14:11+03:00",
+   "rss_dk": 6
   }
  },
  "ozet": {
-  "haber": 218,
-  "sitemap_medyan_dk": 32.5,
+  "haber": 219,
+  "sitemap_medyan_dk": 32,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 32.5,
+  "rss_medyan_dk": 32,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-16T13:56+03:00"
+  "guncelleme": "2026-11-16T14:11+03:00"
  }
 }
