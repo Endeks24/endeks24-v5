@@ -2,9 +2,7 @@ name: endeks24-gostergeler-gunluk
 # Endeks24 Göstergeleri (endeksler/gostergeler.json): alım gücü, hedef fiyat potansiyeli, tavan taban dengesi, bilanço sürprizi, simit ve menemen, maaş karşılığı.
 # Hafta içi seans sonrası (borsa-veri yazıldıktan sonra), elle ya da betik ve girdi dosyaları değişince. Yapay zeka ve Fintables çağrısı yoktur.
 on:
-  schedule:
-    - cron: '25 16 * * 1-5'
-    - cron: '55 17 * * 1-5'
+  # Zamanlama Cloudflare Worker'a taşındı (16.11.2026; endeks24-cms src/agirhat.ts, src/verihat.ts, src/veriworker.ts). Elle çalıştırma (workflow_dispatch) duruyor.
   workflow_dispatch:
   push:
     paths:
