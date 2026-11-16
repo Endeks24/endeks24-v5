@@ -1,14 +1,5 @@
 {
  "kayit": {
-  "/tmsf-fon-islemlerinde-31-milyar-600-milyon-lira-gonullu-iade-tahsil-etti": {
-   "yayin": "2026-11-09T11:59:00+03:00",
-   "sitemap_gorulen": "2026-11-09T12:12+03:00",
-   "baslangic": false,
-   "sitemap_dk": 13,
-   "durum": 200,
-   "rss_gorulen": "2026-11-09T12:12+03:00",
-   "rss_dk": 13
-  },
   "/turk-telekom-ttkom-kurulunda-yunus-arinci-istifa-etti-8-uye-kaldi": {
    "yayin": "2026-11-09T12:42:00+03:00",
    "sitemap_gorulen": "2026-11-09T13:11+03:00",
@@ -1916,6 +1907,15 @@
    "durum": 200,
    "rss_gorulen": "2026-11-16T11:56+03:00",
    "rss_dk": 5
+  },
+  "/ticari-gayrimenkul-fiyati-yillik-nominal-yuzde-30-artti-ankara-onde": {
+   "yayin": "2026-11-16T12:04:55+03:00",
+   "sitemap_gorulen": "2026-11-16T12:10+03:00",
+   "baslangic": false,
+   "sitemap_dk": 6,
+   "durum": 200,
+   "rss_gorulen": "2026-11-16T12:10+03:00",
+   "rss_dk": 6
   }
  },
  "ozet": {
@@ -1924,6 +1924,6 @@
   "sitemap_en_uzun_dk": 180,
   "rss_medyan_dk": 36,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-16T11:56+03:00"
+  "guncelleme": "2026-11-16T12:10+03:00"
  }
 }
