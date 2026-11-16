@@ -9,15 +9,6 @@
    "rss_gorulen": "2026-11-09T14:17+03:00",
    "rss_dk": 24
   },
-  "/cevdet-yilmaz-cinle-2025-ticaretinin-yalnizca-yuzde-6si-ihracatti": {
-   "yayin": "2026-11-09T13:22:00+03:00",
-   "sitemap_gorulen": "2026-11-09T14:17+03:00",
-   "baslangic": false,
-   "sitemap_dk": 55,
-   "durum": 200,
-   "rss_gorulen": "2026-11-09T14:17+03:00",
-   "rss_dk": 55
-  },
   "/habas-demir-celikte-patlamada-3-kisi-oldu-14-kisi-yaralandi": {
    "yayin": "2026-11-09T14:21:00+03:00",
    "sitemap_gorulen": "2026-11-09T15:06+03:00",
@@ -1943,14 +1934,32 @@
    "durum": 200,
    "rss_gorulen": "2026-11-16T13:11+03:00",
    "rss_dk": 14
+  },
+  "/bist-100-sanayide-27-sirketin-3-ceyrek-satisi-reel-artti-19-unda-geriledi": {
+   "yayin": "2026-11-16T13:25:31+03:00",
+   "sitemap_gorulen": "2026-11-16T13:26+03:00",
+   "baslangic": false,
+   "sitemap_dk": 1,
+   "durum": 200,
+   "rss_gorulen": "2026-11-16T13:26+03:00",
+   "rss_dk": 1
+  },
+  "/dogus-otomotiv-doas-52-haftalik-dibin-altini-gordu-zirve-247-liraydi": {
+   "yayin": "2026-11-16T13:12:17+03:00",
+   "sitemap_gorulen": "2026-11-16T13:26+03:00",
+   "baslangic": false,
+   "sitemap_dk": 15,
+   "durum": 200,
+   "rss_gorulen": "2026-11-16T13:26+03:00",
+   "rss_dk": 15
   }
  },
  "ozet": {
-  "haber": 216,
-  "sitemap_medyan_dk": 36.0,
+  "haber": 217,
+  "sitemap_medyan_dk": 33,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 36.0,
+  "rss_medyan_dk": 33,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-16T13:11+03:00"
+  "guncelleme": "2026-11-16T13:26+03:00"
  }
 }
