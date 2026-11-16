@@ -1,14 +1,5 @@
 {
  "kayit": {
-  "/turk-telekom-ttkom-kurulunda-yunus-arinci-istifa-etti-8-uye-kaldi": {
-   "yayin": "2026-11-09T12:42:00+03:00",
-   "sitemap_gorulen": "2026-11-09T13:11+03:00",
-   "baslangic": false,
-   "sitemap_dk": 29,
-   "durum": 200,
-   "rss_gorulen": "2026-11-09T13:11+03:00",
-   "rss_dk": 29
-  },
   "/issizlik-sigortasi-fonu-varligi-917-milyar-lira-oldu-yillik-yuzde-62-artti": {
    "yayin": "2026-11-09T13:53:00+03:00",
    "sitemap_gorulen": "2026-11-09T14:17+03:00",
@@ -1934,6 +1925,15 @@
    "durum": 200,
    "rss_gorulen": "2026-11-16T12:41+03:00",
    "rss_dk": 10
+  },
+  "/bist-100-gun-ortasinda-artida-74-hisse-yukseldi-asels-hacimde-ilk-sirada": {
+   "yayin": "2026-11-16T12:44:27+03:00",
+   "sitemap_gorulen": "2026-11-16T12:56+03:00",
+   "baslangic": false,
+   "sitemap_dk": 12,
+   "durum": 200,
+   "rss_gorulen": "2026-11-16T12:56+03:00",
+   "rss_dk": 12
   }
  },
  "ozet": {
@@ -1942,6 +1942,6 @@
   "sitemap_en_uzun_dk": 180,
   "rss_medyan_dk": 36,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-16T12:41+03:00"
+  "guncelleme": "2026-11-16T12:56+03:00"
  }
 }
