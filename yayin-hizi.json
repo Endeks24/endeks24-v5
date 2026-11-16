@@ -1,68 +1,5 @@
 {
  "kayit": {
-  "/fon-sorusturmasinda-bddk-baskan-yardimcisi-banka-genel-muduru-tutuklandi": {
-   "yayin": "2026-11-09T10:55:00+03:00",
-   "sitemap_gorulen": "2026-11-09T10:56+03:00",
-   "baslangic": false,
-   "sitemap_dk": 2,
-   "durum": 200,
-   "rss_gorulen": "2026-11-09T10:56+03:00",
-   "rss_dk": 2
-  },
-  "/bist-100-son-11-kapanisin-uzerinde-acildi-30-ekimden-yuzde-7-yukarida": {
-   "yayin": "2026-11-09T10:32:00+03:00",
-   "sitemap_gorulen": "2026-11-09T10:56+03:00",
-   "baslangic": false,
-   "sitemap_dk": 25,
-   "durum": 200,
-   "rss_gorulen": "2026-11-09T10:56+03:00",
-   "rss_dk": 25
-  },
-  "/reel-getiri-ekimde-mevduat-faizinde-en-yuksek-bist-100-en-cok-kaybettirdi": {
-   "yayin": "2026-11-09T10:18:00+03:00",
-   "sitemap_gorulen": "2026-11-09T10:56+03:00",
-   "baslangic": false,
-   "sitemap_dk": 39,
-   "durum": 200,
-   "rss_gorulen": "2026-11-09T10:56+03:00",
-   "rss_dk": 39
-  },
-  "/bakanlik-duyurdu-teskomb-kefaletli-esnaf-kredileri-900-milyar-lirayi-asti": {
-   "yayin": "2026-11-09T09:29:00+03:00",
-   "sitemap_gorulen": "2026-11-09T10:56+03:00",
-   "baslangic": false,
-   "sitemap_dk": 88,
-   "durum": 200,
-   "rss_gorulen": "2026-11-09T10:56+03:00",
-   "rss_dk": 88
-  },
-  "/altinay-savunma-altny-ilk-yari-satisinin-yuzde-11ini-ar-geye-ayirdi": {
-   "yayin": "2026-11-09T09:07:00+03:00",
-   "sitemap_gorulen": "2026-11-09T10:56+03:00",
-   "baslangic": false,
-   "sitemap_dk": 110,
-   "durum": 200,
-   "rss_gorulen": "2026-11-09T10:56+03:00",
-   "rss_dk": 110
-  },
-  "/pegasus-pgsus-ilk-yari-satisinin-yuzde-15i-kadar-kiralama-borcu-odedi": {
-   "yayin": "2026-11-09T08:47:00+03:00",
-   "sitemap_gorulen": "2026-11-09T10:56+03:00",
-   "baslangic": false,
-   "sitemap_dk": 130,
-   "durum": 200,
-   "rss_gorulen": "2026-11-09T10:56+03:00",
-   "rss_dk": 130
-  },
-  "/17-eylulden-bu-yana-10-sirket-sermaye-artirimini-iptal-etti-5i-bedelsiz": {
-   "yayin": "2026-11-09T08:13:00+03:00",
-   "sitemap_gorulen": "2026-11-09T10:56+03:00",
-   "baslangic": false,
-   "sitemap_dk": 164,
-   "durum": 200,
-   "rss_gorulen": "2026-11-09T10:56+03:00",
-   "rss_dk": 164
-  },
   "/iso-ihracat-iklim-endeksi-geriledi-10-buyuk-pazarin-7sinde-uretim-artti": {
    "yayin": "2026-11-09T11:16:00+03:00",
    "sitemap_gorulen": "2026-11-09T11:33+03:00",
@@ -1925,14 +1862,59 @@
    "durum": 200,
    "rss_gorulen": "2026-11-16T06:05+03:00",
    "rss_dk": 50
+  },
+  "/bakir-libre-basina-6-dolara-indi-24-haziran-dan-bu-yana-en-dusuk-duzeyde": {
+   "yayin": "2026-11-16T11:12:04+03:00",
+   "sitemap_gorulen": "2026-11-16T11:12+03:00",
+   "baslangic": false,
+   "sitemap_dk": 0,
+   "durum": 200,
+   "rss_gorulen": "2026-11-16T11:12+03:00",
+   "rss_dk": 0
+  },
+  "/tayvan-agirlikli-endeksi-yuzde-6-dususle-kapandi-kospi-yuzde-4-geriledi": {
+   "yayin": "2026-11-16T10:28:44+03:00",
+   "sitemap_gorulen": "2026-11-16T11:12+03:00",
+   "baslangic": false,
+   "sitemap_dk": 44,
+   "durum": 200,
+   "rss_gorulen": "2026-11-16T11:12+03:00",
+   "rss_dk": 44
+  },
+  "/bist-100-gune-ekside-basladi-en-cok-sngyo-yukseldi-trmet-geriledi": {
+   "yayin": "2026-11-16T10:15:28+03:00",
+   "sitemap_gorulen": "2026-11-16T11:12+03:00",
+   "baslangic": false,
+   "sitemap_dk": 57,
+   "durum": 200,
+   "rss_gorulen": "2026-11-16T11:12+03:00",
+   "rss_dk": 57
+  },
+  "/otomobil-uretimi-10-ayda-yuzde-17-azaldi-ticari-arac-yuzde-12-artti": {
+   "yayin": "2026-11-16T09:41:31+03:00",
+   "sitemap_gorulen": "2026-11-16T11:12+03:00",
+   "baslangic": false,
+   "sitemap_dk": 91,
+   "durum": 200,
+   "rss_gorulen": "2026-11-16T11:12+03:00",
+   "rss_dk": 91
+  },
+  "/cin-de-sanayi-uretimi-ekim-de-yuzde-5-artti-yatirim-10-ayda-yuzde-8-azaldi": {
+   "yayin": "2026-11-16T09:28:23+03:00",
+   "sitemap_gorulen": "2026-11-16T11:12+03:00",
+   "baslangic": false,
+   "sitemap_dk": 104,
+   "durum": 200,
+   "rss_gorulen": "2026-11-16T11:12+03:00",
+   "rss_dk": 104
   }
  },
  "ozet": {
-  "haber": 214,
+  "haber": 212,
   "sitemap_medyan_dk": 36.5,
   "sitemap_en_uzun_dk": 180,
   "rss_medyan_dk": 36.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-16T06:05+03:00"
+  "guncelleme": "2026-11-16T11:12+03:00"
  }
 }
