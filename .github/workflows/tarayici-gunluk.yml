@@ -1,8 +1,7 @@
 name: endeks24-tarayici-gunluk
 # Hisse Tarayıcısı verisi (tarayici-veri dalı, tarayici/ozet.json): profil-veri ve borsa-veri dallarından hesaplanır. Hafta içi akşam ya da elle. Yapay zeka çağrısı yoktur.
 on:
-  schedule:
-    - cron: '40 17 * * 1-5'
+  # Zamanlama Cloudflare Worker'a taşındı (16.11.2026; endeks24-cms src/agirhat.ts, src/verihat.ts, src/veriworker.ts). Elle çalıştırma (workflow_dispatch) duruyor.
   workflow_dispatch:
 permissions:
   contents: write
