@@ -1970,14 +1970,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-16T14:26+03:00",
    "rss_dk": 8
+  },
+  "/bist-30-aralik-vadelisi-gun-icinde-15-477-puanda-baz-farki-556-puana-indi": {
+   "yayin": "2026-11-16T14:31:58+03:00",
+   "sitemap_gorulen": "2026-11-16T14:42+03:00",
+   "baslangic": false,
+   "sitemap_dk": 11,
+   "durum": 200,
+   "rss_gorulen": "2026-11-16T14:42+03:00",
+   "rss_dk": 11
   }
  },
  "ozet": {
-  "haber": 219,
-  "sitemap_medyan_dk": 31,
+  "haber": 220,
+  "sitemap_medyan_dk": 31.0,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 31,
+  "rss_medyan_dk": 31.0,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-16T14:26+03:00"
+  "guncelleme": "2026-11-16T14:42+03:00"
  }
 }
