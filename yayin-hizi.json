@@ -1,14 +1,5 @@
 {
  "kayit": {
-  "/iso-ihracat-iklim-endeksi-geriledi-10-buyuk-pazarin-7sinde-uretim-artti": {
-   "yayin": "2026-11-09T11:16:00+03:00",
-   "sitemap_gorulen": "2026-11-09T11:33+03:00",
-   "baslangic": false,
-   "sitemap_dk": 17,
-   "durum": 200,
-   "rss_gorulen": "2026-11-09T11:33+03:00",
-   "rss_dk": 17
-  },
   "/tmsf-fon-islemlerinde-31-milyar-600-milyon-lira-gonullu-iade-tahsil-etti": {
    "yayin": "2026-11-09T11:59:00+03:00",
    "sitemap_gorulen": "2026-11-09T12:12+03:00",
@@ -1907,6 +1898,15 @@
    "durum": 200,
    "rss_gorulen": "2026-11-16T11:12+03:00",
    "rss_dk": 104
+  },
+  "/mia-teknoloji-miatk-bagli-ortakligi-siparis-aldi-tutar-866-milyon-lira": {
+   "yayin": "2026-11-16T11:25:16+03:00",
+   "sitemap_gorulen": "2026-11-16T11:27+03:00",
+   "baslangic": false,
+   "sitemap_dk": 2,
+   "durum": 200,
+   "rss_gorulen": "2026-11-16T11:27+03:00",
+   "rss_dk": 2
   }
  },
  "ozet": {
@@ -1915,6 +1915,6 @@
   "sitemap_en_uzun_dk": 180,
   "rss_medyan_dk": 36.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-16T11:12+03:00"
+  "guncelleme": "2026-11-16T11:27+03:00"
  }
 }
