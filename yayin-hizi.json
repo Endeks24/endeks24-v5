@@ -27,15 +27,6 @@
    "rss_gorulen": "2026-11-09T21:46+03:00",
    "rss_dk": 128
   },
-  "/turkcell-tcell-3-ceyrek-geliri-82-milyar-lira-oldu-kar-beklentiyi-asti": {
-   "yayin": "2026-11-09T19:12:00+03:00",
-   "sitemap_gorulen": "2026-11-09T21:46+03:00",
-   "baslangic": false,
-   "sitemap_dk": 154,
-   "durum": 200,
-   "rss_gorulen": "2026-11-09T21:46+03:00",
-   "rss_dk": 154
-  },
   "/doas-3-ceyrekte-434-milyon-lira-net-zarar-yazdi-9-ayda-kar-dustu": {
    "yayin": "2026-11-09T21:49:00+03:00",
    "sitemap_gorulen": "2026-11-09T22:06+03:00",
@@ -1997,14 +1988,50 @@
    "durum": 200,
    "rss_gorulen": "2026-11-16T17:40+03:00",
    "rss_dk": 2
+  },
+  "/bosch-fren-bfren-9-aylik-net-kari-yuzde-103-artti-finansman-gideri-indi": {
+   "yayin": "2026-11-16T19:05:24+03:00",
+   "sitemap_gorulen": "2026-11-16T19:14+03:00",
+   "baslangic": false,
+   "sitemap_dk": 9,
+   "durum": 200,
+   "rss_gorulen": "2026-11-16T19:14+03:00",
+   "rss_dk": 9
+  },
+  "/mobiltel-mobtl-realme-distributoru-oldu-yetki-2027-de-munhasir-olacak": {
+   "yayin": "2026-11-16T18:51:58+03:00",
+   "sitemap_gorulen": "2026-11-16T19:14+03:00",
+   "baslangic": false,
+   "sitemap_dk": 23,
+   "durum": 200,
+   "rss_gorulen": "2026-11-16T19:14+03:00",
+   "rss_dk": 23
+  },
+  "/bist-100-gunu-1-puan-dususle-kapatti-en-cok-vestl-yukseldi-sise-geriledi": {
+   "yayin": "2026-11-16T18:38:35+03:00",
+   "sitemap_gorulen": "2026-11-16T19:14+03:00",
+   "baslangic": false,
+   "sitemap_dk": 36,
+   "durum": 200,
+   "rss_gorulen": "2026-11-16T19:14+03:00",
+   "rss_dk": 36
+  },
+  "/emlak-konut-ekgyo-didim-de-arsa-aldi-bedel-2-milyar-100-milyon-lira": {
+   "yayin": "2026-11-16T18:25:20+03:00",
+   "sitemap_gorulen": "2026-11-16T19:14+03:00",
+   "baslangic": false,
+   "sitemap_dk": 49,
+   "durum": 200,
+   "rss_gorulen": "2026-11-16T19:14+03:00",
+   "rss_dk": 49
   }
  },
  "ozet": {
-  "haber": 222,
-  "sitemap_medyan_dk": 29.0,
+  "haber": 225,
+  "sitemap_medyan_dk": 29,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 29.0,
+  "rss_medyan_dk": 29,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-16T18:07+03:00"
+  "guncelleme": "2026-11-16T19:14+03:00"
  }
 }
