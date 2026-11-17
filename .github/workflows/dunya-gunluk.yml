@@ -1,12 +1,8 @@
 name: endeks24-dunya-gunluk
 # Dünya Piyasaları verisi (dunya-veri dalı, dunya/ozet.json): hafta içi günde üç kez ya da elle. Yapay zeka çağrısı yoktur.
 on:
-  schedule:
-    - cron: '30 6,14,21 * * 1-5'
+  # 17.11.2026: zamanlama Cloudflare Worker'a taşındı (sabah tam turu 09.30 TR sağlık sayfasında doğrulandı). Elle workflow_dispatch kaldı.
   workflow_dispatch:
-  push:
-    paths:
-      - '.github/workflows/dunya-gunluk.yml'
 permissions:
   contents: write
 concurrency:
