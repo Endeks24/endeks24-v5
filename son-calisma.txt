@@ -1,4 +1,4 @@
 BIST 100 17 Kasım seansını yüzde 1,53 düşüşle 11.661,00 puandan kapattı. Endeksteki 100 hisseden 84 hisse geriledi, 15 hisse yükseldi.
 rakamlar: {'piyasa': 8, 'gundem': 8}
-TAMAM: cikti/veri.json 115689 bayt; seans 2026-11-17T18:10:00+03:00 ; kripto 2026-11-17T18:16:00+03:00
-2026-11-17T15:17:24Z 
+TAMAM: cikti/veri.json 115855 bayt; seans 2026-11-17T18:10:00+03:00 ; kripto 2026-11-17T18:30:00+03:00
+2026-11-17T15:31:14Z 
