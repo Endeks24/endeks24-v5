@@ -1,4 +1,4 @@
-BIST 100 saat 15.55 itibarıyla yüzde 0,68 düşüşle 11.761,73 puanda. Endeksteki 100 hisseden 57 hisse geriliyor, 37 hisse yükseliyor.
+BIST 100 saat 16.10 itibarıyla yüzde 0,98 düşüşle 11.725,17 puanda. Endeksteki 100 hisseden 66 hisse geriliyor, 30 hisse yükseliyor.
 rakamlar: {'piyasa': 8, 'gundem': 8}
-TAMAM: cikti/veri.json 115906 bayt; seans 2026-11-17T15:55:00+03:00 ; kripto 2026-11-17T15:59:00+03:00
-2026-11-17T13:00:51Z 
+TAMAM: cikti/veri.json 115922 bayt; seans 2026-11-17T16:10:00+03:00 ; kripto 2026-11-17T16:14:00+03:00
+2026-11-17T13:14:22Z 
