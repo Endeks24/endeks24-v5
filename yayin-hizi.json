@@ -1925,14 +1925,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-17T16:01+03:00",
    "rss_dk": 178
+  },
+  "/kirac-galvaniz-tckrc-yeni-ihaleyi-aldi-bedel-212-milyon-lira": {
+   "yayin": "2026-11-17T16:22:17+03:00",
+   "sitemap_gorulen": "2026-11-17T16:29+03:00",
+   "baslangic": false,
+   "sitemap_dk": 7,
+   "durum": 200,
+   "rss_gorulen": "2026-11-17T16:29+03:00",
+   "rss_dk": 7
   }
  },
  "ozet": {
-  "haber": 214,
-  "sitemap_medyan_dk": 25.5,
+  "haber": 215,
+  "sitemap_medyan_dk": 25,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 25.5,
+  "rss_medyan_dk": 25,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-17T16:15+03:00"
+  "guncelleme": "2026-11-17T16:29+03:00"
  }
 }
