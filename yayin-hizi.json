@@ -1,14 +1,5 @@
 {
  "kayit": {
-  "/erdogan-gabarda-iki-yeni-sahada-135-milyon-varil-petrol-potansiyeli-var": {
-   "yayin": "2026-11-10T16:41:00+03:00",
-   "sitemap_gorulen": "2026-11-10T17:16+03:00",
-   "baslangic": false,
-   "sitemap_dk": 36,
-   "durum": 200,
-   "rss_gorulen": "2026-11-10T17:16+03:00",
-   "rss_dk": 36
-  },
   "/denge-holding-denge-metrobil-teknoloji-payini-99-milyon-liraya-satti": {
    "yayin": "2026-11-10T23:06:00+03:00",
    "sitemap_gorulen": "2026-11-10T23:36+03:00",
@@ -1937,11 +1928,11 @@
   }
  },
  "ozet": {
-  "haber": 215,
-  "sitemap_medyan_dk": 25,
+  "haber": 214,
+  "sitemap_medyan_dk": 24.5,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 25,
+  "rss_medyan_dk": 24.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-17T16:29+03:00"
+  "guncelleme": "2026-11-17T16:42+03:00"
  }
 }
