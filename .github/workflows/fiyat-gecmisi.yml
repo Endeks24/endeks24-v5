@@ -1,8 +1,7 @@
 name: endeks24-fiyat-gecmisi
 # Günlük kapanışlar (fiyat/), aracı kurum tahmin kopyası, Endeksi kim taşıdı ve bilanço sürprizi (analiz/), Endeks24 endeksleri (endeksler/). Hafta içi seans sonrası; yapay zeka çağrısı yoktur.
 on:
-  schedule:
-    - cron: '47 15 * * 1-5'
+  # 17.11.2026: zamanlama Cloudflare Worker'a taşındı (fiyat geçmişi ilk zamanlanmış Worker döngüsü doğrulandı). Elle workflow_dispatch kaldı.
   workflow_dispatch:
     inputs:
       tam:
