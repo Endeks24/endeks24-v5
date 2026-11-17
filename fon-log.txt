@@ -1,0 +1,32 @@
+  saatlik sınır; 10 dk bekleniyor (1/30)
+  saatlik sınır; 10 dk bekleniyor (2/30)
+fon 1256 pyş 105
+değer 1255 akış 1256
+getiri referansları {'h1h': 1253, 'h1a': 1253, 'h3a': 1238, 'h6a': 1208, 'hyb': 1176, 'h1y': 1152}
+  saatlik sınır; 10 dk bekleniyor (3/30)
+  saatlik sınır; 10 dk bekleniyor (4/30)
+  saatlik sınır; 10 dk bekleniyor (5/30)
+Traceback (most recent call last):
+  File "/home/runner/work/endeks24-v5/endeks24-v5/veri-programi/fon_veri.py", line 168, in <module>
+    main(sys.argv[1])
+    ~~~~^^^^^^^^^^^^^
+  File "/home/runner/work/endeks24-v5/endeks24-v5/veri-programi/fon_veri.py", line 112, in main
+    for s in kodlar_sorgu(ft, f"SELECT m.kod, m.zaman_utc, m.kapanis FROM mumlar_gunluk_gh m WHERE m.kod IN ({liste}) AND m.zaman_utc >= TIMESTAMP '{(ilk - datetime.timedelta(days=1)).isoformat()} 00:00:00' "
+             ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                               f"AND EXTRACT(DOW FROM m.zaman_utc) = 4 ORDER BY m.kod, m.zaman_utc"):
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/endeks24-v5/endeks24-v5/veri-programi/fon_veri.py", line 48, in kodlar_sorgu
+    return fg.sayfala(ft, sorgu)
+           ~~~~~~~~~~^^^^^^^^^^^
+  File "/home/runner/work/endeks24-v5/endeks24-v5/veri-programi/fiyat_gecmisi.py", line 38, in sayfala
+    sat = ft.sql(f'{sorgu} LIMIT 1000 OFFSET {off}')
+  File "/home/runner/work/endeks24-v5/endeks24-v5/veri-programi/hafiza_hesapla.py", line 61, in sql
+    return self.sorgu(q)
+           ~~~~~~~~~~^^^
+  File "/home/runner/work/endeks24-v5/endeks24-v5/veri-programi/fintables_veri.py", line 72, in sorgu
+    r = self.rpc('tools/call', {'name': 'veri_sorgula', 'arguments': {'sql': sql, 'purpose': 'Endeks24 sitesi veri güncellemesi'}})
+        ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/endeks24-v5/endeks24-v5/veri-programi/fintables_veri.py", line 56, in rpc
+    if t.lstrip().startswith('{'):
+       ^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'lstrip'
