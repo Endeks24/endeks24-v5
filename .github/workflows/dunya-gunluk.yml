@@ -1,7 +1,10 @@
 name: endeks24-dunya-gunluk
 # Dünya Piyasaları verisi (dunya-veri dalı, dunya/ozet.json): hafta içi günde üç kez ya da elle. Yapay zeka çağrısı yoktur.
 on:
-  # 17.11.2026: zamanlama Cloudflare Worker'a taşındı (sabah tam turu 09.30 TR sağlık sayfasında doğrulandı). Elle workflow_dispatch kaldı.
+  # 17.11.2026 akşam: ekonomik takvimin tek üreticisi bu iş akışı (Worker dünya hattı takvimi dunya-veri dalındaki dosyadan taşır); Worker takvim üretimi eklenene kadar
+  # zamanlama GERİ EKLENDİ (Fintables kullanmaz, kota etkisi yok). Hafta içi 09.30, 17.30, 00.30 (TR).
+  schedule:
+    - cron: '30 6,14,21 * * 1-5'
   workflow_dispatch:
 permissions:
   contents: write
