@@ -1925,14 +1925,32 @@
    "durum": 200,
    "rss_gorulen": "2026-11-17T16:29+03:00",
    "rss_dk": 7
+  },
+  "/fon-sorusturmasinda-4-sirkete-tmsf-kayyim-biri-adil-katilim-bankasi": {
+   "yayin": "2026-11-17T17:18:12+03:00",
+   "sitemap_gorulen": "2026-11-17T17:23+03:00",
+   "baslangic": false,
+   "sitemap_dk": 5,
+   "durum": 200,
+   "rss_gorulen": "2026-11-17T17:23+03:00",
+   "rss_dk": 5
+  },
+  "/smart-gunes-smrtg-uc-ges-icin-33-milyon-dolarlik-sozlesme-imzaladi": {
+   "yayin": "2026-11-17T17:17:56+03:00",
+   "sitemap_gorulen": "2026-11-17T17:23+03:00",
+   "baslangic": false,
+   "sitemap_dk": 6,
+   "durum": 200,
+   "rss_gorulen": "2026-11-17T17:23+03:00",
+   "rss_dk": 6
   }
  },
  "ozet": {
-  "haber": 214,
-  "sitemap_medyan_dk": 24.5,
+  "haber": 216,
+  "sitemap_medyan_dk": 23.5,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 24.5,
+  "rss_medyan_dk": 23.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-17T17:10+03:00"
+  "guncelleme": "2026-11-17T17:23+03:00"
  }
 }
