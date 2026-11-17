@@ -1,8 +1,7 @@
 name: endeks24-halka-arz-gunluk
 # Halka Arz sayfasının hattı ve karnesi (analiz/halka-arz-hat.json): hafta içi her akşam ya da elle. Yapay zeka çağrısı yoktur.
 on:
-  schedule:
-    - cron: '40 15 * * 1-5'
+  # 17.11.2026: zamanlama Cloudflare Worker'a taşındı (halka arz ilk zamanlanmış Worker döngüsü doğrulandı). Elle workflow_dispatch kaldı.
   workflow_dispatch:
 permissions:
   contents: write
