@@ -1,113 +1,5 @@
 {
  "kayit": {
-  "/yapi-kredinin-ykbnk-yuzde-61i-kocta-paylarin-degeri-192-milyar-lira": {
-   "yayin": "2026-11-10T11:03:00+03:00",
-   "sitemap_gorulen": "2026-11-10T11:12+03:00",
-   "baslangic": false,
-   "sitemap_dk": 9,
-   "durum": 200,
-   "rss_gorulen": "2026-11-10T11:12+03:00",
-   "rss_dk": 9
-  },
-  "/sanayi-uretimi-eylulde-artti-3-ceyrekte-2-ceyregin-altinda-kaldi": {
-   "yayin": "2026-11-10T10:42:00+03:00",
-   "sitemap_gorulen": "2026-11-10T11:12+03:00",
-   "baslangic": false,
-   "sitemap_dk": 30,
-   "durum": 200,
-   "rss_gorulen": "2026-11-10T11:12+03:00",
-   "rss_dk": 30
-  },
-  "/bist-100-gune-yukselisle-basladi-2025-sonu-kapanisinin-yuzde-4-uzerinde": {
-   "yayin": "2026-11-10T10:05:00+03:00",
-   "sitemap_gorulen": "2026-11-10T11:12+03:00",
-   "baslangic": false,
-   "sitemap_dk": 67,
-   "durum": 200,
-   "rss_gorulen": "2026-11-10T11:12+03:00",
-   "rss_dk": 67
-  },
-  "/bist-100de-12-sirket-satisinin-cogunu-yurt-disinda-yapti-brsan-onde": {
-   "yayin": "2026-11-10T09:04:00+03:00",
-   "sitemap_gorulen": "2026-11-10T11:12+03:00",
-   "baslangic": false,
-   "sitemap_dk": 128,
-   "durum": 200,
-   "rss_gorulen": "2026-11-10T11:12+03:00",
-   "rss_dk": 128
-  },
-  "/family-danismanlik-koc-holdingin-kchol-229-milyar-liralik-payina-sahip": {
-   "yayin": "2026-11-10T08:33:00+03:00",
-   "sitemap_gorulen": "2026-11-10T11:12+03:00",
-   "baslangic": false,
-   "sitemap_dk": 159,
-   "durum": 200,
-   "rss_gorulen": "2026-11-10T11:12+03:00",
-   "rss_dk": 159
-  },
-  "/enflasyon-beklentisi-tcmb-tebligine-gore-yasanan-enflasyonla-iliskili": {
-   "yayin": "2026-11-10T12:06:00+03:00",
-   "sitemap_gorulen": "2026-11-10T12:11+03:00",
-   "baslangic": false,
-   "sitemap_dk": 6,
-   "durum": 200,
-   "rss_gorulen": "2026-11-10T12:11+03:00",
-   "rss_dk": 6
-  },
-  "/ek-sure-alan-17-sirketin-14u-borsada-5i-kayyim-ya-da-konkordatoda": {
-   "yayin": "2026-11-10T11:45:00+03:00",
-   "sitemap_gorulen": "2026-11-10T12:11+03:00",
-   "baslangic": false,
-   "sitemap_dk": 27,
-   "durum": 200,
-   "rss_gorulen": "2026-11-10T12:11+03:00",
-   "rss_dk": 27
-  },
-  "/alarko-holding-alark-ilk-yarida-amortismaninin-16-kati-yatirim-yapti": {
-   "yayin": "2026-11-10T11:24:00+03:00",
-   "sitemap_gorulen": "2026-11-10T12:11+03:00",
-   "baslangic": false,
-   "sitemap_dk": 48,
-   "durum": 200,
-   "rss_gorulen": "2026-11-10T12:11+03:00",
-   "rss_dk": 48
-  },
-  "/halkbankta-halkb-fiili-dolasimin-yuzde-20si-fonlarda-garanda-yuzde-19": {
-   "yayin": "2026-11-10T12:34:00+03:00",
-   "sitemap_gorulen": "2026-11-10T13:11+03:00",
-   "baslangic": false,
-   "sitemap_dk": 37,
-   "durum": 200,
-   "rss_gorulen": "2026-11-10T13:11+03:00",
-   "rss_dk": 37
-  },
-  "/netcad-netcd-halka-arz-getirisi-duzeltmeyle-yuzde-102den-109a-cikiyor": {
-   "yayin": "2026-11-10T13:44:00+03:00",
-   "sitemap_gorulen": "2026-11-10T14:12+03:00",
-   "baslangic": false,
-   "sitemap_dk": 28,
-   "durum": 200,
-   "rss_gorulen": "2026-11-10T14:12+03:00",
-   "rss_dk": 28
-  },
-  "/insaat-maliyetleri-eylulde-yillik-yuzde-31-artti-malzeme-isciligi-gecti": {
-   "yayin": "2026-11-10T14:30:00+03:00",
-   "sitemap_gorulen": "2026-11-10T15:14+03:00",
-   "baslangic": false,
-   "sitemap_dk": 45,
-   "durum": 200,
-   "rss_gorulen": "2026-11-10T15:14+03:00",
-   "rss_dk": 45
-  },
-  "/hanehalki-kiymetli-maden-hesaplari-22-milyar-dolar-azaldi-parite-etkisiyle": {
-   "yayin": "2026-11-10T15:49:00+03:00",
-   "sitemap_gorulen": "2026-11-10T15:58+03:00",
-   "baslangic": false,
-   "sitemap_dk": 10,
-   "durum": 200,
-   "rss_gorulen": "2026-11-10T15:58+03:00",
-   "rss_dk": 10
-  },
   "/erdogan-gabarda-iki-yeni-sahada-135-milyon-varil-petrol-potansiyeli-var": {
    "yayin": "2026-11-10T16:41:00+03:00",
    "sitemap_gorulen": "2026-11-10T17:16+03:00",
@@ -1970,14 +1862,77 @@
    "durum": 200,
    "rss_gorulen": "2026-11-17T01:30+03:00",
    "rss_dk": 21
+  },
+  "/doviz-ticari-kredi-ihracatin-yuzde-64-une-denk-haziran-2024-te-49-du": {
+   "yayin": "2026-11-17T15:52:43+03:00",
+   "sitemap_gorulen": "2026-11-17T16:01+03:00",
+   "baslangic": false,
+   "sitemap_dk": 9,
+   "durum": 200,
+   "rss_gorulen": "2026-11-17T16:01+03:00",
+   "rss_dk": 9
+  },
+  "/yeo-teknoloji-yeotk-300-milyon-dolarlik-ihrac-tavanina-spk-onayi-aldi": {
+   "yayin": "2026-11-17T15:16:32+03:00",
+   "sitemap_gorulen": "2026-11-17T16:01+03:00",
+   "baslangic": false,
+   "sitemap_dk": 45,
+   "durum": 200,
+   "rss_gorulen": "2026-11-17T16:01+03:00",
+   "rss_dk": 45
+  },
+  "/fiili-dolasim-orani-13-hissede-degisiyor-ostim-yuzde-85-e-cikiyor": {
+   "yayin": "2026-11-17T14:29:58+03:00",
+   "sitemap_gorulen": "2026-11-17T16:01+03:00",
+   "baslangic": false,
+   "sitemap_dk": 92,
+   "durum": 200,
+   "rss_gorulen": "2026-11-17T16:01+03:00",
+   "rss_dk": 92
+  },
+  "/bist-100-gun-ortasinda-ekside-en-cok-eggub-yukseldi-glrmk-dustu": {
+   "yayin": "2026-11-17T14:16:49+03:00",
+   "sitemap_gorulen": "2026-11-17T16:01+03:00",
+   "baslangic": false,
+   "sitemap_dk": 105,
+   "durum": 200,
+   "rss_gorulen": "2026-11-17T16:01+03:00",
+   "rss_dk": 105
+  },
+  "/komisyon-euro-bolgesini-yukari-turkiye-buyume-tahminini-asagi-cekti": {
+   "yayin": "2026-11-17T13:31:57+03:00",
+   "sitemap_gorulen": "2026-11-17T16:01+03:00",
+   "baslangic": false,
+   "sitemap_dk": 150,
+   "durum": 200,
+   "rss_gorulen": "2026-11-17T16:01+03:00",
+   "rss_dk": 150
+  },
+  "/almanya-da-zew-endeksi-35-puani-asti-piyasa-beklentisini-gecti": {
+   "yayin": "2026-11-17T13:18:42+03:00",
+   "sitemap_gorulen": "2026-11-17T16:01+03:00",
+   "baslangic": false,
+   "sitemap_dk": 163,
+   "durum": 200,
+   "rss_gorulen": "2026-11-17T16:01+03:00",
+   "rss_dk": 163
+  },
+  "/tumosan-tmsn-ihale-sozlesmelerini-tamamladi-tutar-882-milyon-lira": {
+   "yayin": "2026-11-17T13:04:27+03:00",
+   "sitemap_gorulen": "2026-11-17T16:01+03:00",
+   "baslangic": false,
+   "sitemap_dk": 178,
+   "durum": 200,
+   "rss_gorulen": "2026-11-17T16:01+03:00",
+   "rss_dk": 178
   }
  },
  "ozet": {
-  "haber": 219,
-  "sitemap_medyan_dk": 26,
+  "haber": 214,
+  "sitemap_medyan_dk": 25.5,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 26,
+  "rss_medyan_dk": 25.5,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-17T07:46+03:00"
+  "guncelleme": "2026-11-17T16:01+03:00"
  }
 }
