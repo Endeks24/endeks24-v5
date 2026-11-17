@@ -1,8 +1,7 @@
 name: endeks24-veri-bekci
 # veri.yml zamanlaması GitHub tarafından atlanırsa seans saatlerinde veriyi kendisi tetikler.
 on:
-  schedule:
-    - cron: '7,22,37,52 7-15 * * 1-5'
+  # 17.11.2026: kapatıldı (veri hatları Cloudflare Worker'da canlı; bekçi aynı işleri GitHub'da yeniden başlatıp Fintables kotasını tüketiyordu).
   workflow_dispatch:
 permissions:
   contents: read

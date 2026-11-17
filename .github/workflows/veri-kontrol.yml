@@ -5,12 +5,9 @@ name: endeks24-veri-kontrol
 # bu iş hafta içi 07.00 ile 23.20 (TR) arasında 10 dakikada bir kendi içinde kontrol eder, bayat kalan akışları başlatır.
 # En çok 5 saat 40 dakika sürer; sonra 30 dakikalık zamanlama ya da bu dosyanın değişmesi onu yeniden başlatır (concurrency tek çalışma bırakır).
 on:
-  schedule:
-    - cron: '5,35 4-20 * * 1-5'
+  # 17.11.2026: kapatıldı. Veri hatlarının hepsi Cloudflare Worker'da canlı ve taze; bu bekçi Worker ile aynı Fintables kotasını paylaşıp çift yük bindiriyordu.
+  # Geri açmak için schedule ve push bloklarını geri ekleyin (git geçmişinde önceki sürüm var).
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths: [.github/workflows/veri-kontrol.yml]
 permissions:
   contents: write
   actions: write
