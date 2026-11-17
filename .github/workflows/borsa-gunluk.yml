@@ -1,12 +1,8 @@
 name: endeks24-borsa-gunluk
 # Borsa Ekranı ve hisse sayfaları verisi (veri dalı, borsa/): hafta içi her akşam ya da elle. Yapay zeka çağrısı yoktur.
 on:
-  schedule:
-    - cron: '50 15 * * 1-5'
+  # 17.11.2026: zamanlama Cloudflare Worker'a taşındı (borsa günlük ilk zamanlanmış Worker döngüsü 18.50'de tamamlandı, özet tarihi 17.11.2026). Elle workflow_dispatch kaldı.
   workflow_dispatch:
-  push:
-    paths:
-      - '.github/workflows/borsa-gunluk.yml'
 permissions:
   contents: write
 concurrency:
