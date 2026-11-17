@@ -1,32 +1,5 @@
 {
  "kayit": {
-  "/ford-otosan-froto-temettusunde-ford-ve-koc-yuzde-80-alacak-kalan-borsaya": {
-   "yayin": "2026-11-10T07:18:00+03:00",
-   "sitemap_gorulen": "2026-11-10T07:20+03:00",
-   "baslangic": false,
-   "sitemap_dk": 2,
-   "durum": 200,
-   "rss_gorulen": "2026-11-10T07:20+03:00",
-   "rss_dk": 2
-  },
-  "/cw-enerji-cwene-favoku-artarken-dokuz-aylik-net-kari-yuzde-32-azaldi": {
-   "yayin": "2026-11-10T05:42:00+03:00",
-   "sitemap_gorulen": "2026-11-10T07:20+03:00",
-   "baslangic": false,
-   "sitemap_dk": 98,
-   "durum": 200,
-   "rss_gorulen": "2026-11-10T07:20+03:00",
-   "rss_dk": 98
-  },
-  "/turk-altin-tralt-3-ceyrek-net-kari-yuzde-31-azaldi-favok-yuzde-29-artti": {
-   "yayin": "2026-11-10T04:31:00+03:00",
-   "sitemap_gorulen": "2026-11-10T07:20+03:00",
-   "baslangic": false,
-   "sitemap_dk": 169,
-   "durum": 200,
-   "rss_gorulen": "2026-11-10T07:20+03:00",
-   "rss_dk": 169
-  },
   "/yapi-kredinin-ykbnk-yuzde-61i-kocta-paylarin-degeri-192-milyar-lira": {
    "yayin": "2026-11-10T11:03:00+03:00",
    "sitemap_gorulen": "2026-11-10T11:12+03:00",
@@ -2000,11 +1973,11 @@
   }
  },
  "ozet": {
-  "haber": 222,
-  "sitemap_medyan_dk": 26.5,
+  "haber": 219,
+  "sitemap_medyan_dk": 26,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 26.5,
+  "rss_medyan_dk": 26,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-17T01:30+03:00"
+  "guncelleme": "2026-11-17T07:46+03:00"
  }
 }
