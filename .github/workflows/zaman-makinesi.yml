@@ -1,8 +1,7 @@
 name: endeks24-zaman-makinesi
 # Zaman makinesi verisi (BIST 100, dolar, euro, gram altın, mevduat, TÜFE). Elle ya da haftalık. Yapay zeka çağrısı yoktur.
 on:
-  schedule:
-    - cron: '40 16 * * 1-5'
+  # 17.11.2026: zamanlama Cloudflare Worker'a taşındı (zaman makinesi ilk zamanlanmış Worker döngüsü 19.40'ta doğrulandı). Elle workflow_dispatch kaldı.
   workflow_dispatch:
     inputs:
       islem:
