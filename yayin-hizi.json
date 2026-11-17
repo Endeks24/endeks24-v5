@@ -1943,14 +1943,23 @@
    "durum": 200,
    "rss_gorulen": "2026-11-17T17:23+03:00",
    "rss_dk": 6
+  },
+  "/abd-de-sanayi-uretimi-ekimde-geriledi-perakende-yillik-yuzde-7-artti": {
+   "yayin": "2026-11-17T18:13:54+03:00",
+   "sitemap_gorulen": "2026-11-17T18:18+03:00",
+   "baslangic": false,
+   "sitemap_dk": 5,
+   "durum": 200,
+   "rss_gorulen": "2026-11-17T18:18+03:00",
+   "rss_dk": 5
   }
  },
  "ozet": {
-  "haber": 216,
-  "sitemap_medyan_dk": 23.5,
+  "haber": 217,
+  "sitemap_medyan_dk": 23,
   "sitemap_en_uzun_dk": 180,
-  "rss_medyan_dk": 23.5,
+  "rss_medyan_dk": 23,
   "adresi_404_olan": [],
-  "guncelleme": "2026-11-17T18:04+03:00"
+  "guncelleme": "2026-11-17T18:18+03:00"
  }
 }
