@@ -1,8 +1,7 @@
 name: endeks24-analiz-haftalik
 # Fon dedektifi ve halka arz röntgeni (analiz/): haftada bir ya da elle. Yapay zeka çağrısı yoktur.
 on:
-  schedule:
-    - cron: '23 5 * * 0'
+  # 23.11.2026: zamanlama Cloudflare Worker'a taşındı (analiz hattı ilk zamanlanmış Worker döngüsü 22.11.2026 08.23'te doğrulandı). Elle workflow_dispatch kaldı.
   workflow_dispatch:
     inputs:
       modul:

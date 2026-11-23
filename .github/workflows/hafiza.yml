@@ -1,8 +1,7 @@
 name: endeks24-hafiza
 # KAP kararları sonrası fiyat hafızası (bedelsiz, temettü, bedelli). Ayda bir ya da elle; sonuç main kökündeki hafiza.json. Yapay zeka çağrısı yoktur.
 on:
-  schedule:
-    - cron: '17 4 2 * *'
+  # 23.11.2026: zamanlama Cloudflare Worker'a taşındı (hafıza hattı Worker'da canlı, ayın 2'si 04.17 UTC; 16.11 gölge çalışması GitHub ile ortak 866 olayda aynı). Elle workflow_dispatch kaldı.
   workflow_dispatch:
     inputs:
       dene:

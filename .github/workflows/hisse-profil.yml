@@ -1,8 +1,7 @@
 name: endeks24-hisse-profil
 # Hisse sayfası profil verisi (künye, ortaklık, yönetim, iştirakler, finansal özet): haftada bir ya da elle. Çıktı "profil-veri" dalına yazılır. Yapay zeka çağrısı yoktur.
 on:
-  schedule:
-    - cron: '17 4 * * 0'
+  # 23.11.2026: zamanlama Cloudflare Worker'a taşındı (profil hattı ilk zamanlanmış Worker döngüsü 22.11.2026 07.17'de doğrulandı). Elle workflow_dispatch kaldı.
   workflow_dispatch:
     inputs:
       sinir:
